@@ -1,17 +1,16 @@
 /*!
-  * Bootstrap alert.js v4.3.1 (https://getbootstrap.com/)
-  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Bootstrap alert.js v4.4.1 (https://flo-scss.flo.center/)
+  * Copyright 2011-2020 FloSports Engineering & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./dom/data.js'), require('./dom/event-handler.js'), require('./dom/selector-engine.js')) :
-  typeof define === 'function' && define.amd ? define(['./dom/data.js', './dom/event-handler.js', './dom/selector-engine.js'], factory) :
-  (global = global || self, global.Alert = factory(global.Data, global.EventHandler, global.SelectorEngine));
-}(this, (function (Data, EventHandler, SelectorEngine) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery'), require('./util.js')) :
+  typeof define === 'function' && define.amd ? define(['jquery', './util.js'], factory) :
+  (global = global || self, global.Alert = factory(global.jQuery, global.Util));
+}(this, (function ($, Util) { 'use strict';
 
-  Data = Data && Data.hasOwnProperty('default') ? Data['default'] : Data;
-  EventHandler = EventHandler && EventHandler.hasOwnProperty('default') ? EventHandler['default'] : EventHandler;
-  SelectorEngine = SelectorEngine && SelectorEngine.hasOwnProperty('default') ? SelectorEngine['default'] : SelectorEngine;
+  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
+  Util = Util && Util.hasOwnProperty('default') ? Util['default'] : Util;
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -30,99 +29,17 @@
   }
 
   /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): util/index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-  var MILLISECONDS_MULTIPLIER = 1000;
-  var TRANSITION_END = 'transitionend'; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
-
-  var getSelector = function getSelector(element) {
-    var selector = element.getAttribute('data-target');
-
-    if (!selector || selector === '#') {
-      var hrefAttr = element.getAttribute('href');
-      selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : null;
-    }
-
-    return selector;
-  };
-
-  var getElementFromSelector = function getElementFromSelector(element) {
-    var selector = getSelector(element);
-    return selector ? document.querySelector(selector) : null;
-  };
-
-  var getTransitionDurationFromElement = function getTransitionDurationFromElement(element) {
-    if (!element) {
-      return 0;
-    } // Get transition-duration of the element
-
-
-    var _window$getComputedSt = window.getComputedStyle(element),
-        transitionDuration = _window$getComputedSt.transitionDuration,
-        transitionDelay = _window$getComputedSt.transitionDelay;
-
-    var floatTransitionDuration = parseFloat(transitionDuration);
-    var floatTransitionDelay = parseFloat(transitionDelay); // Return 0 if element or transition duration is not found
-
-    if (!floatTransitionDuration && !floatTransitionDelay) {
-      return 0;
-    } // If multiple durations are defined, take the first
-
-
-    transitionDuration = transitionDuration.split(',')[0];
-    transitionDelay = transitionDelay.split(',')[0];
-    return (parseFloat(transitionDuration) + parseFloat(transitionDelay)) * MILLISECONDS_MULTIPLIER;
-  };
-
-  var triggerTransitionEnd = function triggerTransitionEnd(element) {
-    var evt = document.createEvent('HTMLEvents');
-    evt.initEvent(TRANSITION_END, true, true);
-    element.dispatchEvent(evt);
-  };
-
-  var emulateTransitionEnd = function emulateTransitionEnd(element, duration) {
-    var called = false;
-    var durationPadding = 5;
-    var emulatedDuration = duration + durationPadding;
-
-    function listener() {
-      called = true;
-      element.removeEventListener(TRANSITION_END, listener);
-    }
-
-    element.addEventListener(TRANSITION_END, listener);
-    setTimeout(function () {
-      if (!called) {
-        triggerTransitionEnd(element);
-      }
-    }, emulatedDuration);
-  };
-
-  var getjQuery = function getjQuery() {
-    var _window = window,
-        jQuery = _window.jQuery;
-
-    if (jQuery && !document.body.hasAttribute('data-no-jquery')) {
-      return jQuery;
-    }
-
-    return null;
-  };
-
-  /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
 
   var NAME = 'alert';
-  var VERSION = '4.3.1';
+  var VERSION = 'flo-scss';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
   var Selector = {
     DISMISS: '[data-dismiss="alert"]'
   };
@@ -147,10 +64,6 @@
   function () {
     function Alert(element) {
       this._element = element;
-
-      if (this._element) {
-        Data.setData(element, DATA_KEY, this);
-      }
     } // Getters
 
 
@@ -166,7 +79,7 @@
 
       var customEvent = this._triggerCloseEvent(rootElement);
 
-      if (customEvent === null || customEvent.defaultPrevented) {
+      if (customEvent.isDefaultPrevented()) {
         return;
       }
 
@@ -174,58 +87,62 @@
     };
 
     _proto.dispose = function dispose() {
-      Data.removeData(this._element, DATA_KEY);
+      $.removeData(this._element, DATA_KEY);
       this._element = null;
     } // Private
     ;
 
     _proto._getRootElement = function _getRootElement(element) {
-      var parent = getElementFromSelector(element);
+      var selector = Util.getSelectorFromElement(element);
+      var parent = false;
+
+      if (selector) {
+        parent = document.querySelector(selector);
+      }
 
       if (!parent) {
-        parent = SelectorEngine.closest(element, "." + ClassName.ALERT);
+        parent = $(element).closest("." + ClassName.ALERT)[0];
       }
 
       return parent;
     };
 
     _proto._triggerCloseEvent = function _triggerCloseEvent(element) {
-      return EventHandler.trigger(element, Event.CLOSE);
+      var closeEvent = $.Event(Event.CLOSE);
+      $(element).trigger(closeEvent);
+      return closeEvent;
     };
 
     _proto._removeElement = function _removeElement(element) {
       var _this = this;
 
-      element.classList.remove(ClassName.SHOW);
+      $(element).removeClass(ClassName.SHOW);
 
-      if (!element.classList.contains(ClassName.FADE)) {
+      if (!$(element).hasClass(ClassName.FADE)) {
         this._destroyElement(element);
 
         return;
       }
 
-      var transitionDuration = getTransitionDurationFromElement(element);
-      EventHandler.one(element, TRANSITION_END, function () {
-        return _this._destroyElement(element);
-      });
-      emulateTransitionEnd(element, transitionDuration);
+      var transitionDuration = Util.getTransitionDurationFromElement(element);
+      $(element).one(Util.TRANSITION_END, function (event) {
+        return _this._destroyElement(element, event);
+      }).emulateTransitionEnd(transitionDuration);
     };
 
     _proto._destroyElement = function _destroyElement(element) {
-      if (element.parentNode) {
-        element.parentNode.removeChild(element);
-      }
-
-      EventHandler.trigger(element, Event.CLOSED);
+      $(element).detach().trigger(Event.CLOSED).remove();
     } // Static
     ;
 
-    Alert.jQueryInterface = function jQueryInterface(config) {
+    Alert._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = Data.getData(this, DATA_KEY);
+        var $element = $(this);
+        var data = $element.data(DATA_KEY);
 
         if (!data) {
           data = new Alert(this);
+          $element.data(DATA_KEY, data);
         }
 
         if (config === 'close') {
@@ -234,7 +151,7 @@
       });
     };
 
-    Alert.handleDismiss = function handleDismiss(alertInstance) {
+    Alert._handleDismiss = function _handleDismiss(alertInstance) {
       return function (event) {
         if (event) {
           event.preventDefault();
@@ -242,10 +159,6 @@
 
         alertInstance.close(this);
       };
-    };
-
-    Alert.getInstance = function getInstance(element) {
-      return Data.getData(element, DATA_KEY);
     };
 
     _createClass(Alert, null, [{
@@ -264,27 +177,20 @@
    */
 
 
-  EventHandler.on(document, Event.CLICK_DATA_API, Selector.DISMISS, Alert.handleDismiss(new Alert()));
-  var $ = getjQuery();
+  $(document).on(Event.CLICK_DATA_API, Selector.DISMISS, Alert._handleDismiss(new Alert()));
   /**
    * ------------------------------------------------------------------------
    * jQuery
    * ------------------------------------------------------------------------
-   * add .alert to jQuery only if jQuery is present
    */
 
-  /* istanbul ignore if */
+  $.fn[NAME] = Alert._jQueryInterface;
+  $.fn[NAME].Constructor = Alert;
 
-  if ($) {
-    var JQUERY_NO_CONFLICT = $.fn[NAME];
-    $.fn[NAME] = Alert.jQueryInterface;
-    $.fn[NAME].Constructor = Alert;
-
-    $.fn[NAME].noConflict = function () {
-      $.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Alert.jQueryInterface;
-    };
-  }
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Alert._jQueryInterface;
+  };
 
   return Alert;
 

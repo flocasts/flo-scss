@@ -1,0 +1,10 @@
+@each $display in $displays {
+  .hover-toggle-#{$display} {
+    display: none;
+  }
+  .hover-target:hover + .hover-toggle-#{$display},
+  .hover-target:hover .hover-toggle-#{$display},
+  .hover-target:hover ~ .hover-toggle-#{$display} {
+    display: $display;
+  }
+}

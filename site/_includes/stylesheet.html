@@ -1,0 +1,131 @@
+<!-- Bootstrap core CSS -->
+{%- if jekyll.environment == "production" or jekyll.environment == "netlify" %}
+<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/bootstrap.min.css" rel="stylesheet" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
+{% else %}
+<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/bootstrap.css" rel="stylesheet">
+{% endif -%}
+
+{%- if page.layout == "docs" or page.layout != "examples" -%}
+<!-- Documentation extras -->
+{% if page.layout == "docs" %}
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+{% endif %}
+{% if page.layout != "examples" %}
+<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/css/docs.min.css" rel="stylesheet">
+{% endif %}
+{%- endif -%}
+
+<style>
+@font-face {
+  font-family: Open-Sans;
+  src: local("Open Sans"), local("Open-Sans"),
+    url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+}
+
+@font-face {
+  font-family: Uni-Neue-Book;
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBook.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBook.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-book-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-book-webfont.woff") format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueBook.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Uni-Neue-Bold;
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBold.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-bold-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-bold-webfont.woff") format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Heavy";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueHeavy.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueHeavy.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-heavy-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-heavy-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueHeavy.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Uni-Neue-Light";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueLight.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-light-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts//uni-neue/woff/uni-neue-light-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Regular";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueRegular.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-regular-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-regular-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Thin";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueThin.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueThin.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-thin-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-thin-webfont.woff") format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueThin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Black";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBlack.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBlack.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-black-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-black-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueBlack.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Corporate-Bold";
+  src: local("Corporate Bold"), local("Corporate-Bold"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.eot");
+  src: local("Corporate Bold"), local("Corporate-Bold"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.woff") format("woff"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "Interstate-Mono-Bold";
+  src: url("https://use.typekit.net/af/0d5649/00000000000000003b9ae814/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/0d5649/00000000000000003b9ae814/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/0d5649/00000000000000003b9ae814/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  src: local("FontAwesome"), local("Font Awesome"), local("Font-Awesome"),
+    url("../assets/fonts/font-awesome/fontawesome-webfont.eot");
+}
+</style>

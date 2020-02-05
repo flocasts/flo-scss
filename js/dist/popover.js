@@ -1,16 +1,15 @@
 /*!
-  * Bootstrap popover.js v4.3.1 (https://getbootstrap.com/)
-  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Bootstrap popover.js v4.4.1 (https://flo-scss.flo.center/)
+  * Copyright 2011-2020 FloSports Engineering & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./dom/data.js'), require('./dom/selector-engine.js'), require('./tooltip.js')) :
-  typeof define === 'function' && define.amd ? define(['./dom/data.js', './dom/selector-engine.js', './tooltip.js'], factory) :
-  (global = global || self, global.Popover = factory(global.Data, global.SelectorEngine, global.Tooltip));
-}(this, (function (Data, SelectorEngine, Tooltip) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery'), require('./tooltip.js')) :
+  typeof define === 'function' && define.amd ? define(['jquery', './tooltip.js'], factory) :
+  (global = global || self, global.Popover = factory(global.jQuery, global.Tooltip));
+}(this, (function ($, Tooltip) { 'use strict';
 
-  Data = Data && Data.hasOwnProperty('default') ? Data['default'] : Data;
-  SelectorEngine = SelectorEngine && SelectorEngine.hasOwnProperty('default') ? SelectorEngine['default'] : SelectorEngine;
+  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
   Tooltip = Tooltip && Tooltip.hasOwnProperty('default') ? Tooltip['default'] : Tooltip;
 
   function _defineProperties(target, props) {
@@ -63,13 +62,13 @@
       var source = arguments[i] != null ? arguments[i] : {};
 
       if (i % 2) {
-        ownKeys(source, true).forEach(function (key) {
+        ownKeys(Object(source), true).forEach(function (key) {
           _defineProperty(target, key, source[key]);
         });
       } else if (Object.getOwnPropertyDescriptors) {
         Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
       } else {
-        ownKeys(source).forEach(function (key) {
+        ownKeys(Object(source)).forEach(function (key) {
           Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
         });
       }
@@ -85,33 +84,16 @@
   }
 
   /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): util/index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  var getjQuery = function getjQuery() {
-    var _window = window,
-        jQuery = _window.jQuery;
-
-    if (jQuery && !document.body.hasAttribute('data-no-jquery')) {
-      return jQuery;
-    }
-
-    return null;
-  };
-
-  /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
 
   var NAME = 'popover';
-  var VERSION = '4.3.1';
+  var VERSION = 'flo-scss';
   var DATA_KEY = 'bs.popover';
   var EVENT_KEY = "." + DATA_KEY;
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
   var CLASS_PREFIX = 'bs-popover';
   var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
 
@@ -119,7 +101,7 @@
     placement: 'right',
     trigger: 'click',
     content: '',
-    template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
+    template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
   });
 
   var DefaultType = _objectSpread2({}, Tooltip.DefaultType, {
@@ -168,10 +150,19 @@
       return this.getTitle() || this._getContent();
     };
 
-    _proto.setContent = function setContent() {
-      var tip = this.getTipElement(); // we use append for html objects to maintain js events
+    _proto.addAttachmentClass = function addAttachmentClass(attachment) {
+      $(this.getTipElement()).addClass(CLASS_PREFIX + "-" + attachment);
+    };
 
-      this.setElementContent(SelectorEngine.findOne(Selector.TITLE, tip), this.getTitle());
+    _proto.getTipElement = function getTipElement() {
+      this.tip = this.tip || $(this.config.template)[0];
+      return this.tip;
+    };
+
+    _proto.setContent = function setContent() {
+      var $tip = $(this.getTipElement()); // We use append for html objects to maintain js events
+
+      this.setElementContent($tip.find(Selector.TITLE), this.getTitle());
 
       var content = this._getContent();
 
@@ -179,13 +170,8 @@
         content = content.call(this.element);
       }
 
-      this.setElementContent(SelectorEngine.findOne(Selector.CONTENT, tip), content);
-      tip.classList.remove(ClassName.FADE);
-      tip.classList.remove(ClassName.SHOW);
-    };
-
-    _proto._addAttachmentClass = function _addAttachmentClass(attachment) {
-      this.getTipElement().classList.add(CLASS_PREFIX + "-" + attachment);
+      this.setElementContent($tip.find(Selector.CONTENT), content);
+      $tip.removeClass(ClassName.FADE + " " + ClassName.SHOW);
     } // Private
     ;
 
@@ -194,22 +180,18 @@
     };
 
     _proto._cleanTipClass = function _cleanTipClass() {
-      var tip = this.getTipElement();
-      var tabClass = tip.getAttribute('class').match(BSCLS_PREFIX_REGEX);
+      var $tip = $(this.getTipElement());
+      var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX);
 
       if (tabClass !== null && tabClass.length > 0) {
-        tabClass.map(function (token) {
-          return token.trim();
-        }).forEach(function (tClass) {
-          return tip.classList.remove(tClass);
-        });
+        $tip.removeClass(tabClass.join(''));
       }
     } // Static
     ;
 
-    Popover.jQueryInterface = function jQueryInterface(config) {
+    Popover._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = Data.getData(this, DATA_KEY);
+        var data = $(this).data(DATA_KEY);
 
         var _config = typeof config === 'object' ? config : null;
 
@@ -219,7 +201,7 @@
 
         if (!data) {
           data = new Popover(this, _config);
-          Data.setData(this, DATA_KEY, data);
+          $(this).data(DATA_KEY, data);
         }
 
         if (typeof config === 'string') {
@@ -230,10 +212,6 @@
           data[config]();
         }
       });
-    };
-
-    Popover.getInstance = function getInstance(element) {
-      return Data.getData(element, DATA_KEY);
     };
 
     _createClass(Popover, null, [{
@@ -276,26 +254,20 @@
 
     return Popover;
   }(Tooltip);
-
-  var $ = getjQuery();
   /**
    * ------------------------------------------------------------------------
    * jQuery
    * ------------------------------------------------------------------------
    */
 
-  /* istanbul ignore if */
 
-  if ($) {
-    var JQUERY_NO_CONFLICT = $.fn[NAME];
-    $.fn[NAME] = Popover.jQueryInterface;
-    $.fn[NAME].Constructor = Popover;
+  $.fn[NAME] = Popover._jQueryInterface;
+  $.fn[NAME].Constructor = Popover;
 
-    $.fn[NAME].noConflict = function () {
-      $.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Popover.jQueryInterface;
-    };
-  }
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Popover._jQueryInterface;
+  };
 
   return Popover;
 

@@ -1,13 +1,14 @@
 # Ignore docs files
 /_gh_pages/
-# This is the old Jekyll docs dist folder;
-# keeping it here so that when we switch branches it doesn't show up
+/site/.jekyll-metadata
 /site/docs/**/dist/
-# Hugo resources folder
+/site/docs/**/assets/css/
+**/*.min.*
+**/*.map
+# Hugo folders
 /resources/
 
-# Ignore ruby/bundler files;
-# keeping them here so that when we switch branches they don't show up
+# Ignore ruby/bundler files
 /.bundle/
 /vendor/
 /.ruby-version
@@ -44,4 +45,6 @@ Thumbs.db
 
 # Folders to ignore
 /js/coverage/
+/js/dist/
 /node_modules/
+/dist/

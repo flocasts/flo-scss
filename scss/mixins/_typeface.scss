@@ -1,0 +1,8 @@
+@mixin typeface($typeface) {
+  font-family: map-get($font-families, $typeface);
+  line-height: map-get($line-heights, $typeface);
+  font-weight: map-get($font-weights, $typeface);
+  letter-spacing: map-get($letter-spacings, $typeface);
+  text-transform: map-get($text-transforms, $typeface);
+  @include font-size(map-get($font-sizes, $typeface));
+}

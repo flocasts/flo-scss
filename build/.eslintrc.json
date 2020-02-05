@@ -8,6 +8,13 @@
   },
   "extends": "../.eslintrc.json",
   "rules": {
-    "no-console": "off"
+    "consistent-return": "off",
+    "func-style": "off",
+    "no-console": "off",
+    "no-magic-numbers": "off",
+    "no-process-env": "off",
+    "no-process-exit": "off",
+    "no-sync": "off",
+    "spaced-comment": "off"
   }
 }

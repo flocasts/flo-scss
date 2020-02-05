@@ -11,5 +11,10 @@ module.exports = {
   ],
   plugins: [
     '@babel/plugin-proposal-object-rest-spread'
-  ]
+  ],
+  env: {
+    test: {
+      plugins: [ 'istanbul' ]
+    }
+  }
 };

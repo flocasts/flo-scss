@@ -1,0 +1,15 @@
+@each $display in $displays {
+  .click-toggle-#{$display} {
+    display: none;
+  }
+  input[type="checkbox"].click-toggle-input:checked .click-toggle-#{$display},
+  input[type="checkbox"].click-toggle-input:checked
+    ~ .click-toggle-#{$display} {
+    display: $display;
+  }
+}
+
+input[type="checkbox"].click-toggle-input:checked ~ .click-toggle-once,
+input[type="checkbox"].click-toggle-input:checked .click-toggle-once {
+  display: none;
+}

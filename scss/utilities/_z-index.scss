@@ -1,0 +1,10 @@
+// stylelint-disable declaration-no-important
+
+
+// Generate z-index classes from zindecies map in _variables.scss
+
+@each $index, $value in $zindecies {
+  .z-#{$index} {
+    z-index: $value;
+  }
+}

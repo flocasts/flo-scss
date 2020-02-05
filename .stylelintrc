@@ -1,6 +1,5 @@
 {
   "extends": [
-    "stylelint-config-twbs-bootstrap/scss"
   ],
   "rules": {
     "property-blacklist": [
@@ -11,12 +10,6 @@
       "border-bottom-left-radius",
       "transition"
     ],
-    "function-blacklist": ["calc"],
-    "scss/dollar-variable-default": [
-      true,
-      {
-        "ignore": "local"
-      }
-    ]
+    "function-blacklist": ["calc"]
   }
 }

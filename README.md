@@ -1,24 +1,24 @@
 <p align="center">
-  <a href="https://getbootstrap.com/">
-    <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="72" height="72">
+  <a href="https://flo-scss.flo.center/">
+    <img src="https://flo-scss.flo.center/docs/4.4/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="72" height="72">
   </a>
 </p>
 
-<h3 align="center">Bootstrap</h3>
+<h3 align="center">Flo-SCSS</h3>
 
 <p align="center">
   Sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br>
-  <a href="https://getbootstrap.com/docs/4.3/"><strong>Explore Bootstrap docs »</strong></a>
+  <a href="https://flo-scss.flo.center/docs/4.4/"><strong>Explore Bootstrap docs »</strong></a>
   <br>
   <br>
   <a href="https://github.com/twbs/bootstrap/issues/new?template=bug.md">Report bug</a>
   ·
   <a href="https://github.com/twbs/bootstrap/issues/new?template=feature.md&labels=feature">Request feature</a>
   ·
-  <a href="https://themes.getbootstrap.com/">Themes</a>
+  <a href="https://themes.flo-scss.flo.center/">Themes</a>
   ·
-  <a href="https://blog.getbootstrap.com/">Blog</a>
+  <a href="https://blog.flo-scss.flo.center/">Blog</a>
 </p>
 
 
@@ -41,14 +41,11 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/twbs/bootstrap/archive/v4.3.1.zip)
-- Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install bootstrap`
-- Install with [yarn](https://yarnpkg.com/): `yarn add bootstrap@4.3.1`
-- Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.3.1`
-- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
+- [Download the latest release.](https://github.com/flocasts/flo-scss/archive/vflo-scss.zip)
+- Clone the repo: `git clone https://github.com/flocasts/flo-scss.git`
+- Install with [npm](https://www.npmjs.com/): `npm install flocasts/flo-scss#v4-dev`
 
-Read the [Getting started page](https://getbootstrap.com/docs/4.3/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](https://flo-scss.flo.center/docs/4.4/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 
 ## Status
@@ -62,12 +59,12 @@ Read the [Getting started page](https://getbootstrap.com/docs/4.3/getting-starte
 [![NuGet](https://img.shields.io/nuget/vpre/bootstrap.svg)](https://www.nuget.org/packages/bootstrap/absoluteLatest)
 [![peerDependencies Status](https://img.shields.io/david/peer/twbs/bootstrap.svg)](https://david-dm.org/twbs/bootstrap?type=peer)
 [![devDependency Status](https://img.shields.io/david/dev/twbs/bootstrap.svg)](https://david-dm.org/twbs/bootstrap?type=dev)
-[![Coverage Status](https://img.shields.io/coveralls/github/twbs/bootstrap/master.svg)](https://coveralls.io/github/twbs/bootstrap?branch=master)
-[![CSS gzip size](https://img.badgesize.io/twbs/bootstrap/master/dist/css/bootstrap.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/twbs/bootstrap/tree/master/dist/css/bootstrap.min.css)
-[![JS gzip size](https://img.badgesize.io/twbs/bootstrap/master/dist/js/bootstrap.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/twbs/bootstrap/tree/master/dist/js/bootstrap.min.js)
+[![Coverage Status](https://img.shields.io/coveralls/github/twbs/bootstrap/v4-dev.svg)](https://coveralls.io/github/twbs/bootstrap?branch=v4-dev)
+[![CSS gzip size](https://img.badgesize.io/twbs/bootstrap/v4-dev/dist/css/bootstrap.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/twbs/bootstrap/tree/v4-dev/dist/css/bootstrap.min.css)
+[![JS gzip size](https://img.badgesize.io/twbs/bootstrap/v4-dev/dist/js/bootstrap.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/twbs/bootstrap/tree/v4-dev/dist/js/bootstrap.min.js)
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=SkxZcStBeExEdVJqQ2hWYnlWckpkNmNEY213SFp6WHFETWk2bGFuY3pCbz0tLXhqbHJsVlZhQnRBdEpod3NLSDMzaHc9PQ==--3d0b75245708616eb93113221beece33e680b229)](https://www.browserstack.com/automate/public-build/SkxZcStBeExEdVJqQ2hWYnlWckpkNmNEY213SFp6WHFETWk2bGFuY3pCbz0tLXhqbHJsVlZhQnRBdEpod3NLSDMzaHc9PQ==--3d0b75245708616eb93113221beece33e680b229)
-[![Backers on Open Collective](https://img.shields.io/opencollective/backers/bootstrap.svg)](#backers)
-[![Sponsors on Open Collective](https://img.shields.io/opencollective/sponsors/bootstrap.svg)](#sponsors)
+[![Backers on Open Collective](https://opencollective.com/bootstrap/backers/badge.svg)](#backers)
+[![Sponsors on Open Collective](https://opencollective.com/bootstrap/sponsors/badge.svg)](#sponsors)
 
 
 ## What's included
@@ -86,10 +83,6 @@ bootstrap/
     │   ├── bootstrap-reboot.css.map
     │   ├── bootstrap-reboot.min.css
     │   ├── bootstrap-reboot.min.css.map
-    │   ├── bootstrap-utilities.css
-    │   ├── bootstrap-utilities.css.map
-    │   ├── bootstrap-utilities.min.css
-    │   ├── bootstrap-utilities.min.css.map
     │   ├── bootstrap.css
     │   ├── bootstrap.css.map
     │   ├── bootstrap.min.css
@@ -99,49 +92,45 @@ bootstrap/
         ├── bootstrap.bundle.js.map
         ├── bootstrap.bundle.min.js
         ├── bootstrap.bundle.min.js.map
-        ├── bootstrap.esm.js
-        ├── bootstrap.esm.js.map
-        ├── bootstrap.esm.min.js
-        ├── bootstrap.esm.min.js.map
         ├── bootstrap.js
         ├── bootstrap.js.map
         ├── bootstrap.min.js
         └── bootstrap.min.js.map
 ```
 
-We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/).
+We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/).
 
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/twbs/bootstrap/blob/master/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new).
+Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new).
 
 
 ## Documentation
 
-Bootstrap's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://getbootstrap.com/>. The docs may also be run locally.
+Bootstrap's documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com/) and publicly hosted on GitHub Pages at <https://flo-scss.flo.center/>. The docs may also be run locally.
 
-Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/assets/js/src/search.js` file.
+Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/docs/4.4/assets/js/src/search.js` file.
 
 ### Running documentation locally
 
-1. Run `npm install` to install the Node.js dependencies, including Hugo (the site builder).
-2. Run `npm run test` (or a specific npm script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
-3. From the root `/bootstrap` directory, run `npm run docs-serve` in the command line.
-4. Open `http://localhost:9001/` in your browser, and voilà.
+1. Run through the [tooling setup](https://flo-scss.flo.center/docs/4.4/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
+2. Run `npm install` to install Node.js dependencies.
+3. Run `npm start` to compile CSS and JavaScript files, generate our docs, and watch for changes.
+4. Open `http://localhost:9001` in your browser, and voilà.
 
-Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).
+Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/).
 
 ### Documentation for previous releases
 
-You can find all our previous releases docs on <https://getbootstrap.com/docs/versions/>.
+You can find all our previous releases docs on <https://flo-scss.flo.center/docs/versions/>.
 
 [Previous releases](https://github.com/twbs/bootstrap/releases) and their documentation are also available for download.
 
 
 ## Contributing
 
-Please read through our [contributing guidelines](https://github.com/twbs/bootstrap/blob/master/.github/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+Please read through our [contributing guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
 Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/twbs/bootstrap/tree/master/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
 

@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="FloSports Engineering, Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Typeramp · Flo-SCSS</title>
+
+    <link rel="canonical" href="http://localhost:9001/docs/4.4/examples/typeramp/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.4/dist/css/bootstrap.css" rel="stylesheet">
+<style>
+@font-face {
+  font-family: Open-Sans;
+  src: local("Open Sans"), local("Open-Sans"),
+    url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+}
+
+@font-face {
+  font-family: Uni-Neue-Book;
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBook.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBook.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-book-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-book-webfont.woff") format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueBook.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Uni-Neue-Bold;
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBold.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-bold-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-bold-webfont.woff") format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Heavy";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueHeavy.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueHeavy.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-heavy-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-heavy-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueHeavy.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Uni-Neue-Light";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueLight.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-light-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts//uni-neue/woff/uni-neue-light-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Regular";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueRegular.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-regular-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-regular-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Thin";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueThin.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueThin.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-thin-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-thin-webfont.woff") format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueThin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Black";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBlack.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBlack.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-black-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-black-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueBlack.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Corporate-Bold";
+  src: local("Corporate Bold"), local("Corporate-Bold"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.eot");
+  src: local("Corporate Bold"), local("Corporate-Bold"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.woff") format("woff"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "Interstate-Mono-Bold";
+  src: url("https://use.typekit.net/af/0d5649/00000000000000003b9ae814/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/0d5649/00000000000000003b9ae814/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/0d5649/00000000000000003b9ae814/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  src: local("FontAwesome"), local("Font Awesome"), local("Font-Awesome"),
+    url("../assets/fonts/font-awesome/fontawesome-webfont.eot");
+}
+</style>
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+  <table class="table">
+    <tr>
+      <th class="headline">style name</th>
+      <th class="headline">html</th>
+      <th class="headline">typeface</th>
+      <th class="headline">weight</th>
+      <th class="headline">font-size</th>
+      <th class="headline">text-transform</th>
+      <th class="headline">line-height</th>
+      <th class="headline">letter-spacing</th>
+      <th class="headline">color</th>
+      <th class="headline">alignment</th>
+    </tr>
+    <tr>
+      <td><span>Body</span></td>
+      <td>
+        <pre><code>&lt;span&gt;Body&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Regular
+      </td>
+      <td>
+        400
+      </td>
+      <td>
+        17px
+      </td>
+      <td>None</td>
+      <td>28px</td>
+      <td>.1px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><span class="h1">Huge1</span></td>
+      <td>
+        <pre><code>&lt;h1&gt;Huge1&lt;/h1&gt;</code></pre>
+        <pre><code>&lt;span class="h1"&gt;Huge1&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Heavy
+      </td>
+      <td>
+        900
+      </td>
+      <td>
+        56px
+      </td>
+      <td>None</td>
+      <td>72px</td>
+      <td>.35px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><span class="h2">Huge2</span></td>
+      <td>
+        <pre><code>&lt;h2&gt;Huge2&lt;/h2&gt;</code></pre>
+        <pre><code>&lt;span class="h2"&gt;Heading 2&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Heavy
+      </td>
+      <td>
+        900
+      </td>
+      <td>
+        44px
+      </td>
+      <td>None</td>
+      <td>56px</td>
+      <td>.28px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><span class="h3">Huge3</span></td>
+      <td>
+        <pre><code>&lt;h3&gt;Heading 3&lt;/h3&gt;</code></pre>
+        <pre><code>&lt;span class="h3"&gt;Heading 3&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Heavy
+      </td>
+      <td>
+        900
+      </td>
+      <td>
+        36px
+      </td>
+      <td>None</td>
+      <td>48px</td>
+      <td>.23px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="display-1">Display 1</span></td>
+      <td>
+        <pre><code>&lt;span class="display-1"&gt;Display 1&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Heavy
+      </td>
+      <td>
+        900
+      </td>
+      <td>
+        32px
+      </td>
+      <td>None</td>
+      <td>40px</td>
+      <td>.2px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="display-2">Display 2</span></td>
+      <td>
+        <pre><code>&lt;span class="display-2"&gt;Display 2&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Heavy
+      </td>
+      <td>
+        900
+      </td>
+      <td>
+        24px
+      </td>
+      <td>None</td>
+      <td>32px</td>
+      <td>.2px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="display-3">Display 3</span></td>
+      <td>
+        <pre><code>&lt;span class="display-3"&gt;Display 3&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Bold
+      </td>
+      <td>
+        700
+      </td>
+      <td>
+        20px
+      </td>
+      <td>None</td>
+      <td>28px</td>
+      <td>.1px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="display-4">Display 4</span></td>
+      <td>
+        <pre><code>&lt;span class="display-4"&gt;Display 4&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Heavy
+      </td>
+      <td>
+        900
+      </td>
+      <td>
+        18px
+      </td>
+      <td>None</td>
+      <td>28px</td>
+      <td>.1px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="text-data">Sport Data Score</span></td>
+      <td>
+        <pre><code>&lt;span class="text-data"&gt;Sport Data Score&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Heavy
+      </td>
+      <td>
+        900
+      </td>
+      <td>
+        16px
+      </td>
+      <td>None</td>
+      <td>24px</td>
+      <td>0px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="headline">headline</span></td>
+      <td>
+        <pre><code>&lt;span class="headline"&gt;headline&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue
+      </td>
+      <td>
+        400
+      </td>
+      <td>
+        16px
+      </td>
+      <td>none</td>
+      <td>24px</td>
+      <td>0px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="subhead">subhead</span></td>
+      <td>
+        <pre><code>&lt;span class="subhead"&gt;subhead&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Regular
+      </td>
+      <td>
+        400
+      </td>
+      <td>
+        14px
+      </td>
+      <td>none</td>
+      <td>20px</td>
+      <td>.1px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="footnote">footnote</span></td>
+      <td>
+        <pre><code>&lt;span class="footnote"&gt;footnote&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Regular
+      </td>
+      <td>
+        400
+      </td>
+      <td>
+        13px
+      </td>
+      <td>none</td>
+      <td>20px</td>
+      <td>.2px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="caption">caption</span></td>
+      <td>
+        <pre><code>&lt;span class="caption"&gt;caption&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Regular
+      </td>
+      <td>
+        400
+      </td>
+      <td>
+        12px
+      </td>
+      <td>none</td>
+      <td>20px</td>
+      <td>.1px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="overtext">overtext</span></td>
+      <td>
+        <pre><code>&lt;span class="overtext"&gt;overtext&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Regular
+      </td>
+      <td>
+        400
+      </td>
+      <td>
+        12px
+      </td>
+      <td>uppercase</td>
+      <td>20px</td>
+      <td>1px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><pre>mono</pre></td>
+      <td>
+        <pre><code>&lt;pre&gt;mono&lt;/pre&gt;</code></pre>
+      </td>
+      <td>
+        InterstateMono
+      </td>
+      <td>
+        400
+      </td>
+      <td>
+        13px
+      </td>
+      <td>None</td>
+      <td>18px</td>
+      <td>.1px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><a href="#">link</a></td>
+      <td>
+        <pre><code>&lt;a href="#"&gt;link&lt;/a&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Regular
+      </td>
+      <td>
+        400
+      </td>
+      <td>
+        13px
+      </td>
+      <td>None</td>
+      <td>16px</td>
+      <td>.2px</td>
+      <td><code>$primary-color</code></td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="bold">bold</span></td>
+      <td>
+        <pre><code>&lt;span class="bold"&gt;bold&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Bold
+      </td>
+      <td>700</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="heavy">heavy</span></td>
+      <td>
+        <pre><code>&lt;span class="heavy"&gt;bold&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Heavy
+      </td>
+      <td>900</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><p class="small">small</p></td>
+      <td>
+        <pre><code>&lt;small&gt;Paragraph (small)&lt;/small&gt;</code></pre>
+        <pre><code>&lt;span class="small"&gt;Paragraph (small)&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        -
+      </td>
+      <td>
+        400
+      </td>
+      <td>80%</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><p>Paragraph</p></td>
+      <td>
+        <pre><code>&lt;p&gt;Paragraph&lt;/p&gt;</code></pre>
+        <pre><code>&lt;span&gt;Paragraph&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neu Regular
+      </td>
+      <td>
+        400
+      </td>
+      <td>
+        15px
+      </td>
+      <td>None</td>
+      <td>22px</td>
+      <td>.15px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="subtitle-1">subtitle-1</span></td>
+      <td>
+        <pre><code>&lt;span class="subtitle-1"&gt;subtitle-1&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Regular
+      </td>
+      <td>
+        400
+      </td>
+      <td>
+        12px
+      </td>
+      <td>uppercase</td>
+      <td>15px</td>
+      <td>.03px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="subtitle-2">subtitle-2</span></td>
+      <td>
+        <pre><code>&lt;span class="subtitle-2"&gt;subtitle-2&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Regular
+      </td>
+      <td>
+        400
+      </td>
+      <td>
+        11px
+      </td>
+      <td>None</td>
+      <td>14px</td>
+      <td>.75px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><button class="btn">button</button></td>
+      <td>
+        <pre><code>&lt;button class="btn"&gt;button&lt;/button&gt;</code></pre>
+        <pre><code>&lt;a class="btn"&gt;button&lt;/a&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Heavy
+      </td>
+      <td>
+        900
+      </td>
+      <td>
+        12px
+      </td>
+      <td>uppercase</td>
+      <td>15px</td>
+      <td>.75px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><span class="status">status</span></td>
+      <td>
+        <pre><code>&lt;span class="status"&gt;status&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Bold
+      </td>
+      <td>
+        700
+      </td>
+      <td>
+        11px
+      </td>
+      <td>uppercase</td>
+      <td>15px</td>
+      <td>.8px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><time datetime="pt1h">date/time</time></td>
+      <td>
+        <pre><code>&lt;time datetime="pt1h"&gt;date/time&lt;/time&gt;</code></pre>
+      </td>
+      <td>
+        Uni Neue Regular
+      </td>
+      <td>
+        400
+      </td>
+      <td>
+        11px
+      </td>
+      <td>uppercase</td>
+      <td>15px</td>
+      <td>.8px</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><h4>Heading 4</h4></td>
+      <td>
+        <pre><code>&lt;h4&gt;Heading 4&lt;/h4&gt;</code></pre>
+        <pre><code>&lt;span class="h4"&gt;Heading 4&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        <pre><code>$font-family-base</code></pre>
+      </td>
+      <td>
+        <pre><code>$font-weight-bold</code></pre>
+      </td>
+      <td>
+        <pre><code>$font-size-base</code></pre>
+      </td>
+      <td>None</td>
+      <td>1.2</td>
+      <td>.007rem</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><h5>Heading 5</h5></td>
+      <td>
+        <pre><code>&lt;h5&gt;Heading 5&lt;/h5&gt;</code></pre>
+        <pre><code>&lt;span class="h5"&gt;Heading 5&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        <pre><code>$font-family-base</code></pre>
+      </td>
+      <td>
+        <pre><code>$font-weight-bold</code></pre>
+      </td>
+      <td>
+        <pre><code>$font-size-base * .875</code></pre>
+      </td>
+      <td>None</td>
+      <td>1.2</td>
+      <td>.007rem</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td><h6>Heading 6</h6></td>
+      <td>
+        <pre><code>&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+        <pre><code>&lt;span class="h6"&gt;Heading 6&lt;/span&gt;</code></pre>
+      </td>
+      <td>
+        <pre><code>$font-family-base</code></pre>
+      </td>
+      <td>
+        <pre><code>$font-weight-bold</code></pre>
+      </td>
+      <td>
+        <pre><code>$font-size-base * .8125</code></pre>
+      </td>
+      <td>None</td>
+      <td>1.2</td>
+      <td>.007rem</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </table>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.js"></script></body>
+</html>
