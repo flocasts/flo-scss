@@ -3,8 +3,6 @@
 /site/.jekyll-metadata
 /site/docs/**/dist/
 /site/docs/**/assets/css/
-**/*.min.*
-**/*.map
 # Hugo folders
 /resources/
 
