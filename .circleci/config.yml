@@ -7,10 +7,7 @@ jobs:
   build:
     branches:
       only:
-        - v4-dev
-        - circleci
-        - typography
-        - docs
+        - master
     docker:
       # specify the version you desire here
       - image: circleci/ruby:2.6-buster-node  # language image
