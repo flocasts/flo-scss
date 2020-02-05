@@ -5,7 +5,6 @@
 /site/docs/**/assets/css/
 # Hugo folders
 /resources/
-/docs/CNAME
 
 # Ignore ruby/bundler files
 /.bundle/
