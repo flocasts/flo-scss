@@ -123,6 +123,16 @@ Change a selection to our monospace font stack with `.text-monospace`.
 <p class="text-700">This is in Gray 700</p>
 <p class="text-800">This is in Gray 800</p>
 <p class="text-900">This is in Gray 900</p>
+
+<p class="bg-black text-100">This is in Gray 100</p>
+<p class="bg-black text-200">This is in Gray 200</p>
+<p class="bg-black text-300">This is in Gray 300</p>
+<p class="bg-black text-400">This is in Gray 400</p>
+<p class="bg-black text-500">This is in Gray 500</p>
+<p class="bg-black text-600">This is in Gray 600</p>
+<p class="bg-black text-700">This is in Gray 700</p>
+<p class="bg-black text-800">This is in Gray 800</p>
+<p class="bg-black text-900">This is in Gray 900</p>
 {% endcapture %}
 {% include example.html content=example %}
 
