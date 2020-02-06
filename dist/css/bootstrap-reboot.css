@@ -32,7 +32,7 @@ body {
   color: #0c0c0c;
   text-align: left;
   letter-spacing: 0.00588rem;
-  background-color: #fff;
+  background-color: #000;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -47,7 +47,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.470588rem;
 }
 
 p {
