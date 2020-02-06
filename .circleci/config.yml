@@ -22,7 +22,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "bf:16:25:b1:2a:ff:dc:ee:ec:53:b4:33:95:86:c5:23"
+            - "5b:58:a2:6e:11:ed:10:15:40:e5:5e:cc:cd:17:13:5a"
 
       - checkout
 
@@ -43,7 +43,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # copy build artifacts to v4-dist and docs to gh-pages
-      - run: git config --global user.email "engineering@flosports.tv"
+      - run: git config --global user.email "dev@flosports.tv"
       - run: git config --global user.name "FloSports Engineering"
       - run: cd .. && cp -rf repo bs-docs
       - run: cd ../bs-docs && git checkout . && git checkout gh-pages
