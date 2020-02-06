@@ -8148,6 +8148,10 @@ button.bg-900:focus {
   background-color: #fff !important;
 }
 
+.bg-black {
+  background-color: #000 !important;
+}
+
 .bg-transparent {
   background-color: transparent !important;
 }

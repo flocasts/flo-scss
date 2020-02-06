@@ -15,7 +15,7 @@
 <link rel="canonical" href="https://flo-scss.flo.center/docs/4.4/utilities/text/">
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-D9vapeffi+0p+YVUwZFpQfi9NY/neC36KIo6OUo3MHID6R9TPLkuSeDEBc4lL0Ab" crossorigin="anonymous">
+<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-VwbuXSke9d2NmXbjpQo8RoGO2l9U6UJreQ36bv5EhukgR7byBPTTmzSV20GJPcrY" crossorigin="anonymous">
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
@@ -774,52 +774,56 @@
 
 <div class="bd-example">
 
-<div class="col-6">
-<p class="text-100">This is in Gray 100</p>
-<p class="text-200">This is in Gray 200</p>
-<p class="text-300">This is in Gray 300</p>
-<p class="text-400">This is in Gray 400</p>
-<p class="text-500">This is in Gray 500</p>
-<p class="text-600">This is in Gray 600</p>
-<p class="text-700">This is in Gray 700</p>
-<p class="text-800">This is in Gray 800</p>
-<p class="text-900">This is in Gray 900</p>
-</div>
+<div class="row">
+  <div class="col-6">
+    <p class="text-100">This is in Gray 100</p>
+    <p class="text-200">This is in Gray 200</p>
+    <p class="text-300">This is in Gray 300</p>
+    <p class="text-400">This is in Gray 400</p>
+    <p class="text-500">This is in Gray 500</p>
+    <p class="text-600">This is in Gray 600</p>
+    <p class="text-700">This is in Gray 700</p>
+    <p class="text-800">This is in Gray 800</p>
+    <p class="text-900">This is in Gray 900</p>
+  </div>
 
-<div class="col-6">
-<p class="bg-black text-100">This is in Gray 100</p>
-<p class="bg-black text-200">This is in Gray 200</p>
-<p class="bg-black text-300">This is in Gray 300</p>
-<p class="bg-black text-400">This is in Gray 400</p>
-<p class="bg-black text-500">This is in Gray 500</p>
-<p class="bg-black text-600">This is in Gray 600</p>
-<p class="bg-black text-700">This is in Gray 700</p>
-<p class="bg-black text-800">This is in Gray 800</p>
-<p class="bg-black text-900">This is in Gray 900</p>
+  <div class="col-6">
+    <p class="bg-black text-100">This is in Gray 100</p>
+    <p class="bg-black text-200">This is in Gray 200</p>
+    <p class="bg-black text-300">This is in Gray 300</p>
+    <p class="bg-black text-400">This is in Gray 400</p>
+    <p class="bg-black text-500">This is in Gray 500</p>
+    <p class="bg-black text-600">This is in Gray 600</p>
+    <p class="bg-black text-700">This is in Gray 700</p>
+    <p class="bg-black text-800">This is in Gray 800</p>
+    <p class="bg-black text-900">This is in Gray 900</p>
+  </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-100"</span><span class="nt">&gt;</span>This is in Gray 100<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-200"</span><span class="nt">&gt;</span>This is in Gray 200<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-300"</span><span class="nt">&gt;</span>This is in Gray 300<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-400"</span><span class="nt">&gt;</span>This is in Gray 400<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-500"</span><span class="nt">&gt;</span>This is in Gray 500<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-600"</span><span class="nt">&gt;</span>This is in Gray 600<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-700"</span><span class="nt">&gt;</span>This is in Gray 700<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-800"</span><span class="nt">&gt;</span>This is in Gray 800<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-900"</span><span class="nt">&gt;</span>This is in Gray 900<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-100"</span><span class="nt">&gt;</span>This is in Gray 100<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-200"</span><span class="nt">&gt;</span>This is in Gray 200<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-300"</span><span class="nt">&gt;</span>This is in Gray 300<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-400"</span><span class="nt">&gt;</span>This is in Gray 400<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-500"</span><span class="nt">&gt;</span>This is in Gray 500<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-600"</span><span class="nt">&gt;</span>This is in Gray 600<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-700"</span><span class="nt">&gt;</span>This is in Gray 700<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-800"</span><span class="nt">&gt;</span>This is in Gray 800<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-900"</span><span class="nt">&gt;</span>This is in Gray 900<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-100"</span><span class="nt">&gt;</span>This is in Gray 100<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-200"</span><span class="nt">&gt;</span>This is in Gray 200<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-300"</span><span class="nt">&gt;</span>This is in Gray 300<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-400"</span><span class="nt">&gt;</span>This is in Gray 400<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-500"</span><span class="nt">&gt;</span>This is in Gray 500<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-600"</span><span class="nt">&gt;</span>This is in Gray 600<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-700"</span><span class="nt">&gt;</span>This is in Gray 700<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-800"</span><span class="nt">&gt;</span>This is in Gray 800<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-900"</span><span class="nt">&gt;</span>This is in Gray 900<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-100"</span><span class="nt">&gt;</span>This is in Gray 100<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-200"</span><span class="nt">&gt;</span>This is in Gray 200<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-300"</span><span class="nt">&gt;</span>This is in Gray 300<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-400"</span><span class="nt">&gt;</span>This is in Gray 400<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-500"</span><span class="nt">&gt;</span>This is in Gray 500<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-600"</span><span class="nt">&gt;</span>This is in Gray 600<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-700"</span><span class="nt">&gt;</span>This is in Gray 700<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-800"</span><span class="nt">&gt;</span>This is in Gray 800<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-black text-900"</span><span class="nt">&gt;</span>This is in Gray 900<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="reset-color">Reset color</h2>

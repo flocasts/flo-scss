@@ -51,7 +51,7 @@ download:
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-  css_hash:         "sha384-D9vapeffi+0p+YVUwZFpQfi9NY/neC36KIo6OUo3MHID6R9TPLkuSeDEBc4lL0Ab"
+  css_hash:         "sha384-VwbuXSke9d2NmXbjpQo8RoGO2l9U6UJreQ36bv5EhukgR7byBPTTmzSV20GJPcrY"
   js:               "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
   js_hash:          "sha384-Pt/+In+rEVnDXMawG+jMNBk8U5JskkrYVU3txyqOuJyk1hcq2c/9vXF5Nm6tb39v"
   js_bundle:        "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
