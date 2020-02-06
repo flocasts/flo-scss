@@ -11,6 +11,7 @@ toc: true
 Easily realign text to components with text alignment classes.
 
 {% capture example %}
+
 <p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
 {% endcapture %}
 {% include example.html content=example %}
@@ -18,6 +19,7 @@ Easily realign text to components with text alignment classes.
 For left, right, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
 
 {% capture example %}
+
 <p class="text-left">Left aligned text on all viewport sizes.</p>
 <p class="text-center">Center aligned text on all viewport sizes.</p>
 <p class="text-right">Right aligned text on all viewport sizes.</p>
@@ -34,6 +36,7 @@ For left, right, and center alignment, responsive classes are available that use
 Wrap text with a `.text-wrap` class.
 
 {% capture example %}
+
 <div class="badge badge-primary text-wrap" style="width: 6rem;">
   This text should wrap.
 </div>
@@ -43,6 +46,7 @@ Wrap text with a `.text-wrap` class.
 Prevent text from wrapping with a `.text-nowrap` class.
 
 {% capture example %}
+
 <div class="text-nowrap bd-highlight" style="width: 8rem;">
   This text should overflow the parent.
 </div>
@@ -52,6 +56,7 @@ Prevent text from wrapping with a `.text-nowrap` class.
 For longer content, you can add a `.text-truncate` class to truncate the text with an ellipsis. **Requires `display: inline-block` or `display: block`.**
 
 {% capture example %}
+
 <!-- Block level -->
 <div class="row">
   <div class="col-2 text-truncate">
@@ -71,6 +76,7 @@ For longer content, you can add a `.text-truncate` class to truncate the text wi
 Prevent long strings of text from breaking your components' layout by using `.text-break` to set `overflow-wrap: break-word` (and `word-break: break-word` for IE & Edge compatibility).
 
 {% capture example %}
+
 <p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
 {% endcapture %}
 {% include example.html content=example %}
@@ -80,6 +86,7 @@ Prevent long strings of text from breaking your components' layout by using `.te
 Transform text in components with text capitalization classes.
 
 {% capture example %}
+
 <p class="text-lowercase">Lowercased text.</p>
 <p class="text-uppercase">Uppercased text.</p>
 <p class="text-capitalize">CapiTaliZed text.</p>
@@ -93,6 +100,7 @@ Note how `.text-capitalize` only changes the first letter of each word, leaving 
 Quickly change the weight (boldness) of text or italicize text.
 
 {% capture example %}
+
 <p class="font-weight-bold">Bold text.</p>
 <p class="font-weight-bolder">Bolder weight text (relative to the parent element).</p>
 <p class="font-weight-normal">Normal weight text.</p>
@@ -107,6 +115,7 @@ Quickly change the weight (boldness) of text or italicize text.
 Change a selection to our monospace font stack with `.text-monospace`.
 
 {% capture example %}
+
 <p class="text-monospace">This is in monospace</p>
 {% endcapture %}
 {% include example.html content=example %}
@@ -114,6 +123,8 @@ Change a selection to our monospace font stack with `.text-monospace`.
 ## Grays
 
 {% capture example %}
+
+<div class="col-6">
 <p class="text-100">This is in Gray 100</p>
 <p class="text-200">This is in Gray 200</p>
 <p class="text-300">This is in Gray 300</p>
@@ -123,7 +134,9 @@ Change a selection to our monospace font stack with `.text-monospace`.
 <p class="text-700">This is in Gray 700</p>
 <p class="text-800">This is in Gray 800</p>
 <p class="text-900">This is in Gray 900</p>
+</div>
 
+<div class="col-6">
 <p class="bg-black text-100">This is in Gray 100</p>
 <p class="bg-black text-200">This is in Gray 200</p>
 <p class="bg-black text-300">This is in Gray 300</p>
@@ -133,6 +146,7 @@ Change a selection to our monospace font stack with `.text-monospace`.
 <p class="bg-black text-700">This is in Gray 700</p>
 <p class="bg-black text-800">This is in Gray 800</p>
 <p class="bg-black text-900">This is in Gray 900</p>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -141,6 +155,7 @@ Change a selection to our monospace font stack with `.text-monospace`.
 Reset a text or link's color with `.text-reset`, so that it inherits the color from its parent.
 
 {% capture example %}
+
 <p class="text-muted">
   Muted text with a <a href="#" class="text-reset">reset link</a>.
 </p>
