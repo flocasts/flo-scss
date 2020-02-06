@@ -15,7 +15,7 @@
 <link rel="canonical" href="https://flo-scss.flo.center/docs/4.4/content/typography/">
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Yc11nk7M5PRT5zzCMmb4UNrE8WQJwNNPfGf2WaxckxQ706pWTSjDDrdcKh/smUh2" crossorigin="anonymous">
+<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-D9vapeffi+0p+YVUwZFpQfi9NY/neC36KIo6OUo3MHID6R9TPLkuSeDEBc4lL0Ab" crossorigin="anonymous">
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
@@ -613,13 +613,13 @@
           <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
             <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#global-settings">Global settings</a></li>
-<li class="toc-entry toc-h2"><a href="#headings">Headings</a>
+<li class="toc-entry toc-h2"><a href="#headings-huge">Headings (Huge)</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#customizing-headings">Customizing headings</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#display-headings">Display headings</a></li>
-<li class="toc-entry toc-h2"><a href="#lead">Lead</a></li>
+<li class="toc-entry toc-h2"><a href="#other-typefaces">Other Typefaces</a></li>
 <li class="toc-entry toc-h2"><a href="#inline-text-elements">Inline text elements</a></li>
 <li class="toc-entry toc-h2"><a href="#text-utilities">Text utilities</a></li>
 <li class="toc-entry toc-h2"><a href="#dates-and-times">Dates and Times</a></li>
@@ -659,7 +659,7 @@
 
 <p>These styles can be found within <code class="highlighter-rouge">_reboot.scss</code>, and the global variables are defined in <code class="highlighter-rouge">_variables.scss</code>. Make sure to set <code class="highlighter-rouge">$font-size-base</code> in <code class="highlighter-rouge">rem</code>.</p>
 
-<h2 id="headings">Headings</h2>
+<h2 id="headings-huge">Headings (Huge)</h2>
 
 <p>All HTML headings, <code class="highlighter-rouge">&lt;h1&gt;</code> through <code class="highlighter-rouge">&lt;h6&gt;</code>, are available.</p>
 
@@ -726,6 +726,7 @@
 <p><code class="highlighter-rouge">.h1</code> through <code class="highlighter-rouge">.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
 
 <div class="bd-example">
+
 <p class="h1">h1. Bootstrap heading</p>
 <p class="h2">h2. Bootstrap heading</p>
 <p class="h3">h3. Bootstrap heading</p>
@@ -745,6 +746,7 @@
 <p>Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.</p>
 
 <div class="bd-example">
+
 <h3>
   Fancy display heading
   <small class="text-muted">With faded secondary text</small>
@@ -757,7 +759,11 @@
 
 <h2 id="display-headings">Display headings</h2>
 
-<p>Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a <strong>display heading</strong>—a larger, slightly more opinionated heading style. Keep in mind these headings are not responsive by default, but it’s possible to enable <a href="#responsive-font-sizes">responsive font sizes</a>.</p>
+<p>Traditional heading elements are designed to work best in the meat of your page
+content. When you need a heading to stand out, consider using a <strong>display
+heading</strong>—a smaller, slightly more opinionated heading style. Keep in mind
+these headings are responsive by default, but it’s possible to disable
+<a href="#responsive-font-sizes">responsive font sizes</a>.</p>
 
 <div class="bd-example bd-example-type">
   <table class="table">
@@ -783,24 +789,56 @@
 <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-3"</span><span class="nt">&gt;</span>Display 3<span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-4"</span><span class="nt">&gt;</span>Display 4<span class="nt">&lt;/h1&gt;</span></code></pre></figure>
 
-<h2 id="lead">Lead</h2>
-
-<p>Make a paragraph stand out by adding <code class="highlighter-rouge">.lead</code>.</p>
+<h2 id="other-typefaces">Other Typefaces</h2>
 
 <div class="bd-example">
-<p class="lead">
-  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-</p>
+
+<div class="text-data">Sport Data Score</div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>
-  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-data"</span><span class="nt">&gt;</span>Sport Data Score<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-example">
+
+<div class="headline">Headline</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"headline"</span><span class="nt">&gt;</span>Headline<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-example">
+
+<div class="subhead">Subhead</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"subhead"</span><span class="nt">&gt;</span>Subhead<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-example">
+
+<div class="footnote">Footnote</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footnote"</span><span class="nt">&gt;</span>Footnote<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-example">
+
+<div class="caption">Caption</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>Caption<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-example">
+
+<div class="overtext">Overtext</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"overtext"</span><span class="nt">&gt;</span>Overtext<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-example">
+
+<div class="mono">Mono</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mono"</span><span class="nt">&gt;</span>Mono<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="inline-text-elements">Inline text elements</h2>
 
 <p>Styling for common inline HTML5 elements.</p>
 
 <div class="bd-example">
+
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
 <p><del>This line of text is meant to be treated as deleted text.</del></p>
 <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
@@ -840,6 +878,7 @@
 </ul>
 
 <div class="bd-example">
+
 <p>The event starts at <time datetime="2018-07-07T20:00:00">20:00</time>.</p>
 <p>The event took place on <time datetime="2001-05-15T19:00">May 15</time>.</p>
 </div>
@@ -856,6 +895,7 @@
 <p>Add <code class="highlighter-rouge">.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
 
 <div class="bd-example">
+
 <p><abbr title="attribute">attr</abbr></p>
 <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
 </div>
@@ -867,6 +907,7 @@
 <p>For quoting blocks of content from another source within your document. Wrap <code class="highlighter-rouge">&lt;blockquote class="blockquote"&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.</p>
 
 <div class="bd-example">
+
 <blockquote class="blockquote">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 </blockquote>
@@ -880,6 +921,7 @@
 <p>Add a <code class="highlighter-rouge">&lt;footer class="blockquote-footer"&gt;</code> for identifying the source. Wrap the name of the source work in <code class="highlighter-rouge">&lt;cite&gt;</code>.</p>
 
 <div class="bd-example">
+
 <blockquote class="blockquote">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -895,6 +937,7 @@
 <p>Use text utilities as needed to change the alignment of your blockquote.</p>
 
 <div class="bd-example">
+
 <blockquote class="blockquote text-center">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -906,6 +949,7 @@
 <span class="nt">&lt;/blockquote&gt;</span></code></pre></figure>
 
 <div class="bd-example">
+
 <blockquote class="blockquote text-right">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -923,6 +967,7 @@
 <p>Remove the default <code class="highlighter-rouge">list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
 
 <div class="bd-example">
+
 <ul class="list-unstyled">
   <li>Lorem ipsum dolor sit amet</li>
   <li>Consectetur adipiscing elit</li>
@@ -964,6 +1009,7 @@
 <p>Remove a list’s bullets and apply some light <code class="highlighter-rouge">margin</code> with a combination of two classes, <code class="highlighter-rouge">.list-inline</code> and <code class="highlighter-rouge">.list-inline-item</code>.</p>
 
 <div class="bd-example">
+
 <ul class="list-inline">
   <li class="list-inline-item">Lorem ipsum</li>
   <li class="list-inline-item">Phasellus iaculis</li>
@@ -981,6 +1027,7 @@
 <p>Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can optionally add a <code class="highlighter-rouge">.text-truncate</code> class to truncate the text with an ellipsis.</p>
 
 <div class="bd-example">
+
 <dl class="row">
   <dt class="col-sm-3">Description lists</dt>
   <dd class="col-sm-9">A description list is perfect for defining terms.</dd>

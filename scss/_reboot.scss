@@ -27,7 +27,7 @@ html {
   line-height: 1.15; // 3
   -webkit-text-size-adjust: 100%; // 4
   -webkit-tap-highlight-color: rgba($black, 0); // 5
-  font-size: 17px;
+  font-size: calc(100% * 17 / 16);
 }
 
 // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
