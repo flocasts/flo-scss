@@ -113,7 +113,18 @@ Change a selection to our monospace font stack with `.text-monospace`.
 
 ## Grays
 
-`.text-100` - `.text-900`
+{% capture example %}
+<p class="text-100">This is in Gray 100</p>
+<p class="text-200">This is in Gray 200</p>
+<p class="text-300">This is in Gray 300</p>
+<p class="text-400">This is in Gray 400</p>
+<p class="text-500">This is in Gray 500</p>
+<p class="text-600">This is in Gray 600</p>
+<p class="text-700">This is in Gray 700</p>
+<p class="text-800">This is in Gray 800</p>
+<p class="text-900">This is in Gray 900</p>
+{% endcapture %}
+{% include example.html content=example %}
 
 ## Reset color
 
