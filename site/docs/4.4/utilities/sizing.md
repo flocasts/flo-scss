@@ -8,11 +8,23 @@ toc: true
 
 ## Relative to the parent
 
-Width and height utilities are generated from the `$sizes` Sass map in `_variables.scss`. Includes support for `25%`, `50%`, `75%`, `100%`, and `auto` by default. Modify those values as you need to generate different utilities here.
+Width and height utilities are generated from the `$sizes` Sass map in `_variables.scss`. Includes support for `10%`, `25%`, `33%`, `50%`, `66%`, `75%`, `100%`, and `auto` by default. Modify those values as you need to generate different utilities here.
+
+    10: 10%,
+    25: 25%,
+    33: 33%,
+    50: 50%,
+    66: 66%,
+    75: 75%,
+    100: 100%,
+    auto: auto
 
 {% capture example %}
+<div class="w-10 p-3" style="background-color: #eee;">Width 10%</div>
 <div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
+<div class="w-33 p-3" style="background-color: #eee;">Width 33%</div>
 <div class="w-50 p-3" style="background-color: #eee;">Width 50%</div>
+<div class="w-66 p-3" style="background-color: #eee;">Width 66%</div>
 <div class="w-75 p-3" style="background-color: #eee;">Width 75%</div>
 <div class="w-100 p-3" style="background-color: #eee;">Width 100%</div>
 <div class="w-auto p-3" style="background-color: #eee;">Width auto</div>
@@ -21,8 +33,11 @@ Width and height utilities are generated from the `$sizes` Sass map in `_variabl
 
 {% capture example %}
 <div style="height: 100px; background-color: rgba(255,0,0,0.1);">
+  <div class="h-10 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 10%</div>
   <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 25%</div>
+  <div class="h-33 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 33%</div>
   <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 50%</div>
+  <div class="h-66 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 66%</div>
   <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 75%</div>
   <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 100%</div>
   <div class="h-auto d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height auto</div>
