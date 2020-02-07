@@ -43,7 +43,7 @@ Several quick start options are available:
 
 - [Download the latest release.](https://github.com/flocasts/flo-scss/archive/vflo-scss.zip)
 - Clone the repo: `git clone https://github.com/flocasts/flo-scss.git`
-- Install with [npm](https://www.npmjs.com/): `npm install flocasts/flo-scss#v4-dev`
+- Install with [npm](https://www.npmjs.com/): `npm install flocasts/flo-scss`
 
 Read the [Getting started page](https://flo-scss.flo.center/docs/4.4/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
