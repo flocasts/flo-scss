@@ -9611,6 +9611,23 @@ input[type="checkbox"].click-toggle-input:checked .click-toggle-once {
   top: 100%;
 }
 
+.center-x {
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.center-y {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.center-x.center-y {
+  -webkit-transform: translateY(-50%) translateX(50%);
+  transform: translateY(-50%) translateX(50%);
+}
+
 .pointer-events-all {
   pointer-events: all;
 }

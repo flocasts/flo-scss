@@ -56,3 +56,17 @@
 .below {
   top: 100%;
 }
+
+.center-x {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.center-y {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-x.center-y {
+  transform: translateY(-50%) translateX(50%);
+}

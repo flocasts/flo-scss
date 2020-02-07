@@ -15,7 +15,7 @@
 <link rel="canonical" href="https://flo-scss.flo.center/docs/4.4/utilities/position/">
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-VwbuXSke9d2NmXbjpQo8RoGO2l9U6UJreQ36bv5EhukgR7byBPTTmzSV20GJPcrY" crossorigin="anonymous">
+<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-lDwZTVrFPQeKpl7z2yFTL49Kx9nll9w3NWBPfHciyhCYP/Jz05BlwOfLAnihUNQW" crossorigin="anonymous">
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
@@ -637,7 +637,62 @@
 
 <h2 id="positions">Positions</h2>
 
-<p>Position elements with <code class="highlighter-rouge">.top</code>, <code class="highlighter-rouge">.right</code>, <code class="highlighter-rouge">.bottom</code>, <code class="highlighter-rouge">.left</code>, <code class="highlighter-rouge">.above</code>, and <code class="highlighter-rouge">.below</code></p>
+<p>Position elements with <code class="highlighter-rouge">.center-x</code>, <code class="highlighter-rouge">.center-y</code>, <code class="highlighter-rouge">.top</code>, <code class="highlighter-rouge">.right</code>, <code class="highlighter-rouge">.bottom</code>, <code class="highlighter-rouge">.left</code>, <code class="highlighter-rouge">.above</code>, and <code class="highlighter-rouge">.below</code></p>
+
+<div class="bd-example">
+
+<div class="position-relative border m-5" style="height:200px;width:200px;">
+  <div class="position-absolute center-x center-y bg-primary">Center-X Center-Y</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-relative border m-5"</span> <span class="na">style=</span><span class="s">"height:200px;width:200px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-absolute center-x center-y bg-primary"</span><span class="nt">&gt;</span>Center-X Center-Y<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-example">
+<div class="position-relative border m-5" style="height:200px;width:200px;">
+  <div class="position-absolute right center-y bg-primary">Right Center-y</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-relative border m-5"</span> <span class="na">style=</span><span class="s">"height:200px;width:200px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-absolute right center-y bg-primary"</span><span class="nt">&gt;</span>Right Center-y<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-example">
+<div class="position-relative border m-5" style="height:200px;width:200px;">
+  <div class="position-absolute above center-x bg-primary">Above Center-x</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-relative border m-5"</span> <span class="na">style=</span><span class="s">"height:200px;width:200px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-absolute above center-x bg-primary"</span><span class="nt">&gt;</span>Above Center-x<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-example">
+<div class="position-relative border m-5" style="height:200px;width:200px;">
+  <div class="position-absolute below bg-primary">Below</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-relative border m-5"</span> <span class="na">style=</span><span class="s">"height:200px;width:200px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-absolute below bg-primary"</span><span class="nt">&gt;</span>Below<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-example">
+<div class="position-relative border m-5" style="height:200px;width:200px;">
+  <div class="position-absolute bottom left bg-primary">Bottom Left</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-relative border m-5"</span> <span class="na">style=</span><span class="s">"height:200px;width:200px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-absolute bottom left bg-primary"</span><span class="nt">&gt;</span>Bottom Left<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-example">
+<div class="position-relative border m-5" style="height:200px;width:200px;">
+  <div class="position-absolute top right bg-primary">top Right</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-relative border m-5"</span> <span class="na">style=</span><span class="s">"height:200px;width:200px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-absolute top right bg-primary"</span><span class="nt">&gt;</span>top Right<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="fixed-top">Fixed top</h2>
 
