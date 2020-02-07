@@ -611,7 +611,7 @@ $input-btn-padding-x: 0.75rem !default;
 $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base * 0.75 !default;
 $input-btn-line-height: 1.25 !default;
-$input-btn-letter-spacing: 0.05rem !default;
+$input-btn-letter-spacing: normal !default;
 $input-btn-text-transform: capitalize !default;
 
 $input-btn-focus-width: 0.2rem !default;
