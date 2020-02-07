@@ -612,7 +612,7 @@ $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base * 0.75 !default;
 $input-btn-line-height: 1.25 !default;
 $input-btn-letter-spacing: 0.05rem !default;
-$input-btn-text-transform: uppercase !default;
+$input-btn-text-transform: capitalize !default;
 
 $input-btn-focus-width: 0.2rem !default;
 $input-btn-focus-color: rgba($component-active-bg, 0.25) !default;
