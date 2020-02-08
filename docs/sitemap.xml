@@ -217,10 +217,10 @@
 <loc>https://flo-scss.flo.center/docs/4.4/utilities/overflow/</loc>
 </url>
 <url>
-<loc>https://flo-scss.flo.center/docs/4.4/about/overview/</loc>
+<loc>https://flo-scss.flo.center/docs/4.4/layout/overview/</loc>
 </url>
 <url>
-<loc>https://flo-scss.flo.center/docs/4.4/layout/overview/</loc>
+<loc>https://flo-scss.flo.center/docs/4.4/about/overview/</loc>
 </url>
 <url>
 <loc>https://flo-scss.flo.center/docs/4.4/components/pagination/</loc>
@@ -248,6 +248,9 @@
 </url>
 <url>
 <loc>https://flo-scss.flo.center/docs/4.4/utilities/shadows/</loc>
+</url>
+<url>
+<loc>https://flo-scss.flo.center/docs/4.4/components/shapes/</loc>
 </url>
 <url>
 <loc>https://flo-scss.flo.center/docs/4.4/utilities/sizing/</loc>

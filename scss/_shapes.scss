@@ -1,0 +1,25 @@
+//
+// Base styles
+//
+.square {
+  position: relative;
+  width: $shape-width;
+}
+
+.circle {
+  position: relative;
+  border-radius: 50%
+}
+
+.circle:after,
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.shape-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

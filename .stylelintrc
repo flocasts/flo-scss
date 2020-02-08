@@ -3,12 +3,6 @@
   ],
   "rules": {
     "property-blacklist": [
-      "border-radius",
-      "border-top-left-radius",
-      "border-top-right-radius",
-      "border-bottom-right-radius",
-      "border-bottom-left-radius",
-      "transition"
     ],
     "function-blacklist": []
   }

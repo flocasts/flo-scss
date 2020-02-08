@@ -7871,6 +7871,29 @@ input.tab-input:checked + label.tab-label + .tab-content {
   text-align: center;
 }
 
+.square {
+  position: relative;
+  width: 25%;
+}
+
+.circle {
+  position: relative;
+  border-radius: 50%;
+}
+
+.circle:after,
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.shape-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 @-webkit-keyframes spinner-border {
   to {
     -webkit-transform: rotate(360deg);
