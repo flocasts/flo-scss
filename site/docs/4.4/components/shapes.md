@@ -19,7 +19,7 @@ Ensure responsive shapes with a `.square`, or `.circle` container and and `.posi
 
 {% capture example %}
 
-<div class="square bg-primary" role="alert">
+<div class="square bg-primary">
   <div class="shape-content">
     default 25% width
   </div>
@@ -29,7 +29,7 @@ Ensure responsive shapes with a `.square`, or `.circle` container and and `.posi
 
 {% capture example %}
 
-<div class="square bg-primary w-10" role="alert">
+<div class="square bg-primary w-10">
   <div class="shape-content">
     10% width
   </div>
@@ -39,7 +39,7 @@ Ensure responsive shapes with a `.square`, or `.circle` container and and `.posi
 
 {% capture example %}
 
-<div class="square bg-primary w-33" role="alert">
+<div class="square bg-primary w-33">
   <div class="position-absolute center-x center-y text-white">
     33% width
   </div>
@@ -47,32 +47,9 @@ Ensure responsive shapes with a `.square`, or `.circle` container and and `.posi
 {% endcapture %}
 {% include example.html content=example %}
 
-
 {% capture example %}
 
-<div class="d-flex">
-  <div class="circle bg-primary" role="alert">
-    <div class="position-absolute center-x center-y text-white">
-      Flex
-    </div>
-  </div>
-  <div class="circle bg-primary" role="alert">
-    <div class="position-absolute center-x center-y text-white">
-      Flex
-    </div>
-  </div>
-  <div class="circle bg-primary" role="alert">
-    <div class="position-absolute center-x center-y text-white">
-      Flex
-    </div>
-  </div>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-
-<div class="circle bg-primary w-33" role="alert">
+<div class="circle bg-primary w-33">
   <div class="position-absolute center-x center-y text-white">
     33% width
   </div>
