@@ -53,14 +53,6 @@ group: utilities
   <div class="col">
     {% capture example %}
 
-    <svg viewBox="0 0 5000 500" class="text-primary">
-      <use xlink:href="#logo"></use>
-    </svg>
-    {% endcapture %}
-    {% include example.html content=example %}
-
-    {% capture example %}
-
     <svg viewBox="0 0 24 24" class="text-primary w-10">
       <use xlink:href="#close"></use>
     </svg>
