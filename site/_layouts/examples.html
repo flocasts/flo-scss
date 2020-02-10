@@ -36,6 +36,7 @@
     {%- endfor %}
   </head>
   <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+    {% include icons.html %}
     {{ content }}
 
     {%- if page.include_js != false -%}

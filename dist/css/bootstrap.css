@@ -7878,6 +7878,7 @@ input.tab-input:checked + label.tab-label + .tab-content {
 
 .circle {
   position: relative;
+  width: 25%;
   border-radius: 50%;
 }
 
