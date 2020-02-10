@@ -2417,10 +2417,10 @@ textarea.form-control {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.875rem;
+  font-size: 0.8em;
   line-height: 1.5;
   color: #fff;
-  background-color: rgba(40, 167, 69, 0.9);
+  background-color: #28a745;
 }
 
 .was-validated :valid ~ .valid-feedback,
@@ -2516,10 +2516,10 @@ textarea.form-control {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.875rem;
+  font-size: 0.8em;
   line-height: 1.5;
   color: #fff;
-  background-color: rgba(255, 20, 15, 0.9);
+  background-color: #ff140f;
 }
 
 .was-validated :invalid ~ .invalid-feedback,
@@ -7421,20 +7421,20 @@ input.tab-input:checked + label.tab-label + .tab-content {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.8em;
   word-wrap: break-word;
   opacity: 0;
 }
 
 .tooltip.show {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .tooltip .arrow {
   position: absolute;
   display: block;
-  width: 0.8rem;
-  height: 0.4rem;
+  width: 1rem;
+  height: 0.5rem;
 }
 
 .tooltip .arrow::before {
@@ -7445,7 +7445,7 @@ input.tab-input:checked + label.tab-label + .tab-content {
 }
 
 .bs-tooltip-top, .bs-tooltip-auto[x-placement^="top"] {
-  padding: 0.4rem 0;
+  padding: 0.5rem 0;
 }
 
 .bs-tooltip-top .arrow, .bs-tooltip-auto[x-placement^="top"] .arrow {
@@ -7454,28 +7454,28 @@ input.tab-input:checked + label.tab-label + .tab-content {
 
 .bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
   top: 0;
-  border-width: 0.4rem 0.4rem 0;
+  border-width: 0.5rem 0.5rem 0;
   border-top-color: #000;
 }
 
 .bs-tooltip-right, .bs-tooltip-auto[x-placement^="right"] {
-  padding: 0 0.4rem;
+  padding: 0 0.5rem;
 }
 
 .bs-tooltip-right .arrow, .bs-tooltip-auto[x-placement^="right"] .arrow {
   left: 0;
-  width: 0.4rem;
-  height: 0.8rem;
+  width: 0.5rem;
+  height: 1rem;
 }
 
 .bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before {
   right: 0;
-  border-width: 0.4rem 0.4rem 0.4rem 0;
+  border-width: 0.5rem 0.5rem 0.5rem 0;
   border-right-color: #000;
 }
 
 .bs-tooltip-bottom, .bs-tooltip-auto[x-placement^="bottom"] {
-  padding: 0.4rem 0;
+  padding: 0.5rem 0;
 }
 
 .bs-tooltip-bottom .arrow, .bs-tooltip-auto[x-placement^="bottom"] .arrow {
@@ -7484,30 +7484,30 @@ input.tab-input:checked + label.tab-label + .tab-content {
 
 .bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
   bottom: 0;
-  border-width: 0 0.4rem 0.4rem;
+  border-width: 0 0.5rem 0.5rem;
   border-bottom-color: #000;
 }
 
 .bs-tooltip-left, .bs-tooltip-auto[x-placement^="left"] {
-  padding: 0 0.4rem;
+  padding: 0 0.5rem;
 }
 
 .bs-tooltip-left .arrow, .bs-tooltip-auto[x-placement^="left"] .arrow {
   right: 0;
-  width: 0.4rem;
-  height: 0.8rem;
+  width: 0.5rem;
+  height: 1rem;
 }
 
 .bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
   left: 0;
-  border-width: 0.4rem 0 0.4rem 0.4rem;
+  border-width: 0.5rem 0 0.5rem 0.5rem;
   border-left-color: #000;
 }
 
 .tooltip-inner {
   max-width: 200px;
   padding: 0.25rem 0.5rem;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   background-color: #000;
 }
