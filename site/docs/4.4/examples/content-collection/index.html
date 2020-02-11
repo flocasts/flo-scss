@@ -3,6 +3,70 @@ layout: examples
 title: Content Collection example
 ---
 
+<nav class="navbar navbar-light bg-white sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <svg viewBox="0 0 5000 500" class="text-primary w-100">
+        <use xlink:href="#hawk-flosports-logo"></use>
+      </svg>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      aria-controls="navbarsExample01"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link disabled"
+            href="#"
+            tabindex="-1"
+            aria-disabled="true"
+            >Disabled</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="dropdown01"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Dropdown</a
+          >
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-md-0">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </form>
+    </div>
+  </div>
+</nav>
+
 <div
   class="h-100 w-100 position-fixed top left bottom right"
   title="Ad Skin"
@@ -10,36 +74,36 @@ title: Content Collection example
 >
   Ad
 </div>
-<div
-  style="background:wheat;width:728px;height:90px;"
-  class="d-none d-md-block mx-auto my-5"
-  title="Ad Leaderboard"
->
-  Ad
-</div>
-<div class="jumbotron mb-0 bg-300 container-sm" title="jumbotron">
-  <div class="h1">
-    FinalX Jumbotron
-  </div>
-</div>
+<!-- <div -->
+<!--   style="background:wheat;width:728px;height:90px;" -->
+<!--   class="d-none d-md-block mx-auto my-5" -->
+<!--   title="Ad Leaderboard" -->
+<!-- > -->
+<!--   Ad -->
+<!-- </div> -->
+<div class="jumbotron mb-0 bg-300 container-fluid" title="jumbotron"></div>
 <main class="container bg-white h-100">
   <div class="row">
     <div class="col-13 col-lg-8">
       <h1
-        class="overtext text-muted d-flex justify-content-center justify-content-md-start mb-md-2 pb-md-1 pt-md-3 mt-2"
+        class="overtext d-flex justify-content-between mb-md-2 pb-md-1 pt-md-3 mt-2"
       >
-        Final X
+        Big Ten
+        <span class="text-muted">Indianapolis, IN</span>
       </h1>
       <hr class="m-0" />
-      <h2 class="h3 mb-0 mt-3 pt-1">Final X - Lincoln</h2>
-      <time class="headline d-block text-700">Sat, Mar 12, 7:00 PM CST</time>
+      <h2 class="h3 mb-0 mt-3 pt-1">Big Ten Men's Basketball Tournament</h2>
+      <time class="headline d-block text-700">Mar 11-15</time>
       <h6 class="subhead text-muted">Fueled by Rocket Mortgage</h6>
       <section class="my-3">
         <p class="text-700">
-          This is a pretty great event because Ipsum dicta maxime minus autem
-          dicta? Rem facere velit quo consequatur fugit, dolore Delectus ut
-          accusamus quas facilis itaque nam Sequi officiis labore dicta
-          aspernatur obcaecati veritatis. Natus dolores similique.
+          The 23rd Big Ten Men's Basketball Tournament will be held Consectetur
+          ut iusto alias repellendus iusto? Et hic nemo deleniti adipisci sed
+          minima Natus illo vitae itaque molestiae in Enim excepturi molestiae
+          nihil fugit necessitatibus nobis consectetur Neque velit iure
+          <label for="click-toggle-block-example" class="click-toggle-once"
+            >Read More</label
+          >
         </p>
         <input
           id="click-toggle-block-example"
@@ -53,26 +117,184 @@ title: Content Collection example
           cupiditate incidunt id odio nulla? Qui eius a nesciunt nisi ducimus!
           Atque nesciunt magnam ducimus
         </p>
-        <label
-          for="click-toggle-block-example"
-          class="text-primary click-toggle-once"
-          >Read More</label
-        >
       </section>
-      <div class="row m-0 mt-1 row-cols-1 row-cols-md-4">
-        <button class="btn btn-primary mr-md-3">
-          Primary CTA
-        </button>
-        <a class="btn btn-link mx-md-3" href="#">
-          More Events
-        </a>
-      </div>
       <section class="tabs-container">
+        <input
+          id="tab-two"
+          type="radio"
+          name="example-tabs"
+          checked="checked"
+          class="tab-input"
+        />
+        <label for="tab-two" class="tab-label">Events</label>
+        <div class="tab-content vh-100 overflow-y-auto">
+          <ol class="list-group list-group-flush">
+            <li class="list-group-item hover-target hover-bg-300">
+              <time>9 AM CST 3/11</time>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Minnesota</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Michigan</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="caption">B10 Men's Basketball</span>
+                <span class="caption">-3.5 ABC</span>
+              </div>
+            </li>
+
+            <li class="list-group-item hover-target hover-bg-300">
+              <time>9 AM CST 3/11</time>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Minnesota</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Michigan</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="caption">B10 Men's Basketball</span>
+                <span class="caption">-3.5 ABC</span>
+              </div>
+            </li>
+
+            <li class="list-group-item hover-target hover-bg-300">
+              <time>9 AM CST 3/11</time>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Minnesota</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Michigan</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="caption">B10 Men's Basketball</span>
+                <span class="caption">-3.5 ABC</span>
+              </div>
+            </li>
+
+            <li class="list-group-item hover-target hover-bg-300">
+              <time>9 AM CST 3/11</time>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Minnesota</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Michigan</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="caption">B10 Men's Basketball</span>
+                <span class="caption">-3.5 ABC</span>
+              </div>
+            </li>
+
+            <li class="list-group-item hover-target hover-bg-300">
+              <time>9 AM CST 3/11</time>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Minnesota</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Michigan</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="caption">B10 Men's Basketball</span>
+                <span class="caption">-3.5 ABC</span>
+              </div>
+            </li>
+
+            <li class="list-group-item hover-target hover-bg-300">
+              <time>9 AM CST 3/11</time>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Minnesota</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Michigan</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="caption">B10 Men's Basketball</span>
+                <span class="caption">-3.5 ABC</span>
+              </div>
+            </li>
+
+            <li class="list-group-item hover-target hover-bg-300">
+              <time>9 AM CST 3/11</time>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Minnesota</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Michigan</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="caption">B10 Men's Basketball</span>
+                <span class="caption">-3.5 ABC</span>
+              </div>
+            </li>
+
+            <li class="list-group-item hover-target hover-bg-300">
+              <time>9 AM CST 3/11</time>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Minnesota</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Michigan</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="caption">B10 Men's Basketball</span>
+                <span class="caption">-3.5 ABC</span>
+              </div>
+            </li>
+
+            <li class="list-group-item hover-target hover-bg-300">
+              <time>9 AM CST 3/11</time>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Minnesota</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Michigan</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="caption">B10 Men's Basketball</span>
+                <span class="caption">-3.5 ABC</span>
+              </div>
+            </li>
+
+            <li class="list-group-item hover-target hover-bg-300">
+              <time>9 AM CST 3/11</time>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Minnesota</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="display-4 hover-text-primary">Michigan</span>
+                <span>0-0</span>
+              </div>
+              <div class="d-flex flex-row justify-content-between">
+                <span class="caption">B10 Men's Basketball</span>
+                <span class="caption">-3.5 ABC</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+
         <input
           id="tab-one"
           type="radio"
           name="example-tabs"
-          checked="checked"
           class="tab-input"
         />
         <label for="tab-one" class="tab-label">Videos</label>
@@ -96,22 +318,28 @@ title: Content Collection example
           </form>
           <form class="form-inline d-none d-md-block py-3">
             <button type="button" class="chip chip-light subhead">
-              Chip 1
-              <span class="badge badge-400 badge-pill close text-light"
-                >&times;</span
-              >
+              Chip
+              <svg viewBox="0 0 500 500" class="text-500 icon">
+                <use xlink:href="#close-circle"></use>
+              </svg>
             </button>
             <button type="button" class="chip chip-light subhead">
-              Chip 2
-              <span class="badge badge-400 badge-pill close text-light"
-                >&times;</span
-              >
+              Chip
+              <svg viewBox="0 0 500 500" class="text-500 icon">
+                <use xlink:href="#close-circle"></use>
+              </svg>
             </button>
             <button type="button" class="chip chip-light subhead">
-              Chip 3
-              <span class="badge badge-400 badge-pill close text-light"
-                >&times;</span
-              >
+              Chip
+              <svg viewBox="0 0 500 500" class="text-500 icon">
+                <use xlink:href="#close-circle"></use>
+              </svg>
+            </button>
+            <button type="button" class="chip chip-light subhead">
+              Chip
+              <svg viewBox="0 0 500 500" class="text-500 icon">
+                <use xlink:href="#close-circle"></use>
+              </svg>
             </button>
           </form>
           <video
@@ -126,31 +354,6 @@ title: Content Collection example
             >
             and watch it with your favorite video player!
           </video>
-        </div>
-
-        <input
-          id="tab-two"
-          type="radio"
-          name="example-tabs"
-          class="tab-input"
-        />
-        <label for="tab-two" class="tab-label">News</label>
-        <div class="tab-content">
-          Tab 2 Content
-          <div>
-            Elit cumque rem harum reiciendis veniam nam nostrum ea. Dolor aut
-            tempora vero culpa saepe Ratione nemo reprehenderit possimus libero
-            earum Quas atque temporibus fuga quibusdam mollitia! Odit architecto
-            possimus debitis aliquid optio Quidem consectetur nostrum fuga magni
-            quia cumque placeat? Quis sapiente iusto saepe debitis adipisci?
-            Tempore similique maiores commodi labore rerum possimus nisi
-            explicabo. Voluptate at sapiente laborum consequatur sunt sint Ipsa
-            reiciendis dolor error quisquam tenetur! Aut eum repudiandae nostrum
-            sint nostrum! Nobis illo mollitia officiis placeat nihil nostrum
-            Quod eum ratione deleniti possimus maiores Dicta neque molestias
-            delectus sit quos Veritatis quaerat culpa aspernatur excepturi
-            aspernatur
-          </div>
         </div>
 
         <input
@@ -175,6 +378,31 @@ title: Content Collection example
             voluptas inventore! Animi corrupti tempora placeat magni eos
             Pariatur quod quam iste minima iure omnis? Cupiditate voluptatibus
             ut quam soluta ex, fugit?
+          </div>
+        </div>
+
+        <input
+          id="tab-four"
+          type="radio"
+          name="example-tabs"
+          class="tab-input"
+        />
+        <label for="tab-four" class="tab-label">News</label>
+        <div class="tab-content">
+          Tab 2 Content
+          <div>
+            Elit cumque rem harum reiciendis veniam nam nostrum ea. Dolor aut
+            tempora vero culpa saepe Ratione nemo reprehenderit possimus libero
+            earum Quas atque temporibus fuga quibusdam mollitia! Odit architecto
+            possimus debitis aliquid optio Quidem consectetur nostrum fuga magni
+            quia cumque placeat? Quis sapiente iusto saepe debitis adipisci?
+            Tempore similique maiores commodi labore rerum possimus nisi
+            explicabo. Voluptate at sapiente laborum consequatur sunt sint Ipsa
+            reiciendis dolor error quisquam tenetur! Aut eum repudiandae nostrum
+            sint nostrum! Nobis illo mollitia officiis placeat nihil nostrum
+            Quod eum ratione deleniti possimus maiores Dicta neque molestias
+            delectus sit quos Veritatis quaerat culpa aspernatur excepturi
+            aspernatur
           </div>
         </div>
       </section>

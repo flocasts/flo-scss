@@ -386,6 +386,10 @@ h6,
   }
 }
 
+.svg-h1 {
+  width: 3.294118rem;
+}
+
 .h2 {
   font-family: "Uni-Neue-Heavy", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.272727;
@@ -399,6 +403,10 @@ h6,
   .h2 {
     font-size: calc(1.383824rem + 1.605882vw) ;
   }
+}
+
+.svg-h2 {
+  width: 2.588235rem;
 }
 
 .h3 {
@@ -416,6 +424,10 @@ h6,
   }
 }
 
+.svg-h3 {
+  width: 2.117647rem;
+}
+
 .display-1 {
   font-family: "Uni-Neue-Heavy", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.25;
@@ -429,6 +441,10 @@ h6,
   .display-1 {
     font-size: calc(1.313235rem + 0.758824vw) ;
   }
+}
+
+.svg-display-1 {
+  width: 1.882353rem;
 }
 
 .display-2 {
@@ -446,6 +462,10 @@ h6,
   }
 }
 
+.svg-display-2 {
+  width: 1.411765rem;
+}
+
 .display-3 {
   font-family: "Uni-Neue-Bold", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4;
@@ -453,6 +473,10 @@ h6,
   letter-spacing: 0.005;
   text-transform: none;
   font-size: 1.176471rem;
+}
+
+.svg-display-3 {
+  width: 1.176471rem;
 }
 
 .display-4 {
@@ -464,6 +488,10 @@ h6,
   font-size: 1.058824rem;
 }
 
+.svg-display-4 {
+  width: 1.058824rem;
+}
+
 .text-data {
   font-family: "Uni-Neue-Heavy", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -471,6 +499,10 @@ h6,
   letter-spacing: 0;
   text-transform: none;
   font-size: 0.941176rem;
+}
+
+.svg-text-data {
+  width: 0.941176rem;
 }
 
 .headline {
@@ -482,6 +514,10 @@ h6,
   font-size: 0.941176rem;
 }
 
+.svg-headline {
+  width: 0.941176rem;
+}
+
 .subhead {
   font-family: "Uni-Neue-Regular", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.428571;
@@ -489,6 +525,10 @@ h6,
   letter-spacing: 0.007143;
   text-transform: none;
   font-size: 0.823529rem;
+}
+
+.svg-subhead {
+  width: 0.823529rem;
 }
 
 .footnote {
@@ -500,6 +540,10 @@ h6,
   font-size: 0.764706rem;
 }
 
+.svg-footnote {
+  width: 0.764706rem;
+}
+
 .caption {
   font-family: "Uni-Neue-Regular", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.666667;
@@ -507,6 +551,10 @@ h6,
   letter-spacing: 0.008333;
   text-transform: none;
   font-size: 0.705882rem;
+}
+
+.svg-caption {
+  width: 0.705882rem;
 }
 
 .overtext {
@@ -518,6 +566,10 @@ h6,
   font-size: 0.705882rem;
 }
 
+.svg-overtext {
+  width: 0.705882rem;
+}
+
 .mono {
   font-family: "InterstateMono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   line-height: 1.384615;
@@ -527,8 +579,16 @@ h6,
   font-size: 0.764706rem;
 }
 
+.svg-mono {
+  width: 0.764706rem;
+}
+
 .small {
   font-size: 80%;
+}
+
+.svg-small {
+  width: 80%;
 }
 
 .bold {
@@ -617,6 +677,18 @@ mark,
 
 .blockquote-footer::before {
   content: "\2014\00A0";
+}
+
+.icon {
+  height: 1.25em;
+}
+
+.icon-sm {
+  height: 0.75em;
+}
+
+.icon-lg {
+  height: 1.75em;
 }
 
 .img-fluid {
@@ -6877,11 +6949,6 @@ a.badge-900:focus, a.badge-900.focus {
   }
 }
 
-.list-group-flush {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 .list-group-flush .list-group-heading {
   color: #000;
   border: 1px solid #000;
@@ -7104,7 +7171,7 @@ label.tab-label {
   cursor: pointer;
   z-index: 1;
   margin-left: -1px;
-  margin-bottom: 0px;
+  margin-bottom: -1px;
 }
 
 label.tab-label:first-of-type {
@@ -9432,7 +9499,7 @@ input[type="checkbox"].click-toggle-input:checked .click-toggle-once {
 .hover-target:hover + .hover-toggle-none,
 .hover-target:hover .hover-toggle-none,
 .hover-target:hover ~ .hover-toggle-none {
-  display: none;
+  display: none !important;
 }
 
 .hover-toggle-inline {
@@ -9442,7 +9509,7 @@ input[type="checkbox"].click-toggle-input:checked .click-toggle-once {
 .hover-target:hover + .hover-toggle-inline,
 .hover-target:hover .hover-toggle-inline,
 .hover-target:hover ~ .hover-toggle-inline {
-  display: inline;
+  display: inline !important;
 }
 
 .hover-toggle-inline-block {
@@ -9452,7 +9519,7 @@ input[type="checkbox"].click-toggle-input:checked .click-toggle-once {
 .hover-target:hover + .hover-toggle-inline-block,
 .hover-target:hover .hover-toggle-inline-block,
 .hover-target:hover ~ .hover-toggle-inline-block {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 .hover-toggle-block {
@@ -9462,7 +9529,7 @@ input[type="checkbox"].click-toggle-input:checked .click-toggle-once {
 .hover-target:hover + .hover-toggle-block,
 .hover-target:hover .hover-toggle-block,
 .hover-target:hover ~ .hover-toggle-block {
-  display: block;
+  display: block !important;
 }
 
 .hover-toggle-table {
@@ -9472,7 +9539,7 @@ input[type="checkbox"].click-toggle-input:checked .click-toggle-once {
 .hover-target:hover + .hover-toggle-table,
 .hover-target:hover .hover-toggle-table,
 .hover-target:hover ~ .hover-toggle-table {
-  display: table;
+  display: table !important;
 }
 
 .hover-toggle-table-row {
@@ -9482,7 +9549,7 @@ input[type="checkbox"].click-toggle-input:checked .click-toggle-once {
 .hover-target:hover + .hover-toggle-table-row,
 .hover-target:hover .hover-toggle-table-row,
 .hover-target:hover ~ .hover-toggle-table-row {
-  display: table-row;
+  display: table-row !important;
 }
 
 .hover-toggle-table-cell {
@@ -9492,7 +9559,7 @@ input[type="checkbox"].click-toggle-input:checked .click-toggle-once {
 .hover-target:hover + .hover-toggle-table-cell,
 .hover-target:hover .hover-toggle-table-cell,
 .hover-target:hover ~ .hover-toggle-table-cell {
-  display: table-cell;
+  display: table-cell !important;
 }
 
 .hover-toggle-flex {
@@ -9502,8 +9569,8 @@ input[type="checkbox"].click-toggle-input:checked .click-toggle-once {
 .hover-target:hover + .hover-toggle-flex,
 .hover-target:hover .hover-toggle-flex,
 .hover-target:hover ~ .hover-toggle-flex {
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .hover-toggle-inline-flex {
@@ -9513,8 +9580,296 @@ input[type="checkbox"].click-toggle-input:checked .click-toggle-once {
 .hover-target:hover + .hover-toggle-inline-flex,
 .hover-target:hover .hover-toggle-inline-flex,
 .hover-target:hover ~ .hover-toggle-inline-flex {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+}
+
+.hover-target.hover-text-primary:hover {
+  color: #ff140f !important;
+}
+
+.hover-target:hover .hover-text-primary {
+  color: #ff140f !important;
+}
+
+.hover-target.hover-bg-primary:hover {
+  background-color: #ff140f !important;
+}
+
+.hover-target:hover .hover-bg-primary {
+  background-color: #ff140f !important;
+}
+
+.hover-target.hover-text-secondary:hover {
+  color: #646469 !important;
+}
+
+.hover-target:hover .hover-text-secondary {
+  color: #646469 !important;
+}
+
+.hover-target.hover-bg-secondary:hover {
+  background-color: #646469 !important;
+}
+
+.hover-target:hover .hover-bg-secondary {
+  background-color: #646469 !important;
+}
+
+.hover-target.hover-text-success:hover {
+  color: #28a745 !important;
+}
+
+.hover-target:hover .hover-text-success {
+  color: #28a745 !important;
+}
+
+.hover-target.hover-bg-success:hover {
+  background-color: #28a745 !important;
+}
+
+.hover-target:hover .hover-bg-success {
+  background-color: #28a745 !important;
+}
+
+.hover-target.hover-text-info:hover {
+  color: #17a2b8 !important;
+}
+
+.hover-target:hover .hover-text-info {
+  color: #17a2b8 !important;
+}
+
+.hover-target.hover-bg-info:hover {
+  background-color: #17a2b8 !important;
+}
+
+.hover-target:hover .hover-bg-info {
+  background-color: #17a2b8 !important;
+}
+
+.hover-target.hover-text-warning:hover {
+  color: #ffc107 !important;
+}
+
+.hover-target:hover .hover-text-warning {
+  color: #ffc107 !important;
+}
+
+.hover-target.hover-bg-warning:hover {
+  background-color: #ffc107 !important;
+}
+
+.hover-target:hover .hover-bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.hover-target.hover-text-danger:hover {
+  color: #ff140f !important;
+}
+
+.hover-target:hover .hover-text-danger {
+  color: #ff140f !important;
+}
+
+.hover-target.hover-bg-danger:hover {
+  background-color: #ff140f !important;
+}
+
+.hover-target:hover .hover-bg-danger {
+  background-color: #ff140f !important;
+}
+
+.hover-target.hover-text-tint:hover {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.hover-target:hover .hover-text-tint {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.hover-target.hover-bg-tint:hover {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.hover-target:hover .hover-bg-tint {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.hover-target.hover-text-light:hover {
+  color: #f5f5f7 !important;
+}
+
+.hover-target:hover .hover-text-light {
+  color: #f5f5f7 !important;
+}
+
+.hover-target.hover-bg-light:hover {
+  background-color: #f5f5f7 !important;
+}
+
+.hover-target:hover .hover-bg-light {
+  background-color: #f5f5f7 !important;
+}
+
+.hover-target.hover-text-dark:hover {
+  color: #232327 !important;
+}
+
+.hover-target:hover .hover-text-dark {
+  color: #232327 !important;
+}
+
+.hover-target.hover-bg-dark:hover {
+  background-color: #232327 !important;
+}
+
+.hover-target:hover .hover-bg-dark {
+  background-color: #232327 !important;
+}
+
+.hover-target.hover-text-100:hover {
+  color: #ffffff !important;
+}
+
+.hover-target:hover .hover-text-100 {
+  color: #ffffff !important;
+}
+
+.hover-target.hover-bg-100:hover {
+  background-color: #ffffff !important;
+}
+
+.hover-target:hover .hover-bg-100 {
+  background-color: #ffffff !important;
+}
+
+.hover-target.hover-text-200:hover {
+  color: #f5f5f7 !important;
+}
+
+.hover-target:hover .hover-text-200 {
+  color: #f5f5f7 !important;
+}
+
+.hover-target.hover-bg-200:hover {
+  background-color: #f5f5f7 !important;
+}
+
+.hover-target:hover .hover-bg-200 {
+  background-color: #f5f5f7 !important;
+}
+
+.hover-target.hover-text-300:hover {
+  color: #eeeef0 !important;
+}
+
+.hover-target:hover .hover-text-300 {
+  color: #eeeef0 !important;
+}
+
+.hover-target.hover-bg-300:hover {
+  background-color: #eeeef0 !important;
+}
+
+.hover-target:hover .hover-bg-300 {
+  background-color: #eeeef0 !important;
+}
+
+.hover-target.hover-text-400:hover {
+  color: #cdcdd2 !important;
+}
+
+.hover-target:hover .hover-text-400 {
+  color: #cdcdd2 !important;
+}
+
+.hover-target.hover-bg-400:hover {
+  background-color: #cdcdd2 !important;
+}
+
+.hover-target:hover .hover-bg-400 {
+  background-color: #cdcdd2 !important;
+}
+
+.hover-target.hover-text-500:hover {
+  color: #919196 !important;
+}
+
+.hover-target:hover .hover-text-500 {
+  color: #919196 !important;
+}
+
+.hover-target.hover-bg-500:hover {
+  background-color: #919196 !important;
+}
+
+.hover-target:hover .hover-bg-500 {
+  background-color: #919196 !important;
+}
+
+.hover-target.hover-text-600:hover {
+  color: #646469 !important;
+}
+
+.hover-target:hover .hover-text-600 {
+  color: #646469 !important;
+}
+
+.hover-target.hover-bg-600:hover {
+  background-color: #646469 !important;
+}
+
+.hover-target:hover .hover-bg-600 {
+  background-color: #646469 !important;
+}
+
+.hover-target.hover-text-700:hover {
+  color: #323236 !important;
+}
+
+.hover-target:hover .hover-text-700 {
+  color: #323236 !important;
+}
+
+.hover-target.hover-bg-700:hover {
+  background-color: #323236 !important;
+}
+
+.hover-target:hover .hover-bg-700 {
+  background-color: #323236 !important;
+}
+
+.hover-target.hover-text-800:hover {
+  color: #232327 !important;
+}
+
+.hover-target:hover .hover-text-800 {
+  color: #232327 !important;
+}
+
+.hover-target.hover-bg-800:hover {
+  background-color: #232327 !important;
+}
+
+.hover-target:hover .hover-bg-800 {
+  background-color: #232327 !important;
+}
+
+.hover-target.hover-text-900:hover {
+  color: #0c0c0c !important;
+}
+
+.hover-target:hover .hover-text-900 {
+  color: #0c0c0c !important;
+}
+
+.hover-target.hover-bg-900:hover {
+  background-color: #0c0c0c !important;
+}
+
+.hover-target:hover .hover-bg-900 {
+  background-color: #0c0c0c !important;
 }
 
 .overflow-auto {
