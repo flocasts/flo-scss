@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://flo-scss.flo.center/">
-    <img src="https://flo-scss.flo.center/docs/4.4/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="72" height="72">
+    <img src="https://flo-scss.flo.center/docs/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="72" height="72">
   </a>
 </p>
 
@@ -9,7 +9,7 @@
 <p align="center">
   Sleek, intuitive, and powerful front-end framework for faster and easier web development.
   <br>
-  <a href="https://flo-scss.flo.center/docs/4.4/"><strong>Explore Bootstrap docs »</strong></a>
+  <a href="https://flo-scss.flo.center/docs/"><strong>Explore Bootstrap docs »</strong></a>
   <br>
   <br>
   <a href="https://github.com/twbs/bootstrap/issues/new?template=bug.md">Report bug</a>
@@ -45,7 +45,7 @@ Several quick start options are available:
 - Clone the repo: `git clone git@github.com:flocasts/flo-scss && cd flo-scss && bundle install && npm i && npm run release && npm start` OR
 - Install with [npm](https://www.npmjs.com/): `npm install flocasts/flo-scss` OR
 
-Read the [Getting started page](https://flo-scss.flo.center/docs/4.4/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](https://flo-scss.flo.center/docs/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 
 ## Status
@@ -110,11 +110,11 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 Bootstrap's documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com/) and publicly hosted on GitHub Pages at <https://flo-scss.flo.center/>. The docs may also be run locally.
 
-Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/docs/4.4/assets/js/src/search.js` file.
+Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/docs/assets/js/src/search.js` file.
 
 ### Running documentation locally
 
-1. Run through the [tooling setup](https://flo-scss.flo.center/docs/4.4/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
+1. Run through the [tooling setup](https://flo-scss.flo.center/docs/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
 2. Run `npm install` to install Node.js dependencies.
 3. Run `npm start` to compile CSS and JavaScript files, generate our docs, and watch for changes.
 4. Open `http://localhost:9001` in your browser, and voilà.

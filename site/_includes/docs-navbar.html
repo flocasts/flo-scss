@@ -9,10 +9,10 @@
         <a class="nav-link {% if page.layout == "home" %}active{% endif %}" href="{{ site.baseurl }}/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+        <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
+        <a class="nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/docs/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ site.icons }}/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');">Icons</a>
@@ -32,10 +32,10 @@
   <ul class="navbar-nav ml-md-auto">
     <li class="nav-item dropdown">
       <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        v{{ site.docs_version }}
+        v
       </a>
       <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="versions">
-        <a class="dropdown-item active" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/">Latest (4.4.x)</a>
+        <a class="dropdown-item active" href="{{ site.baseurl }}/docs/">Latest (4.4.x)</a>
         <a class="dropdown-item" href="https://getbootstrap.com/docs/4.3/">v4.3.1</a>
         <a class="dropdown-item" href="https://getbootstrap.com/docs/4.2/">v4.2.1</a>
         <a class="dropdown-item" href="https://getbootstrap.com/docs/4.0/">v4.0.0</a>
@@ -71,5 +71,5 @@
     </li>
   </ul>
 
-  <a class="btn btn-outline-light d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/">Download</a>
+  <a class="btn btn-outline-light d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ site.baseurl }}/docs/getting-started/download/">Download</a>
 </header>
