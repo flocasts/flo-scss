@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="FloSports Engineering, Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Content Collection example · Flo-SCSS</title>
+
+    <link rel="canonical" href="https://flo-scss.flo.center/docs/examples/content-collection/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ysHE6Xg8KXEI7wxC2nlIoX7lbJ5uJXlhmVLzoC9N47gzzrtutzyCHNfvQKSM3CGX" crossorigin="anonymous">
+<style>
+@font-face {
+  font-family: Open-Sans;
+  src: local("Open Sans"), local("Open-Sans"),
+    url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+}
+
+@font-face {
+  font-family: Uni-Neue-Book;
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBook.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBook.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-book-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-book-webfont.woff") format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueBook.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Uni-Neue-Bold;
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBold.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-bold-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-bold-webfont.woff") format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Heavy";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueHeavy.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueHeavy.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-heavy-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-heavy-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueHeavy.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Uni-Neue-Light";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueLight.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-light-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts//uni-neue/woff/uni-neue-light-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Regular";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueRegular.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-regular-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-regular-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Thin";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueThin.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueThin.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-thin-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-thin-webfont.woff") format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueThin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Black";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBlack.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBlack.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-black-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-black-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueBlack.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Corporate-Bold";
+  src: local("Corporate Bold"), local("Corporate-Bold"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.eot");
+  src: local("Corporate Bold"), local("Corporate-Bold"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.woff") format("woff"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "Interstate-Mono-Bold";
+  src: url("https://use.typekit.net/af/0d5649/00000000000000003b9ae814/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/0d5649/00000000000000003b9ae814/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/0d5649/00000000000000003b9ae814/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  src: local("FontAwesome"), local("Font Awesome"), local("Font-Awesome"),
+    url("../assets/fonts/font-awesome/fontawesome-webfont.eot");
+}
+</style>
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+  class="h-100 w-100 position-fixed top left bottom right"
+  title="Ad Skin"
+  style="background:honeydew;z-index:-1;"
+>
+  Ad
+</div>
+<div
+  style="background:wheat;width:728px;height:90px;"
+  class="d-none d-md-block mx-auto my-5"
+  title="Ad Leaderboard"
+>
+  Ad
+</div>
+<div class="jumbotron mb-0 bg-300 container-sm" title="jumbotron">
+  <div class="h1">
+    FinalX Jumbotron
+  </div>
+</div>
+<main class="container bg-white h-100">
+  <div class="row">
+    <div class="col-13 col-lg-8">
+      <h1
+        class="overtext text-muted d-flex justify-content-center justify-content-md-start mb-md-2 pb-md-1 pt-md-3 mt-2"
+      >
+        Final X
+      </h1>
+      <hr class="m-0" />
+      <h2 class="h3 mb-0 mt-3 pt-1">Final X - Lincoln</h2>
+      <time class="headline d-block text-700">Sat, Mar 12, 7:00 PM CST</time>
+      <h6 class="subhead text-muted">Fueled by Rocket Mortgage</h6>
+      <section class="my-3">
+        <p class="text-700">
+          This is a pretty great event because Ipsum dicta maxime minus autem
+          dicta? Rem facere velit quo consequatur fugit, dolore Delectus ut
+          accusamus quas facilis itaque nam Sequi officiis labore dicta
+          aspernatur obcaecati veritatis. Natus dolores similique.
+        </p>
+        <input
+          id="click-toggle-block-example"
+          class="click-toggle-input d-none"
+          type="checkbox"
+        />
+        <p class="text-700 click-toggle-block">
+          Additional Content Adipisicing nisi numquam beatae repellat sapiente!
+          Consequuntur aliquid quis ipsam qui consectetur! Sapiente ipsum aut
+          neque modi quia. Cumque dicta nihil error aliquid dolorem? Voluptas
+          cupiditate incidunt id odio nulla? Qui eius a nesciunt nisi ducimus!
+          Atque nesciunt magnam ducimus
+        </p>
+        <label
+          for="click-toggle-block-example"
+          class="text-primary click-toggle-once"
+          >Read More</label
+        >
+      </section>
+      <div class="row m-0 mt-1 row-cols-1 row-cols-md-4">
+        <button class="btn btn-primary mr-md-3">
+          Primary CTA
+        </button>
+        <a class="btn btn-link mx-md-3" href="#">
+          More Events
+        </a>
+      </div>
+      <section class="tabs-container">
+        <input
+          id="tab-one"
+          type="radio"
+          name="example-tabs"
+          checked="checked"
+          class="tab-input"
+        />
+        <label for="tab-one" class="tab-label">Videos</label>
+        <div class="tab-content">
+          <form class="form-inline d-none d-md-block">
+            <select class="form-control">
+              <option>Level</option>
+            </select>
+            <select class="form-control">
+              <option>Governing Body</option>
+            </select>
+            <select class="form-control">
+              <option>Type</option>
+            </select>
+            <select class="form-control">
+              <option>Conference</option>
+            </select>
+            <select class="form-control">
+              <option>Gender</option>
+            </select>
+          </form>
+          <form class="form-inline d-none d-md-block py-3">
+            <button type="button" class="chip chip-light subhead">
+              Chip 1
+              <span class="badge badge-400 badge-pill close text-light"
+                >&times;</span
+              >
+            </button>
+            <button type="button" class="chip chip-light subhead">
+              Chip 2
+              <span class="badge badge-400 badge-pill close text-light"
+                >&times;</span
+              >
+            </button>
+            <button type="button" class="chip chip-light subhead">
+              Chip 3
+              <span class="badge badge-400 badge-pill close text-light"
+                >&times;</span
+              >
+            </button>
+          </form>
+          <video
+            class="w-100 img-fluid"
+            controls
+            src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+          >
+            Sorry, your browser doesn't support embedded videos, but don't
+            worry, you can
+            <a href="https://archive.org/details/BigBuckBunny_124"
+              >download it</a
+            >
+            and watch it with your favorite video player!
+          </video>
+        </div>
+
+        <input
+          id="tab-two"
+          type="radio"
+          name="example-tabs"
+          class="tab-input"
+        />
+        <label for="tab-two" class="tab-label">News</label>
+        <div class="tab-content">
+          Tab 2 Content
+          <div>
+            Elit cumque rem harum reiciendis veniam nam nostrum ea. Dolor aut
+            tempora vero culpa saepe Ratione nemo reprehenderit possimus libero
+            earum Quas atque temporibus fuga quibusdam mollitia! Odit architecto
+            possimus debitis aliquid optio Quidem consectetur nostrum fuga magni
+            quia cumque placeat? Quis sapiente iusto saepe debitis adipisci?
+            Tempore similique maiores commodi labore rerum possimus nisi
+            explicabo. Voluptate at sapiente laborum consequatur sunt sint Ipsa
+            reiciendis dolor error quisquam tenetur! Aut eum repudiandae nostrum
+            sint nostrum! Nobis illo mollitia officiis placeat nihil nostrum
+            Quod eum ratione deleniti possimus maiores Dicta neque molestias
+            delectus sit quos Veritatis quaerat culpa aspernatur excepturi
+            aspernatur
+          </div>
+        </div>
+
+        <input
+          id="tab-three"
+          type="radio"
+          name="example-tabs"
+          class="tab-input"
+        />
+        <label for="tab-three" class="tab-label">Matchups</label>
+        <div class="tab-content">
+          Tab 3 Content
+          <div>
+            Lorem delectus perferendis ipsam aperiam dolor Quidem ratione ipsum
+            impedit eos odio. Maiores excepturi totam officiis officiis ducimus
+            Officiis excepturi quos atque amet inventore Accusantium ipsum modi
+            eius pariatur iste! Quibusdam nihil sed maxime eum mollitia sapiente
+            Nihil ab libero voluptatum commodi nulla unde quasi veritatis
+            perferendis. Dolor dolorem laboriosam assumenda eius debitis,
+            dolorum nulla veniam. Laboriosam porro similique nam officia vitae?
+            Mollitia officia iste architecto quaerat cumque Numquam doloremque
+            sed perferendis ut incidunt Sit ducimus voluptatem necessitatibus
+            voluptas inventore! Animi corrupti tempora placeat magni eos
+            Pariatur quod quam iste minima iure omnis? Cupiditate voluptatibus
+            ut quam soluta ex, fugit?
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="d-none d-lg-block col-lg-4 border-left px-0">
+      <div class="p-4 border-bottom">
+        <ul class="list-unstyled">
+          <li class="media my-3">
+            <img
+              src="https://d2779tscntxxsw.cloudfront.net/5e31f3e4eb17c.png"
+              class="px-0 col-4 img-fluid"
+              alt="..."
+            />
+            <div class="media-body col-8">
+              <h5 class="mt-0 mb-1">List-based media object</h5>
+            </div>
+          </li>
+
+          <li class="media my-3">
+            <img
+              src="https://d2779tscntxxsw.cloudfront.net/5e31f3e4eb17c.png"
+              class="px-0 col-4 img-fluid"
+              alt="..."
+            />
+            <div class="media-body col-8">
+              <h5 class="mt-0 mb-1">List-based media object</h5>
+            </div>
+          </li>
+
+          <li class="media my-3">
+            <img
+              src="https://d2779tscntxxsw.cloudfront.net/5e31f3e4eb17c.png"
+              class="px-0 col-4 img-fluid"
+              alt="..."
+            />
+            <div class="media-body col-8">
+              <h5 class="mt-0 mb-1">List-based media object</h5>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        style="width:300px;height:250px;background:palegoldenrod;"
+        class="mx-auto my-4"
+        title="Ad Sidebar"
+      >
+        Ad
+      </div>
+    </div>
+  </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-qscWFhNf9M09nQ+hSbh5SMEPY6a8qmYDhQYqxlO7gdFujH1l4l5iniL6QDXUxwA2" crossorigin="anonymous"></script></body>
+</html>

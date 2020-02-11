@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="FloSports Engineering, Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Bottom navbar example · Flo-SCSS</title>
+
+    <link rel="canonical" href="https://flo-scss.flo.center/docs/examples/navbar-bottom/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ysHE6Xg8KXEI7wxC2nlIoX7lbJ5uJXlhmVLzoC9N47gzzrtutzyCHNfvQKSM3CGX" crossorigin="anonymous">
+<style>
+@font-face {
+  font-family: Open-Sans;
+  src: local("Open Sans"), local("Open-Sans"),
+    url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+}
+
+@font-face {
+  font-family: Uni-Neue-Book;
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBook.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBook.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-book-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-book-webfont.woff") format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueBook.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Uni-Neue-Bold;
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBold.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-bold-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-bold-webfont.woff") format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Heavy";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueHeavy.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueHeavy.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-heavy-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-heavy-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueHeavy.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Uni-Neue-Light";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueLight.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-light-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts//uni-neue/woff/uni-neue-light-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Regular";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueRegular.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-regular-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-regular-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Thin";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueThin.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueThin.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-thin-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-thin-webfont.woff") format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueThin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Uni-Neue-Black";
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBlack.eot");
+  src: url("/assets/fonts/uni-neue/eot/UniNeueBlack.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-black-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/uni-neue/woff/uni-neue-black-webfont.woff")
+      format("woff"),
+    url("/assets/fonts/uni-neue/ttf/UniNeueBlack.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Corporate-Bold";
+  src: local("Corporate Bold"), local("Corporate-Bold"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.eot");
+  src: local("Corporate Bold"), local("Corporate-Bold"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.woff") format("woff"),
+    url("/assets/fonts/corporate/corporatee-bold-webfont.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "Interstate-Mono-Bold";
+  src: url("https://use.typekit.net/af/0d5649/00000000000000003b9ae814/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/0d5649/00000000000000003b9ae814/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/0d5649/00000000000000003b9ae814/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("opentype");
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  src: local("FontAwesome"), local("Font Awesome"), local("Font-Awesome"),
+    url("../assets/fonts/font-awesome/fontawesome-webfont.eot");
+}
+</style>
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+  <div class="jumbotron mt-3">
+    <h1>Bottom Navbar example</h1>
+    <p class="lead">This example is a quick exercise to illustrate how the bottom navbar works.</p>
+    <a class="btn btn-lg btn-primary" href="/docs/4.4/components/navbar/" role="button">View navbar docs &raquo;</a>
+  </div>
+</div>
+<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Bottom navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+      <li class="nav-item dropup">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropup</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown10">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-qscWFhNf9M09nQ+hSbh5SMEPY6a8qmYDhQYqxlO7gdFujH1l4l5iniL6QDXUxwA2" crossorigin="anonymous"></script></body>
+</html>

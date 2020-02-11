@@ -51,11 +51,11 @@ download:
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-  css_hash:         "sha384-fkUu0EFbF+2FTEQnSZG3GEkAlfbcLgLcHZY+ixIhxQAzKvtQCjzpXZzS3PRqAFQV"
+  css_hash:         "sha384-ysHE6Xg8KXEI7wxC2nlIoX7lbJ5uJXlhmVLzoC9N47gzzrtutzyCHNfvQKSM3CGX"
   js:               "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-  js_hash:          "sha384-Pt/+In+rEVnDXMawG+jMNBk8U5JskkrYVU3txyqOuJyk1hcq2c/9vXF5Nm6tb39v"
+  js_hash:          "sha384-49D1/4fruNgnSgZhv4BEvBvgE656g2G0Nfe/JVRJJMvxJCyB8onpS40lRZLzPQyr"
   js_bundle:        "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
-  js_bundle_hash:   "sha384-Ytc7hpFCC5CBJzIc3Lplxw5mLRIuzKQG21cK+Ky0myddmtLDDzQAGKDNmjrMRwhQ"
+  js_bundle_hash:   "sha384-qscWFhNf9M09nQ+hSbh5SMEPY6a8qmYDhQYqxlO7gdFujH1l4l5iniL6QDXUxwA2"
   jquery:           "https://code.jquery.com/jquery-3.4.1.slim.min.js"
   jquery_hash:      "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
   popper:           "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
