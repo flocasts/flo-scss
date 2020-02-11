@@ -3,7 +3,7 @@ layout: docs
 title: Overview
 description: Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.
 group: layout
-redirect_from: "/docs/4.4/layout/"
+redirect_from: "/docs/layout/"
 toc: true
 ---
 
@@ -19,7 +19,7 @@ Bootstrap comes with three different containers:
 
 The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
 
-See them in action and compare them in our [Grid example]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/grid/#containers).
+See them in action and compare them in our [Grid example]({{ site.baseurl }}/docs/examples/grid/#containers).
 
 <table class="table text-left">
   <thead>

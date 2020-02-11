@@ -10,8 +10,8 @@ toc: true
 
 Scrollspy has a few requirements to function properly:
 
-- If you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util).
-- It must be used on a Bootstrap [nav component]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/) or [list group]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/list-group/).
+- If you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/getting-started/javascript/#util).
+- It must be used on a Bootstrap [nav component]({{ site.baseurl }}/docs/components/navs/) or [list group]({{ site.baseurl }}/docs/components/list-group/).
 - Scrollspy requires `position: relative;` on the element you're spying on, usually the `<body>`.
 - When spying on elements other than the `<body>`, be sure to have a `height` set and `overflow-y: scroll;` applied.
 - Anchors (`<a>`) are required and must point to an element with that `id`.

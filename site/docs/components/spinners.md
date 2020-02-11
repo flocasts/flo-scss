@@ -176,10 +176,10 @@ Use spinners within buttons to indicate an action is currently processing or tak
 {% include example.html content=example %}
 
 
-[color]:   {{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/
-[display]: {{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/
-[flex]:    {{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/
-[float]:   {{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/float/
-[margin]:  {{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/
-[sizing]:  {{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/
-[text]:    {{ site.baseurl }}/docs/{{ site.docs_version }}/content/typography/
+[color]:   {{ site.baseurl }}/docs/utilities/colors/
+[display]: {{ site.baseurl }}/docs/utilities/display/
+[flex]:    {{ site.baseurl }}/docs/utilities/flex/
+[float]:   {{ site.baseurl }}/docs/utilities/float/
+[margin]:  {{ site.baseurl }}/docs/utilities/spacing/
+[sizing]:  {{ site.baseurl }}/docs/utilities/sizing/
+[text]:    {{ site.baseurl }}/docs/content/typography/

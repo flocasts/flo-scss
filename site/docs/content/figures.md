@@ -17,7 +17,7 @@ Use the included `.figure` , `.figure-img` and `.figure-caption` classes to prov
 {% endcapture %}
 {% include example.html content=example %}
 
-Aligning the figure's caption is easy with our [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment).
+Aligning the figure's caption is easy with our [text utilities]({{ site.baseurl }}/docs/utilities/text/#text-alignment).
 
 {% capture example %}
 <figure class="figure">

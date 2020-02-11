@@ -17,7 +17,7 @@ baseurl:        ""
 url:            "https://flo-scss.flo.center"
 encoding:       UTF-8
 exclude:
-  - docs/4.4/assets/scss/
+  - docs/assets/scss/
 
 plugins:
   - jekyll-redirect-from
@@ -29,13 +29,12 @@ title:              Flo-SCSS
 description:        "Based on The most popular HTML, CSS, and JS library in the world."
 twitter:            flosports
 authors:            "FloSports Engineering, Mark Otto, Jacob Thornton, and Bootstrap contributors"
-social_image_path:  /docs/4.4/assets/brand/bootstrap-social.png
-social_logo_path:   /docs/4.4/assets/brand/bootstrap-social-logo.png
+social_image_path:  /docs/assets/brand/bootstrap-social.png
+social_logo_path:   /docs/assets/brand/bootstrap-social-logo.png
 
 # Custom variables
-current_version:      4.4.1
-current_ruby_version: 4.4.1
-docs_version:         4.4
+current_version:      0.0.1
+current_ruby_version: 0.0.1
 repo:                 "https://github.com/twbs/bootstrap"
 slack:                "https://bootstrap-slack.herokuapp.com"
 opencollective:       "https://opencollective.com/bootstrap"

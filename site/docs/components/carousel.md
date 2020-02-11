@@ -16,7 +16,7 @@ In browsers where the [Page Visibility API](https://www.w3.org/TR/page-visibilit
 
 Please be aware that nested carousels are not supported, and carousels are generally not compliant with accessibility standards.
 
-Lastly, if you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util).
+Lastly, if you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/getting-started/javascript/#util).
 
 ## Example
 
@@ -110,7 +110,7 @@ You can also add the indicators to the carousel, alongside the controls, too.
 
 ### With captions
 
-Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
+Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{ site.baseurl }}/docs/utilities/display/). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
 
 {% capture example %}
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">

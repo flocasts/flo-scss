@@ -36,7 +36,7 @@ Put that all together, and you have the following examples.
 {% endcapture %}
 {% include example.html content=example %}
 
-Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/). Depending on your needs, these may help with quickly configuring progress.
+Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}/docs/utilities/sizing/). Depending on your needs, these may help with quickly configuring progress.
 
 {% capture example %}
 <div class="progress">

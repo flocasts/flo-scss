@@ -70,10 +70,10 @@ Bootstrap includes a handful of options for including some or all of our compile
         <div><code class="font-weight-normal text-nowrap">bootstrap-grid.css</code></div>
         <div><code class="font-weight-normal text-nowrap">bootstrap-grid.min.css</code></div>
       </th>
-      <td><a class="text-warning" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/">Only grid system</a></td>
+      <td><a class="text-warning" href="{{ site.baseurl }}/docs/layout/grid/">Only grid system</a></td>
       <td class="bg-light text-muted">Not included</td>
       <td class="bg-light text-muted">Not included</td>
-      <td><a class="text-warning" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/">Only flex utilities</a></td>
+      <td><a class="text-warning" href="{{ site.baseurl }}/docs/utilities/flex/">Only flex utilities</a></td>
     </tr>
     <tr>
       <th scope="row">
@@ -81,7 +81,7 @@ Bootstrap includes a handful of options for including some or all of our compile
         <div><code class="font-weight-normal text-nowrap">bootstrap-reboot.min.css</code></div>
       </th>
       <td class="bg-light text-muted">Not included</td>
-      <td><a class="text-warning" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/">Only Reboot</a></td>
+      <td><a class="text-warning" href="{{ site.baseurl }}/docs/content/reboot/">Only Reboot</a></td>
       <td class="bg-light text-muted">Not included</td>
       <td class="bg-light text-muted">Not included</td>
     </tr>
@@ -131,8 +131,7 @@ bootstrap/
 │   └── js/
 ├── site/
 │   └──docs/
-│      └── 4.4/
-│          └── examples/
+│      └── examples/
 ├── js/
 └── scss/
 {% endhighlight %}

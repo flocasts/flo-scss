@@ -5,7 +5,7 @@ description: Simple Scalable Shapess
 group: components
 redirect_from:
   - "/components/"
-  - "/docs/4.4/components/"
+  - "/docs/components/"
 toc: true
 ---
 

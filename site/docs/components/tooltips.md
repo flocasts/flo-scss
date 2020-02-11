@@ -11,7 +11,7 @@ toc: true
 Things to know when using the tooltip plugin:
 
 - Tooltips rely on the 3rd party library [Popper.js](https://popper.js.org/) for positioning. You must include [popper.min.js]({{ site.cdn.popper }}) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper.js in order for tooltips to work!
-- If you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util).
+- If you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/getting-started/javascript/#util).
 - Tooltips are opt-in for performance reasons, so **you must initialize them yourself**.
 - Tooltips with zero-length titles are never displayed.
 - Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc).
@@ -267,7 +267,7 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
     <tr>
       <td>whiteList</td>
       <td>object</td>
-      <td><a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#sanitizer">Default value</a></td>
+      <td><a href="{{ site.baseurl }}/docs/getting-started/javascript/#sanitizer">Default value</a></td>
       <td>Object which contains allowed attributes and tags</td>
     </tr>
     <tr>
