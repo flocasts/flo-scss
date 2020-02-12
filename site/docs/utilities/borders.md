@@ -80,12 +80,11 @@ Add classes to an element to easily round its corners.
 
 Use `.rounded-lg` or `.rounded-sm` for larger or smaller border-radius.
 
-<div class="bd-example bd-example-images">
-  {%- include icons/placeholder.svg width="75" height="75" class="rounded-sm" title="Example small rounded image" -%}
-  {%- include icons/placeholder.svg width="75" height="75" class="rounded-lg" title="Example large rounded image" -%}
-</div>
+{% capture example %}
 
-{% highlight html %}
-<img src="..." alt="..." class="rounded-sm">
-<img src="..." alt="..." class="rounded-lg">
-{% endhighlight %}
+<div class="rounded-sm bg-300 w-10 square m-3">rounded-sm</div>
+<div class="rounded bg-300 w-10 square m-3">rounded</div>
+<div class="rounded-lg bg-300 w-10 square m-3">rounded-lg</div>
+{% endcapture %}
+{% include example.html content=example %}
+

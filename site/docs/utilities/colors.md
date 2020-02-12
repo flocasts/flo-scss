@@ -10,6 +10,7 @@ toc: true
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
+
 <p class="text-{{ color.name }}{% if color.name == "light" %} bg-dark{% endif %}">.text-{{ color.name }}</p>{% endfor %}
 <p class="text-body">.text-body</p>
 <p class="text-muted">.text-muted</p>
@@ -23,6 +24,7 @@ Contextual text classes also work well on anchors with the provided hover and fo
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
+
 <p><a href="#" class="text-{{ color.name }}{% if color.name == "light" %} bg-dark{% endif %}">{{ color.name | capitalize }} link</a></p>{% endfor %}
 <p><a href="#" class="text-muted">Muted link</a></p>
 <p><a href="#" class="text-white bg-dark">White link</a></p>
@@ -35,9 +37,17 @@ Similar to the contextual text color classes, easily set the background of an el
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
+
 <div class="p-3 mb-2 bg-{{ color.name }} {% if color.name == "light" or color.name == "warning" %}text-dark{% else %}text-white{% endif %}">.bg-{{ color.name }}</div>{% endfor %}
 <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
 <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
+{% endcapture %}
+{% include example.html content=example %}
+
+{% capture example %}
+{% for color in site.data.grays %}
+
+<div class="alert bg-{{ color.name }}">bg-{{color.name}}</div>{% endfor %}
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -45,10 +55,23 @@ Similar to the contextual text color classes, easily set the background of an el
 
 When `$enable-gradients` is set to `true` (default is `false`), you can use `.bg-gradient-` utility classes. [Learn about our Sass options]({{ site.baseurl }}/docs/getting-started/theming/#sass-options) to enable these classes and more.
 
+{% capture example %}
 {% for color in site.data.theme-colors %}
-- `.bg-gradient-{{ color.name }}`{% endfor %}
+
+<div class="alert bg-gradient-{{ color.name }}">bg-gradient-{{color.name}}</div>{% endfor %}
+{% endcapture %}
+{% include example.html content=example %}
+
+{% capture example %}
+
+{% for color in site.data.grays %}
+
+<div class="alert bg-gradient-{{ color.name }}">bg-gradient-{{color.name}}</div>{% endfor %}
+{% endcapture %}
+{% include example.html content=example %}
 
 {% capture callout %}
+
 #### Dealing with specificity
 
 Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a `<div>` with the class.

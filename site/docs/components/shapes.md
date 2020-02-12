@@ -49,6 +49,8 @@ Ensure responsive shapes with a `.square`, or `.circle` container and and `.posi
 
 {% capture example %}
 
+### Circle
+
 <div class="circle bg-primary w-33">
   <div class="position-absolute center-x center-y text-white">
     33% width

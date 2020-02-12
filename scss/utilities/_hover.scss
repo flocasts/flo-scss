@@ -5,6 +5,36 @@
   .hover-target:hover + .hover-toggle-#{$display},
   .hover-target:hover .hover-toggle-#{$display},
   .hover-target:hover ~ .hover-toggle-#{$display} {
-    display: $display;
+    display: $display !important;
+  }
+}
+
+@each $label, $color in $theme-colors {
+  .hover-target.hover-text-#{$label}:hover {
+    color: $color !important;
+  }
+  .hover-target:hover .hover-text-#{$label} {
+    color: $color !important;
+  }
+  .hover-target.hover-bg-#{$label}:hover {
+    background-color: $color !important;
+  }
+  .hover-target:hover .hover-bg-#{$label} {
+    background-color: $color !important;
+  }
+}
+
+@each $label, $color in $grays {
+  .hover-target.hover-text-#{$label}:hover {
+    color: $color !important;
+  }
+  .hover-target:hover .hover-text-#{$label} {
+    color: $color !important;
+  }
+  .hover-target.hover-bg-#{$label}:hover {
+    background-color: $color !important;
+  }
+  .hover-target:hover .hover-bg-#{$label} {
+    background-color: $color !important;
   }
 }
