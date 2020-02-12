@@ -7,7 +7,7 @@ jobs:
   build:
     branches:
       only:
-        - circleci
+        - cicd
         - master
     docker:
       # specify the version you desire here
