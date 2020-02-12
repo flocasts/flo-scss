@@ -45,6 +45,7 @@ jobs:
 
       # copy build artifacts to v4-dist and docs to gh-pages
       - run: echo "good morning"
+      - run: echo "good morning"
       - run: git config --global user.email "engineering@flosports.tv"
       - run: git config --global user.name "FloSports Engineering"
       - run: cd .. && cp -rf repo bs-docs
