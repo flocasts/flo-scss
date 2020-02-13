@@ -24,6 +24,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "bf:16:25:b1:2a:ff:dc:ee:ec:53:b4:33:95:86:c5:23"
+            - "2d:80:03:87:eb:a2:56:8a:bd:ae:bc:45:09:9f:cf:48"
 
       - checkout
 
