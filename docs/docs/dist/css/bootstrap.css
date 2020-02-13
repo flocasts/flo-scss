@@ -2286,9 +2286,9 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.25em + 0.867647rem);
-  padding: 0.375rem 0.75rem;
-  font-size: 0.75rem;
+  height: calc(1.25em + 2em + 0.117647rem);
+  padding: 1em 0;
+  font-size: 0.705882rem;
   font-weight: 400;
   line-height: 1.25;
   color: #323236;
@@ -2365,33 +2365,33 @@ select.form-control:focus::-ms-value {
 }
 
 .col-form-label {
-  padding-top: 0.433824rem;
-  padding-bottom: 0.433824rem;
+  padding-top: calc(1em + 0.058824rem);
+  padding-bottom: calc(1em + 0.058824rem);
   margin-bottom: 0;
   font-size: inherit;
   line-height: 1.25;
 }
 
 .col-form-label-lg {
-  padding-top: 0.558824rem;
-  padding-bottom: 0.558824rem;
-  font-size: 0.9375rem;
+  padding-top: 0.058824rem;
+  padding-bottom: 0.058824rem;
+  font-size: 0.705882rem;
   line-height: 2;
 }
 
 .col-form-label-sm {
-  padding-top: 0.308824rem;
-  padding-bottom: 0.308824rem;
-  font-size: 0.65625rem;
+  padding-top: 0.058824rem;
+  padding-bottom: 0.058824rem;
+  font-size: 0.705882rem;
   line-height: 1.25;
 }
 
 .form-control-plaintext {
   display: block;
   width: 100%;
-  padding: 0.375rem 0;
+  padding: 1em 0;
   margin-bottom: 0;
-  font-size: 0.75rem;
+  font-size: 0.705882rem;
   line-height: 1.25;
   color: #0c0c0c;
   background-color: transparent;
@@ -2405,16 +2405,16 @@ select.form-control:focus::-ms-value {
 }
 
 .form-control-sm {
-  height: calc(1.25em + 0.617647rem);
-  padding: 0.25rem 0.5rem;
-  font-size: 0.65625rem;
+  height: calc(1.25em + 0.117647rem);
+  padding: 0 0;
+  font-size: 0.705882rem;
   line-height: 1.25;
 }
 
 .form-control-lg {
-  height: calc(2em + 1.117647rem);
-  padding: 0.5rem 1rem;
-  font-size: 0.9375rem;
+  height: calc(2em + 0.117647rem);
+  padding: 0 0;
+  font-size: 0.705882rem;
   line-height: 2;
 }
 
@@ -2518,11 +2518,11 @@ textarea.form-control {
 
 .was-validated .form-control:valid, .form-control.is-valid {
   border-color: #28a745;
-  padding-right: calc(1.25em + 0.75rem);
+  padding-right: 3.25em;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.3125em + 0.1875rem) center;
-  background-size: calc(0.625em + 0.375rem) calc(0.625em + 0.375rem);
+  background-position: right 0.8125em center;
+  background-size: 1.625em 1.625em;
 }
 
 .was-validated .form-control:valid:focus, .form-control.is-valid:focus {
@@ -2531,14 +2531,14 @@ textarea.form-control {
 }
 
 .was-validated textarea.form-control:valid, textarea.form-control.is-valid {
-  padding-right: calc(1.25em + 0.75rem);
-  background-position: top calc(0.3125em + 0.1875rem) right calc(0.3125em + 0.1875rem);
+  padding-right: 3.25em;
+  background-position: top 0.8125em right 0.8125em;
 }
 
 .was-validated .custom-select:valid, .custom-select.is-valid {
   border-color: #28a745;
-  padding-right: calc(0.75em + 2.3125rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23232327' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.625em + 0.375rem) calc(0.625em + 0.375rem);
+  padding-right: 3.25em;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23232327' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0 center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1em/1.625em 1.625em;
 }
 
 .was-validated .custom-select:valid:focus, .custom-select.is-valid:focus {
@@ -2617,11 +2617,11 @@ textarea.form-control {
 
 .was-validated .form-control:invalid, .form-control.is-invalid {
   border-color: #ff140f;
-  padding-right: calc(1.25em + 0.75rem);
+  padding-right: 3.25em;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23ff140f' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ff140f' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.3125em + 0.1875rem) center;
-  background-size: calc(0.625em + 0.375rem) calc(0.625em + 0.375rem);
+  background-position: right 0.8125em center;
+  background-size: 1.625em 1.625em;
 }
 
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
@@ -2630,14 +2630,14 @@ textarea.form-control {
 }
 
 .was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
-  padding-right: calc(1.25em + 0.75rem);
-  background-position: top calc(0.3125em + 0.1875rem) right calc(0.3125em + 0.1875rem);
+  padding-right: 3.25em;
+  background-position: top 0.8125em right 0.8125em;
 }
 
 .was-validated .custom-select:invalid, .custom-select.is-invalid {
   border-color: #ff140f;
-  padding-right: calc(0.75em + 2.3125rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23232327' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23ff140f' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ff140f' stroke='none'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.625em + 0.375rem) calc(0.625em + 0.375rem);
+  padding-right: 3.25em;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23232327' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0 center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23ff140f' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ff140f' stroke='none'/%3e%3c/svg%3e") #fff no-repeat center right 1em/1.625em 1.625em;
 }
 
 .was-validated .custom-select:invalid:focus, .custom-select.is-invalid:focus {
@@ -2776,8 +2776,8 @@ textarea.form-control {
   user-select: none;
   background-color: transparent;
   border: 0.058824rem solid transparent;
-  padding: 1rem 0.75rem;
-  font-size: 0.75rem;
+  padding: 1em 0;
+  font-size: 0.705882rem;
   line-height: 1.25;
   border-radius: 0;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3469,15 +3469,15 @@ fieldset:disabled a.btn {
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  padding: 0.5rem 1rem;
-  font-size: 0.9375rem;
+  padding: 0 0;
+  font-size: 0.705882rem;
   line-height: 2;
   border-radius: 0;
 }
 
 .btn-sm, .btn-group-sm > .btn {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.65625rem;
+  padding: 0 0;
+  font-size: 0.705882rem;
   line-height: 1.25;
   border-radius: 0;
 }
@@ -4564,16 +4564,16 @@ fieldset:disabled a.btn {
 }
 
 .chip-lg {
-  padding: 0.5rem 1rem;
-  font-size: 0.9375rem;
+  padding: 0 0;
+  font-size: 0.705882rem;
   line-height: 2;
   border-radius: 0;
   border-radius: 2rem;
 }
 
 .chip-sm {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.65625rem;
+  padding: 0 0;
+  font-size: 0.705882rem;
   line-height: 1.25;
   border-radius: 0;
   border-radius: 1rem;
@@ -4858,8 +4858,8 @@ input[type="button"].chip-block {
 }
 
 .dropdown-toggle-split {
-  padding-right: 0.5625rem;
-  padding-left: 0.5625rem;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .dropdown-toggle-split::after,
@@ -4873,13 +4873,13 @@ input[type="button"].chip-block {
 }
 
 .btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
-  padding-right: 0.375rem;
-  padding-left: 0.375rem;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .btn-group-vertical {
@@ -5010,9 +5010,9 @@ input[type="button"].chip-block {
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0.375rem 0.75rem;
+  padding: 1em 0;
   margin-bottom: 0;
-  font-size: 0.75rem;
+  font-size: 0.705882rem;
   font-weight: 400;
   line-height: 1.25;
   color: #323236;
@@ -5031,7 +5031,7 @@ input[type="button"].chip-block {
 
 .input-group-lg > .form-control:not(textarea),
 .input-group-lg > .custom-select {
-  height: calc(2em + 1.117647rem);
+  height: calc(2em + 0.117647rem);
 }
 
 .input-group-lg > .form-control,
@@ -5040,14 +5040,14 @@ input[type="button"].chip-block {
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
-  padding: 0.5rem 1rem;
-  font-size: 0.9375rem;
+  padding: 0 0;
+  font-size: 0.705882rem;
   line-height: 2;
 }
 
 .input-group-sm > .form-control:not(textarea),
 .input-group-sm > .custom-select {
-  height: calc(1.25em + 0.617647rem);
+  height: calc(1.25em + 0.117647rem);
 }
 
 .input-group-sm > .form-control,
@@ -5056,14 +5056,14 @@ input[type="button"].chip-block {
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.65625rem;
+  padding: 0 0;
+  font-size: 0.705882rem;
   line-height: 1.25;
 }
 
 .input-group-lg > .custom-select,
 .input-group-sm > .custom-select {
-  padding-right: 1.75rem;
+  padding-right: 1em;
 }
 
 .custom-control {
@@ -5221,14 +5221,14 @@ input[type="button"].chip-block {
 .custom-select {
   display: inline-block;
   width: 100%;
-  height: calc(1.25em + 0.867647rem);
-  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  font-size: 0.75rem;
+  height: calc(1.25em + 2em + 0.117647rem);
+  padding: 1em 1em 1em 0;
+  font-size: 0.705882rem;
   font-weight: 400;
   line-height: 1.25;
   color: #323236;
   vertical-align: middle;
-  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23232327' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23232327' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0 center/8px 10px;
   border: 0.058824rem solid #cdcdd2;
   border-radius: 0;
   -webkit-appearance: none;
@@ -5249,7 +5249,7 @@ input[type="button"].chip-block {
 
 .custom-select[multiple], .custom-select[size]:not([size="1"]) {
   height: auto;
-  padding-right: 0.75rem;
+  padding-right: 0;
   background-image: none;
 }
 
@@ -5268,26 +5268,26 @@ input[type="button"].chip-block {
 }
 
 .custom-select-sm {
-  height: calc(1.25em + 0.617647rem);
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  font-size: 0.65625rem;
+  height: calc(1.25em + 0.117647rem);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  font-size: 0.705882rem;
 }
 
 .custom-select-lg {
-  height: calc(2em + 1.117647rem);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  font-size: 0.9375rem;
+  height: calc(2em + 0.117647rem);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  font-size: 0.705882rem;
 }
 
 .custom-file {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: calc(1.25em + 0.867647rem);
+  height: calc(1.25em + 2em + 0.117647rem);
   margin-bottom: 0;
 }
 
@@ -5295,7 +5295,7 @@ input[type="button"].chip-block {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: calc(1.25em + 0.867647rem);
+  height: calc(1.25em + 2em + 0.117647rem);
   margin: 0;
   opacity: 0;
 }
@@ -5324,8 +5324,8 @@ input[type="button"].chip-block {
   right: 0;
   left: 0;
   z-index: 1;
-  height: calc(1.25em + 0.867647rem);
-  padding: 0.375rem 0.75rem;
+  height: calc(1.25em + 2em + 0.117647rem);
+  padding: 1em 0;
   font-weight: 400;
   line-height: 1.25;
   color: #323236;
@@ -5340,8 +5340,8 @@ input[type="button"].chip-block {
   bottom: 0;
   z-index: 3;
   display: block;
-  height: calc(1.25em + 0.75rem);
-  padding: 0.375rem 0.75rem;
+  height: 3.25em;
+  padding: 1em 0;
   line-height: 1.25;
   color: #323236;
   content: "Browse";
