@@ -157,8 +157,7 @@
     "node": ">=6"
   },
   "files": [
-    "dist/{css,js}/*.{css,js,map}",
-    "js/{src,dist}/**/*.{js,map}",
+    "dist/css/*.{css,map}",
     "scss/**/*.scss"
   ],
   "jspm": {

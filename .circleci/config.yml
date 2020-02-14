@@ -57,6 +57,7 @@ jobs:
       - run: cp -rf docs/* ../gh-pages
       # - run: bash build/ship.sh 0.0.3
       - run: cd ../gh-pages && git add . && git commit -m 'CircleCI auto commit' && git push
+      - run: npm publish --access public
       # - run: git checkout v4-dist
       # - run: git pull && git merge $CIRCLE_BRANCH --no-edit
       # - run: git add . && git commit -m 'CircleCI auto commit' && git push
