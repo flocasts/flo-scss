@@ -48,7 +48,7 @@ jobs:
 
       - run: git config --global user.email "engineering@flosports.tv"
       - run: git config --global user.name "FloSports Engineering"
-      - run: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/rep
+      - run: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
       - run: cd .. && cp -rf repo bs-docs
       - run: cd ../bs-docs && git checkout . && git checkout gh-pages && git pull
       - run: mkdir ../gh-pages && cp -rf ../bs-docs/.git ../gh-pages
