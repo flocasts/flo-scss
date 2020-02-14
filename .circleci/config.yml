@@ -30,8 +30,8 @@ jobs:
       - run: git config --global user.email "engineering@flosports.tv"
       - run: git config --global user.name "FloSports Engineering"
       - run:
-        name: Authenticate with registry
-        command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/rep
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/rep
 
       - checkout
 
