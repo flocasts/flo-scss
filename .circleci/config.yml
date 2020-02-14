@@ -52,6 +52,7 @@ jobs:
       - run: cd .. && cp -rf repo bs-docs
       - run: cd ../bs-docs && git checkout . && git checkout gh-pages && git pull
       - run: mkdir ../gh-pages && cp -rf ../bs-docs/.git ../gh-pages
+      - run: cp -rf .circleci ../gh-pages
       - run: npm run release
       - run: cp -rf docs/* ../gh-pages
       # - run: bash build/ship.sh 0.0.3
