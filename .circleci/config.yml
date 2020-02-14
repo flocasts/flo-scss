@@ -45,14 +45,16 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # copy build artifacts to v4-dist and docs to gh-pages
-      - run: echo 'github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==' >> ~/.ssh/known_hosts
+      # - run: echo 'github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==' >> ~/.ssh/known_hosts
       - run: git config --global user.email "engineering@flosports.tv"
       - run: git config --global user.name "FloSports Engineering"
       - run: cd .. && cp -rf repo bs-docs
       - run: cd ../bs-docs && git checkout . && git checkout gh-pages && git pull
-      - run: bash build/ship.sh 4.4.1
-      - run: cd ../bs-docs && git add . && git commit -m 'CircleCI auto commit' && git push
-      - run: git checkout v4-dist
-      - run: git pull && git merge $CIRCLE_BRANCH --no-edit
+      - run: mkdir ../gh-pages && cp -rf ../bs-docs/.git ../gh-pages
       - run: npm run release
-      - run: git add . && git commit -m 'CircleCI auto commit' && git push
+      - run: cp -rf docs/* ../gh-pages
+      # - run: bash build/ship.sh 0.0.3
+      - run: cd ../gh-pages && git add . && git commit -m 'CircleCI auto commit' && git push
+      # - run: git checkout v4-dist
+      # - run: git pull && git merge $CIRCLE_BRANCH --no-edit
+      # - run: git add . && git commit -m 'CircleCI auto commit' && git push
