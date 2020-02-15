@@ -5,6 +5,22 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+$black: #fff;
+$gray-900: #ffffff;
+$gray-800: #f5f5f7;
+$gray-700: #eeeef0;
+$gray-600: #cdcdd2;
+$gray-500: #919196;
+$gray-400: #646469;
+$gray-300: #323236;
+$gray-200: #232327;
+$gray-100: #0c0c0c;
+$white: #000;
+
+$yiq-text-dark: $gray-100 !default;
+$yiq-text-light: $black !default;
+
+
 @import "functions";
 @import "variables";
 @import "mixins";
