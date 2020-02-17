@@ -8,6 +8,7 @@ jobs:
     branches:
       only:
         - cicd
+        - semver
         - master
     docker:
       # specify the version you desire here
