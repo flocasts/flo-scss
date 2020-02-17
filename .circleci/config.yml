@@ -6,6 +6,7 @@ jobs:
         - cicd
         - semver
         - master
+    working_directory: ~/flo-scss
     docker:
       # - image: 'circleci/node:latest'
       - image: circleci/ruby:2.6-buster-node  # language image
@@ -22,13 +23,17 @@ jobs:
       - run:
           name: install ruby and node dependencies
           command: bundle install && npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: setup release folders
           command: |
             pwd
             cd .. 
             pwd
-            cp -rf repo bs-docs
+            cp -rf flo-scss bs-docs
             pwd
             cd bs-docs 
             pwd
@@ -44,7 +49,7 @@ jobs:
             pwd
             cp -rf bs-docs/.git gh-pages
             pwd
-            cp -rf repo/.circleci gh-pages
+            cp -rf flo-scss/.circleci gh-pages
             pwd
       - run:
           name: build release
