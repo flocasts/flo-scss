@@ -1,11 +1,6 @@
 version: 2
 jobs:
   build:
-    branches:
-      only:
-        - cicd
-        - semver
-        - master
     working_directory: ~/flo-scss
     docker:
       # - image: 'circleci/node:latest'
@@ -41,7 +36,7 @@ jobs:
             cp -rf bs-docs/.git gh-pages
             cp -rf flo-scss/.circleci gh-pages
       - run:
-          name: build release
+          name: create build
           command: npm run release
 
   release:
@@ -78,3 +73,13 @@ jobs:
       - run:
           name: run semantic release
           command: npm run semantic-release || true
+
+
+workflows:
+  version: 2.1
+  build_release:
+    jobs:
+      - build
+      - release:
+          requires:
+            - build
