@@ -25,16 +25,27 @@ jobs:
       - run:
           name: setup release folders
           command: |
+            pwd
             cd .. 
+            pwd
             cp -rf repo bs-docs
+            pwd
             cd bs-docs 
+            pwd
             git checkout . 
+            pwd
             git checkout gh-pages 
+            pwd
             git pull
+            pwd
             cd ..
+            pwd
             mkdir gh-pages 
+            pwd
             cp -rf bs-docs/.git gh-pages
+            pwd
             cp -rf repo/.circleci gh-pages
+            pwd
       - run:
           name: build release
           command: npm run release
