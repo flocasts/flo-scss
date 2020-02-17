@@ -1,85 +1,79 @@
-version: 2
-jobs:
-  build:
-    working_directory: ~/flo-scss
-    docker:
-      # - image: 'circleci/node:latest'
-      - image: circleci/ruby:2.6-buster-node  # language image
-    steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "5b:58:a2:6e:11:ed:10:15:40:e5:5e:cc:cd:17:13:5a"
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-      - run:
-          name: install ruby and node dependencies
-          command: bundle install && npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run:
-          name: setup release folders
-          command: |
-            cd .. 
-            cp -rf flo-scss bs-docs
-            cd bs-docs 
-            git checkout . 
-            git checkout gh-pages 
-            git pull
-            cd ..
-            mkdir gh-pages 
-            cp -rf bs-docs/.git gh-pages
-            cp -rf flo-scss/.circleci gh-pages
-      - run:
-          name: create build
-          command: npm run release
-
-  release:
-    branches:
-      only:
-        - cicd
-        - semver
-        - master
-    working_directory: ~/flo-scss
-    docker:
-      # - image: 'circleci/node:latest'
-      - image: circleci/ruby:2.6-buster-node  # language image
-    steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "5b:58:a2:6e:11:ed:10:15:40:e5:5e:cc:cd:17:13:5a"
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-      - run:
-          name: setup git user
-          command: |
-            git config --global user.email "engineering@flosports.tv"
-            git config --global user.name "FloSports Engineering"
-      - run:
-          name: push github pages
-          command: |
-            cp -rf docs/* ../gh-pages
-            cd ../gh-pages 
-            git add . 
-            git commit -m 'CircleCI auto commit' && git push
-      - run:
-          name: run semantic release
-          command: npm run semantic-release || true
-
-
 workflows:
-  version: 2.1
+  version: 2
   build_release:
-    jobs:
-      - build
-      - release:
-          requires:
-            - build
+  jobs:
+    build:
+      working_directory: ~/flo-scss
+      docker:
+        # - image: 'circleci/node:latest'
+        - image: circleci/ruby:2.6-buster-node  # language image
+      steps:
+        - add_ssh_keys:
+            fingerprints:
+              - "5b:58:a2:6e:11:ed:10:15:40:e5:5e:cc:cd:17:13:5a"
+        - checkout
+        - restore_cache:
+            keys:
+              - v1-dependencies-{{ checksum "package.json" }}
+              # fallback to using the latest cache if no exact match is found
+              - v1-dependencies-
+        - run:
+            name: install ruby and node dependencies
+            command: bundle install && npm install
+        - save_cache:
+            paths:
+              - node_modules
+            key: v1-dependencies-{{ checksum "package.json" }}
+        - run:
+            name: setup release folders
+            command: |
+              cd .. 
+              cp -rf flo-scss bs-docs
+              cd bs-docs 
+              git checkout . 
+              git checkout gh-pages 
+              git pull
+              cd ..
+              mkdir gh-pages 
+              cp -rf bs-docs/.git gh-pages
+              cp -rf flo-scss/.circleci gh-pages
+        - run:
+            name: create build
+            command: npm run release
+    release:
+      requires:
+        - build
+      branches:
+        only:
+          - cicd
+          - semver
+          - master
+      working_directory: ~/flo-scss
+      docker:
+        # - image: 'circleci/node:latest'
+        - image: circleci/ruby:2.6-buster-node  # language image
+      steps:
+        - add_ssh_keys:
+            fingerprints:
+              - "5b:58:a2:6e:11:ed:10:15:40:e5:5e:cc:cd:17:13:5a"
+        - restore_cache:
+            keys:
+              - v1-dependencies-{{ checksum "package.json" }}
+              # fallback to using the latest cache if no exact match is found
+              - v1-dependencies-
+        - run:
+            name: setup git user
+            command: |
+              git config --global user.email "engineering@flosports.tv"
+              git config --global user.name "FloSports Engineering"
+        - run:
+            name: push github pages
+            command: |
+              cp -rf docs/* ../gh-pages
+              cd ../gh-pages 
+              git add . 
+              git commit -m 'CircleCI auto commit' && git push
+        - run:
+            name: run semantic release
+            command: npm run semantic-release || true
+
