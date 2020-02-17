@@ -1,7 +1,7 @@
 {
   "name": "@flosportsinc/flo-scss",
   "description": "Based on The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "0.0.4",
+  "version": "0.0.0-development",
   "version_short": "0.0",
   "keywords": [
     "css",
@@ -14,7 +14,7 @@
     "flosports"
   ],
   "homepage": "https://flo-scss.flo.center/",
-  "author": "FloSports Engineering & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
+  "author": "FloSports Engineering (https://flosports.tv) & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
   "contributors": [
     "FloSports",
     "Twitter, Inc."
@@ -86,17 +86,18 @@
     "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm run css-main\"",
     "watch-css-docs": "nodemon --watch \"site/docs/**/assets/scss/\" --ext scss --exec \"npm run css-docs\"",
     "watch-js-main": "nodemon --watch js/src/ --ext js --exec \"npm run js-compile\"",
-    "watch-js-docs": "nodemon --watch \"site/docs/**/assets/js/src/\" --ext js --exec \"npm run js-docs\""
+    "watch-js-docs": "nodemon --watch \"site/docs/**/assets/js/src/\" --ext js --exec \"npm run js-docs\"",
+    "semantic-release": "semantic-release"
   },
   "style": "dist/css/bootstrap.css",
   "sass": "scss/bootstrap.scss",
   "main": "dist/js/bootstrap",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/twbs/bootstrap.git"
+    "url": "https://github.com/flocasts/flo-scss.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/flocasts/flo-scss/issues"
   },
   "license": "MIT",
   "funding": {
@@ -153,7 +154,8 @@
     "stylelint": "^9.10.1",
     "stylelint-config-twbs-bootstrap": "^0.5.0",
     "uglify-js": "^3.7.3",
-    "vnu-jar": "19.9.4"
+    "vnu-jar": "19.9.4",
+    "semantic-release": "^17.0.4"
   },
   "engines": {
     "node": ">=6"
