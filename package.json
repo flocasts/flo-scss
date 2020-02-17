@@ -121,7 +121,6 @@
     "bundlesize": "^0.18.0",
     "clean-css-cli": "^4.3.0",
     "cross-env": "^5.2.1",
-    "cz-conventional-changelog": "^3.1.0",
     "eslint": "^5.16.0",
     "find-unused-sass-variables": "^0.6.0",
     "glob": "^7.1.6",
@@ -183,16 +182,6 @@
     "peerDependencies": {
       "jquery": "1.9.1 - 3",
       "popper.js": "^1.16.0"
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
   "release": {
