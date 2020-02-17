@@ -194,5 +194,11 @@
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
+  },
+  "release": {
+    "branches": [
+      "master",
+      "semver"
+    ]
   }
 }
