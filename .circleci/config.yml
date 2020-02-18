@@ -48,6 +48,9 @@ jobs:
       - image: circleci/ruby:2.6-buster-node  # language image
     working_directory: ~/flo-scss
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "5b:58:a2:6e:11:ed:10:15:40:e5:5e:cc:cd:17:13:5a"
       - restore_cache:
           keys:
             - flo-scss-validate-{{ .Branch }}	
@@ -82,9 +85,6 @@ jobs:
       - restore_cache:
           keys:
             - flo-scss-build-{{ .Branch }}	
-      - add_ssh_keys:
-          fingerprints:
-            - "5b:58:a2:6e:11:ed:10:15:40:e5:5e:cc:cd:17:13:5a"
       - run:
           name: setup git && npm
           command: |
