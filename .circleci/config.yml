@@ -96,9 +96,7 @@ jobs:
   release:
     docker:
       - image: circleci/ruby:2.6-buster-node  # language image
-
     working_directory: ~/flo-scss
-
     steps:
       - checkout
       - restore_cache:
