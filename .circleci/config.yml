@@ -4,47 +4,45 @@
 #
 version: 2
 jobs:
-  validate:
-    docker:
-      - image: circleci/node:lts
-    working_directory: ~/flo-scss
-    steps:
-      - checkout
-      - run:
-          name: npm install
-          command: npm install
-      - run:
-          name: lint
-          command: npx commitlint --from=HEAD~1
-      - save_cache:
-          paths:
-            - .
-          key: flo-scss-validate
-
   dependencies:
     docker:
       - image: circleci/ruby:2.6-buster-node  # language image
     working_directory: ~/flo-scss
     steps:
+      - checkout
       - restore_cache:
           keys:
-            - flo-scss-validate
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "Gemfile" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "Gemfile" }}-{{ .Branch }}	
+      - run:
+          name: npm install
+          command: npm install
       - run: 
           name: bundle install
           command: cd ~/flo-scss && pwd && ls -lash && bundle install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "Gemfile" }}-{{ .Branch }}	
       - save_cache:
           paths:
             - .
-          key: flo-scss-dependencies
+          key: flo-scss-dependencies-{{ .Branch }}	
+
+  validate:
+    docker:
+      - image: circleci/ruby:2.6-buster-node  # language image
+    working_directory: ~/flo-scss
+    steps:
+      - restore_cache:
+          keys:
+            - flo-scss-dependencies-{{ .Branch }}	
+      - run:
+          name: lint
+          command: npx commitlint --from=HEAD~1
+      - save_cache:
+          paths:
+            - .
+          key: flo-scss-validate-{{ .Branch }}	
   build:
     docker:
       - image: circleci/ruby:2.6-buster-node  # language image
@@ -52,19 +50,7 @@ jobs:
     steps:
       - restore_cache:
           keys:
-            - flo-scss-dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "Gemfile" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-      - run: 
-          name: bundle install
-          command: cd ~/flo-scss && pwd && ls -lash && bundle install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+            - flo-scss-validate-{{ .Branch }}	
       - run: 
           name: create build
           command: |
@@ -81,10 +67,17 @@ jobs:
             cd flo-scss
             npm run release
             cp -rf docs/* ../gh-pages
+      - save_cache:
+          paths:
+            - node_modules
+          key: flo-scss-build-{{ .Branch }}
 
   release:
     docker:
       - image: circleci/ruby:2.6-buster-node  # language image
+      - restore_cache:
+          keys:
+            - flo-scss-build-{{ .Branch }}	
 
     working_directory: ~/flo-scss
 
@@ -116,15 +109,10 @@ workflows:
   version: 2
   validate-build-release:
     jobs:
-      - validate
-      - dependencies:
+      - dependencies
+      - validate:
           requires:
-            - validate
-          filters:
-            branches:
-              only: 
-                - master
-                - cicd
+            - dependencies
       - build:
           requires:
             - dependencies
