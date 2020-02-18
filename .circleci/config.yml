@@ -16,9 +16,6 @@ jobs:
       - run:
           name: npm install
           command: npm install
-      - run: 
-          name: bundle install
-          command: cd ~/flo-scss && pwd && ls -lash && bundle install
       - save_cache:
           paths:
             - node_modules
@@ -56,6 +53,9 @@ jobs:
       - restore_cache:
           keys:
             - flo-scss-validate-{{ .Branch }}	
+      - run: 
+          name: bundle install
+          command: bundle install
       - run: 
           name: create build
           command: |
