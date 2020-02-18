@@ -15,7 +15,7 @@ jobs:
           command: npm install
       - save_cache:
           paths:
-            - node_modules
+            - '~'
           key: flo-scss-dependencies-{{ .Branch }}-{{ .Revision }}
       - slack/status:
           fail_only: true
