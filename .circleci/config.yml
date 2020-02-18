@@ -58,7 +58,7 @@ jobs:
           command: bundle install
       - run: 
           name: increment version
-          command: echo 'standard-version'
+          command: npx standard-version
       - run: 
           name: create build
           command: |
@@ -102,7 +102,7 @@ jobs:
           command: |
             git add .
             git commit -m 'CircleCI auto commit'
-            git push
+            git push --follow-tags
       - run: 
           name: release github pages
           command: |
