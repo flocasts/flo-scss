@@ -109,3 +109,9 @@ jobs:
       # - run: bash build/ship.sh 0.0.3
       - run: cd ../gh-pages && git add . && git commit -m 'CircleCI auto commit' && git push
       - run: npm publish --access public
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - validate
+      - test
