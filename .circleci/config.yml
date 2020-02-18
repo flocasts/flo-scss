@@ -24,6 +24,13 @@ jobs:
           paths:
             - '~'
           key: flo-scss-dependencies-{{ .Branch }}	
+      - slack/status:
+          fail_only: false
+          # color: '#42e2f4'
+          channel: 'DEZFWC2B0'
+          mentions: 'KurtAngular'
+          # message: This is a custom message notification
+          webhook: '${SLACK_WEBHOOK}'
 
   validate:
     docker:
@@ -40,6 +47,13 @@ jobs:
           paths:
             - '~'
           key: flo-scss-validate-{{ .Branch }}	
+      - slack/status:
+          fail_only: false
+          # color: '#42e2f4'
+          channel: 'DEZFWC2B0'
+          mentions: 'KurtAngular'
+          # message: This is a custom message notification
+          webhook: '${SLACK_WEBHOOK}'
   build:
     docker:
       - image: circleci/ruby:2.6-buster-node  # language image
