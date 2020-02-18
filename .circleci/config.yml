@@ -65,8 +65,15 @@ jobs:
             git config --global user.name "FloSports Engineering"
             echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/flo-scss/.npmrc
       - run: 
+          name: increment version
+          command: echo 'standard-version'
+      - run: 
           name: release github pages
-          command: cd ../gh-pages && git add . && git commit -m 'CircleCI auto commit' && git push
+          command: |
+            cd ../gh-pages
+            git add .
+            git commit -m 'CircleCI auto commit'
+            git push
       - run:
           name: release npm
           command: npm publish --access public
