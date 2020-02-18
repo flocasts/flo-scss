@@ -15,37 +15,38 @@ jobs:
           command: npm install
       - run:
           name: lint
-          command: npx commitlint --from=HEAD~1
+          command: npx commitlint --from=HEAD
   build:
     docker:
       - image: circleci/ruby:2.6-buster-node  # language image
-
     working_directory: ~/flo-scss
-
     steps:
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-
       - run: bundle install
-
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
-      # copy docs to gh-pages and publish dist and scss to npm
-
-      - run: cd .. && cp -rf flo-scss bs-docs
-      - run: cd ../bs-docs && git checkout . && git checkout gh-pages && git pull
-      - run: mkdir ../gh-pages && cp -rf ../bs-docs/.git ../gh-pages
-      - run: cp -rf .circleci ../gh-pages
-      - run: npm run release
-      - run: cp -rf docs/* ../gh-pages
+      - run: 
+          name: create build
+          command: |
+            cd .. 
+            cp -rf flo-scss bs-docs
+            cd bs-docs
+            git checkout .
+            git checkout gh-pages
+            git pull
+            cd ..
+            mkdir gh-pages
+            cp -rf bs-docs/.git gh-pages
+            cp -rf flo-scss/.circleci gh-pages
+            cd flo-scss
+            npm run release
+            cp -rf docs/* ../gh-pages
 
   release:
     docker:
