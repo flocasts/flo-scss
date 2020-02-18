@@ -2,29 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.1](https://github.com/flocasts/flo-scss/compare/v0.0.0...v0.0.1) (2020-02-18)
-
-
-### Features
-
-* wip ([b18caa6](https://github.com/flocasts/flo-scss/commit/b18caa6bd26bc850b38e18616c54b7067f26d790))
-* wip ([00385c7](https://github.com/flocasts/flo-scss/commit/00385c756c1aea05fe7cc623f9fe5b5ab714245c))
-
-## [0.0.0](https://github.com/flocasts/flo-scss/compare/v4.3.1...v0.0.0) (2020-02-18)
-
-
-### Features
-
-* asd ([444cf6a](https://github.com/flocasts/flo-scss/commit/444cf6a2eea799e83e9204580cbce3151b0a10b0))
-* init icons and update utilities ([#4](https://github.com/flocasts/flo-scss/issues/4)) ([8e75140](https://github.com/flocasts/flo-scss/commit/8e75140b8c6f4729c5db3747e893da5cef222d61))
-* wip ([e4d4e84](https://github.com/flocasts/flo-scss/commit/e4d4e84db703b451d4f4e93f4b236123c01c02c7))
-* wip ([024b798](https://github.com/flocasts/flo-scss/commit/024b798af2bf3287f34c9c4d96bdfe949732cf98))
-* wip ([3967f7b](https://github.com/flocasts/flo-scss/commit/3967f7b781b9e65130ce413f90e73ecd62fb410d))
-* wip ([39f6186](https://github.com/flocasts/flo-scss/commit/39f6186459cd228a86d64e5591d9228c65210bef))
-* wip ([9caf3b2](https://github.com/flocasts/flo-scss/commit/9caf3b22554de472a85d8668faa27ae763947303))
-* wip ([5ecf418](https://github.com/flocasts/flo-scss/commit/5ecf4185e28316efb6253992d9103c3f0ba3f8b5))
-* wip ([f0dcdbc](https://github.com/flocasts/flo-scss/commit/f0dcdbca81e167dab85270858ff7540a1cd6b57b))
-* wip ([1129f16](https://github.com/flocasts/flo-scss/commit/1129f166f611126b5c526513a73d35cd925e9feb))
 
 
 ### Bug Fixes

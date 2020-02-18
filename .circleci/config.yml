@@ -118,7 +118,11 @@ workflows:
   version: 2
   validate-build-release:
     jobs:
-      - dependencies
+      - dependencies:
+          filters:
+            branches:
+              ignore: 
+                - gh-pages
       - validate:
           requires:
             - dependencies
