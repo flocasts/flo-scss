@@ -10,16 +10,13 @@ jobs:
     working_directory: ~/flo-scss
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "Gemfile" }}-{{ .Branch }}	
       - run:
           name: npm install
           command: npm install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "Gemfile" }}-{{ .Branch }}	
+          key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "Gemfile" }}-{{ .Branch }}
       - save_cache:
           paths:
             - '~'
