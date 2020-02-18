@@ -16,7 +16,7 @@ jobs:
       - save_cache:
           paths:
             - .
-          key: flo-scss-dependencies-{{ .Branch }}-{{ .BuildNum }}	
+          key: flo-scss-dependencies-{{ .Branch }}-{{ .BuildNum }}
       - slack/status:
           fail_only: true
           # color: '#42e2f4'
