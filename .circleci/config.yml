@@ -28,7 +28,7 @@ jobs:
             - v1-dependencies-
       - run: 
           name: bundle install
-          command: cd ~/flo-scss && bundle install
+          command: cd ~/flo-scss && pwd && ls -lash && bundle install
       - save_cache:
           paths:
             - node_modules
