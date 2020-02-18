@@ -41,7 +41,7 @@ jobs:
             - flo-scss-dependencies-{{ .Branch }}-{{ .Revision }}
       - run:
           name: lint
-          command: pwd && ls -lash && git show && npx commitlint --from=HEAD~1
+          command: npx commitlint --from=HEAD~1
       - save_cache:
           paths:
             - '~'
@@ -69,9 +69,6 @@ jobs:
           name: bundle install
           command: bundle install
       - run: 
-          name: increment version
-          command: npx standard-version
-      - run: 
           name: create build
           command: |
             cd .. 
@@ -85,8 +82,6 @@ jobs:
             cp -rf bs-docs/.git gh-pages
             cp -rf flo-scss/.circleci gh-pages
             cd flo-scss
-            pwd
-            ls -lash
             npm run release
             cp -rf docs/* ../gh-pages
       - save_cache:
@@ -114,6 +109,8 @@ jobs:
           command: |
             git add .
             git commit -m 'CircleCI auto commit'
+            git checkout master
+            git merge {{ .Branch }}
             git push --follow-tags
       - run: 
           name: release github pages
