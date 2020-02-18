@@ -15,11 +15,7 @@ jobs:
           command: npm install
       - save_cache:
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "Gemfile" }}-{{ .Branch }}
-      - save_cache:
-          paths:
-            - '~'
+            - .
           key: flo-scss-dependencies-{{ .Branch }}-{{ .BuildNum }}	
       - slack/status:
           fail_only: true
@@ -42,7 +38,7 @@ jobs:
           command: git show && npx commitlint --from=HEAD~1
       - save_cache:
           paths:
-            - '~'
+            - .
           key: flo-scss-validate-{{ .Branch }}-{{ .BuildNum }}
       - slack/status:
           fail_only: true
@@ -94,7 +90,7 @@ jobs:
             cp -rf docs/* ../gh-pages
       - save_cache:
           paths:
-            - '~'
+            - .
           key: flo-scss-build-{{ .Branch }}-{{ .BuildNum }}
       - slack/status:
           fail_only: true
