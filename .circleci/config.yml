@@ -27,7 +27,6 @@ jobs:
           fail_only: true
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
-          message: flo-scss CircleCI dependencies
           webhook: '${SLACK_WEBHOOK}'
 
   validate:
@@ -49,7 +48,6 @@ jobs:
           fail_only: true
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
-          message: flo-scss CircleCI validate
           webhook: '${SLACK_WEBHOOK}'
   build:
     docker:
@@ -90,7 +88,6 @@ jobs:
           fail_only: true
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
-          message: flo-scss CircleCI build
           webhook: '${SLACK_WEBHOOK}'
 
   release:
@@ -123,7 +120,6 @@ jobs:
           fail_only: false
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
-          message: flo-scss CircleCI release
           webhook: '${SLACK_WEBHOOK}'
 
 orbs:
