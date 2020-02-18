@@ -91,7 +91,8 @@ jobs:
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
           # message: This is a custom message notification
-          webhook: 'https://hooks.slack.com/services/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'
+          url: 'https://circleci.com/workflow-run/${CIRCLE_WORKFLOW_ID}'
+          webhook: '${SLACK_WEBHOOK}'
 
   release:
     docker:
