@@ -56,6 +56,12 @@ jobs:
       - run: 
           name: bundle install
           command: bundle install
+      - run:
+          name: setup git && npm
+          command: |
+            git config --global user.email "engineering@flosports.tv"
+            git config --global user.name "FloSports Engineering"
+            echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/flo-scss/.npmrc
       - run: 
           name: increment version
           command: npx standard-version
@@ -98,12 +104,6 @@ jobs:
       - restore_cache:
           keys:
             - flo-scss-build-{{ .Branch }}	
-      - run:
-          name: setup git && npm
-          command: |
-            git config --global user.email "engineering@flosports.tv"
-            git config --global user.name "FloSports Engineering"
-            echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/flo-scss/.npmrc
       - run: 
           name: update github master branch
           command: |
