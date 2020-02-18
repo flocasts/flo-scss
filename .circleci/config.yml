@@ -2,7 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 2
+version: 2.1
 jobs:
   dependencies:
     docker:
@@ -22,7 +22,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "Gemfile" }}-{{ .Branch }}	
       - save_cache:
           paths:
-            - ~
+            - '~'
           key: flo-scss-dependencies-{{ .Branch }}	
 
   validate:
@@ -38,7 +38,7 @@ jobs:
           command: npx commitlint --from=HEAD~1
       - save_cache:
           paths:
-            - ~
+            - '~'
           key: flo-scss-validate-{{ .Branch }}	
   build:
     docker:
@@ -77,7 +77,7 @@ jobs:
             cp -rf docs/* ../gh-pages
       - save_cache:
           paths:
-            - ~
+            - '~'
           key: flo-scss-build-{{ .Branch }}
       - slack/status:
           fail_only: false
@@ -124,7 +124,6 @@ jobs:
 orbs:
   slack: circleci/slack@3.4.2
 workflows:
-  version: 2
   validate-build-release:
     jobs:
       - dependencies:
