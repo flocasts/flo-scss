@@ -23,7 +23,7 @@ jobs:
       - save_cache:
           paths:
             - '~'
-          key: flo-scss-dependencies-{{ .Branch }}	
+          key: flo-scss-dependencies-{{ .Branch }}-{{ .BuildNum }}	
       - slack/status:
           fail_only: true
           # color: '#42e2f4'
@@ -39,14 +39,14 @@ jobs:
     steps:
       - restore_cache:
           keys:
-            - flo-scss-dependencies-{{ .Branch }}	
+            - flo-scss-dependencies-{{ .Branch }}-{{ .BuildNum }}	
       - run:
           name: lint
           command: git show && npx commitlint --from=HEAD~1
       - save_cache:
           paths:
             - '~'
-          key: flo-scss-validate-{{ .Branch }}	
+          key: flo-scss-validate-{{ .Branch }}-{{ .BuildNum }}
       - slack/status:
           fail_only: true
           # color: '#42e2f4'
@@ -66,7 +66,7 @@ jobs:
             - "2d:80:03:87:eb:a2:56:8a:bd:ae:bc:45:09:9f:cf:48"
       - restore_cache:
           keys:
-            - flo-scss-validate-{{ .Branch }}	
+            - flo-scss-validate-{{ .Branch }}-{{ .BuildNum }}
       - run: 
           name: bundle install
           command: bundle install
@@ -98,7 +98,7 @@ jobs:
       - save_cache:
           paths:
             - '~'
-          key: flo-scss-build-{{ .Branch }}
+          key: flo-scss-build-{{ .Branch }}-{{ .BuildNum }}
       - slack/status:
           fail_only: true
           # color: '#42e2f4'
@@ -115,7 +115,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - flo-scss-build-{{ .Branch }}	
+            - flo-scss-build-{{ .Branch }}-{{ .BuildNum }}
       - run: 
           name: update github master branch
           command: |
