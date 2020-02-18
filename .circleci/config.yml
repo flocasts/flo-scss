@@ -25,7 +25,7 @@ jobs:
             - '~'
           key: flo-scss-dependencies-{{ .Branch }}	
       - slack/status:
-          fail_only: false
+          fail_only: true
           # color: '#42e2f4'
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
@@ -48,7 +48,7 @@ jobs:
             - '~'
           key: flo-scss-validate-{{ .Branch }}	
       - slack/status:
-          fail_only: false
+          fail_only: true
           # color: '#42e2f4'
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
@@ -100,7 +100,7 @@ jobs:
             - '~'
           key: flo-scss-build-{{ .Branch }}
       - slack/status:
-          fail_only: false
+          fail_only: true
           # color: '#42e2f4'
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
@@ -132,6 +132,13 @@ jobs:
       - run:
           name: release npm
           command: npm publish --access public
+      - slack/status:
+          fail_only: false
+          # color: '#42e2f4'
+          channel: 'DEZFWC2B0'
+          mentions: 'KurtAngular'
+          # message: This is a custom message notification
+          webhook: '${SLACK_WEBHOOK}'
 
 orbs:
   slack: circleci/slack@3.4.2
