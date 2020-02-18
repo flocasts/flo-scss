@@ -91,7 +91,7 @@ jobs:
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
           # message: This is a custom message notification
-          webhook: webhook
+          webhook: 'https://hooks.slack.com/services/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'
 
   release:
     docker:
