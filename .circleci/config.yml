@@ -15,7 +15,7 @@ jobs:
           command: |
             git config --global user.email "engineering@flosports.tv"
             git config --global user.name "FloSports Engineering"
-            echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/flo-scss/.npmrc
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/flo-scss/.npmrc
       - run:
           name: npm install
           command: npm install
@@ -25,10 +25,10 @@ jobs:
           key: flo-scss-dependencies-{{ .Branch }}-{{ .Revision }}
       - slack/status:
           fail_only: true
-          # color: '#42e2f4'
+          color: '#42e2f4'
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
-          # message: This is a custom message notification
+          message: flo-scss CircleCI dependencies
           webhook: '${SLACK_WEBHOOK}'
 
   validate:
@@ -51,7 +51,7 @@ jobs:
           # color: '#42e2f4'
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
-          # message: This is a custom message notification
+          message: flo-scss CircleCI validate
           webhook: '${SLACK_WEBHOOK}'
   build:
     docker:
@@ -93,7 +93,7 @@ jobs:
           # color: '#42e2f4'
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
-          # message: This is a custom message notification
+          message: flo-scss CircleCI build
           webhook: '${SLACK_WEBHOOK}'
 
   release:
@@ -121,13 +121,13 @@ jobs:
             git push
       - run:
           name: release npm
-          command: npm publish --access public
+          command: cat .npmrc && echo "$NPM_TOKEN" && npm publish --access public
       - slack/status:
           fail_only: false
           # color: '#42e2f4'
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
-          # message: This is a custom message notification
+          message: flo-scss CircleCI release
           webhook: '${SLACK_WEBHOOK}'
 
 orbs:
@@ -140,6 +140,7 @@ workflows:
             branches:
               ignore: 
                 - gh-pages
+                - master
       - validate:
           requires:
             - dependencies
