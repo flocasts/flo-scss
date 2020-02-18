@@ -25,20 +25,6 @@ jobs:
 
       - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: bundle install
-      - run: npm install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
 
       # copy docs to gh-pages and publish dist and scss to npm
 
@@ -50,11 +36,6 @@ jobs:
       - run: mkdir ../gh-pages && cp -rf ../bs-docs/.git ../gh-pages
       - run: cp -rf .circleci ../gh-pages
   build:
-    branches:
-      only:
-        - cicd
-        - remove-semantic-release
-        - master
     docker:
       # specify the version you desire here
       - image: circleci/ruby:2.6-buster-node  # language image
@@ -106,18 +87,12 @@ jobs:
       - run: npm publish --access public
 workflows:
   version: 2
-  validate:
-    branches:
-      only:
-        - cicd
-        - remove-semantic-release
-        - master
+  validate-build:
     jobs:
-      - validate
-  validate_build:
-    branches:
-      only:
-        - master
-    jobs:
-      - validate
-      - build
+      - validate:
+      - build:
+          requires:
+            - validate
+          filters:
+            branches:
+              only: master
