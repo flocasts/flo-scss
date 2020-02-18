@@ -11,6 +11,12 @@ jobs:
     steps:
       - checkout
       - run:
+          name: setup git && npm
+          command: |
+            git config --global user.email "engineering@flosports.tv"
+            git config --global user.name "FloSports Engineering"
+            echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/flo-scss/.npmrc
+      - run:
           name: npm install
           command: npm install
       - save_cache:
@@ -52,7 +58,6 @@ jobs:
       - image: circleci/ruby:2.6-buster-node  # language image
     working_directory: ~/flo-scss
     steps:
-      - checkout
       - add_ssh_keys:
           fingerprints:
             - "5b:58:a2:6e:11:ed:10:15:40:e5:5e:cc:cd:17:13:5a"
@@ -63,12 +68,6 @@ jobs:
       - run: 
           name: bundle install
           command: bundle install
-      - run:
-          name: setup git && npm
-          command: |
-            git config --global user.email "engineering@flosports.tv"
-            git config --global user.name "FloSports Engineering"
-            echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/flo-scss/.npmrc
       - run: 
           name: increment version
           command: npx standard-version
@@ -107,7 +106,6 @@ jobs:
       - image: circleci/ruby:2.6-buster-node  # language image
     working_directory: ~/flo-scss
     steps:
-      - checkout
       - restore_cache:
           keys:
             - flo-scss-build-{{ .Branch }}-{{ .Revision }}
