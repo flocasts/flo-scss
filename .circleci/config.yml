@@ -91,7 +91,6 @@ jobs:
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
           # message: This is a custom message notification
-          url: 'https://circleci.com/workflow-run/${CIRCLE_WORKFLOW_ID}'
           webhook: '${SLACK_WEBHOOK}'
 
   release:
