@@ -1,7 +1,7 @@
 {
   "name": "@flosportsinc/flo-scss",
   "description": "Based on The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "version_short": "0.0",
   "keywords": [
     "css",
@@ -153,6 +153,7 @@
     "shelljs": "^0.8.3",
     "shx": "^0.3.2",
     "sinon": "^7.5.0",
+    "standard-version": "^7.1.0",
     "stylelint": "^9.10.1",
     "stylelint-config-twbs-bootstrap": "^0.5.0",
     "uglify-js": "^3.7.3",
