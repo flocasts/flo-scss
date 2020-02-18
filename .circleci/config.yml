@@ -42,7 +42,7 @@ jobs:
             - flo-scss-dependencies-{{ .Branch }}	
       - run:
           name: lint
-          command: npx commitlint --from=HEAD~1
+          command: git status && npx commitlint --from=HEAD~1
       - save_cache:
           paths:
             - '~'
@@ -159,7 +159,6 @@ workflows:
           filters:
             branches:
               only: 
-                - master
                 - cicd
       - release:
           requires:
