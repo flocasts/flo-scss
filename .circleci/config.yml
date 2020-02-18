@@ -8,7 +8,7 @@ jobs:
     branches:
       only:
         - cicd
-        - semver
+        - remove-semantic-release
         - master
     docker:
       # specify the version you desire here
