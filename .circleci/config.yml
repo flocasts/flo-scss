@@ -69,6 +69,7 @@ jobs:
       - run:
           name: release npm
           command: npm publish --access public
+
 workflows:
   version: 2
   validate-build-release:
