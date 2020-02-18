@@ -36,7 +36,7 @@ jobs:
     steps:
       - restore_cache:
           keys:
-            - flo-scss-dependencies-{{ .Branch }}-{{ .BuildNum }}	
+            - flo-scss-dependencies-{{ .Branch }}-{{ .BuildNum }}
       - run:
           name: lint
           command: git show && npx commitlint --from=HEAD~1
