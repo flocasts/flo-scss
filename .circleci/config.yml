@@ -6,53 +6,23 @@ version: 2
 jobs:
   validate:
     docker:
-      # specify the version you desire here
-      - image: circleci/ruby:2.6-buster-node  # language image
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
+      - image: circleci/node:lts
+    working_directory: ~/flo-scss
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "5b:58:a2:6e:11:ed:10:15:40:e5:5e:cc:cd:17:13:5a"
-            # - "2d:80:03:87:eb:a2:56:8a:bd:ae:bc:45:09:9f:cf:48"
-            # - "bf:16:25:b1:2a:ff:dc:ee:ec:53:b4:33:95:86:c5:23"
-
       - checkout
-
-
-      # copy docs to gh-pages and publish dist and scss to npm
-
-      - run: npm install
-
+      - run:
+          name: npm install
+          command: npm install
       - run:
           name: lint
           command: npx commitlint --from=HEAD~1
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/ruby:2.6-buster-node  # language image
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
+    working_directory: ~/flo-scss
 
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "5b:58:a2:6e:11:ed:10:15:40:e5:5e:cc:cd:17:13:5a"
-            # - "2d:80:03:87:eb:a2:56:8a:bd:ae:bc:45:09:9f:cf:48"
-            # - "bf:16:25:b1:2a:ff:dc:ee:ec:53:b4:33:95:86:c5:23"
-
-      - checkout
 
       # Download and cache dependencies
       - restore_cache:
@@ -70,21 +40,41 @@ jobs:
 
       # copy docs to gh-pages and publish dist and scss to npm
 
-      - run: git config --global user.email "engineering@flosports.tv"
-      - run: git config --global user.name "FloSports Engineering"
-      - run: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+      - run:
+        name: setup git && npm
+        command: |
       - run: cd .. && cp -rf repo bs-docs
       - run: cd ../bs-docs && git checkout . && git checkout gh-pages && git pull
       - run: mkdir ../gh-pages && cp -rf ../bs-docs/.git ../gh-pages
       - run: cp -rf .circleci ../gh-pages
       - run: npm run release
       - run: cp -rf docs/* ../gh-pages
-      # - run: bash build/ship.sh 0.0.3
-      - run: cd ../gh-pages && git add . && git commit -m 'CircleCI auto commit' && git push
-      - run: npm publish --access public
+
+  release:
+    docker:
+      - image: circleci/ruby:2.6-buster-node  # language image
+
+    working_directory: ~/flo-scss
+
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "5b:58:a2:6e:11:ed:10:15:40:e5:5e:cc:cd:17:13:5a"
+      - run:
+          name: setup git && npm
+          command: |
+            git config --global user.email "engineering@flosports.tv"
+            git config --global user.name "FloSports Engineering"
+            echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+      - run: 
+          name: release github pages
+          command: cd ../gh-pages && git add . && git commit -m 'CircleCI auto commit' && git push
+      - run:
+          name: release npm
+          command: npm publish --access public
 workflows:
   version: 2
-  validate-build:
+  validate-build-release:
     jobs:
       - validate
       - build:
@@ -92,4 +82,13 @@ workflows:
             - validate
           filters:
             branches:
-              only: master
+              only: 
+                - master
+                - cicd
+      - release:
+          requires:
+            - build
+          filters:
+            branches:
+              only: 
+                - master
