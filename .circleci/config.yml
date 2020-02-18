@@ -75,12 +75,7 @@ workflows:
   version: 2
   validate-build-release:
     jobs:
-      - validate:
-          filters:
-            branches:
-              only: 
-                - master
-                - cicd
+      - validate
       - build:
           requires:
             - validate
