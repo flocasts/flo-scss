@@ -35,7 +35,7 @@ jobs:
             - flo-scss-dependencies-{{ .Branch }}-{{ .BuildNum }}
       - run:
           name: lint
-          command: git show && npx commitlint --from=HEAD~1
+          command: pwd && ls -lash && git show && npx commitlint --from=HEAD~1
       - save_cache:
           paths:
             - .
