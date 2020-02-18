@@ -104,6 +104,7 @@ jobs:
             git add .
             git commit -m 'CircleCI auto commit'
             git checkout master
+            git pull
             git merge << pipeline.git.branch >>
             git push --follow-tags
       - run: 
