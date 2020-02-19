@@ -187,12 +187,6 @@
       "popper.js": "^1.16.0"
     }
   },
-  "release": {
-    "branches": [
-      "master",
-      "semver"
-    ]
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
