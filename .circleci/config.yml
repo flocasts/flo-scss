@@ -116,7 +116,7 @@ jobs:
             git push
       - run:
           name: release npm
-          command: cat .npmrc && echo "$NPM_TOKEN" && npm publish --access public
+          command: npm publish --access public
       - slack/status:
           fail_only: false
           channel: 'DEZFWC2B0'
