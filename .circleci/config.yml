@@ -98,15 +98,9 @@ jobs:
       - restore_cache:
           keys:
             - flo-scss-build-{{ .Branch }}-{{ .Revision }}
-      - run: 
-          name: update github master branch
-          command: |
-            git add .
-            git commit -m 'CircleCI auto commit'
-            git checkout master
-            git pull
-            git merge << pipeline.git.branch >>
-            git push --follow-tags
+      - run:
+          name: release npm
+          command: npm publish --access public
       - run: 
           name: release github pages
           command: |
@@ -114,9 +108,15 @@ jobs:
             git add .
             git commit -m 'ci: CircleCI auto commit'
             git push
-      - run:
-          name: release npm
-          command: npm publish --access public
+      - run: 
+          name: update github master branch
+          command: |
+            git add .
+            git commit -m 'ci: CircleCI auto commit'
+            git checkout master
+            git pull
+            git merge << pipeline.git.branch >>
+            git push --follow-tags
       - slack/status:
           fail_only: false
           channel: 'DEZFWC2B0'
