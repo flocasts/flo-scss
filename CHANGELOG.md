@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/flocasts/flo-scss/compare/v0.0.9...v0.0.10) (2020-02-19)
+
+
+### Features
+
+* ci ([6a5838f](https://github.com/flocasts/flo-scss/commit/6a5838f8742de1389bde2b5276ed14435efa1e65))
+
 ### [0.0.9](https://github.com/flocasts/flo-scss/compare/v0.0.8...v0.0.9) (2020-02-19)
 
 ### [0.0.8](https://github.com/flocasts/flo-scss/compare/v0.0.4...v0.0.8) (2020-02-18)
