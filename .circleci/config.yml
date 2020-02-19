@@ -112,7 +112,7 @@ jobs:
           command: |
             cd ../gh-pages
             git add .
-            git commit -m 'CircleCI auto commit'
+            git commit -m 'ci: CircleCI auto commit'
             git push
       - run:
           name: release npm
