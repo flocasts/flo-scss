@@ -102,7 +102,7 @@ jobs:
             - flo-scss-build-{{ .Branch }}-{{ .Revision }}
       - run:
           name: release npm
-          command: cat ~/.npmrc && npm publish --access public
+          command: npm publish --access public
       - run: 
           name: release github pages
           command: |
