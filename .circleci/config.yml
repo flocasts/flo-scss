@@ -16,8 +16,6 @@ jobs:
             git config --global user.email "engineering@flosports.tv"
             git config --global user.name "FloSports Engineering"
             echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ~/.npmrc
-            echo $NPM_TOKEN
-            echo ${NPM_TOKEN}
       - run:
           name: npm install
           command: npm install
