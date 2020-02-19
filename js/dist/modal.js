@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap modal.js v0.0.8 (https://flo-scss.flo.center/)
+  * Bootstrap modal.js v0.0.10 (https://flo-scss.flo.center/)
   * Copyright 2011-2020 FloSports Engineering (https://flosports.tv) & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
