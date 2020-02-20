@@ -92,7 +92,28 @@ jobs:
           mentions: 'KurtAngular'
           webhook: '${SLACK_WEBHOOK}'
 
-  release:
+  release-docs:
+    docker:
+      - image: circleci/ruby:2.6-buster-node  # language image
+    working_directory: ~/flo-scss
+    steps:
+      - restore_cache:
+          keys:
+            - flo-scss-build-{{ .Branch }}-{{ .Revision }}
+      - run: 
+          name: release github pages
+          command: |
+            cd ../gh-pages
+            git add .
+            git commit -m 'ci: CircleCI auto commit'
+            git push
+      - slack/status:
+          fail_only: true
+          channel: 'DEZFWC2B0'
+          mentions: 'KurtAngular'
+          webhook: '${SLACK_WEBHOOK}'
+
+  release-npm:
     docker:
       - image: circleci/ruby:2.6-buster-node  # language image
     working_directory: ~/flo-scss
@@ -102,23 +123,18 @@ jobs:
             - flo-scss-build-{{ .Branch }}-{{ .Revision }}
       - run:
           name: release npm
-          command: npm publish --access public
-      - run: 
-          name: release github pages
-          command: |
-            cd ../gh-pages
-            git add .
-            git commit -m 'ci: CircleCI auto commit'
-            git push
-      - run: 
-          name: update github master branch
-          command: |
-            git add .
-            git commit -m 'ci: CircleCI auto commit'
-            git checkout master
-            git pull
-            git merge << pipeline.git.branch >>
-            git push --follow-tags
+          command: npm run semantic-release
+      - slack/status:
+          fail_only: true
+          channel: 'DEZFWC2B0'
+          mentions: 'KurtAngular'
+          webhook: '${SLACK_WEBHOOK}'
+
+  notify-success:
+    docker:
+      - image: circleci/ruby:2.6-buster-node  # language image
+    working_directory: ~/flo-scss
+    steps:
       - slack/status:
           fail_only: false
           channel: 'DEZFWC2B0'
@@ -146,10 +162,26 @@ workflows:
             branches:
               only: 
                 - cicd
-      - release:
+      - release-docs:
           requires:
             - build
             - validate
+          filters:
+            branches:
+              only: 
+                - cicd
+      - release-npm:
+          requires:
+            - build
+            - validate
+          filters:
+            branches:
+              only: 
+                - cicd
+      - notify-success:
+          requires:
+            - release-npm
+            - release-docs
           filters:
             branches:
               only: 
