@@ -21,7 +21,7 @@ jobs:
       - save_cache:
           paths:
             - '~'
-          key: flo-scss-dependencies-{{ .Branch }}-{{ .Revision }}
+          key: flo-scss-dependencies-{{ checksum "package-lock.json" }}-{{ checksum "Gemfile" }}
       - slack/status:
           fail_only: true
           channel: 'DEZFWC2B0'
@@ -39,8 +39,7 @@ jobs:
             - "2d:80:03:87:eb:a2:56:8a:bd:ae:bc:45:09:9f:cf:48"
       - restore_cache:
           keys:
-            - flo-scss-dependencies-{{ .Branch }}-{{ .Revision }}
-      - run: 
+            - flo-scss-dependencies-{{ checksum "package-lock.json" }}-{{ checksum "Gemfile" }}          key: 
           name: bundle install
           command: bundle install
       - run: 
@@ -82,10 +81,10 @@ jobs:
           command: |
             cd ../gh-pages
             git add .
-            git commit -m 'ci: CircleCI auto commit'
+            git commit -m 'docs: CircleCI'
             git push
       - slack/status:
-          fail_only: true
+          fail_only: false
           channel: 'DEZFWC2B0'
           mentions: 'KurtAngular'
           webhook: '${SLACK_WEBHOOK}'
