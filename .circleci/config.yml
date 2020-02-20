@@ -99,7 +99,7 @@ jobs:
             - flo-scss-build-{{ .Branch }}-{{ .Revision }}
       - run:
           name: release npm
-          command: npm run semantic-release -- --branches cicd
+          command: npm run semantic-release
       - slack/status:
           fail_only: false
           channel: 'DEZFWC2B0'
@@ -115,7 +115,7 @@ workflows:
           filters:
             branches:
               only: 
-                - cicd
+                - master
       - build:
           requires:
             - dependencies
