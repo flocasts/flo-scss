@@ -1,8 +1,8 @@
 {
   "name": "@flosportsinc/flo-scss",
   "description": "Based on The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "0.0.0-development",
-  "version_short": "0.0",
+  "version": "0.1.1-development",
+  "version_short": "0.1",
   "keywords": [
     "css",
     "sass",
