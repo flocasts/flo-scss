@@ -31,7 +31,7 @@ Width and height utilities are generated from the `$sizes` Sass map in `_variabl
 {% endcapture %}
 {% include example.html content=example %}
 
-Use responsive width classes to adjust widths to various breakpoint with  `.w-$size-$width`
+Use responsive width classes to adjust widths to various breakpoint with  `.w-$breakpoint-$size`
 
 {% capture example %}
 <div class="w-lg-10 w-md-100 p-3 bg-300">w-lg 10% / w-md 100%</div>
