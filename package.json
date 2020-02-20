@@ -1,7 +1,7 @@
 {
   "name": "@flosportsinc/flo-scss",
   "description": "Based on The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "0.1.1-development",
+  "version": "0.1.2",
   "version_short": "0.1",
   "keywords": [
     "css",
@@ -151,14 +151,15 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "semantic-release": "^17.0.4",
     "shelljs": "^0.8.3",
     "shx": "^0.3.2",
     "sinon": "^7.5.0",
+    "standard-version": "^7.1.0",
     "stylelint": "^9.10.1",
     "stylelint-config-twbs-bootstrap": "^0.5.0",
     "uglify-js": "^3.7.3",
-    "vnu-jar": "19.9.4",
-    "semantic-release": "^17.0.4"
+    "vnu-jar": "19.9.4"
   },
   "engines": {
     "node": ">=6"
