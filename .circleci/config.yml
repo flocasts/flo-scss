@@ -100,18 +100,7 @@ jobs:
             - flo-scss-build-{{ .Branch }}-{{ .Revision }}
       - run:
           name: release npm
-          command: npm run semantic-release
-      - slack/status:
-          fail_only: true
-          channel: 'DEZFWC2B0'
-          mentions: 'KurtAngular'
-          webhook: '${SLACK_WEBHOOK}'
-
-  notify-success:
-    docker:
-      - image: circleci/ruby:2.6-buster-node  # language image
-    working_directory: ~/flo-scss
-    steps:
+          command: npm run semantic-release -- --branches cicd
       - slack/status:
           fail_only: false
           channel: 'DEZFWC2B0'
