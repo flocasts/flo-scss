@@ -21,7 +21,7 @@ jobs:
       - save_cache:
           paths:
             - '~'
-          key: flo-scss-dependencies-{{ checksum "package-lock.json" }}-{{ checksum "Gemfile" }}
+          key: flo-scss-dependencies-{{ .Branch }}-{{ .Revision }}
       - slack/status:
           fail_only: true
           channel: 'DEZFWC2B0'
@@ -39,7 +39,7 @@ jobs:
             - "2d:80:03:87:eb:a2:56:8a:bd:ae:bc:45:09:9f:cf:48"
       - restore_cache:
           keys:
-            - flo-scss-dependencies-{{ checksum "package-lock.json" }}-{{ checksum "Gemfile" }}
+            - flo-scss-dependencies-{{ .Branch }}-{{ .Revision }}
           name: bundle install
           command: bundle install
       - run: 
