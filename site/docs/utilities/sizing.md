@@ -31,6 +31,19 @@ Width and height utilities are generated from the `$sizes` Sass map in `_variabl
 {% endcapture %}
 {% include example.html content=example %}
 
+Width relative to viewport
+{% capture example %}
+<div class="w-lg-10 w-md-100 p-3" style="background-color: #eee;">w-lg 10% / w-md 100%</div>
+<div class="w-lg-25 w-md-75 p-3" style="background-color: #eee;">w-lg 25% / w-md 75%</div>
+<div class="w-lg-33 w-md-66 p-3" style="background-color: #eee;">w-lg 33% / w-md 66%</div>
+<div class="w-lg-50 w-md-50 p-3" style="background-color: #eee;">w-lg 50% / w-md 50%</div>
+<div class="w-lg-66 w-md-33 p-3" style="background-color: #eee;">w-lg 66% / w-md 33%</div>
+<div class="w-lg-75 w-md-25 p-3" style="background-color: #eee;">w-lg 75% / w-md 25%</div>
+<div class="w-lg-100 w-md-10 p-3" style="background-color: #eee;">w-lg 100% / w-md 10%</div>
+<div class="w-lg-auto w-md-auto p-3" style="background-color: #eee;">Width auto</div>
+{% endcapture %}
+{% include example.html content=example %}
+
 {% capture example %}
 <div style="height: 100px; background-color: rgba(255,0,0,0.1);">
   <div class="h-10 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 10%</div>
