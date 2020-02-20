@@ -126,7 +126,3 @@ workflows:
       - release-npm:
           requires:
             - build
-      - notify-success:
-          requires:
-            - release-npm
-            - release-docs
