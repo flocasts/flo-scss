@@ -73,6 +73,19 @@ fieldset:disabled a.btn {
   }
 }
 
+// custom flo secondary button
+.btn-secondary {
+  @extend .btn-outline-primary;
+  border-color: $gray-400;
+  background: $white;
+
+  @include hover() {
+    @include gradient-bg($gray-200);
+    color: $primary;
+    border-color: $gray-400;
+  }
+}
+
 
 //
 // Link buttons
