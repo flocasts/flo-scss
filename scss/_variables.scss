@@ -114,7 +114,7 @@ $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-sm: $font-size-base * 0.875 !default;
 
 @function from-pixels($pixelsUnitless) {
-  @return $font-size-base * $pixelsUnitless / $font-size-pixels;
+  @return 1rem * $pixelsUnitless / $font-size-pixels;
 }
 
 // Characters which are escaped by the escape-svg function

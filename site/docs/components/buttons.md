@@ -18,6 +18,16 @@ Bootstrap includes several predefined button styles, each serving its own semant
 {% endcapture %}
 {% include example.html content=example %}
 
+## Outline buttons
+
+In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
+
+{% capture example %}
+{% for color in site.data.theme-colors %}
+<button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
+{% endcapture %}
+{% include example.html content=example %}
+
 {% include callout-warning-color-assistive-technologies.md %}
 
 ## Disable text wrapping
@@ -36,16 +46,6 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 <input class="btn btn-primary" type="button" value="Input">
 <input class="btn btn-primary" type="submit" value="Submit">
 <input class="btn btn-primary" type="reset" value="Reset">
-{% endcapture %}
-{% include example.html content=example %}
-
-## Outline buttons
-
-In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
-
-{% capture example %}
-{% for color in site.data.theme-colors %}
-<button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 {% endcapture %}
 {% include example.html content=example %}
 
