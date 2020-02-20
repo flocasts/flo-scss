@@ -54,14 +54,37 @@ In need of a button, but not the hefty background colors they bring? Replace the
 Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 
 {% capture example %}
+<button type="button" class="btn btn-primary btn-sm">Small button</button>
+<button type="button" class="btn btn-primary">Button</button>
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+{% endcapture %}
+{% include example.html content=example %}
+
+###  Font-based sizing
+{% capture example %}
+<button type="button" class="btn btn-primary display-1 d-block">Display 1 Button</button>
+<button type="button" class="btn btn-primary display-2 d-block">Display 2 Button</button>
+<button type="button" class="btn btn-primary display-3 d-block">Display 3 Button</button>
+<button type="button" class="btn btn-primary btn-lg display-4 d-block">Display 4 Large Button</button>
+<button type="button" class="btn btn-primary btn-sm h3 d-block">H3 Small Button</button>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture example %}
 <button type="button" class="btn btn-primary btn-sm">Small button</button>
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+{% endcapture %}
+{% include example.html content=example %}
+
+{% capture example %}
+<button type="button" class="btn btn-primary">button</button>
+<button type="button" class="btn btn-secondary">button</button>
+{% endcapture %}
+{% include example.html content=example %}
+
+{% capture example %}
+<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<button type="button" class="btn btn-secondary btn-lg">Large button</button>
 {% endcapture %}
 {% include example.html content=example %}
 
