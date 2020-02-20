@@ -1,6 +1,6 @@
 /*!
-  * Bootstrap tooltip.js v0.0.3 (https://flo-scss.flo.center/)
-  * Copyright 2011-2020 FloSports Engineering & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Bootstrap tooltip.js v0.0.13 (https://flo-scss.flo.center/)
+  * Copyright 2011-2020 FloSports Engineering (https://flosports.tv) & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {

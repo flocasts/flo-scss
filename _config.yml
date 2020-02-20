@@ -52,13 +52,13 @@ cdn:
   css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
   css_hash:         "sha384-tAfSkwtY4WhrbtrO3kuFr6ky5c03JBHKfeK/vqVz6gsWLbC/v2W0AIcJpxN/QCMG"
   js:               "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-  js_hash:          "sha384-S5vb7aoMNRBZ7NKJi2iNDmo5rOoUbW6A/cPFzCsvYGNTdPbRalImkVvwpKTwuKSQ"
+  js_hash:          "sha384-EdHNnXuMr0NXaqFRXG13DdmEtkhqhVuRfg/d4u+8U+Cu+n507CHDfAOLQvLyoVR6"
   js_bundle:        "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
-  js_bundle_hash:   "sha384-RrI6yepv0cD1hg445z6FrMAT4FGQjVtP/FJxgY03DGM9B6oR2iALHhFceIUrJfym"
+  js_bundle_hash:   "sha384-ISDO9rL71nrZIOwUcM/07KtjnsvVaijGcflUKugf6U0I3SLJPm6XTiNbh0aYTB5z"
   jquery:           "https://code.jquery.com/jquery-3.4.1.slim.min.js"
   jquery_hash:      "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
   popper:           "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  popper_hash:      "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  popper_hash:      "sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
 
 toc:
   min_level:        2
