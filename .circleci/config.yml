@@ -42,7 +42,7 @@ jobs:
             - flo-scss-dependencies-{{ .Branch }}-{{ .Revision }}
       - run:
           name: bundle install
-          command: gem install bundler:2.1.4 && bundle install
+          command: bundle install
       - run: 
           name: create build
           command: |
