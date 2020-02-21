@@ -1483,6 +1483,7 @@ $displays: none, inline, inline-block, block, table, table-row, table-cell, flex
   inline-flex !default;
 $overflows: auto, hidden, visible, scroll !default;
 $positions: static, relative, absolute, fixed, sticky !default;
+$degrees: 45, 90, 135, 180, 225, 270, 315 !default;
 
 // Printing
 

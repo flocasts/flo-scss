@@ -8,7 +8,7 @@ toc: true
 
 ## Icons
 
-### Sizing
+### Size
 
 Apply `.icon`, `.icon-sm`, and `.icon-lg` to size icons
 
@@ -41,6 +41,17 @@ add `.text-$color` classes to apply colors to icons and select logos
 </svg>
 <svg class="text-primary bg-black">
   <use xlink:href="#hawk_flosports_logo" />
+</svg>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Transform
+
+Transform icons with [transform utilities](/docs/utilities/transform)
+
+{% capture example %}
+<svg class="rotate-180">
+  <use xlink:href="#right_arrow" />
 </svg>
 {% endcapture %}
 {% include example.html content=example %}
