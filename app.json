@@ -1,7 +1,10 @@
 {
   "buildpacks": [
     {
-      "url": "https://github.com/sammyjopeters/heroku-buildpack-jekyll.git"
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "heroku/node"
     }
   ]
 }

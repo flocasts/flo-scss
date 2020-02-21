@@ -88,7 +88,8 @@
     "watch-css-docs": "nodemon --watch \"site/docs/**/assets/scss/\" --ext scss --exec \"npm run css-docs\"",
     "watch-js-main": "nodemon --watch js/src/ --ext js --exec \"npm run js-compile\"",
     "watch-js-docs": "nodemon --watch \"site/docs/**/assets/js/src/\" --ext js --exec \"npm run js-docs\"",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "build": "npm run release"
   },
   "style": "dist/css/bootstrap.css",
   "sass": "scss/bootstrap.scss",
