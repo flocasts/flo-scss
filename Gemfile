@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'heroku'
+
 group :development, :test do
   gem 'jekyll', '~> 3.8.6'
   gem 'jekyll-redirect-from', '~> 0.15.0'
