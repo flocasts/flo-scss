@@ -30,7 +30,7 @@ jobs:
 
   build:
     docker:
-      - image: circleci/ruby:2.6-buster-node  # language image
+      - image: circleci/ruby:2.5-buster-node  # language image
     working_directory: ~/flo-scss
     steps:
       - add_ssh_keys:
