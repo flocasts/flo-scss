@@ -1,10 +1,10 @@
 {
   "buildpacks": [
     {
-      "url": "heroku/nodejs"
+      "url": "heroku/ruby"
     },
     {
-      "url": "heroku/ruby"
+      "url": "heroku/nodejs"
     }
   ]
 }
