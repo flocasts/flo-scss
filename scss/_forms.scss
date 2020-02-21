@@ -336,3 +336,34 @@ textarea.form-control {
     }
   }
 }
+
+.select-wrapper {
+    position: relative;
+
+    .form-control {
+      border-width: 0;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
+        padding-right:      40px; // to ensure select text does not run into chevron
+
+        &::-ms-expand {
+            // remove the caret on `<select>`s in IE10+.
+            display: none;
+        }
+    }
+
+    &:after {
+        content:          'V';
+        // background-image: url('images/icon/chevron-down.svg');
+        height:           24px;
+        pointer-events:   none;
+        position:         absolute;
+        right:            12px;
+        top:              calc(50% - 12px); // half the select height minus half the icon height.
+        width:            24px;
+    }
+}
