@@ -42,7 +42,7 @@ jobs:
             - flo-scss-dependencies-{{ .Branch }}-{{ .Revision }}
       - run:
           name: bundle install
-          command: bundle install
+          command: bundle version && bundle install
       - run: 
           name: create build
           command: |
