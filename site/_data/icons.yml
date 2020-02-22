@@ -4,11 +4,6 @@
 - name: apple_logo
 - name: apple_tv_logo
 - name: back_10
-- name: badge_live
-- name: badge_not_live
-- name: badge_pro_dark
-- name: badge_pro_light
-- name: badge_replay
 - name: bell_regular
 - name: bell_solid
 - name: calendar_alt
@@ -30,10 +25,10 @@
 - name: expand
 - name: filters
 - name: fire_tv_logo
-- name: flo_tomahawk
+- name: flo_hawk
+- name: flosports_logo
 - name: forward_10
 - name: google_logo
-- name: hawk_flosports_logo
 - name: ios_logo
 - name: live_inactive
 - name: location_blocked

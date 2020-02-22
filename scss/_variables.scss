@@ -94,6 +94,31 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+$amex: #006FCF;
+$android: #3ddc84;
+$apple: #231f20;
+$discover: #FF6602;
+$mastercard: #000;
+$visa: #192061;
+$fire-tv: #fc4c02;
+$outlook: #0072c6;
+$roku: #662d91;
+$brand-colors: () !default;
+$brand-colors: map-merge(
+  (
+    "amex": $amex,
+    "android": $android,
+    "apple": $apple,
+    "discover": $discover,
+    "mastercard": $mastercard,
+    "visa": $visa,
+    "fire-tv": $fire-tv,
+    "outlook": $outlook,
+    "roku": $roku
+  ),
+  $brand-colors
+);
+
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8% !default;
 
@@ -103,7 +128,6 @@ $yiq-contrasted-threshold: 150 !default;
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark: $gray-900 !default;
 $yiq-text-light: $white !default;
-
 
 // Base font-sizes
 
@@ -307,7 +331,6 @@ $font-family-heavy: "Uni-Neue-Heavy", "Open Sans", "Helvetica Neue", Helvetica,
 $typefaces: "h1", "h2", "h3", "display-1", "display-2", "display-3", "display-4",
   "body", "text-data", "headline", "subhead", "footnote", "caption", "overtext",
   "mono", "small", "bold", "heavy" !default;
-
 
 $icon-size: 1.25em !default;
 $icon-size-lg: 1.75em !default;
