@@ -30,7 +30,6 @@
 - name: forward_10
 - name: google_logo
 - name: ios_logo
-- name: live_inactive
 - name: location_blocked
 - name: lock
 - name: minus
@@ -39,7 +38,6 @@
 - name: plus
 - name: plus_outline
 - name: right_arrow
-- name: right_arrow_with_style
 - name: roku_logo
 - name: search
 - name: share

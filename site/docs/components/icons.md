@@ -57,7 +57,7 @@ The following brand-specific color classes are provided
   <use xlink:href="#android_logo_stacked" />
 </svg>
 <svg class="icon color-apple">
-  <use xlink:href="apple_logo" />
+  <use xlink:href="#apple_logo" />
 </svg>
 <svg class="icon color-discover">
   <use xlink:href="#cc_discover" />
@@ -101,5 +101,16 @@ Transform icons with [transform utilities](/docs/utilities/transform)
 </div>
 {% endfor %}
 </div>
+<div class="row text-white bg-black">
+{% for icon in site.data.icons %}
+<div class="col-6 col-md-2 d-flex flex-column align-items-center justify-content-center">
+  <svg class="icon">
+    <use xlink:href="#{{ icon.name }}" />
+  </svg>
+  <p class="caption">{{ icon.name }}</p>
+</div>
+{% endfor %}
+</div>
+
 {% endcapture %}
 {% include example.html content=example %}
