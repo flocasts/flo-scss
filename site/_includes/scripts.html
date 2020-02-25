@@ -8,7 +8,8 @@
 {%- endif -%}
 
 {%- if page.layout == "docs" -%}
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js" integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js" integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous"></script>
 {%- endif -%}
 
 {%- if jekyll.environment == "production" or jekyll.environment == "netlify" -%}
@@ -21,3 +22,24 @@
   <script src="{{ site.baseurl }}/docs/assets/js/src/search.js"></script>
   <script src="{{ site.baseurl }}/docs/assets/js/src/ie-emulation-modes-warning.js"></script>
 {%- endif -%}
+
+<script>
+const searchClient = algoliasearch('0SR6QJF3WD', 'd02c0eaa013433a9d79c8828566fcc68');
+
+const search = instantsearch({
+  indexName: 'demo_ecommerce',
+  searchClient,
+});
+
+search.addWidgets([
+  instantsearch.widgets.searchBox({
+    container: '#searchbox',
+  }),
+
+  instantsearch.widgets.hits({
+    container: '#hits',
+  })
+]);
+
+search.start();
+</script>

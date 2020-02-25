@@ -34,7 +34,7 @@ social_logo_path:   /docs/assets/brand/bootstrap-social-logo.png
 
 # Custom variables
 current_version:      0.0.1
-current_ruby_version: 0.0.1
+current_ruby_version: 2.5.6
 repo:                 "https://github.com/twbs/bootstrap"
 slack:                "https://bootstrap-slack.herokuapp.com"
 opencollective:       "https://opencollective.com/bootstrap"
@@ -66,3 +66,7 @@ toc:
   no_toc_section_class:
     - "bd-callout"
     - "bd-example"
+
+algolia:
+  application_id: '0SR6QJF3WD'
+  index_name: 'prod_flo-scss'
