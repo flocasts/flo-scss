@@ -11,7 +11,7 @@ permalink:      pretty
 # Server
 source:         "site"
 destination:    ./docs
-host:           "localhost"
+host:           "flo-scss.flo.center"
 port:           9001
 baseurl:        ""
 url:            "https://flo-scss.flo.center"
