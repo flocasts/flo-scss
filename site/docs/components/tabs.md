@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Tabs (FloSports)
+title: Tabs
 description: A tabbed interface for showing and hiding content
 group: components
 toc: true
