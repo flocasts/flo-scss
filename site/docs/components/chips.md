@@ -23,13 +23,17 @@ Flo-SCSS includes several predefined chip styles, each serving its own semantic 
 
 {% include callout-warning-color-assistive-technologies.md %}
 
+## Chips with Close Icons
+
+{% capture example %}
+<button type="button" class="chip chip-close chip-light">Light</button>
+<button type="button" class="chip chip-close chip-dark">Dark</button>
+{% endcapture %}
+{% include example.html content=example %}
+
 ## Chips with Badges
 
 {% capture example %}
-<button type="button" class="chip chip-light chip-close">
-  Close 
-</button>
-
 <button type="button" class="chip chip-light">
   Watch <span class="badge badge-400 bg-primary text-white">Live</span>
 </button>
