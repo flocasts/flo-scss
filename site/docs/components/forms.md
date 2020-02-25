@@ -50,8 +50,6 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Example select</label>
-    <div class="select-wrapper">
-    <div class="select-wrapper">
       <select class="form-control" id="exampleFormControlSelect1">
         <option>1</option>
         <option>2</option>
@@ -59,12 +57,9 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
         <option>4</option>
         <option>5</option>
       </select>
-    </div>
-    </div>
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect2">Example multiple select</label>
-    <div class="select-wrapper">
     <select multiple class="form-control" id="exampleFormControlSelect2">
       <option>1</option>
       <option>2</option>
@@ -72,7 +67,6 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
       <option>4</option>
       <option>5</option>
     </select>
-    </div>
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Example textarea</label>
@@ -94,23 +88,17 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 {% include example.html content=example %}
 
 {% capture example %}
-<div class="select-wrapper">
 <select class="form-control form-control-lg">
   <option>Large select</option>
 </select>
-</div>
 
-<div class="select-wrapper">
 <select class="form-control">
   <option>Default select</option>
 </select>
-</div>
 
-<div class="select-wrapper">
 <select class="form-control form-control-sm">
   <option>Small select</option>
 </select>
-</div>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -159,55 +147,6 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
   </div>
   <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
 </form>
-{% endcapture %}
-{% include example.html content=example %}
-
-## Select (WIP)
-
-wrap `<select>` elements with a `.select-wrapper` to apply custom styling
-
-{% capture example %}
-
-<div class="form-row">
-  <div class="col-6 d-flex justify-content-start">
-    <div class="select-wrapper flex-shrink-0">
-      <select class="form-control border-0" id="exampleFormControlSelect1">
-        <option>Wrestling</option>
-        <option>Bowling</option>
-        <option>Track</option>
-        <option>Cheer</option>
-        <option>Racing</option>
-      </select>
-    </div>
-    <div class="select-wrapper flex-shrink-0">
-      <select class="form-control border-0" id="exampleFormControlSelect2">
-        <option>Wrestling</option>
-        <option>Bowling</option>
-        <option>Track</option>
-        <option>Cheer</option>
-        <option>Racing</option>
-      </select>
-    </div>
-    <div class="select-wrapper flex-shrink-0">
-      <select class="form-control border-0" id="exampleFormControlSelect3">
-        <option>Wrestling</option>
-        <option>Bowling</option>
-        <option>Track</option>
-        <option>Cheer</option>
-        <option>Racing</option>
-      </select>
-    </div>
-    <div class="select-wrapper flex-shrink-0">
-      <select class="form-control border-0" id="exampleFormControlSelect4">
-        <option>Wrestling</option>
-        <option>Bowling</option>
-        <option>Track</option>
-        <option>Cheer</option>
-        <option>Racing</option>
-      </select>
-    </div>
-  </div>
-  </div>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -722,7 +661,7 @@ Custom form controls and selects are also supported.
 
 <form class="form-inline">
   <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
-  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+  <select class="custom-select-primary my-1 mr-sm-2" id="inlineFormCustomSelectPref">
     <option selected>Choose...</option>
     <option value="1">One</option>
     <option value="2">Two</option>
@@ -869,7 +808,7 @@ With that in mind, consider the following demos for our custom form validation s
 
 For custom Bootstrap form validation messages, you'll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
 
-Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.custom-select`, and not `.form-control`.
+Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.custom-select` or `.custom-select-primary`, and not `.form-control`.
 
 {% capture example %}
 
@@ -1106,7 +1045,7 @@ We recommend using client-side validation, but in case you require server-side v
 Validation styles are available for the following form controls and components:
 
 - `<input>`s and `<textarea>`s with `.form-control` (including up to one `.form-control` in input groups)
-- `<select>`s with `.form-control` or `.custom-select`
+- `<select>`s with `.form-control`, `.custom-select`, or `.custom-select-primary`
 - `.form-check`s
 - `.custom-checkbox`s and `.custom-radio`s
 - `.custom-file`
@@ -1377,7 +1316,7 @@ Custom `<select>` menus need only a custom class, `.custom-select` to trigger th
 You may also choose from small and large custom selects to match our similarly sized text inputs.
 
 {% capture example %}
-<select class="custom-select custom-select-lg mb-3">
+<select class="custom-select-primary custom-select-lg mb-3">
 
   <option selected>Open this select menu</option>
   <option value="1">One</option>
@@ -1419,6 +1358,46 @@ As is the `size` attribute:
 </select>
 {% endcapture %}
 {% include example.html content=example %}
+
+### Inline Borderless Select
+
+{% capture example %}
+
+<div class="form-row">
+  <div class="col-6 d-flex justify-content-start">
+      <select class="form-control border-0 col flex-shrink-0 custom-select" id="exampleFormControlSelect1">
+        <option>Wrestling</option>
+        <option>Bowling</option>
+        <option>Track</option>
+        <option>Cheer</option>
+        <option>Racing</option>
+      </select>
+      <select class="form-control border-0 col flex-shrink-0 custom-select" id="exampleFormControlSelect2">
+        <option>Wrestling</option>
+        <option>Bowling</option>
+        <option>Track</option>
+        <option>Cheer</option>
+        <option>Racing</option>
+      </select>
+      <select class="form-control border-0 col flex-shrink-0 custom-select-primary" id="exampleFormControlSelect3">
+        <option>Wrestling</option>
+        <option>Bowling</option>
+        <option>Track</option>
+        <option>Cheer</option>
+        <option>Racing</option>
+      </select>
+      <select class="form-control border-0 col flex-shrink-0 custom-select-primary" id="exampleFormControlSelect4">
+        <option>Wrestling</option>
+        <option>Bowling</option>
+        <option>Track</option>
+        <option>Cheer</option>
+        <option>Racing</option>
+      </select>
+  </div>
+  </div>
+{% endcapture %}
+{% include example.html content=example %}
+
 
 ### Range
 
