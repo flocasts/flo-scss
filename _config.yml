@@ -12,7 +12,7 @@ permalink:      pretty
 source:         "site"
 destination:    ./docs
 host:           "flo-scss.flo.center"
-port:           9001
+port:           80
 baseurl:        ""
 url:            "https://flo-scss.flo.center"
 encoding:       UTF-8
