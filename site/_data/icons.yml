@@ -28,8 +28,6 @@
 - name: flo_hawk
 - name: flosports_logo
 - name: forward_10
-- name: google_logo
-- name: ios_logo
 - name: location_blocked
 - name: lock
 - name: minus
