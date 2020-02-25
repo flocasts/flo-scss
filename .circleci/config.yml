@@ -69,27 +69,6 @@ jobs:
           mentions: 'KurtAngular'
           webhook: '${SLACK_WEBHOOK}'
 
-  release-docs:
-    docker:
-      - image: circleci/ruby:2.6.5-buster-node  # language image
-    working_directory: ~/flo-scss
-    steps:
-      - restore_cache:
-          keys:
-            - flo-scss-build-{{ .Branch }}-{{ .Revision }}
-      - run: 
-          name: release github pages
-          command: |
-            cd ../gh-pages
-            git add .
-            git commit -m 'docs: *update via CircleCI*'
-            git push
-      - slack/status:
-          fail_only: false
-          channel: 'DEZFWC2B0'
-          mentions: 'KurtAngular'
-          webhook: '${SLACK_WEBHOOK}'
-
   release-npm:
     docker:
       - image: circleci/ruby:2.6.5-buster-node  # language image
@@ -120,9 +99,6 @@ workflows:
       - build:
           requires:
             - dependencies
-      - release-docs:
-          requires:
-            - build
       - release-npm:
           requires:
             - build
