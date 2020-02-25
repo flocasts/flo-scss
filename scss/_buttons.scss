@@ -22,6 +22,9 @@
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
+  // override $enable-rounded flag
+  border-radius: $btn-border-radius;
+
   @include hover() {
     color: $body-color;
     text-decoration: none;
