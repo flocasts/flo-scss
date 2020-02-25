@@ -51,6 +51,7 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
   <div class="form-group">
     <label for="exampleFormControlSelect1">Example select</label>
     <div class="select-wrapper">
+    <div class="select-wrapper">
       <select class="form-control" id="exampleFormControlSelect1">
         <option>1</option>
         <option>2</option>
@@ -59,9 +60,11 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
         <option>5</option>
       </select>
     </div>
+    </div>
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect2">Example multiple select</label>
+    <div class="select-wrapper">
     <select multiple class="form-control" id="exampleFormControlSelect2">
       <option>1</option>
       <option>2</option>
@@ -69,6 +72,7 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
       <option>4</option>
       <option>5</option>
     </select>
+    </div>
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Example textarea</label>
@@ -90,16 +94,23 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 {% include example.html content=example %}
 
 {% capture example %}
+<div class="select-wrapper">
 <select class="form-control form-control-lg">
-
   <option>Large select</option>
 </select>
+</div>
+
+<div class="select-wrapper">
 <select class="form-control">
   <option>Default select</option>
 </select>
+</div>
+
+<div class="select-wrapper">
 <select class="form-control form-control-sm">
   <option>Small select</option>
 </select>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
