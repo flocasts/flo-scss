@@ -70,8 +70,6 @@ When using chip classes on `<a>` elements that are used to trigger in-page funct
 
 ## Gray chips
 
-In need of a chip, but not the hefty background colors they bring? Replace the default modifier classes with the `.chip-outline-*` ones to remove all background images and colors on any chip.
-
 {% capture example %}
 {% for color in site.data.grays %}
 <button type="button" class="chip chip-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
