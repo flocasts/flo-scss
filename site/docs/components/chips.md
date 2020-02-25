@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Chips (FloSports) (WIP)
+title: Chips
 description: Chips are compact elements that represent an input, attribute, or action.
 group: components
 toc: true
