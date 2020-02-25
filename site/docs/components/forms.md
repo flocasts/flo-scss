@@ -1359,7 +1359,7 @@ As is the `size` attribute:
 {% endcapture %}
 {% include example.html content=example %}
 
-### Inline Borderless Select
+#### Inline Borderless Select
 
 {% capture example %}
 
