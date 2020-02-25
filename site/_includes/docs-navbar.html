@@ -32,7 +32,7 @@
   <ul class="navbar-nav ml-md-auto">
     <li class="nav-item dropdown">
       <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        v
+        v{{ site.current_version }}
       </a>
       <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="versions">
         <a class="dropdown-item active" href="{{ site.baseurl }}/docs/">Latest (4.4.x)</a>
@@ -71,5 +71,5 @@
     </li>
   </ul>
 
-  <a class="btn btn-outline-light d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ site.baseurl }}/docs/getting-started/download/">Download</a>
+  <a class="btn btn-outline-light d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/flocasts/flo-scss/archive/v{{site.current_version}}.zip">Download</a>
 </header>
