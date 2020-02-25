@@ -34,7 +34,7 @@ social_logo_path:   /docs/assets/brand/bootstrap-social-logo.png
 
 # Custom variables
 current_version:      0.0.1
-current_ruby_version: 0.0.1
+current_ruby_version: 2.6.5
 repo:                 "https://github.com/twbs/bootstrap"
 slack:                "https://bootstrap-slack.herokuapp.com"
 opencollective:       "https://opencollective.com/bootstrap"
