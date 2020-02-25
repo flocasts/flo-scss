@@ -167,27 +167,30 @@ input[type="button"] {
   }
 }
 
-// Badges
+// Chips with Badges
 
 .chip {
   .badge {
     margin-left: $badge-margin-x;
   }
 
-  &.chip-close {
-    position: relative;
-    padding-right: $chip-close-icon-buffer-padding;
-    &:after {
-      position: absolute;
-      content: " ";
-      background-image: escape-svg($chip-close-icon);
-      background-repeat: no-repeat;
-      pointer-events: none;
-      height: $chip-close-icon-height;
-      width: $chip-close-icon-width;
-      top: $chip-close-icon-position-y;
-      transform: translateY($chip-close-icon-translate-y);
-      right: 0;
-    }
+}
+
+// Chip with close icon
+
+.chip.chip-close {
+  position: relative;
+  padding-right: $chip-close-icon-buffer-padding;
+  &:after {
+    position: absolute;
+    content: " ";
+    background-image: escape-svg($chip-close-icon);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    height: $chip-close-icon-height;
+    width: $chip-close-icon-width;
+    top: $chip-close-icon-position-y;
+    transform: translateY($chip-close-icon-translate-y);
+    right: 0;
   }
 }
