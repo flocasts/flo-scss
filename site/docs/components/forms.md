@@ -151,7 +151,7 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 {% endcapture %}
 {% include example.html content=example %}
 
-## Select
+## Select (WIP)
 
 wrap `<select>` elements with a `.select-wrapper` to apply custom styling
 

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Icons
+title: Icons (FloSports) (WIP)
 description: Use SVG Icons in HTML
 group: components
 toc: true

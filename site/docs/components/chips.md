@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Chips (FloSports)
+title: Chips (FloSports) (WIP)
 description: Chips are compact elements that represent an input, attribute, or action.
 group: components
 toc: true
@@ -26,8 +26,8 @@ Flo-SCSS includes several predefined chip styles, each serving its own semantic 
 ## Chips with Badges
 
 {% capture example %}
-<button type="button" class="chip chip-light">
-  Close <span class="badge badge-400 badge-pill close">&times;</span>
+<button type="button" class="chip chip-light chip-close">
+  Close 
 </button>
 
 <button type="button" class="chip chip-light">

@@ -335,12 +335,6 @@ textarea.form-control {
   }
 }
 
-$select-icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath fill='currentColor' d='M1.88.74A.773.773 0 0 0 .73.72a.92.92 0 0 0-.02 1.234l5.58 6.207a.773.773 0 0 0 1.149.02l5.793-6.009a.92.92 0 0 0 .021-1.234.773.773 0 0 0-1.148-.02L6.896 6.32 1.879.74z' opacity='.9'/%3E%3C/svg%3E%0A";
-$select-padding-icon-buffer: 3em;
-$select-icon-height: 1em;
-$select-icon-width: 2em;
-$select-icon-position-y: 1em;
-
 .select-wrapper {
   position: relative;
 
@@ -348,7 +342,7 @@ $select-icon-position-y: 1em;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding-right: $select-padding-icon-buffer; // to ensure select text does not run into chevron
+    padding-right: $select-icon-buffer-padding; // to ensure select text does not run into chevron
 
     &::-ms-expand {
       // remove the caret on `<select>`s in IE10+.
