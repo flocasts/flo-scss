@@ -1,0 +1,18 @@
+{
+  "packageFiles": [
+    {
+      "filename": "package.json",
+      "type": "json"
+    }
+  ],
+  "bumpFiles": [
+    {
+      "filename": "package.json",
+      "type": "json"
+    },
+    {
+      "filename": "_config.yml",
+      "updater": "build/config-updater.js"
+    }
+  ]
+}
