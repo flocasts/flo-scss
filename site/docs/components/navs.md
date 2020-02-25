@@ -129,28 +129,6 @@ As always, vertical navigation is possible without `<ul>`s, too.
 {% endcapture %}
 {% include example.html content=example %}
 
-### Tabs
-
-Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabbed interface. Use them to create tabbable regions with our [tab JavaScript plugin](#javascript-behavior).
-
-{% capture example %}
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-  </li>
-</ul>
-{% endcapture %}
-{% include example.html content=example %}
-
 ### Pills
 
 Take that same HTML, but use `.nav-pills` instead:
