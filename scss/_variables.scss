@@ -94,6 +94,31 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+$amex: #006FCF;
+$android: #3ddc84;
+$apple: #231f20;
+$discover: #FF6602;
+$mastercard: #000;
+$visa: #192061;
+$fire-tv: #fc4c02;
+$outlook: #0072c6;
+$roku: #662d91;
+$brand-colors: () !default;
+$brand-colors: map-merge(
+  (
+    "amex": $amex,
+    "android": $android,
+    "apple": $apple,
+    "discover": $discover,
+    "mastercard": $mastercard,
+    "visa": $visa,
+    "fire-tv": $fire-tv,
+    "outlook": $outlook,
+    "roku": $roku
+  ),
+  $brand-colors
+);
+
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8% !default;
 
@@ -103,7 +128,6 @@ $yiq-contrasted-threshold: 150 !default;
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark: $gray-900 !default;
 $yiq-text-light: $white !default;
-
 
 // Base font-sizes
 
@@ -307,7 +331,6 @@ $font-family-heavy: "Uni-Neue-Heavy", "Open Sans", "Helvetica Neue", Helvetica,
 $typefaces: "h1", "h2", "h3", "display-1", "display-2", "display-3", "display-4",
   "body", "text-data", "headline", "subhead", "footnote", "caption", "overtext",
   "mono", "small", "bold", "heavy" !default;
-
 
 $icon-size: 1.25em !default;
 $icon-size-lg: 1.75em !default;
@@ -696,9 +719,10 @@ $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 $chip-padding-x: 0.75rem !default;
-$chip-padding-y: 0 !default;
-$chip-height: 2.75em !default;
+$chip-padding-y: .4em !default;
+// $chip-height: 2.75em !default;
 $chip-white-space: null !default; // Set to `nowrap` to prevent text wrapping
+$chip-font-size: $input-btn-font-size !default;
 
 $chip-padding-y-sm: $input-btn-padding-y-sm !default;
 $chip-padding-x-sm: $input-btn-padding-x-sm !default;
@@ -729,6 +753,14 @@ $chip-border-radius-sm: $chip-border-radius !default;
 
 $chip-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+
+$chip-close-icon-color: $gray-400;
+$chip-close-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$chip-close-icon-color}' viewBox='0 0 500 500'><path d='M250,0C111.929,0,0,111.929,0,250S111.929,500,250,500,500,388.071,500,250,388.071,0,250,0ZM355.342,339.208l-16.134,16.134a7.092,7.092,0,0,1-10.029,0L250,276.163l-79.179,79.179a7.092,7.092,0,0,1-10.029,0l-16.134-16.134a7.092,7.092,0,0,1,0-10.029L223.837,250l-79.179-79.179a7.092,7.092,0,0,1,0-10.029l16.134-16.134a7.092,7.092,0,0,1,10.029,0L250,223.837l79.179-79.179a7.092,7.092,0,0,1,10.029,0l16.134,16.134a7.092,7.092,0,0,1,0,10.029L276.163,250l79.179,79.179A7.092,7.092,0,0,1,355.342,339.208Z'/></svg>") !default;
+$chip-close-icon-buffer-padding: 2em !default;
+$chip-close-icon-height: 1.3em !default;
+$chip-close-icon-width: 1.6em !default;
+$chip-close-icon-position-y: 50% !default;
+$chip-close-icon-translate-y: -50% !default;
 
 // Forms
 
@@ -1410,11 +1442,13 @@ $breadcrumb-border-radius: $border-radius !default;
 
 // Tabs
 
-$tab-content-padding-x: 0;
-$tab-content-padding-y: 1rem;
-$tab-border-width: 0.1em;
-$tab-border-color: $light;
-$tab-label-padding: 1rem;
+$tab-content-padding-x: 0 !default;
+$tab-content-padding-y: 1rem !default;
+$tab-border-width: 0.1em !default;
+$tab-border-color: $light !default;
+$tab-label-padding-x: 0 !default;
+$tab-label-padding-bottom: 1em !default;
+$tab-label-margin-x: 1em !default;
 
 // Carousel
 
@@ -1452,12 +1486,6 @@ $spinner-width-sm: 1rem !default;
 $spinner-height-sm: $spinner-width-sm !default;
 $spinner-border-width-sm: 0.2em !default;
 
-// Close
-
-$close-font-size: $font-size-base * 1.5 !default;
-$close-font-weight: $font-weight-bold !default;
-$close-color: $black !default;
-$close-text-shadow: 0 1px 0 $white !default;
 
 // Code
 
@@ -1483,8 +1511,16 @@ $displays: none, inline, inline-block, block, table, table-row, table-cell, flex
   inline-flex !default;
 $overflows: auto, hidden, visible, scroll !default;
 $positions: static, relative, absolute, fixed, sticky !default;
+$degrees: 45, 90, 135, 180, 225, 270, 315 !default;
 
 // Printing
 
 $print-page-size: a3 !default;
 $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
+
+$select-icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath fill='currentColor' d='M1.88.74A.773.773 0 0 0 .73.72a.92.92 0 0 0-.02 1.234l5.58 6.207a.773.773 0 0 0 1.149.02l5.793-6.009a.92.92 0 0 0 .021-1.234.773.773 0 0 0-1.148-.02L6.896 6.32 1.879.74z' opacity='.9'/%3E%3C/svg%3E%0A";
+$select-icon-buffer-padding: 3em;
+$select-icon-height: 1em;
+$select-icon-width: 2em;
+$select-icon-position-y: 1em;
+

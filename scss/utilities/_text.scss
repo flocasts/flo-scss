@@ -76,3 +76,10 @@
 // Reset
 
 .text-reset { color: inherit !important; }
+
+// specific brand colors for use with svg logos
+@each $label, $value in $brand-colors {
+.color-#{$label} {
+  color: $value;
+}
+}

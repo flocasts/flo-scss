@@ -89,6 +89,9 @@
     "watch-js-main": "nodemon --watch js/src/ --ext js --exec \"npm run js-compile\"",
     "watch-js-docs": "nodemon --watch \"site/docs/**/assets/js/src/\" --ext js --exec \"npm run js-docs\"",
     "semantic-release": "semantic-release",
+    "process-svg": "npm run process-icons && npm run process-graphics",
+    "process-icons": "svg-sprite --dest=svg --symbol --symbol-render-scss --symbol-render-scss-dest ../../scss/_sprite.scss --symbol-sprite ../../site/_includes/icon-sprite.svg svg/*.svg ",
+    "process-graphics": "echo process-graphics",
     "build": "npm run release"
   },
   "style": "dist/css/bootstrap.css",
