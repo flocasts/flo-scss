@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/flocasts/flo-scss/compare/v0.3.0...v0.4.0) (2020-02-25)
+
+
+### Features
+
+* **svg:** init svg icon sprite ([#21](https://github.com/flocasts/flo-scss/issues/21)) ([3e97e78](https://github.com/flocasts/flo-scss/commit/3e97e781d7fb46476d7fe6df2f4583d5b2460982))
+
 ### [0.3.1](https://github.com/flocasts/flo-scss/compare/v0.3.0...v0.3.1) (2020-02-25)
 
 
