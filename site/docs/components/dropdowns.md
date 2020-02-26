@@ -78,7 +78,7 @@ The best part is you can do this with any button variant, too:
       <a class="dropdown-item" href="#">Separated link</a>
     </div>
     <label class="btn btn-primary dropdown-toggle" aria-haspopup="true" aria-expanded="false" for="toggle2">Primary</label>
-    <input class="d-none dropdown-toggle" aria-haspopup="true" aria-expanded="false" type="checkbox" id="toggle3"/>
+    <input class="d-none dropdown-toggle" aria-haspopup="true" aria-expanded="false" type="checkbox" id="toggle2"/>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
@@ -216,11 +216,13 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 
 Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 
+{% capture example %}
 <div class="bd-example">
   <div class="btn-group dropup">
-    <button type="button" class="btn btn-secondary dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+    <label class="btn btn-secondary dropdown-toggle" aria-haspopup="true" aria-expanded="false" for="toggle10">
       Dropup
-    </button>
+    </label>
+    <input class="d-none dropdown-toggle" aria-haspopup="true" aria-expanded="false" type="checkbox" id="toggle10"/>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
@@ -231,12 +233,13 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
   </div>
 
   <div class="btn-group dropup">
-    <button type="button" class="btn btn-secondary">
+    <label class="btn btn-secondary">
       Split dropup
-    </button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" aria-haspopup="true" aria-expanded="false">
+    </label>
+    <label class="btn btn-secondary dropdown-toggle dropdown-toggle-split" aria-haspopup="true" aria-expanded="false" for="toggle11">
       <span class="sr-only">Toggle Dropdown</span>
-    </button>
+    </label>
+    <input class="d-none dropdown-toggle" aria-haspopup="true" aria-expanded="false" type="checkbox" id="toggle11"/>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
@@ -246,41 +249,20 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
     </div>
   </div>
 </div>
-
-{% highlight html %}
-<!-- Default dropup button -->
-<div class="btn-group dropup">
-  <button type="button" class="btn btn-secondary dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-    Dropup
-  </button>
-  <div class="dropdown-menu">
-    <!-- Dropdown menu links -->
-  </div>
-</div>
-
-<!-- Split dropup button -->
-<div class="btn-group dropup">
-  <button type="button" class="btn btn-secondary">
-    Split dropup
-  </button>
-  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <div class="dropdown-menu">
-    <!-- Dropdown menu links -->
-  </div>
-</div>
-{% endhighlight %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ### Dropright
 
 Trigger dropdown menus at the right of the elements by adding `.dropright` to the parent element.
 
+{% capture example %}
 <div class="bd-example">
   <div class="btn-group dropright">
-    <button type="button" class="btn btn-secondary dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+    <label class="btn btn-secondary dropdown-toggle" aria-haspopup="true" aria-expanded="false" for="toggle12">
       Dropright
-    </button>
+    </label>
+    <input class="d-none dropdown-toggle" aria-haspopup="true" aria-expanded="false" type="checkbox" id="toggle12"/>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
@@ -294,9 +276,10 @@ Trigger dropdown menus at the right of the elements by adding `.dropright` to th
     <button type="button" class="btn btn-secondary">
       Split dropright
     </button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" aria-haspopup="true" aria-expanded="false">
+    <label class="btn btn-secondary dropdown-toggle dropdown-toggle-split" aria-haspopup="true" aria-expanded="false" for="toggle13">
       <span class="sr-only">Toggle Dropright</span>
-    </button>
+    </label>
+    <input class="d-none dropdown-toggle" aria-haspopup="true" aria-expanded="false" type="checkbox" id="toggle13"/>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
@@ -306,41 +289,20 @@ Trigger dropdown menus at the right of the elements by adding `.dropright` to th
     </div>
   </div>
 </div>
-
-{% highlight html %}
-<!-- Default dropright button -->
-<div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-    Dropright
-  </button>
-  <div class="dropdown-menu">
-    <!-- Dropdown menu links -->
-  </div>
-</div>
-
-<!-- Split dropright button -->
-<div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary">
-    Split dropright
-  </button>
-  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropright</span>
-  </button>
-  <div class="dropdown-menu">
-    <!-- Dropdown menu links -->
-  </div>
-</div>
-{% endhighlight %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ### Dropleft
 
 Trigger dropdown menus at the left of the elements by adding `.dropleft` to the parent element.
 
+{% capture example %}
 <div class="bd-example">
   <div class="btn-group dropleft">
-    <button type="button" class="btn btn-secondary dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+    <label class="btn btn-secondary dropdown-toggle" aria-haspopup="true" aria-expanded="false" for="toggle14">
       Dropleft
-    </button>
+    </label>
+    <input class="d-none dropdown-toggle" aria-haspopup="true" aria-expanded="false" type="checkbox" id="toggle14"/>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
@@ -352,9 +314,10 @@ Trigger dropdown menus at the left of the elements by adding `.dropleft` to the 
 
   <div class="btn-group">
     <div class="btn-group dropleft" role="group">
-      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" aria-haspopup="true" aria-expanded="false">
+      <label class="btn btn-secondary dropdown-toggle dropdown-toggle-split" aria-haspopup="true" aria-expanded="false" for="toggle15">
         <span class="sr-only">Toggle Dropleft</span>
-      </button>
+      </label>
+    <input class="d-none dropdown-toggle" aria-haspopup="true" aria-expanded="false" type="checkbox" id="toggle15"/>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
@@ -363,65 +326,10 @@ Trigger dropdown menus at the left of the elements by adding `.dropleft` to the 
         <a class="dropdown-item" href="#">Separated link</a>
       </div>
     </div>
-    <button type="button" class="btn btn-secondary">
+    <label class="btn btn-secondary" for="toggle">
       Split dropleft
-    </button>
+    </label>
   </div>
-</div>
-
-{% highlight html %}
-<!-- Default dropleft button -->
-<div class="btn-group dropleft">
-  <button type="button" class="btn btn-secondary dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-    Dropleft
-  </button>
-  <div class="dropdown-menu">
-    <!-- Dropdown menu links -->
-  </div>
-</div>
-
-<!-- Split dropleft button -->
-<div class="btn-group">
-  <div class="btn-group dropleft" role="group">
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropleft</span>
-    </button>
-    <div class="dropdown-menu">
-      <!-- Dropdown menu links -->
-    </div>
-  </div>
-  <button type="button" class="btn btn-secondary">
-    Split dropleft
-  </button>
-</div>
-{% endhighlight %}
-
-## Menu items
-
-Historically dropdown menu contents *had* to be links, but that's no longer the case with v4. Now you can optionally use `<button>` elements in your dropdowns instead of just `<a>`s.
-
-{% capture example %}
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" aria-haspopup="true" aria-expanded="false">
-    Dropdown
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item" type="button">Action</button>
-    <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item" type="button">Something else here</button>
-  </div>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-You can also create non-interactive dropdown items with `.dropdown-item-text`. Feel free to style further with custom CSS or text utilities.
-
-{% capture example %}
-<div class="dropdown-menu">
-  <span class="dropdown-item-text">Dropdown item text</span>
-  <a class="dropdown-item" href="#">Action</a>
-  <a class="dropdown-item" href="#">Another action</a>
-  <a class="dropdown-item" href="#">Something else here</a>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -431,7 +339,7 @@ You can also create non-interactive dropdown items with `.dropdown-item-text`. F
 Add `.active` to items in the dropdown to **style them as active**.
 
 {% capture example %}
-<div class="dropdown-menu">
+<div class="dropdown-menu d-block">
   <a class="dropdown-item" href="#">Regular link</a>
   <a class="dropdown-item active" href="#">Active link</a>
   <a class="dropdown-item" href="#">Another link</a>
