@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap toast.js v0.2.1 (https://flo-scss.flo.center/)
+  * Bootstrap toast.js v0.4.0 (https://flo-scss.flo.center/)
   * Copyright 2011-2020 FloSports Engineering (https://flosports.tv) & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -120,9 +120,7 @@
    * ------------------------------------------------------------------------
    */
 
-  var Toast =
-  /*#__PURE__*/
-  function () {
+  var Toast = /*#__PURE__*/function () {
     function Toast(element, config) {
       this._element = element;
       this._config = this._getConfig(config);

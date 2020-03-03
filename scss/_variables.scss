@@ -1365,6 +1365,13 @@ $alert-bg-level: -10 !default;
 $alert-border-level: -9 !default;
 $alert-color-level: 6 !default;
 
+// for flo .alert-secondary
+$alert-stripe-width-base: .3rem !default;
+$alert-stripe-width-ratio: 2.5 !default;
+$alert-stripe-angle: 120deg !default;
+$alert-stripe-color-1: $white !default;
+$alert-stripe-color-2: $gray-200 !default;
+
 // Progress bars
 
 $progress-height: 1rem !default;

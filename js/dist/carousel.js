@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap carousel.js v0.2.1 (https://flo-scss.flo.center/)
+  * Bootstrap carousel.js v0.4.0 (https://flo-scss.flo.center/)
   * Copyright 2011-2020 FloSports Engineering (https://flosports.tv) & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -164,9 +164,7 @@
    * ------------------------------------------------------------------------
    */
 
-  var Carousel =
-  /*#__PURE__*/
-  function () {
+  var Carousel = /*#__PURE__*/function () {
     function Carousel(element, config) {
       this._items = null;
       this._interval = null;

@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap button.js v0.2.1 (https://flo-scss.flo.center/)
+  * Bootstrap button.js v0.4.0 (https://flo-scss.flo.center/)
   * Copyright 2011-2020 FloSports Engineering (https://flosports.tv) & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -64,9 +64,7 @@
    * ------------------------------------------------------------------------
    */
 
-  var Button =
-  /*#__PURE__*/
-  function () {
+  var Button = /*#__PURE__*/function () {
     function Button(element) {
       this._element = element;
     } // Getters
