@@ -31,19 +31,6 @@ Flo-SCSS includes several predefined chip styles, each serving its own semantic 
 {% endcapture %}
 {% include example.html content=example %}
 
-## Chips with Badges
-
-{% capture example %}
-<button type="button" class="chip chip-light">
-  Watch <span class="badge badge-400 bg-primary text-white">Live</span>
-</button>
-
-<button type="button" class="chip chip-light">
-  Event <span class="badge badge-400 badge-pill">FloSports</span>
-</button>
-{% endcapture %}
-{% include example.html content=example %}
-
 ## Disable text wrapping
 
 If you don't want the chip text to wrap, you can add the `.text-nowrap` class to the chip. In Sass, you can set `$chip-white-space: nowrap` to disable text wrapping for each chip.
