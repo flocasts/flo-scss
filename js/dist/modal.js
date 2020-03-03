@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap modal.js v0.2.1 (https://flo-scss.flo.center/)
+  * Bootstrap modal.js v0.4.0 (https://flo-scss.flo.center/)
   * Copyright 2011-2020 FloSports Engineering (https://flosports.tv) & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -140,9 +140,7 @@
    * ------------------------------------------------------------------------
    */
 
-  var Modal =
-  /*#__PURE__*/
-  function () {
+  var Modal = /*#__PURE__*/function () {
     function Modal(element, config) {
       this._config = this._getConfig(config);
       this._element = element;

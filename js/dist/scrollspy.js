@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap scrollspy.js v0.2.1 (https://flo-scss.flo.center/)
+  * Bootstrap scrollspy.js v0.4.0 (https://flo-scss.flo.center/)
   * Copyright 2011-2020 FloSports Engineering (https://flosports.tv) & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
@@ -130,9 +130,7 @@
    * ------------------------------------------------------------------------
    */
 
-  var ScrollSpy =
-  /*#__PURE__*/
-  function () {
+  var ScrollSpy = /*#__PURE__*/function () {
     function ScrollSpy(element, config) {
       var _this = this;
 
