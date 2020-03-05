@@ -156,6 +156,7 @@ $escaped-characters: (
 
 $enable-caret: false !default;
 $enable-rounded: false !default;
+$enable-rounded-buttons: true !default;
 $enable-shadows: false !default;
 $enable-gradients: true !default;
 $enable-transitions: true !default;
@@ -707,7 +708,7 @@ $btn-link-disabled-color: $gray-600 !default;
 $btn-block-spacing-y: 0.5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius: $border-radius !default;
+$btn-border-radius: from-pixels(6) !default;
 $btn-border-radius-lg: $border-radius-lg !default;
 $btn-border-radius-sm: $border-radius-sm !default;
 

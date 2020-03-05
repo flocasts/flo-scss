@@ -1,6 +1,5 @@
 // stylelint-disable property-blacklist
 // Single side border-radius
-
 @mixin border-radius($radius: $border-radius, $fallback-border-radius: false) {
   @if $enable-rounded {
     border-radius: $radius;
@@ -58,6 +57,69 @@
 
 @mixin border-bottom-left-radius($radius) {
   @if $enable-rounded {
+    border-bottom-left-radius: $radius;
+  }
+}
+
+// Buttons
+
+@mixin button-border-radius($radius: $border-radius, $fallback-border-radius: false) {
+  @if $enable-rounded-buttons {
+    border-radius: $radius;
+  }
+  @else if $fallback-border-radius != false {
+    border-radius: $fallback-border-radius;
+  }
+}
+
+@mixin button-border-top-radius($radius) {
+  @if $enable-rounded-buttons {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+  }
+}
+
+@mixin button-border-right-radius($radius) {
+  @if $enable-rounded-buttons {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+}
+
+@mixin button-border-bottom-radius($radius) {
+  @if $enable-rounded-buttons {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }
+}
+
+@mixin button-border-left-radius($radius) {
+  @if $enable-rounded-buttons {
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }
+}
+
+@mixin button-border-top-left-radius($radius) {
+  @if $enable-rounded-buttons {
+    border-top-left-radius: $radius;
+  }
+}
+
+@mixin button-border-top-right-radius($radius) {
+  @if $enable-rounded-buttons {
+    border-top-right-radius: $radius;
+  }
+}
+
+@mixin button-border-bottom-right-radius($radius) {
+  @if $enable-rounded-buttons {
+    border-bottom-right-radius: $radius;
+  }
+}
+
+@mixin button-border-bottom-left-radius($radius) {
+  @if $enable-rounded-buttons {
     border-bottom-left-radius: $radius;
   }
 }
