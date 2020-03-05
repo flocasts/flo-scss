@@ -11,6 +11,7 @@ toc: true
 The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
 
 {% capture example %}
+
 <ul class="list-group">
   <li class="list-group-item">Cras justo odio</li>
   <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -26,6 +27,7 @@ The most basic list group is an unordered list with list items and the proper cl
 Add `.active` to a `.list-group-item` to indicate the current active selection.
 
 {% capture example %}
+
 <ul class="list-group">
   <li class="list-group-item active">Cras justo odio</li>
   <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -41,6 +43,7 @@ Add `.active` to a `.list-group-item` to indicate the current active selection.
 Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that some elements with `.disabled` will also require custom JavaScript to fully disable their click events (e.g., links).
 
 {% capture example %}
+
 <ul class="list-group">
   <li class="list-group-item disabled" aria-disabled="true">Cras justo odio</li>
   <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -58,6 +61,7 @@ Use `<a>`s or `<button>`s to create _actionable_ list group items with hover, di
 Be sure to **not use the standard `.btn` classes here**.
 
 {% capture example %}
+
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action active">
     Cras justo odio
@@ -73,6 +77,7 @@ Be sure to **not use the standard `.btn` classes here**.
 With `<button>`s, you can also make use of the `disabled` attribute instead of the `.disabled` class. Sadly, `<a>`s don't support the disabled attribute.
 
 {% capture example %}
+
 <div class="list-group">
   <button type="button" class="list-group-item list-group-item-action active">
     Cras justo odio
@@ -90,6 +95,7 @@ With `<button>`s, you can also make use of the `disabled` attribute instead of t
 Add `.list-group-flush` to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
 
 {% capture example %}
+
 <ul class="list-group list-group-flush">
   <li class="list-group-item">Cras justo odio</li>
   <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -105,6 +111,7 @@ Add `.list-group-flush` to remove some borders and rounded corners to render lis
 Use `.list-group-heading` with `.list-group-item`s to add bold headings to lists
 
 {% capture example %}
+
 <ul class="list-group">
   <li class="list-group-heading">Events</li>
   <li class="list-group-item">Beat the Streets</li>
@@ -116,6 +123,7 @@ Use `.list-group-heading` with `.list-group-item`s to add bold headings to lists
 {% include example.html content=example %}
 
 {% capture example %}
+
 <ul class="list-group list-group-flush">
   <li class="list-group-heading">Events</li>
   <li class="list-group-item">Beat the Streets</li>
@@ -134,6 +142,7 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 
 {% for bp in site.data.breakpoints %}
 {% capture example %}
+
 <ul class="list-group list-group-horizontal{{ bp.abbr }}">
   <li class="list-group-item">Cras justo odio</li>
   <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -147,10 +156,12 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 Use contextual classes to style list items with a stateful background and color.
 
 {% capture example %}
+
 <ul class="list-group">
   <li class="list-group-item">Dapibus ac facilisis in</li>
 
-  {% for color in site.data.theme-colors %}
+{% for color in site.data.theme-colors %}
+
   <li class="list-group-item list-group-item-{{ color.name }}">A simple {{ color.name }} list group item</li>{% endfor %}
 </ul>
 {% endcapture %}
@@ -159,11 +170,13 @@ Use contextual classes to style list items with a stateful background and color.
 Contextual classes also work with `.list-group-item-action`. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
 
 {% capture example %}
+
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
 
-  {% for color in site.data.theme-colors %}
-  <a href="#" class="list-group-item list-group-item-action list-group-item-{{ color.name }}">A simple {{ color.name }} list group item</a>{% endfor %}
+{% for color in site.data.theme-colors %}
+<a href="#" class="list-group-item list-group-item-action list-group-item-{{ color.name }}">A simple {{ color.name }} list group item</a>{% endfor %}
+
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -175,6 +188,7 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
 Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{ site.baseurl }}/docs/utilities/flex/).
 
 {% capture example %}
+
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between align-items-center">
     Cras justo odio
@@ -197,30 +211,58 @@ Add badges to any list group item to show unread counts, activity, and more with
 Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{ site.baseurl }}/docs/utilities/flex/).
 
 {% capture example %}
+
 <div class="list-group">
+  <div class="list-group-heading">Events</div>
   <a href="#" class="list-group-item list-group-item-action active">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small>3 days ago</small>
+    <div class="row">
+      <div class="col-4">
+        <img
+          src="https://d2779tscntxxsw.cloudfront.net/5e31f3e4eb17c.png"
+          class="img-fluid"
+          alt="..."
+        />
+      </div>
+
+      <div class="col-8">
+        <h5>Final X</h5>
+        <time class="text-muted">May 8, 2019</time>
+      </div>
     </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small>Donec id elit non mi porta.</small>
   </a>
   <a href="#" class="list-group-item list-group-item-action">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
+    <div class="row">
+      <div class="col-4">
+        <img
+          src="https://d2779tscntxxsw.cloudfront.net/5e31f3e4eb17c.png"
+          class="img-fluid"
+          alt="..."
+        />
+      </div>
+
+      <div class="col-8">
+        <h5>Final X</h5>
+        <time class="text-muted">May 8, 2019</time>
+      </div>
     </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
+
   </a>
   <a href="#" class="list-group-item list-group-item-action">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
+    <div class="row">
+      <div class="col-4">
+        <img
+          src="https://d2779tscntxxsw.cloudfront.net/5e31f3e4eb17c.png"
+          class="img-fluid"
+          alt="..."
+        />
+      </div>
+
+      <div class="col-8">
+        <h5>Final X</h5>
+        <time class="text-muted">May 8, 2019</time>
+      </div>
     </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
+
   </a>
 </div>
 {% endcapture %}
