@@ -57,6 +57,9 @@
     border-top: none;
     border-left: none;
     border-right: none;
+    &:last-child {
+      border-bottom: none;
+    }
   }
   &:first-child {
     @include border-top-radius($list-group-border-radius);
