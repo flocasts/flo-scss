@@ -23,7 +23,7 @@
   @include transition($btn-transition);
 
   // override $enable-rounded flag
-  border-radius: $btn-border-radius;
+  // border-radius: $btn-border-radius;
 
   @include hover() {
     color: $body-color;

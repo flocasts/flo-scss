@@ -4,6 +4,27 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-new-design-system: true !default;
+
+$enable-caret: false !default;
+$enable-rounded: $enable-new-design-system !default;
+$enable-rounded-buttons: $enable-new-design-system !default;
+$enable-shadows: false !default;
+$enable-gradients: true !default;
+$enable-transitions: true !default;
+$enable-prefers-reduced-motion-media-query: true !default;
+$enable-hover-media-query: false !default; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes: true !default;
+$enable-pointer-cursor-for-buttons: true !default;
+$enable-print-styles: true !default;
+$enable-responsive-font-sizes: true !default;
+$enable-validation-icons: true !default;
+$enable-deprecation-messages: true !default;
+
 // Color system
 
 $white: #fff !default;
@@ -94,10 +115,10 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
-$amex: #006FCF;
+$amex: #006fcf;
 $android: #3ddc84;
 $apple: #231f20;
-$discover: #FF6602;
+$discover: #ff6602;
 $mastercard: #000;
 $visa: #192061;
 $fire-tv: #fc4c02;
@@ -149,25 +170,6 @@ $escaped-characters: (
   ("(", "%28"),
   (")", "%29")
 ) !default;
-
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-
-$enable-caret: false !default;
-$enable-rounded: false !default;
-$enable-rounded-buttons: true !default;
-$enable-shadows: false !default;
-$enable-gradients: true !default;
-$enable-transitions: true !default;
-$enable-prefers-reduced-motion-media-query: true !default;
-$enable-hover-media-query: false !default; // Deprecated, no longer affects any compiled CSS
-$enable-grid-classes: true !default;
-$enable-pointer-cursor-for-buttons: true !default;
-$enable-print-styles: true !default;
-$enable-responsive-font-sizes: true !default;
-$enable-validation-icons: true !default;
-$enable-deprecation-messages: true !default;
 
 // Spacing
 //
@@ -720,7 +722,7 @@ $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 $chip-padding-x: 0.75rem !default;
-$chip-padding-y: .4em !default;
+$chip-padding-y: 0.4em !default;
 // $chip-height: 2.75em !default;
 $chip-white-space: null !default; // Set to `nowrap` to prevent text wrapping
 $chip-font-size: $input-btn-font-size !default;
@@ -1296,7 +1298,7 @@ $badge-font-weight: $font-weight-bold !default;
 $badge-padding-y: 0.25em !default;
 $badge-padding-x: 0.4em !default;
 $badge-margin-x: 0.4em !default;
-$badge-border-radius: $border-radius !default;
+$badge-border-radius: 0 !default;
 
 $badge-transition: $btn-transition !default;
 $badge-focus-width: $input-btn-focus-width !default;
@@ -1382,16 +1384,21 @@ $progress-bar-transition: width 0.6s ease !default;
 
 $list-group-color: null !default;
 $list-group-bg: $white !default;
-$list-group-border-color: rgba($black, 0.125) !default;
+$list-group-border-color: if($enable-new-design-system, $gray-300, rgba($black, 0.125)) !default;
 $list-group-border-width: $border-width !default;
 $list-group-border-radius: $border-radius !default;
 
-$list-group-item-padding-y: 0.75rem !default;
-$list-group-item-padding-x: 1.25rem !default;
+$list-group-item-padding-y: if($enable-new-design-system, 0.75rem, 0.75rem) !default;
+$list-group-item-padding-x: if($enable-new-design-system, 0, 1.25rem) !default;
+
+$list-group-item-margin-y: if($enable-new-design-system, 0, 0) !default;
+$list-group-item-margin-x: if($enable-new-design-system, 1.25rem, 0) !default;
 
 $list-group-heading-padding-y: $list-group-item-padding-y !default;
 $list-group-heading-padding-x: $list-group-item-padding-x !default;
 $list-group-heading-color: $black !default;
+$list-group-heading-bg: if($enable-new-design-system, $list-group-border-color, $list-group-bg) !default;
+$list-group-heading-border-color: if($enable-new-design-system, $list-group-border-color, $black) !default;
 $list-group-heading-border-color: $black !default;
 $list-group-heading-border-width: $list-group-border-width !default;
 $list-group-heading-border-radius: $list-group-border-radius !default;
@@ -1487,7 +1494,6 @@ $spinner-width-sm: 1rem !default;
 $spinner-height-sm: $spinner-width-sm !default;
 $spinner-border-width-sm: 0.2em !default;
 
-
 // Code
 
 $code-font-size: 87.5% !default;
@@ -1524,4 +1530,3 @@ $select-icon-buffer-padding: 3em;
 $select-icon-height: 1em;
 $select-icon-width: 2em;
 $select-icon-position-y: 1em;
-
