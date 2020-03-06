@@ -8,7 +8,7 @@
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-new-design-system: true !default;
+$enable-new-design-system: false !default;
 
 $enable-caret: false !default;
 $enable-rounded: $enable-new-design-system !default;
