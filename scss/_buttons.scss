@@ -22,6 +22,9 @@
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
+  // override $enable-rounded flag
+  // border-radius: $btn-border-radius;
+
   @include hover() {
     color: $body-color;
     text-decoration: none;
@@ -70,6 +73,19 @@ fieldset:disabled a.btn {
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
+  }
+}
+
+// custom flo secondary button
+.btn-secondary {
+  @extend .btn-outline-primary;
+  border-color: $gray-400;
+  background: $white;
+
+  @include hover() {
+    @include gradient-bg($gray-200);
+    color: $primary;
+    border-color: $gray-400;
   }
 }
 

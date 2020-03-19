@@ -1,0 +1,7 @@
+<svg width="16px" height="16px" viewBox="-2 -2 20 20" version="1.1">
+  <path d="M2.66666667,8.04358851 L13.3204746,2.66666667" stroke="currentColor" stroke-width="1.8"></path>
+  <path d="M2.66666667,8 L13.3454835,13.301895" stroke="currentColor" stroke-width="1.8"></path>
+  <circle fill="currentColor" cx="13.3" cy="2.66666667" r="2.7"></circle>
+  <circle fill="currentColor" cx="13.3" cy="13.3" r="2.7"></circle>
+  <circle fill="currentColor" cx="2.7" cy="8" r="2.7"></circle>
+</svg>

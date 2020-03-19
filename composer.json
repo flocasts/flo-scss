@@ -33,5 +33,6 @@
   },
   "replace": {
     "twitter/bootstrap": "self.version"
-  }
+  },
+  "version": "0.1.4"
 }

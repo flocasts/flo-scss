@@ -6,12 +6,15 @@
 }
 
 label.tab-label {
-  height: 3rem;
-  padding: $tab-label-padding;
+  padding-left: $tab-label-padding-x;
+  padding-right: $tab-label-padding-x;
+  padding-bottom: $tab-label-padding-bottom;
   cursor: pointer;
   z-index: 1;
   margin-left: -1px;
-  margin-bottom: 0px;
+  margin-left: $tab-label-margin-x;
+  margin-right: $tab-label-margin-x;
+  margin-bottom: -1px;
 }
 
 label.tab-label:first-of-type {

@@ -39,6 +39,7 @@
     - title: Collapse
     - title: Dropdowns
     - title: Forms
+    - title: Icons
     - title: Input group
     - title: Jumbotron
     - title: List group
@@ -55,12 +56,12 @@
     - title: Tabs
     - title: Toasts
     - title: Tooltips
+    - title: Video Tile
 
 - title: Utilities
   pages:
     - title: Borders
     - title: Clearfix
-    - title: Close icon
     - title: Click toggle
     - title: Colors
     - title: Display
@@ -79,6 +80,7 @@
     - title: Stretched link
     - title: Text
     - title: Tint
+    - title: Transform
     - title: Vertical align
     - title: Visibility
     - title: Z-Index

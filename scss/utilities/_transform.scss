@@ -1,0 +1,11 @@
+// stylelint-disable declaration-no-important
+
+//
+// Transform
+//
+
+@each $degree in $degrees {
+.rotate-#{$degree} {
+  transform: rotate(#{$degree}deg);
+}
+}

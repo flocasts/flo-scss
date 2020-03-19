@@ -24,6 +24,9 @@ h6,
   .#{$typeface} {
     @include typeface($typeface);
   }
+  .svg-#{$typeface} {
+    width: map-get($font-sizes, $typeface);
+  }
 }
 
 time {
@@ -112,4 +115,18 @@ mark,
   &::before {
     content: "\2014\00A0"; // em dash, nbsp
   }
+}
+
+// Icons
+
+.icon {
+  height: $icon-size;
+}
+
+.icon-sm {
+  height: $icon-size-sm;
+}
+
+.icon-lg {
+  height: $icon-size-lg;
 }

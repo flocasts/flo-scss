@@ -9,7 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-decoration: inherit;
-  height: $chip-height;
+  // height: $chip-height;
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
@@ -26,6 +26,7 @@
   background-color: transparent;
   color: $body-color;
   border: $chip-border-width solid transparent;
+  font-size: $chip-font-size;
   box-shadow: $chip-box-shadow;
   @include typeface("subhead");
   @include transition($chip-transition);
@@ -172,8 +173,21 @@ input[type="button"] {
   .badge {
     margin-left: $badge-margin-x;
   }
-  .close {
-    padding: 0.1em 0.4em;
-    font-size: 1.5em;
+
+  &.chip-close {
+    position: relative;
+    padding-right: $chip-close-icon-buffer-padding;
+    &:after {
+      position: absolute;
+      content: " ";
+      background-image: escape-svg($chip-close-icon);
+      background-repeat: no-repeat;
+      pointer-events: none;
+      height: $chip-close-icon-height;
+      width: $chip-close-icon-width;
+      top: $chip-close-icon-position-y;
+      transform: translateY($chip-close-icon-translate-y);
+      right: 0;
+    }
   }
 }
