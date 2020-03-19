@@ -154,7 +154,7 @@ input[type="button"] {
 
 .chip.chip-close {
   position: relative;
-  padding-right: $chip-close-icon-buffer-padding;
+  padding-right: $chip-close-icon-buffer-padding-right;
   &:after {
     position: absolute;
     content: " ";
@@ -165,7 +165,7 @@ input[type="button"] {
     width: $chip-close-icon-width;
     top: $chip-close-icon-position-y;
     transform: translateY($chip-close-icon-translate-y);
-    right: 0;
+    right: $chip-close-icon-right;
   }
   &:hover:after {
     background-image: escape-svg($chip-close-icon-hover);

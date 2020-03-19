@@ -652,7 +652,7 @@ $input-btn-focus-width: 0.2rem !default;
 $input-btn-focus-color: rgba($component-active-bg, 0.25) !default;
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-font-size-pixels: 16 !default;
+$input-btn-font-size-pixels: 14 !default;
 $input-btn-padding-y: 1em * 10 / $input-btn-font-size-pixels !default;
 $input-btn-padding-x: 1em * 30 / $input-btn-font-size-pixels !default;
 $input-btn-font-size: from-pixels($input-btn-font-size-pixels) !default;
@@ -756,11 +756,12 @@ $chip-close-icon-color: $gray-500;
 $chip-close-icon-color-hover: $gray-600;
 $chip-close-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$chip-close-icon-color}' viewBox='0 0 500 500'><path d='M250,0C111.929,0,0,111.929,0,250S111.929,500,250,500,500,388.071,500,250,388.071,0,250,0ZM355.342,339.208l-16.134,16.134a7.092,7.092,0,0,1-10.029,0L250,276.163l-79.179,79.179a7.092,7.092,0,0,1-10.029,0l-16.134-16.134a7.092,7.092,0,0,1,0-10.029L223.837,250l-79.179-79.179a7.092,7.092,0,0,1,0-10.029l16.134-16.134a7.092,7.092,0,0,1,10.029,0L250,223.837l79.179-79.179a7.092,7.092,0,0,1,10.029,0l16.134,16.134a7.092,7.092,0,0,1,0,10.029L276.163,250l79.179,79.179A7.092,7.092,0,0,1,355.342,339.208Z'/></svg>") !default;
 $chip-close-icon-hover: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$chip-close-icon-color-hover}' viewBox='0 0 500 500'><path d='M250,0C111.929,0,0,111.929,0,250S111.929,500,250,500,500,388.071,500,250,388.071,0,250,0ZM355.342,339.208l-16.134,16.134a7.092,7.092,0,0,1-10.029,0L250,276.163l-79.179,79.179a7.092,7.092,0,0,1-10.029,0l-16.134-16.134a7.092,7.092,0,0,1,0-10.029L223.837,250l-79.179-79.179a7.092,7.092,0,0,1,0-10.029l16.134-16.134a7.092,7.092,0,0,1,10.029,0L250,223.837l79.179-79.179a7.092,7.092,0,0,1,10.029,0l16.134,16.134a7.092,7.092,0,0,1,0,10.029L276.163,250l79.179,79.179A7.092,7.092,0,0,1,355.342,339.208Z'/></svg>") !default;
-$chip-close-icon-buffer-padding: 2em !default;
+$chip-close-icon-buffer-padding-right: 2.225em !default;;
 $chip-close-icon-height: 1.3em !default;
 $chip-close-icon-width: 1.6em !default;
 $chip-close-icon-position-y: 50% !default;
 $chip-close-icon-translate-y: -50% !default;
+$chip-close-icon-right: .2em !default;
 
 // Forms
 
