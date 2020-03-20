@@ -4,6 +4,8 @@
 // Base styles
 //
 
+// font-size 14px => 16px
+
 .btn {
   display: inline-block;
   font-family: $btn-font-family;
@@ -79,13 +81,13 @@ fieldset:disabled a.btn {
 // custom flo secondary button
 .btn-secondary {
   @extend .btn-outline-primary;
-  border-color: $gray-400;
+  border-color: $gray-300;
   background: $white;
 
   @include hover() {
     @include gradient-bg($gray-200);
     color: $primary;
-    border-color: $gray-400;
+    border-color: $gray-300;
   }
 }
 

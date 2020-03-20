@@ -653,7 +653,7 @@ $input-btn-focus-width: 0.2rem !default;
 $input-btn-focus-color: rgba($component-active-bg, 0.25) !default;
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-font-size-pixels: 16 !default;
+$input-btn-font-size-pixels: 14 !default;
 $input-btn-padding-y: 1em * 10 / $input-btn-font-size-pixels !default;
 $input-btn-padding-x: 1em * 30 / $input-btn-font-size-pixels !default;
 $input-btn-font-size: from-pixels($input-btn-font-size-pixels) !default;
