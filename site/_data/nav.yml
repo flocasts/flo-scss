@@ -1,14 +1,14 @@
 - title: Getting started
   pages:
     - title: Introduction
-    - title: Download
+    # - title: Download
     - title: Contents
     - title: Browsers & devices
-    - title: JavaScript
+    # - title: JavaScript
     - title: Theming
     - title: Build tools
     # - title: Best practices # TODO: Write this content
-    - title: Webpack
+    # - title: Webpack
     - title: Accessibility
 
 - title: Layout
@@ -41,20 +41,20 @@
     - title: Forms
     - title: Icons
     - title: Input group
-    - title: Jumbotron
+    # - title: Jumbotron
     - title: List group
     - title: Media object
     - title: Modal
     - title: Navs
     - title: Navbar
     - title: Pagination
-    - title: Popovers
+    # - title: Popovers
     - title: Progress
-    - title: Scrollspy
+    # - title: Scrollspy
     - title: Shapes
     - title: Spinners
     - title: Tabs
-    - title: Toasts
+    # - title: Toasts
     - title: Tooltips
     - title: Video Tile
 

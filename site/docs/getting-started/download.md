@@ -1,10 +1,12 @@
 ---
 layout: docs
-title: Download
-description: Download Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.
+title: Download (WIP)
+description: This page is WIP. Please refer to README.md for more information
 group: getting-started
 toc: true
 ---
+
+Download Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.
 
 ## Compiled CSS and JS
 

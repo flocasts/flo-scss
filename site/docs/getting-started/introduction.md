@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Introduction
-description: Get started with Bootstrap, the world's most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.
+description: Get started with Bootstrap, the world's most popular framework for building responsive, mobile-first sites.
 group: getting-started
 redirect_from:
   - "/docs/"
@@ -11,7 +11,7 @@ redirect_from:
 toc: true
 ---
 
-## Quick start
+<!-- ## Quick start
 
 Looking to quickly add Bootstrap to your project? Use BootstrapCDN, provided for free by the folks at StackPath. Using a package manager or need to download the source files? [Head to the downloads page]({{ site.baseurl }}/docs/getting-started/download/).
 
@@ -23,9 +23,11 @@ Copy-paste the stylesheet `<link>` into your `<head>` before all other styleshee
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 {% endhighlight %}
 
+ -->
+
 ### JS
 
-Many of the Bootstrap components requiring JavaScript originally used jQuery or Popper.js. The FloSports projects are built upon Angular and do not use jQuery. Some of the interaction functionality will
+Many of the Bootstrap components requiring JavaScript originally used jQuery or Popper.js. Many FloSports projects are built upon Angular and do not use jQuery. Some of the interaction functionality will
 not work out of the box (for example, within the FloSports Web App) since the Bootstrap JavaScript is not included.
 
 <details>

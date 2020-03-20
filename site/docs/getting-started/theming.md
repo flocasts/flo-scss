@@ -1,10 +1,12 @@
 ---
 layout: docs
-title: Theming Bootstrap
+title: Theming Bootstrap (WIP)
 description: Customize Bootstrap 4 with our new built-in Sass variables for global style preferences for easy theming and component changes.
 group: getting-started
 toc: true
 ---
+
+_NOTE: This page is still WIP and some information may not be correct_
 
 ## Introduction
 
