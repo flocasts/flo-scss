@@ -664,9 +664,9 @@ $input-btn-padding-x-sm: 1em * 30 / $input-btn-font-size-pixels !default;
 $input-btn-font-size-sm: $input-btn-font-size !default;
 $input-btn-line-height-sm: $line-height-sm !default;
 
-$input-btn-padding-y-lg: 1em * 12 / $input-btn-font-size-pixels !default;
+$input-btn-padding-y-lg: 1em * 10 / $input-btn-font-size-pixels !default;
 $input-btn-padding-x-lg: 1em * 30 / $input-btn-font-size-pixels !default;
-$input-btn-font-size-lg: $input-btn-font-size !default;
+$input-btn-font-size-lg: from-pixels(16) !default;
 $input-btn-line-height-lg: $line-height-lg !default;
 
 $input-btn-border-width: $border-width !default;
