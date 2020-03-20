@@ -1,10 +1,12 @@
 ---
 layout: docs
-title: JavaScript
-description: Bring Bootstrap to life with our optional JavaScript plugins built on jQuery. Learn about each plugin, our data and programmatic API options, and more.
+title: JavaScript (DEPRECATED)
+description: This section is deprecated and is not relevant to this project
 group: getting-started
 toc: true
 ---
+
+Bring Bootstrap to life with our optional JavaScript plugins built on jQuery. Learn about each plugin, our data and programmatic API options, and more.
 
 ## Individual or compiled
 
