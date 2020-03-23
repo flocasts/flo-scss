@@ -4,8 +4,6 @@
 // Base styles
 //
 
-// font-size 14px => 16px
-
 .btn {
   display: inline-block;
   font-family: $btn-font-family;
@@ -88,6 +86,14 @@ fieldset:disabled a.btn {
     @include gradient-bg($gray-200);
     color: $primary;
     border-color: $gray-300;
+  }
+  &:active,
+  &.active {
+    color: $primary !important;
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 20, 15, 0.2) !important;
   }
 }
 

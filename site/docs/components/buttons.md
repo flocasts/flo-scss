@@ -1,14 +1,151 @@
 ---
 layout: docs
 title: Buttons
-description: Use Bootstrap's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+description: FloSports Brand has three button styles; primary, secondary, & outline over image. In addition the brand had three button sizes; btn-sm, btn, btn-lg. 
 group: components
 toc: true
 ---
 
-## Examples
+{% capture callout %}
+##### Browser Sizing caveat
+Browsers by default have different built in styles for rendering. Cross-browser differences can be avoided with a CSS reset.
+This project uses reboot.css. 
 
-Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+Sizes are consistent in chromium browsers, however differ in other browsers: FireFox and Safari. Further investigating needed to determine why button heights are not rendering the same, even though buttons heights are consistent viewed in different browsers from Bootstrap 4, the core files this project was forked from.
+
+**Files**
+
+`~flo-scss/scss/_reboot.scss` | 
+`~/flo-scss/site/docs/content/reboot.md`
+{% endcapture %}
+{% include callout.html content=callout type="danger" %}
+
+<!-- FloSports Brand  -->
+## Button Style Types
+
+### Primary Buttons
+
+Primary buttons are are Ignite Red with White text. 
+
+{% capture callout %}
+##### TODO
+Change padding left and padding right to 24px
+ {% endcapture %}
+{% include callout.html content=callout type="danger" %}
+
+{% capture example %}
+<button class="btn btn-primary" type="submit">Button</button>
+<a class="btn btn-primary" href="#" role="button">Link</a>
+<input class="btn btn-primary" type="button" value="Input">
+<input class="btn btn-primary" type="submit" value="Submit">
+<input class="btn btn-primary" type="reset" value="Reset">
+{% endcapture %}
+{% include example.html content=example %}
+
+#### Sizes
+
+For larger or smaller buttons  Button widths are dynamic based on a padding-left & padding-right of 24px plus the characters.  The hight of the buttons are set by adding add `.btn-lg` or `.btn-sm`.  Small buttons have a height of 32px. Base btns have a height of 40px. Large buttons have a height of 52px.
+
+{% capture example %}
+<button type="button" class="btn btn-primary btn-sm">Small button</button>
+<button type="button" class="btn btn-primary">Button</button>
+<button type="button" class="btn btn-primary btn-lg">Large button</button>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Secondary Buttons
+Secondary buttons are are White with Ignite Red text. 
+
+{% capture callout %}
+##### TODO
+Change padding left and padding right to 24px
+ {% endcapture %}
+{% include callout.html content=callout type="danger" %}
+
+{% capture callout %}
+##### TODO
+When hover state is set to just active a red border and dark background color are visible.  This should match the :hover 
+When hover state is set to :active & :focus a red box-shadow is visible. This box-shadow should match :focus 
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+ {% endcapture %}
+{% include callout.html content=callout type="danger" %}
+
+
+{% capture example %}
+<button class="btn btn-secondary" type="submit">Button</button>
+<a class="btn btn-secondary" href="#" role="button">Link</a>
+<input class="btn btn-secondary" type="button" value="Input">
+<input class="btn btn-secondary" type="submit" value="Submit">
+<input class="btn btn-secondary" type="reset" value="Reset">
+{% endcapture %}
+{% include example.html content=example %}
+
+#### Sizes
+
+For larger or smaller buttons  Button widths are dynamic based on a padding-left & padding-right of 24px plus the characters.  The hight of the buttons are set by adding add `.btn-lg` or `.btn-sm`.  Small buttons have a height of 32px. Base btns have a height of 40px. Large buttons have a height of 52px.
+
+{% capture example %}
+<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+<button type="button" class="btn btn-secondary">Button</button>
+<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Outline Over Image Buttons
+
+{% capture callout %}
+##### TODO
+Add to system. Holding off for now for time not part of Event Architecture
+Button style placed on top of images or colored background.
+ {% endcapture %}
+{% include callout.html content=callout type="danger" %}
+
+
+## Button tags
+
+The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
+
+When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
+
+## Disable text wrapping
+
+If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
+
+## Disabled state
+
+{% capture callout%}
+##### TODO Investigate .disabled 
+Class is not working on btn-secondary. Notice darker border and :hover is working
+{% endcapture%}
+{% include callout.html content=callout type="danger" %}
+
+Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element.
+
+{% capture example %}
+<button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
+
+<button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+{% endcapture %}
+{% include example.html content=example %}
+
+## Block Level Buttons
+
+Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
+
+{% capture example %}
+<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+{% endcapture %}
+{% include example.html content=example %}
+
+___
+___
+___
+
+<!-- Bootstrap 4 -->
+## System Extras
+
+Here are extra variants on buttons, imported from forking Bootstrap4. These are not part of the design system, yet could be beneficial in the future.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -18,45 +155,14 @@ Bootstrap includes several predefined button styles, each serving its own semant
 {% endcapture %}
 {% include example.html content=example %}
 
-## Outline buttons
+### Outline buttons
 
 In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
+
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
 <button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-{% endcapture %}
-{% include example.html content=example %}
-
-{% include callout-warning-color-assistive-technologies.md %}
-
-## Disable text wrapping
-
-If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
-
-## Button tags
-
-The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
-
-When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
-
-{% capture example %}
-<a class="btn btn-primary" href="#" role="button">Link</a>
-<button class="btn btn-primary" type="submit">Button</button>
-<input class="btn btn-primary" type="button" value="Input">
-<input class="btn btn-primary" type="submit" value="Submit">
-<input class="btn btn-primary" type="reset" value="Reset">
-{% endcapture %}
-{% include example.html content=example %}
-
-## Sizes
-
-Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
-
-{% capture example %}
-<button type="button" class="btn btn-primary btn-sm">Small button</button>
-<button type="button" class="btn btn-primary">Button</button>
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -70,33 +176,7 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 {% endcapture %}
 {% include example.html content=example %}
 
-{% capture example %}
-<button type="button" class="btn btn-primary btn-sm">Small button</button>
-<button type="button" class="btn btn-secondary btn-sm">Small button</button>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-<button type="button" class="btn btn-primary">button</button>
-<button type="button" class="btn btn-secondary">button</button>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-secondary btn-lg">Large button</button>
-{% endcapture %}
-{% include example.html content=example %}
-
-Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
-
-{% capture example %}
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
-{% endcapture %}
-{% include example.html content=example %}
-
-## Active state
+### Active state
 
 Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. **There's no need to add a class to `<button>`s as they use a pseudo-class**. However, you can still force the same active appearance with `.active` (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.
 
@@ -106,15 +186,7 @@ Buttons will appear pressed (with a darker background, darker border, and inset 
 {% endcapture %}
 {% include example.html content=example %}
 
-## Disabled state
-
-Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element.
-
-{% capture example %}
-<button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-<button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
-{% endcapture %}
-{% include example.html content=example %}
+### Disabled <a>
 
 Disabled buttons using the `<a>` element behave a bit different:
 
@@ -130,7 +202,6 @@ Disabled buttons using the `<a>` element behave a bit different:
 
 {% capture callout %}
 ##### Link functionality caveat
-
 The `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s, but that CSS property is not yet standardized. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a `tabindex="-1"` attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}

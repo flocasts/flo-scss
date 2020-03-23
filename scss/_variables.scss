@@ -68,7 +68,7 @@ $colors: map-merge(
 );
 
 $primary: $red !default;
-$secondary: $gray-600 !default;
+$secondary: $white !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -655,17 +655,17 @@ $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color
 
 $input-btn-font-size-pixels: 14 !default;
 $input-btn-padding-y: 1em * 10 / $input-btn-font-size-pixels !default;
-$input-btn-padding-x: 1em * 30 / $input-btn-font-size-pixels !default;
+$input-btn-padding-x: 1em * 24 / $input-btn-font-size-pixels !default;
 $input-btn-font-size: from-pixels($input-btn-font-size-pixels) !default;
 $input-btn-line-height: 1.25 !default;
 
 $input-btn-padding-y-sm: 1em * 6 / $input-btn-font-size-pixels !default;
-$input-btn-padding-x-sm: 1em * 30 / $input-btn-font-size-pixels !default;
+$input-btn-padding-x-sm: 1em * 24 / $input-btn-font-size-pixels !default;
 $input-btn-font-size-sm: $input-btn-font-size !default;
 $input-btn-line-height-sm: $line-height-sm !default;
 
 $input-btn-padding-y-lg: 1em * 10 / $input-btn-font-size-pixels !default;
-$input-btn-padding-x-lg: 1em * 30 / $input-btn-font-size-pixels !default;
+$input-btn-padding-x-lg: 1em * 24 / $input-btn-font-size-pixels !default;
 $input-btn-font-size-lg: from-pixels(16) !default;
 $input-btn-line-height-lg: $line-height-lg !default;
 
