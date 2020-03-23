@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Typography
-description: Documentation and examples for FloSports typography. Uni Neue is the main font-family. Interstae Mono is the mono font-family. The system has 26 type options, 3 text-alignment modifiers, 10 color modifiers, and 5 font-family modifiers for the Une Neue font-weight variants. 
+description: Documentation and examples for FloSports typography. Uni Neue is the main font-family. Interstate Mono is the mono font-family. The system has 26 type options, 3 text-alignment modifiers, 10 color modifiers, and 5 font-family modifiers for the Une Neue font-weight variants. 
 group: content
 toc: true
 ---

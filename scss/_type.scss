@@ -21,6 +21,7 @@ h6,
 }
 
 @each $typeface in $typefaces {
+  #{$typeface},
   .#{$typeface} {
     @include typeface($typeface);
   }
