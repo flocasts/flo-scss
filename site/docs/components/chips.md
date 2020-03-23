@@ -1,19 +1,58 @@
 ---
 layout: docs
 title: Chips
-description: Chips are compact elements that represent an input, attribute, or action.
+description: FloSports Brand has one chip style. 
 group: components
 toc: true
 ---
 
-Chips allow users to enter information, make selections, filter content, or
-trigger actions. While buttons are expected to appear consistently and with
-familiar calls to action, chips should appear dynamically as a group of
-multiple interactive elements.
+{% capture callout %}
+##### Browser Sizing caveat
+Browsers by default have different built in styles for rendering. Cross-browser differences can be avoided with a CSS reset.
+This project uses reboot.css. 
+​
+Sizes are consistent in chromium browsers, however differ in other browsers: FireFox and Safari. Further investigating needed to determine why chips are not rendering the same.
 
-## Examples
+**Files**
+​
+`~flo-scss/scss/_reboot.scss` | 
+`~/flo-scss/site/docs/content/reboot.md`
+{% endcapture %}
+{% include callout.html content=callout type="danger" %}
 
-Flo-SCSS includes several predefined chip styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+
+
+Chips are used in the system to filter content, or trigger actions. While buttons are expected to appear consistently and with
+familiar calls to action, chips should appear dynamically as a group of multiple interactive elements. 
+
+Chip widths are dynamic, characters + padding-left of 8px and a padding-right of 8px. The last part of the width remains consistent to include the close icon of 18px and a padding-right of 8px.  Chips have a radius of 16 px and a height of 32px. 
+
+
+{% capture example %}
+<button type="button" class="chip chip-close chip-light">Sub 1</button>
+{% endcapture %}
+{% include example.html content=example %}
+
+
+{% capture callout %}
+##### TODO
+ * Update chips radius from 17px to 16px
+ * Update chip text color to $gray-600 
+ * In above example with 'Sub 1' width and height are off from design in Zeplin. Width = 75px  height = 32px
+ * * Chrome display:   width 75.82px and a height of 30.07px
+ * * FireFox display:  width 75.8667px and a height of 31.2px
+ * * Safari display:  width 76px and a height of 30px
+ {% endcapture %}
+{% include callout.html content=callout type="danger" %}
+
+
+___
+___
+___
+​
+<!-- Bootstrap 4 -->
+## System Extras
+Here are extra variations on chips, imported from forking Bootstrap 4. These are not part of the design system, yet could be beneficial in the future.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -23,7 +62,7 @@ Flo-SCSS includes several predefined chip styles, each serving its own semantic 
 
 {% include callout-warning-color-assistive-technologies.md %}
 
-## Chips with Close Icons
+### Chips with Close Icon Variant
 
 {% capture example %}
 <button type="button" class="chip chip-close chip-light">Light</button>
@@ -31,7 +70,7 @@ Flo-SCSS includes several predefined chip styles, each serving its own semantic 
 {% endcapture %}
 {% include example.html content=example %}
 
-## Disable text wrapping
+### Disable text wrapping
 
 If you don't want the chip text to wrap, you can add the `.text-nowrap` class to the chip. In Sass, you can set `$chip-white-space: nowrap` to disable text wrapping for each chip.
 
@@ -44,7 +83,7 @@ If you don't want the chip text to wrap, you can add the `.text-nowrap` class to
 {% endcapture %}
 {% include example.html content=example %}
 
-## chip tags
+### chip tags
 
 The `.chip` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
 
@@ -59,7 +98,7 @@ When using chip classes on `<a>` elements that are used to trigger in-page funct
 {% endcapture %}
 {% include example.html content=example %}
 
-## Gray chips
+### Gray chips
 
 {% capture example %}
 {% for color in site.data.grays %}
@@ -67,7 +106,7 @@ When using chip classes on `<a>` elements that are used to trigger in-page funct
 {% endcapture %}
 {% include example.html content=example %}
 
-## Outline chips
+### Outline chips
 
 In need of a chip, but not the hefty background colors they bring? Replace the default modifier classes with the `.chip-outline-*` ones to remove all background images and colors on any chip.
 
@@ -77,7 +116,7 @@ In need of a chip, but not the hefty background colors they bring? Replace the d
 {% endcapture %}
 {% include example.html content=example %}
 
-## Sizes
+### Sizes
 
 Fancy larger or smaller chips? Add `.chip-lg` or `.chip-sm` for additional sizes.
 
@@ -93,7 +132,7 @@ Fancy larger or smaller chips? Add `.chip-lg` or `.chip-sm` for additional sizes
 {% endcapture %}
 {% include example.html content=example %}
 
-## Active state
+### Active state
 
 chips will appear pressed (with a darker background, darker border, and inset shadow) when active. **There's no need to add a class to `<button>`s as they use a pseudo-class**. However, you can still force the same active appearance with `.active` (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.
 
@@ -103,7 +142,7 @@ chips will appear pressed (with a darker background, darker border, and inset sh
 {% endcapture %}
 {% include example.html content=example %}
 
-## Disabled state
+### Disabled state
 
 Make chips look inactive by adding the `disabled` boolean attribute to any `<button>` element.
 
