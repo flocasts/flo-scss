@@ -55,10 +55,11 @@
 .text-white-50 { color: rgba($white, .5) !important; }
 
 @each $level, $value in $grays {
-  .text-#{$level} {
+  .color-#{$level} {
     color: $value;
   }
 }
+
 
 // Misc
 
