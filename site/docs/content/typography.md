@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Typography
-description: Documentation and examples for FloSports typography. Uni Neue is the main font-family. Interstate Mono is the mono font-family. The system has 26 type options, 3 text-alignment modifiers, 10 color modifiers, and 5 font-family modifiers for the Une Neue font-weight variants. 
+description: Uni Neue is the main font-family. Interstate Mono is the mono font-family. The system has 26 type options, 3 text-alignment modifiers, 10 color modifiers, and 5 font-family modifiers for Une Neue font-weight variants.
 group: content
 toc: true
 ---
@@ -9,7 +9,7 @@ toc: true
 ## Typeramp
 
 ### Display
-All HTML headings, `<h1>` through `<h6>`. `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
+Starting with the largest fonts in the system, displays. When you need a heading to stand out. Keep in mind these headings are responsive by default.
 
 <table>
   <thead>
@@ -20,34 +20,26 @@ All HTML headings, `<h1>` through `<h6>`. `.h1` through `.h6` classes are also a
   </thead>
   <tbody>
     <tr>
-      <td>
-        {{ "`.display-1`" | markdownify }}
-      </td>
+      <td>{{ "`.display-1`" | markdownify }}</td>
       <td><span class="display-1">Display 1</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "`.display-2`" | markdownify }}
-      </td>
+      <td>{{ "`.display-2`" | markdownify }}</td>
       <td><span class="display-2">Display 2</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "`.display-3`" | markdownify }}
-      </td>
+      <td>{{ "`.display-3`" | markdownify }}</td>
       <td><span class="display-3">Display 3</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "`.display-4`" | markdownify }}
-      </td>
+      <td>{{ "`.display-4`" | markdownify }}</td>
       <td><span class="display-4">Display 4</span></td>
     </tr>
   </tbody>
 </table>
 
 ### Headings
-All HTML headings, `<h1>` through `<h6>`. `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
+All HTML headings, `<h1>` through `<h6>` and `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
 
 <table>
   <thead>
@@ -60,70 +52,47 @@ All HTML headings, `<h1>` through `<h6>`. `.h1` through `.h6` classes are also a
   </thead>
   <tbody>
     <tr>
-      <td>
-        {{ "`<h1></h1>`" | markdownify }}
-      </td>
+      <td>{{ "`<h1></h1>`" | markdownify }}</td>
       <td><h1>h1 heading</h1></td>
-      <td>
-        {{ "`.h1`" | markdownify }}
-      </td>
+      <td>{{ "`.h1`" | markdownify }}</td>
       <td><span class="h1">.h1 heading</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "`<h2></h2>`" | markdownify }}
-      </td>
-      <td><h2>h2 heading</h2></td>
-      <td>
-        {{ "`.h2`" | markdownify }}
-      </td>
-      <td><span class="h2"> .h2 heading </span></td>
+      <td>{{ "`<h2></h2>`" | markdownify }}</td>
+      <td><span class="h2">h2 Heading</span></td>
+      <td>{{ "`.h2`" | markdownify }}</td>
+      <td><span class="h2"> .h2 heading</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "`<h3></h3>`" | markdownify }}
-      </td>
-      <td><h3>h3 heading</h3></td>
-      <td>
-        {{ "`.h3`" | markdownify }}
-      </td>
+      <td>{{ "`<h3></h3>`" | markdownify }}</td>
+      <td><span class="h3">h3 heading</span></td>
+      <td>{{ "`.h3`" | markdownify }}</td>
       <td><span class="h3">.h3 heading</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "`<h4></h4>`" | markdownify }}
-      </td>
-      <td><h4>h4 heading</h4></td>
-      <td>
-        {{ "`.h4`" | markdownify }}
-      </td>
+      <td>{{ "`<h4></h4>`" | markdownify }}</td>
+      <td><span class="h4">h4 heading</span></td>
+      <td>{{ "`.h4`" | markdownify }}</td>
       <td><span class="h4">.h4 heading</span></td>
     </tr>
-        <tr>
-      <td>
-        {{ "`<h5></h5>`" | markdownify }}
-      </td>
+    <tr>
+      <td>{{ "`<h5></h5>`" | markdownify }}</td>
       <td><h5>h5. heading</h5></td>
-      <td>
-        {{ "`.h5`" | markdownify }}
-      </td>
+      <td>{{ "`.h5`" | markdownify }}</td>
       <td><span class="h5">.h5 heading</span></td>
     </tr>
-        <tr>
-      <td>
-        {{ "`<h6></h6>`" | markdownify }}
-      </td>
+    <tr>
+      <td>{{ "`<h6></h6>`" | markdownify }}</td>
       <td><h6>h6. heading</h6></td>
-      <td>
-        {{ "`.h6`" | markdownify }}
-      </td>
+      <td>{{ "`.h6`" | markdownify }}</td>
       <td><span class="h6">.h6 heading</span></td>
-    </tr> 
+    </tr>
   </tbody>
 </table>
 
 ### Additional Text Classes
 In addition the system has specific named classes.
+
 
 <table>
   <thead>
@@ -134,88 +103,84 @@ In addition the system has specific named classes.
   </thead>
   <tbody>
     <tr>
-      <td>
-        {{ "body" | markdownify }}
-      </td>
+      <td> {{ "`body`" | markdownify }}</td>
       <td><p>Body font</p></td>
     </tr>
     <tr>
-      <td>
-        {{ "`.text-data`" | markdownify }}
-      </td>
+      <td>{{ "`class='text-data' `" | markdownify }}</td>
       <td><span class="text-data">Sport Data Score</span></td>
     </tr>
     <tr>
-    <tr>
-      <td>
-        {{ "`.headline`" | markdownify }}
-      </td>
+      <td>{{ "`class='headline' `" | markdownify }}</td>
       <td><span class="headline">Headline</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "class='headline font-family-bold' " | markdownify }}
-      </td>
+      <td>{{ "`class='headline font-family-bold' `" | markdownify }}</td>
       <td><span class="headline font-family-bold">Headline Bold</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "`.subhead`" | markdownify }}
-      </td>
+      <td>{{ "`class='subhead' `" | markdownify }}</td>
       <td><span class="subhead">Subhead</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "class='subhead font-family-bold' " | markdownify }}
-      </td>
+      <td>{{ "`class='subhead font-family-bold' `" | markdownify }}</td>
       <td><span class="subhead font-family-bold">Subhead bold</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "`.footnote`" | markdownify }}
-      </td>
-      <td><span class="footnote">Footnote</span></td>
-    </tr>
-    </tr>
-      <td>
-        {{ "`.footnote`" | markdownify }}
-      </td>
+      <td>{{ "`class='footnote' `" | markdownify }}</td>
       <td><span class="footnote">Footnote</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "class='footnote font-family-bold' " | markdownify }}
-      </td>
+      <td>{{ "`class='footnote font-family-bold' `" | markdownify }}</td>
       <td><span class="footnote font-family-bold">Footnote Bold</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "`.overtext`" | markdownify }}
-      </td>
+      <td>{{ "`class='overtext' `" | markdownify }}</td>
       <td><span class="overtext">Overtext</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "class='overtext font-family-bold' " | markdownify }}
-      </td>
+      <td>{{ "`class='overtext font-family-bold' `" | markdownify }}</td>
       <td><span class="overtext font-family-bold">Overtext Bold</span></td>
     </tr>
     <tr>
-      <td>
-        {{ "`.caption`" | markdownify }}
-      </td>
-      <td><span class="caption">Overtext</span></td>
+      <td> {{ "`class='caption' `" | markdownify }}</td>
+      <td><span class="caption">caption</span></td>
     </tr>
-        <tr>
-      <td>
-        {{ "`.mono`" | markdownify }}
-      </td>
+    <tr>
+      <td>{{ "`class='mono' `" | markdownify }}</td>
       <td><span class="mono">mono</span></td>
     </tr>
   </tbody>
 </table>
 
-### Color Modifiers
+### Button Type
+
+Font sizes for buttons. Complete font styling documented in [buttons]({{ site.baseurl }}/docs/components/buttons/).
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ "` class='btn-lg' `" | markdownify }}</td>
+      <td><span class="btn">Button Large</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='btn' `" | markdownify }}</td>
+      <td><span class="btn">Button Base</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='btn-sm' `" | markdownify }}</td>
+      <td><span class="btn-sm">Button Small</span></td>
+    </tr>
+  </tbody>
+</table>
+
+## Color Modifiers
 
 Here is a list of all modifier class to change text color to any brand color.
 
@@ -290,7 +255,7 @@ Here is a list of all modifier class to change text color to any brand color.
   </tbody>
 </table>
 
-### Font-weight Modifiers
+## Font-weight Modifiers
 
 Here is a list of all modifier class to change font weight for the Uni Neue web font.
 
@@ -335,7 +300,7 @@ Here is a list of all modifier class to change font weight for the Uni Neue web 
   </tbody>
 </table>
 
-### Text Alignment Modifiers
+## Text Alignment Modifiers
 
 Easily realign text to components with text alignment classes.
 
@@ -368,37 +333,11 @@ Easily realign text to components with text alignment classes.
   </tbody>
 </table>
 
-### Button Type
-
-Font sizes for buttons. Complete font styling documented in [buttons]({{ site.baseurl }}/docs/components/buttons/).
-
-<table>
-  <thead>
-    <tr>
-      <th>Class</th>
-      <th>Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ "`class='btn-lg' `" | markdownify }}</td>
-      <td><span class="btn">Button Large</span></td>
-    </tr>
-    <tr>
-      <td>{{ "`class='btn' `" | markdownify }}</td>
-      <td><span class="btn">Button Base</span></td>
-    </tr>
-    <tr>
-      <td>{{ "`class='btn-sm' `" | markdownify }}</td>
-      <td><span class="btn-sm">Button Small</span></td>
-    </tr>
-  </tbody>
-</table>
+<br/>
 
 <!-- Bootstrap 4 -->
-___
-___
-___
+
+***
 ​
 ## System Extras
 ​
@@ -417,6 +356,12 @@ Sets basic global display, typography, and link styles. When more control is nee
 
 These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
 
+#### Responsive font sizes
+
+Bootstrap v4.3 ships with the option to enable responsive font sizes, allowing text to scale more naturally across device and viewport sizes. <abbr title="Responsive font sizes">RFS</abbr> can be enabled by changing the `$enable-responsive-font-sizes` Sass variable to `true` and recompiling Bootstrap.
+
+To support <abbr title="Responsive font sizes">RFS</abbr>, we use a Sass mixin to replace our normal `font-size` properties. Responsive font sizes will be compiled into `calc()` functions with a mix of `rem` and viewport units to enable the responsive scaling behavior. More about <abbr title="Responsive font sizes">RFS</abbr> and its configuration can be found on its [GitHub repository](https://github.com/twbs/rfs/tree/v8.0.4).
+
 ### Customizing Headings
 {% capture example %}
 
@@ -426,41 +371,6 @@ These styles can be found within `_reboot.scss`, and the global variables are de
 </h3>
 {% endcapture %}
 {% include example.html content=example %}
-
-## Display headings
-
-Traditional heading elements are designed to work best in the meat of your page
-content. When you need a heading to stand out, consider using a **display
-heading**—a smaller, slightly more opinionated heading style. Keep in mind
-these headings are responsive by default, but it's possible to disable
-[responsive font sizes](#responsive-font-sizes).
-
-<div class="bd-example bd-example-type">
-  <table class="table">
-    <tbody>
-      <tr>
-        <td><span class="display-1">Display 1</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-2">Display 2</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-3">Display 3</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-4">Display 4</span></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-{% highlight html %}
-
-<h1 class="display-1">Display 1</h1>
-<h1 class="display-2">Display 2</h1>
-<h1 class="display-3">Display 3</h1>
-<h1 class="display-4">Display 4</h1>
-{% endhighlight %}
 
 ### Inline text elements
 
@@ -482,10 +392,6 @@ Styling for common inline HTML5 elements.
 `.mark` and `.small` classes are also available to apply the same styles as `<mark>` and `<small>` while avoiding any unwanted semantic implications that the tags would bring.
 
 While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant to highlight words or phrases without conveying additional importance while `<i>` is mostly for voice, technical terms, etc.
-
-### Text utilities
-
-Change text alignment, transform, style, weight, and color with bootstrap [text utilities]({{ site.baseurl }}/docs/utilities/text/) and [color utilities]({{ site.baseurl }}/docs/utilities/colors/).
 
 ### Dates and Times
 
@@ -543,28 +449,6 @@ Add a `<footer class="blockquote-footer">` for identifying the source. Wrap the 
 {% capture example %}
 
 <blockquote class="blockquote">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
-{% endcapture %}
-{% include example.html content=example %}
-
-#### Alignment
-
-Use text utilities as needed to change the alignment of your blockquote.
-
-{% capture example %}
-
-<blockquote class="blockquote text-center">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-
-<blockquote class="blockquote text-right">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
@@ -646,8 +530,3 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 {% endcapture %}
 {% include example.html content=example %}
 
-#### Responsive font sizes
-
-Bootstrap v4.3 ships with the option to enable responsive font sizes, allowing text to scale more naturally across device and viewport sizes. <abbr title="Responsive font sizes">RFS</abbr> can be enabled by changing the `$enable-responsive-font-sizes` Sass variable to `true` and recompiling Bootstrap.
-
-To support <abbr title="Responsive font sizes">RFS</abbr>, we use a Sass mixin to replace our normal `font-size` properties. Responsive font sizes will be compiled into `calc()` functions with a mix of `rem` and viewport units to enable the responsive scaling behavior. More about <abbr title="Responsive font sizes">RFS</abbr> and its configuration can be found on its [GitHub repository](https://github.com/twbs/rfs/tree/v8.0.4).
