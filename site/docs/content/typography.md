@@ -368,6 +368,33 @@ Easily realign text to components with text alignment classes.
   </tbody>
 </table>
 
+### Button Type
+
+Font sizes for buttons. Complete font styling documented in [buttons]({{ site.baseurl }}/docs/components/buttons/).
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ "`class='btn-lg' `" | markdownify }}</td>
+      <td><span class="btn">Button Large</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='btn' `" | markdownify }}</td>
+      <td><span class="btn">Button Base</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='btn-sm' `" | markdownify }}</td>
+      <td><span class="btn-sm">Button Small</span></td>
+    </tr>
+  </tbody>
+</table>
+
 <!-- Bootstrap 4 -->
 ___
 ___
