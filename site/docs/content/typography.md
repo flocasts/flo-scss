@@ -135,6 +135,12 @@ In addition the system has specific named classes.
   <tbody>
     <tr>
       <td>
+        {{ "body" | markdownify }}
+      </td>
+      <td><p>Body font</p></td>
+    </tr>
+    <tr>
+      <td>
         {{ "`.text-data`" | markdownify }}
       </td>
       <td><span class="text-data">Sport Data Score</span></td>
@@ -148,9 +154,28 @@ In addition the system has specific named classes.
     </tr>
     <tr>
       <td>
+        {{ "class='headline font-family-bold' " | markdownify }}
+      </td>
+      <td><span class="headline font-family-bold">Headline Bold</span></td>
+    </tr>
+    <tr>
+      <td>
         {{ "`.subhead`" | markdownify }}
       </td>
       <td><span class="subhead">Subhead</span></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "class='subhead font-family-bold' " | markdownify }}
+      </td>
+      <td><span class="subhead font-family-bold">Subhead bold</span></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.footnote`" | markdownify }}
+      </td>
+      <td><span class="footnote">Footnote</span></td>
+    </tr>
     </tr>
       <td>
         {{ "`.footnote`" | markdownify }}
@@ -159,9 +184,21 @@ In addition the system has specific named classes.
     </tr>
     <tr>
       <td>
+        {{ "class='footnote font-family-bold' " | markdownify }}
+      </td>
+      <td><span class="footnote font-family-bold">Footnote Bold</span></td>
+    </tr>
+    <tr>
+      <td>
         {{ "`.overtext`" | markdownify }}
       </td>
       <td><span class="overtext">Overtext</span></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "class='overtext font-family-bold' " | markdownify }}
+      </td>
+      <td><span class="overtext font-family-bold">Overtext Bold</span></td>
     </tr>
     <tr>
       <td>
@@ -294,6 +331,39 @@ Here is a list of all modifier class to change font weight for the Uni Neue web 
         {{ "`.font-family-heavy`" | markdownify }}
       </td>
       <td><h1 class="font-family-heavy">Change font family weight</h1></td>
+    </tr>
+  </tbody>
+</table>
+
+### Text Alignment Modifiers
+
+Easily realign text to components with text alignment classes.
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{ "`.text-left`" | markdownify }}
+      </td>
+      <td><h1 class="text-left">Text aligns to the left.</h1></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.text-center`" | markdownify }}
+      </td>
+      <td><h1 class="text-center">Text aligns to the center.</h1></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.text-right`" | markdownify }}
+      </td>
+      <td><h1 class="text-right">Text aligns to the right.</h1></td>
     </tr>
   </tbody>
 </table>
