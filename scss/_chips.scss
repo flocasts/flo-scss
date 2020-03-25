@@ -175,4 +175,8 @@ input[type="button"] {
 
 .chip-light {
   color: $gray-600;
+
+  &:hover{
+    color: $gray-600;
+  }
 }

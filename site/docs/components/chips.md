@@ -1,32 +1,13 @@
 ---
 layout: docs
 title: Chips
-description: FloSports Brand has one chip style. 
+description: FloSports Brand has one chip style used to filter content or trigger actions. 
 group: components
 toc: true
 ---
 
-{% capture callout %}
-##### Browser Sizing caveat
-Browsers by default have different built in styles for rendering. Cross-browser differences can be avoided with a CSS reset.
-This project uses reboot.css. 
-​
-Sizes are consistent in chromium browsers, however differ in other browsers: FireFox and Safari. Further investigating needed to determine why chips are not rendering the same.
-
-**Files**
-​
-`~flo-scss/scss/_reboot.scss` | 
-`~/flo-scss/site/docs/content/reboot.md`
-{% endcapture %}
-{% include callout.html content=callout type="danger" %}
-
-
-
 Chips are used in the system to filter content, or trigger actions. While buttons are expected to appear consistently and with
 familiar calls to action, chips should appear dynamically as a group of multiple interactive elements. 
-
-Chip widths are dynamic, characters + padding-left of 8px and a padding-right of 8px. The last part of the width remains consistent to include the close icon of 18px and a padding-right of 8px.  Chips have a radius of 16 px and a height of 32px. 
-
 
 {% capture example %}
 <button type="button" class="chip chip-close chip-light">Sub 1</button>
@@ -34,22 +15,8 @@ Chip widths are dynamic, characters + padding-left of 8px and a padding-right of
 {% include example.html content=example %}
 
 
-{% capture callout %}
-##### TODO
- * Update chips radius from 17px to 16px
- * Update chip text color to $gray-600 
- * In above example with 'Sub 1' width and height are off from design in Zeplin. Width = 75px  height = 32px
- * * Chrome display:   width 75.82px and a height of 30.07px
- * * FireFox display:  width 75.8667px and a height of 31.2px
- * * Safari display:  width 76px and a height of 30px
- {% endcapture %}
-{% include callout.html content=callout type="danger" %}
+***
 
-
-___
-___
-___
-​
 <!-- Bootstrap 4 -->
 ## System Extras
 Here are extra variations on chips, imported from forking Bootstrap 4. These are not part of the design system, yet could be beneficial in the future.
