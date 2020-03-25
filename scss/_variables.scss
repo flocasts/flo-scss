@@ -543,26 +543,26 @@ $text-transforms: map-merge(
 );
 
 $letter-spacing-base: 0.00588rem !default;
-$display-1-letter-spacing: 0.42 / 68 !default;
-$display-2-letter-spacing: 0.35 / 56 !default;
-$display-3-letter-spacing: 0.28 / 44 !default;
-$display-4-letter-spacing: 0.23 / 36 !default;
-$h1-letter-spacing: 0.2 / 32 !default;
-$h2-letter-spacing: 0.28 / 24 !default;
-$h3-letter-spacing: 0.1 / 20 !default;
-$h4-letter-spacing: 0.35 / 18 !default;
-$h5-letter-spacing: 0 / 16 !default;
-$h6-letter-spacing: 0.1 / 14 !default;
+$display-1-letter-spacing: 0.025rem !default;
+$display-2-letter-spacing: 0.021rem !default;
+$display-3-letter-spacing: 0.016rem !default;
+$display-4-letter-spacing: 0.014rem !default;
+$h1-letter-spacing: 0.012rem !default;
+$h2-letter-spacing: 0.016rem !default;
+$h3-letter-spacing: 0.006rem !default;
+$h4-letter-spacing: 0.021rem !default;
+$h5-letter-spacing: 0rem !default;
+$h6-letter-spacing: 0.006rem !default;
 
-$text-data-letter-spacing: 0 / 16 !default;
-$headline-letter-spacing: 0 / 16 !default;
-$subhead-letter-spacing: 0.1 / 14 !default;
-$footnote-letter-spacing: 0.2 / 13 !default;
-$caption-letter-spacing: 0.1 / 12 !default;
-$overtext-letter-spacing: 1 / 12 !default;
-$mono-letter-spacing: 0.1 / 13 !default;
-$link-letter-spacing: 0.1 / 13 !default;
-$time-letter-spacing: 0.8 / 11 !default;
+$text-data-letter-spacing: 0rem !default;
+$headline-letter-spacing: 0rem !default;
+$subhead-letter-spacing: 0.006rem !default;
+$footnote-letter-spacing: 0.012rem !default;
+$caption-letter-spacing: 0.006rem !default;
+$overtext-letter-spacing: 0.059rem !default;
+$mono-letter-spacing: 0.006rem !default;
+$link-letter-spacing: 0.006rem !default;
+$time-letter-spacing: 0.047rem !default;
 
 $letter-spacings: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
