@@ -7,7 +7,7 @@
 .btn {
   display: inline-block;
   font-family: $btn-font-family;
-  // font-weight: $btn-font-weight;
+  font-weight: $btn-font-weight;
   line-height: $btn-line-height;
   color: $body-color;
   text-align: center;
@@ -76,14 +76,16 @@ fieldset:disabled a.btn {
   }
 }
 
+// Custom Flo Primary
+
 // custom flo secondary button
 .btn-secondary {
   @extend .btn-outline-primary;
   border-color: $gray-300;
   background: $white;
 
-  @include hover() {
-    @include gradient-bg($gray-200);
+  &:hover() {
+    background-color: darken($gray-100, 5%);
     color: $primary;
     border-color: $gray-300;
   }
@@ -93,7 +95,7 @@ fieldset:disabled a.btn {
   }
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 0.2rem rgba(255, 20, 15, 0.2) !important;
+    box-shadow: 0 0 0 $btn-focus-width rgba(255, 20, 15, 0.2) !important;
   }
 }
 

@@ -1,37 +1,15 @@
 ---
 layout: docs
 title: Buttons
-description: FloSports Brand has three button styles; primary, secondary, & outline over image. In addition the brand had three button sizes; btn-sm, btn, btn-lg. 
+description: FloSports Brand has three button styles; primary, secondary, & outline over image. In addition the brand has three button sizes; btn-sm, btn, btn-lg. 
 group: components
 toc: true
 ---
 
-{% capture callout %}
-##### Browser Sizing caveat
-Browsers by default have different built in styles for rendering. Cross-browser differences can be avoided with a CSS reset.
-This project uses reboot.css. 
-
-Sizes are consistent in chromium browsers, however differ in other browsers: FireFox and Safari. Further investigating needed to determine why button heights are not rendering the same, even though buttons heights are consistent viewed in different browsers from Bootstrap 4, the core files this project was forked from.
-
-**Files**
-
-`~flo-scss/scss/_reboot.scss` | 
-`~/flo-scss/site/docs/content/reboot.md`
-{% endcapture %}
-{% include callout.html content=callout type="danger" %}
-
 <!-- FloSports Brand  -->
-## Button Style Types
+## Primary Buttons
 
-### Primary Buttons
-
-Primary buttons are are Ignite Red with White text. 
-
-{% capture callout %}
-##### TODO
-Change padding left and padding right to 24px
- {% endcapture %}
-{% include callout.html content=callout type="danger" %}
+Primary buttons are are Ignite Red with White text. Button widths are dynamic based on a padding-left & padding-right of 24px plus the characters.
 
 {% capture example %}
 <button class="btn btn-primary" type="submit">Button</button>
@@ -42,9 +20,10 @@ Change padding left and padding right to 24px
 {% endcapture %}
 {% include example.html content=example %}
 
-#### Sizes
 
-For larger or smaller buttons  Button widths are dynamic based on a padding-left & padding-right of 24px plus the characters.  The hight of the buttons are set by adding add `.btn-lg` or `.btn-sm`.  Small buttons have a height of 32px. Base btns have a height of 40px. Large buttons have a height of 52px.
+### Sizes
+
+Button sizes have dynamic widths. Heights are set by adding add `.btn`, `.btn-lg` or `.btn-sm`.  Small buttons `.btn-sm` have a height of 32px. Base btns `.btn` have a height of 40px. Large buttons `.btn-lg` have a height of 52px.
 
 {% capture example %}
 <button type="button" class="btn btn-primary btn-sm">Small button</button>
@@ -53,7 +32,7 @@ For larger or smaller buttons  Button widths are dynamic based on a padding-left
 {% endcapture %}
 {% include example.html content=example %}
 
-### Secondary Buttons
+## Secondary Buttons
 Secondary buttons are are White with Ignite Red text. 
 
 {% capture callout %}
@@ -80,9 +59,9 @@ When hover state is set to :active & :focus a red box-shadow is visible. This bo
 {% endcapture %}
 {% include example.html content=example %}
 
-#### Sizes
+### Sizes
 
-For larger or smaller buttons  Button widths are dynamic based on a padding-left & padding-right of 24px plus the characters.  The hight of the buttons are set by adding add `.btn-lg` or `.btn-sm`.  Small buttons have a height of 32px. Base btns have a height of 40px. Large buttons have a height of 52px.
+For larger or smaller buttons    The hight of the buttons are set by adding add `.btn-lg` or `.btn-sm`.  Small buttons have a height of 32px. Base btns have a height of 40px. Large buttons have a height of 52px.
 
 {% capture example %}
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
