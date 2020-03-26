@@ -85,9 +85,9 @@ fieldset:disabled a.btn {
   background: $white;
     &:enabled {
     @include hover() {
-        @include gradient-bg($gray-200);
-        color: $primary;
-        border-color: $gray-400;
+      background-color: darken($gray-100, 5%);
+      color: $primary;
+      border-color: $gray-300;
       }
     }
   
