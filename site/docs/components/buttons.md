@@ -1,15 +1,23 @@
 ---
 layout: docs
 title: Buttons
-description: FloSports Brand has three button styles; primary, secondary, & outline over image. In addition the brand has three button sizes; btn-sm, btn, btn-lg. 
+description: FloSports Brand has three button styles; primary, secondary, & over image. In addition the brand has three button sizes; btn-sm, btn, btn-lg. 
 group: components
 toc: true
 ---
 
 <!-- FloSports Brand  -->
-## Primary Buttons
 
-Primary buttons are are Ignite Red with White text. Button widths are dynamic based on a padding-left & padding-right of 24px plus the characters.
+## Button Tags
+
+The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
+
+When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
+
+
+## Primary
+
+Primary buttons are are Ignite Red with White text.
 
 {% capture example %}
 <button class="btn btn-primary" type="submit">Button</button>
@@ -23,7 +31,7 @@ Primary buttons are are Ignite Red with White text. Button widths are dynamic ba
 
 ### Sizes
 
-Button sizes have dynamic widths. Heights are set by adding add `.btn`, `.btn-lg` or `.btn-sm`.  Small buttons `.btn-sm` have a height of 32px. Base btns `.btn` have a height of 40px. Large buttons `.btn-lg` have a height of 52px.
+Button sizes have dynamic widths based on a padding-left & padding-right of 24px plus the characters. Heights are set by adding add `.btn`, `.btn-lg` or `.btn-sm`.  Small buttons `.btn-sm` have a height of 32px. Base btns `.btn` have a height of 40px. Large buttons `.btn-lg` have a height of 52px.
 
 {% capture example %}
 <button type="button" class="btn btn-primary btn-sm">Small button</button>
@@ -32,23 +40,8 @@ Button sizes have dynamic widths. Heights are set by adding add `.btn`, `.btn-lg
 {% endcapture %}
 {% include example.html content=example %}
 
-## Secondary Buttons
+## Secondary
 Secondary buttons are are White with Ignite Red text. 
-
-{% capture callout %}
-##### TODO
-Change padding left and padding right to 24px
- {% endcapture %}
-{% include callout.html content=callout type="danger" %}
-
-{% capture callout %}
-##### TODO
-When hover state is set to just active a red border and dark background color are visible.  This should match the :hover 
-When hover state is set to :active & :focus a red box-shadow is visible. This box-shadow should match :focus 
-.btn-secondary:not(:disabled):not(.disabled):active:focus,
- {% endcapture %}
-{% include callout.html content=callout type="danger" %}
-
 
 {% capture example %}
 <button class="btn btn-secondary" type="submit">Button</button>
@@ -61,7 +54,7 @@ When hover state is set to :active & :focus a red box-shadow is visible. This bo
 
 ### Sizes
 
-For larger or smaller buttons    The hight of the buttons are set by adding add `.btn-lg` or `.btn-sm`.  Small buttons have a height of 32px. Base btns have a height of 40px. Large buttons have a height of 52px.
+Button sizes have dynamic widths based on a padding-left & padding-right of 24px plus the characters. Heights are set by adding add `.btn`, `.btn-lg` or `.btn-sm`.  Small buttons `.btn-sm` have a height of 32px. Base btns `.btn` have a height of 40px. Large buttons `.btn-lg` have a height of 52px.
 
 {% capture example %}
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
@@ -70,40 +63,46 @@ For larger or smaller buttons    The hight of the buttons are set by adding add 
 {% endcapture %}
 {% include example.html content=example %}
 
-### Outline Over Image Buttons
+## Over Image
+These buttons are used on top of an image. Transparent background with a white border and white text. On hover the background is white and the text is dark.
 
-{% capture callout %}
-##### TODO
-Add to system. Holding off for now for time not part of Event Architecture
-Button style placed on top of images or colored background.
- {% endcapture %}
-{% include callout.html content=callout type="danger" %}
+[TODO: Add Outline Button FLO-11207](https://flocasts.atlassian.net/browse/FLO-11207)
 
 
-## Button tags
+### Sizes
 
-The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
+Button sizes have dynamic widths based on a padding-left & padding-right of 24px plus the characters. Heights are set by adding add `.btn`, `.btn-lg` or `.btn-sm`.  Small buttons `.btn-sm` have a height of 32px. Base btns `.btn` have a height of 40px. Large buttons `.btn-lg` have a height of 52px.
 
-When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
+[TODO: Add Outline Button FLO-11207](https://flocasts.atlassian.net/browse/FLO-11207)
+
 
 ## Disable text wrapping
 
 If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
 
 ## Disabled state
-
-{% capture callout%}
-##### TODO Investigate .disabled 
-Class is not working on btn-secondary. Notice darker border and :hover is working
-{% endcapture%}
-{% include callout.html content=callout type="danger" %}
-
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element.
 
 {% capture example %}
 <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
 
 <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+{% endcapture %}
+{% include example.html content=example %}
+
+{% capture callout %}
+##### Link functionality caveat
+The `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s, but that CSS property is not yet standardized. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a `tabindex="-1"` attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
+{% endcapture %}
+{% include callout.html content=callout type="primary" %}
+
+## Active state
+
+Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. **There's no need to add a class to `<button>`s as they use a pseudo-class**. However, you can still force the same active appearance with `.active` (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.
+
+{% capture example %}
+<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -117,14 +116,14 @@ Create block level buttons—those that span the full width of a parent—by add
 {% endcapture %}
 {% include example.html content=example %}
 
-___
-___
-___
 
 <!-- Bootstrap 4 -->
-## System Extras
 
-Here are extra variants on buttons, imported from forking Bootstrap4. These are not part of the design system, yet could be beneficial in the future.
+***
+
+### System Extras
+​
+Setting inherited from forking Bootstrap 4. These are not part of the design system, yet could be beneficial in the future.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -155,32 +154,5 @@ In need of a button, but not the hefty background colors they bring? Replace the
 {% endcapture %}
 {% include example.html content=example %}
 
-### Active state
 
-Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. **There's no need to add a class to `<button>`s as they use a pseudo-class**. However, you can still force the same active appearance with `.active` (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.
 
-{% capture example %}
-<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
-<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
-{% endcapture %}
-{% include example.html content=example %}
-
-### Disabled <a>
-
-Disabled buttons using the `<a>` element behave a bit different:
-
-- `<a>`s don't support the `disabled` attribute, so you must add the `.disabled` class to make it visually appear disabled.
-- Some future-friendly styles are included to disable all `pointer-events` on anchor buttons. In browsers which support that property, you won't see the disabled cursor at all.
-- Disabled buttons should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
-
-{% capture example %}
-<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
-<a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture callout %}
-##### Link functionality caveat
-The `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s, but that CSS property is not yet standardized. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a `tabindex="-1"` attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
-{% endcapture %}
-{% include callout.html content=callout type="warning" %}
