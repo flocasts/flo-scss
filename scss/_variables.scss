@@ -325,13 +325,17 @@ $font-family-sans-serif: "Uni-Neue-Regular", "Open Sans", "Helvetica Neue",
 $font-family-monospace: "InterstateMono", SFMono-Regular, Menlo, Monaco,
   Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
+$font-family-thin: "Uni-Neue-Thin", "Open Sans", "Helvetica Neue", Helvetica,
+Arial, sans-serif !default;
+$font-family-book: "Uni-Neue-Book", "Open Sans", "Helvetica Neue", Helvetica,
+Arial, sans-serif !default;
 $font-family-bold: "Uni-Neue-Bold", "Open Sans", "Helvetica Neue", Helvetica,
   Arial, sans-serif !default;
 $font-family-heavy: "Uni-Neue-Heavy", "Open Sans", "Helvetica Neue", Helvetica,
   Arial, sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$typefaces: "h1", "h2", "h3", "display-1", "display-2", "display-3", "display-4",
+$typefaces: "display-1", "display-2", "display-3", "display-4", "h1", "h2", "h3", "h4", "h5", "h6",
   "body", "text-data", "headline", "subhead", "footnote", "caption", "overtext",
   "mono", "small", "bold", "heavy" !default;
 
@@ -346,7 +350,7 @@ $font-weight-bold: 700 !default;
 $font-weight-bolder: 900 !default;
 $font-weight-base: $font-weight-normal !default;
 
-$line-height-base: 1.5 !default;
+$line-height-base: 1.7 !default;
 $line-height-lg: 2 !default;
 $line-height-sm: 1.25 !default;
 
@@ -357,16 +361,16 @@ $font-families: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $font-families: map-merge(
   (
+    "display-1": $font-family-heavy,
+    "display-2": $font-family-heavy,
+    "display-3": $font-family-heavy,
+    "display-4": $font-family-heavy,
     "h1": $font-family-heavy,
     "h2": $font-family-heavy,
-    "h3": $font-family-heavy,
+    "h3": $font-family-bold,
     "h4": $font-family-heavy,
     "h5": $font-family-heavy,
     "h6": $font-family-heavy,
-    "display-1": $font-family-heavy,
-    "display-2": $font-family-heavy,
-    "display-3": $font-family-bold,
-    "display-4": $font-family-heavy,
     "text-data": $font-family-heavy,
     "headline": $font-family-base,
     "subhead": $font-family-base,
@@ -386,17 +390,17 @@ $font-weights: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $font-weights: map-merge(
   (
-    "h1": $font-weight-bolder,
-    "h2": $font-weight-bolder,
-    "h3": $font-weight-bolder,
-    "h4": $font-weight-bold,
-    "h5": $font-weight-bold,
-    "h6": $font-weight-bold,
-    "display-1": $font-weight-bolder,
-    "display-2": $font-weight-bolder,
-    "display-3": $font-weight-bold,
-    "display-4": $font-weight-bolder,
-    "text-data": $font-weight-bolder,
+    "display-1": $font-weight-normal,
+    "display-2": $font-weight-normal,
+    "display-3": $font-weight-normal,
+    "display-4": $font-weight-normal,
+    "h1": $font-weight-normal,
+    "h2": $font-weight-normal,
+    "h3": $font-weight-normal,
+    "h4": $font-weight-normal,
+    "h5": $font-weight-normal,
+    "h6": $font-weight-normal,
+    "text-data": $font-weight-normal,
     "headline": $font-weight-normal,
     "subhead": $font-weight-normal,
     "footnote": $font-weight-normal,
@@ -411,17 +415,17 @@ $font-weights: map-merge(
   $font-weights
 );
 
-$h1-font-size: from-pixels(56) !default;
-$h2-font-size: from-pixels(44) !default;
-$h3-font-size: from-pixels(36) !default;
-$h4-font-size: from-pixels(16) !default;
-$h5-font-size: from-pixels(14) !default;
-$h6-font-size: from-pixels(13) !default;
+$display-1-font-size: from-pixels(68) !default;
+$display-2-font-size: from-pixels(56) !default;
+$display-3-font-size: from-pixels(44) !default;
+$display-4-font-size: from-pixels(36) !default;
 
-$display-1-font-size: from-pixels(32) !default;
-$display-2-font-size: from-pixels(24) !default;
-$display-3-font-size: from-pixels(20) !default;
-$display-4-font-size: from-pixels(18) !default;
+$h1-font-size: from-pixels(32) !default;
+$h2-font-size: from-pixels(24) !default;
+$h3-font-size: from-pixels(20) !default;
+$h4-font-size: from-pixels(18) !default;
+$h5-font-size: from-pixels(16) !default;
+$h6-font-size: from-pixels(14) !default;
 
 $text-data-font-size: from-pixels(16) !default;
 $headline-font-size: from-pixels(16) !default;
@@ -437,16 +441,16 @@ $font-sizes: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $font-sizes: map-merge(
   (
+    "display-1": $display-1-font-size,
+    "display-2": $display-2-font-size,
+    "display-3": $display-3-font-size,
+    "display-4": $display-4-font-size,
     "h1": $h1-font-size,
     "h2": $h2-font-size,
     "h3": $h3-font-size,
     "h4": $h4-font-size,
     "h5": $h5-font-size,
     "h6": $h6-font-size,
-    "display-1": $display-1-font-size,
-    "display-2": $display-2-font-size,
-    "display-3": $display-3-font-size,
-    "display-4": $display-4-font-size,
     "text-data": $text-data-font-size,
     "headline": $headline-font-size,
     "subhead": $subhead-font-size,
@@ -461,17 +465,17 @@ $font-sizes: map-merge(
   $font-sizes
 );
 
-$h1-line-height: 72 / 56 !default;
-$h2-line-height: 56 / 44 !default;
-$h3-line-height: 48 / 36 !default;
-$h4-line-height: 40 / 32 !default;
-$h5-line-height: 32 / 24 !default;
-$h6-line-height: 28 / 20 !default;
+$display-1-line-height: 84 / 68 !default;
+$display-2-line-height: 72 / 56 !default;
+$display-3-line-height: 56 / 44 !default;
+$display-4-line-height: 48 / 36 !default;
 
-$display-1-line-height: 40 / 32 !default;
-$display-2-line-height: 32 / 24 !default;
-$display-3-line-height: 28 / 20 !default;
-$display-4-line-height: 28 / 18 !default;
+$h1-line-height: 40 / 32 !default;
+$h2-line-height: 32 / 24 !default;
+$h3-line-height: 28 / 20 !default;
+$h4-line-height: 24 / 18 !default;
+$h5-line-height: 24 / 16 !default;
+$h6-line-height: 20 / 14 !default;
 
 $text-data-line-height: 24 / 16 !default;
 $headline-line-height: 24 / 16 !default;
@@ -487,16 +491,16 @@ $line-heights: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $line-heights: map-merge(
   (
+    "display-1": $display-1-line-height,
+    "display-2": $display-2-line-height,
+    "display-3": $display-3-line-height,
+    "display-4": $display-4-line-height,
     "h1": $h1-line-height,
     "h2": $h2-line-height,
     "h3": $h3-line-height,
     "h4": $h4-line-height,
     "h5": $h5-line-height,
     "h6": $h6-line-height,
-    "display-1": $display-1-line-height,
-    "display-2": $display-2-line-height,
-    "display-3": $display-3-line-height,
-    "display-4": $display-4-line-height,
     "text-data": $text-data-line-height,
     "headline": $headline-line-height,
     "subhead": $subhead-line-height,
@@ -514,16 +518,16 @@ $text-transforms: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $text-transforms: map-merge(
   (
+    "display-1": none,
+    "display-2": none,
+    "display-3": none,
+    "display-4": none,
     "h1": none,
     "h2": none,
     "h3": none,
     "h4": none,
     "h5": none,
     "h6": none,
-    "display-1": none,
-    "display-2": none,
-    "display-3": none,
-    "display-4": none,
     "text-data": none,
     "headline": none,
     "subhead": none,
@@ -539,41 +543,41 @@ $text-transforms: map-merge(
 );
 
 $letter-spacing-base: 0.00588rem !default;
-$h1-letter-spacing: 0.35 / 56 !default;
-$h2-letter-spacing: 0.28 / 44 !default;
-$h3-letter-spacing: 0.23 / 36 !default;
-$display-1-letter-spacing: 0.2 / 32 !default;
-$display-2-letter-spacing: 0.2 / 24 !default;
-$display-3-letter-spacing: 0.1 / 20 !default;
-$display-4-letter-spacing: 0.1 / 18 !default;
+$display-1-letter-spacing: 0.025rem !default;
+$display-2-letter-spacing: 0.021rem !default;
+$display-3-letter-spacing: 0.016rem !default;
+$display-4-letter-spacing: 0.014rem !default;
+$h1-letter-spacing: 0.012rem !default;
+$h2-letter-spacing: 0.012rem !default;
+$h3-letter-spacing: 0.006rem !default;
+$h4-letter-spacing: 0.021rem !default;
+$h5-letter-spacing: 0rem !default;
+$h6-letter-spacing: 0.006rem !default;
 
-$text-data-letter-spacing: 0 / 16 !default;
-$headline-letter-spacing: 0 / 16 !default;
-$subhead-letter-spacing: 0.1 / 14 !default;
-$footnote-letter-spacing: 0.2 / 13 !default;
-$caption-letter-spacing: 0.1 / 12 !default;
-$overtext-letter-spacing: 1 / 12 !default;
-$mono-letter-spacing: 0.1 / 13 !default;
-$link-letter-spacing: 0.1 / 13 !default;
-$time-letter-spacing: 0.8 / 11 !default;
-$h4-letter-spacing: 40 / 32 !default;
-$h5-letter-spacing: 32 / 24 !default;
-$h6-letter-spacing: 28 / 20 !default;
+$text-data-letter-spacing: 0rem !default;
+$headline-letter-spacing: 0rem !default;
+$subhead-letter-spacing: 0.006rem !default;
+$footnote-letter-spacing: 0.012rem !default;
+$caption-letter-spacing: 0.006rem !default;
+$overtext-letter-spacing: 0.059rem !default;
+$mono-letter-spacing: 0.006rem !default;
+$link-letter-spacing: 0.006rem !default;
+$time-letter-spacing: 0.047rem !default;
 
 $letter-spacings: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $letter-spacings: map-merge(
   (
+    "display-1": $display-1-letter-spacing,
+    "display-2": $display-2-letter-spacing,
+    "display-3": $display-3-letter-spacing,
+    "display-4": $display-4-letter-spacing,
     "h1": $h1-letter-spacing,
     "h2": $h2-letter-spacing,
     "h3": $h3-letter-spacing,
     "h4": $h4-letter-spacing,
     "h5": $h5-letter-spacing,
     "h6": $h6-letter-spacing,
-    "display-1": $display-1-letter-spacing,
-    "display-2": $display-2-letter-spacing,
-    "display-3": $display-3-letter-spacing,
-    "display-4": $display-4-letter-spacing,
     "text-data": $text-data-letter-spacing,
     "headline": $headline-letter-spacing,
     "subhead": $subhead-letter-spacing,
@@ -667,7 +671,7 @@ $input-btn-font-size-sm: $input-btn-font-size !default;
 $input-btn-line-height-sm: $line-height-sm !default;
 
 $input-btn-padding-y-lg: 1em * 12 / $input-btn-font-size-pixels !default;
-$input-btn-padding-x-lg: 1em * 30 / $input-btn-font-size-pixels !default;
+$input-btn-padding-x-lg: 1em * 24 / $input-btn-font-size-pixels !default;
 $input-btn-font-size-lg: $input-btn-font-size !default;
 $input-btn-line-height-lg: $line-height-lg !default;
 
@@ -677,28 +681,28 @@ $input-btn-border-width: $border-width !default;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-font-size: $input-btn-font-size !default;
-$btn-padding-y: $input-btn-padding-y !default;
-$btn-padding-x: $input-btn-padding-x !default;
+$btn-font-size: from-pixels(14) !default; 
+$btn-padding-y: from-pixels(10) !default; 
+$btn-padding-x: from-pixels(24) !default;
 $btn-font-family: $input-btn-font-family !default;
-$btn-line-height: $input-btn-line-height !default;
+$btn-line-height: 20 / 14 !default;
 $btn-letter-spacing: $input-btn-letter-spacing !default;
 $btn-text-transform: $input-btn-text-transform !default;
 $btn-white-space: null !default; // Set to `nowrap` to prevent text wrapping
 
-$btn-padding-y-sm: $input-btn-padding-y-sm !default;
-$btn-padding-x-sm: $input-btn-padding-x-sm !default;
-$btn-font-size-sm: $input-btn-font-size-sm !default;
-$btn-line-height-sm: $input-btn-line-height-sm !default;
+$btn-padding-y-sm: from-pixels(6) !default;
+$btn-padding-x-sm: $btn-padding-x !default;
+$btn-font-size-sm: $btn-font-size !default;
+$btn-line-height-sm: $btn-line-height !default;
 
-$btn-padding-y-lg: $input-btn-padding-y-lg !default;
-$btn-padding-x-lg: $input-btn-padding-x-lg !default;
-$btn-font-size-lg: $input-btn-font-size-lg !default;
-$btn-line-height-lg: $input-btn-line-height-lg !default;
+$btn-padding-y-lg: from-pixels(16)!default;
+$btn-padding-x-lg: $btn-padding-x !default;
+$btn-font-size-lg: from-pixels(15) !default;
+$btn-line-height-lg: 20 / 15 !default;
 
 $btn-border-width: $input-btn-border-width !default;
 
-$btn-font-weight: $font-weight-bolder !default;
+$btn-font-weight: $font-weight-normal !default;
 $btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075) !default;
 $btn-focus-width: $input-btn-focus-width !default;
 $btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
