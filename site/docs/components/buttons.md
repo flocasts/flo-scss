@@ -75,12 +75,19 @@ Button sizes have dynamic widths based on a padding-left & padding-right of 24px
 
 [TODO: Add Outline Button FLO-11207](https://flocasts.atlassian.net/browse/FLO-11207)
 
+## Block Level Buttons
 
-## Disable text wrapping
+Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
 
-If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
+{% capture example %}
+<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+{% endcapture %}
+{% include example.html content=example %}
 
-## Disabled state
+## States
+
+### Disabled
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element.
 
 {% capture example %}
@@ -96,7 +103,12 @@ The `.disabled` class uses `pointer-events: none` to try to disable the link fun
 {% endcapture %}
 {% include callout.html content=callout type="primary" %}
 
-## Active state
+#### Disable text wrapping
+
+If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
+
+
+### Active
 
 Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. **There's no need to add a class to `<button>`s as they use a pseudo-class**. However, you can still force the same active appearance with `.active` (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.
 
@@ -106,25 +118,16 @@ Buttons will appear pressed (with a darker background, darker border, and inset 
 {% endcapture %}
 {% include example.html content=example %}
 
-## Block Level Buttons
-
-Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
-
-{% capture example %}
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
-{% endcapture %}
-{% include example.html content=example %}
-
 
 <!-- Bootstrap 4 -->
 
 ***
 
-### System Extras
+## System Extras
 ​
-Setting inherited from forking Bootstrap 4. These are not part of the design system, yet could be beneficial in the future.
+Settings inherited from forking Bootstrap 4. These are not part of the design system, yet could be beneficial in the future.
 
+### Solid
 {% capture example %}
 {% for color in site.data.theme-colors %}
 <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
@@ -136,7 +139,6 @@ Setting inherited from forking Bootstrap 4. These are not part of the design sys
 ### Outline buttons
 
 In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
-
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
