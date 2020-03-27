@@ -83,16 +83,14 @@ fieldset:disabled a.btn {
   @extend .btn-outline-primary;
   border-color: $gray-300;
   background: $white;
-    &:hover:not([disabled]) {
-      background-color: darken($gray-100, 5%);
-      color: $primary;
-      border-color: $gray-300;
-      }
+  &:hover:not([disabled]) {
+    background-color: darken($gray-100, 5%);
+    color: $primary;
+    border-color: $gray-300;
+  }
     &.disabled,
     &:disabled {
       border-color: $gray-400;
-      opacity: $btn-disabled-opacity;
-      @include box-shadow(none);
     }
   &:active,
   &.active {
