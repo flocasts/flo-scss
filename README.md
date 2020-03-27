@@ -39,6 +39,33 @@
 
 ## Quick start
 
+### WARNING
+
+    Make sure you follow these instructions for installing Ruby on macOS. Mistakes made in the process of installing
+    Ruby on macOS can result in the operating system failing to boot.
+    
+### Install Ruby on macOS
+
+ 1. Install `gpg` and `curl`
+      * `brew install gpg curl`
+      
+ 2. Install RVM by following the instructions [here](https://rvm.io/rvm/install)
+      * If you have an issue installing the GPG keys, contact your sysadmin
+          * @Sysadmins, this could be a DNS issue. Try switching to 8.8.8.8 temporarily.
+      * Avoid doing a multi-user install. You should not have to `sudo`
+      * Install the stable version with `\curl -sSL https://get.rvm.io | bash -s stable`
+
+ 3. Run the RVM startup script and restart your terminals
+      * Run `source ~/.rvm/scripts/rvm`
+      
+ 4. Install the correct version of ruby for the project
+      * The version can be found in the [Gemfile](./Gemfile)
+      * Run `rvm install x.x.x` replacing Xs with the correct version
+ 
+ 5. Run `rvm use x.x.x` to set your ruby version, and you're ready to go!
+      
+### Install flo-scss
+
 Several quick start options are available:
 
 - [Download the latest release.](https://github.com/flocasts/flo-scss/archive/vflo-scss.zip) OR
