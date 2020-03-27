@@ -167,7 +167,7 @@ Font sizes for buttons. Complete font styling documented in [buttons]({{ site.ba
   <tbody>
     <tr>
       <td>{{ "` class='btn-lg' `" | markdownify }}</td>
-      <td><span class="btn">Button Large</span></td>
+      <td><span class="btn-lg">Button Large</span></td>
     </tr>
     <tr>
       <td>{{ "`class='btn' `" | markdownify }}</td>
