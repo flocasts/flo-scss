@@ -5,7 +5,7 @@ description: Documentation and examples for common text utilities to control ali
 group: utilities
 toc: true
 ---
-
+<!-- TODO ommit This document was reviewed and relevant info was moved to content/typography -->
 ## Text alignment
 
 Easily realign text to components with text alignment classes.

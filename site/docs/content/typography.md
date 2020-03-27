@@ -90,9 +90,8 @@ All HTML headings, `<h1>` through `<h6>` and `.h1` through `.h6` classes are als
   </tbody>
 </table>
 
-### Additional Text Classes
+### Additional Classes
 In addition the system has specific named classes.
-
 
 <table>
   <thead>
@@ -180,7 +179,9 @@ Font sizes for buttons. Complete font styling documented in [buttons]({{ site.ba
   </tbody>
 </table>
 
-## Color Modifiers
+## Modifiers
+
+### Color 
 
 Here is a list of all modifier class to change text color to any brand color.
 
@@ -255,7 +256,7 @@ Here is a list of all modifier class to change text color to any brand color.
   </tbody>
 </table>
 
-## Font-weight Modifiers
+### Font-weight
 
 Here is a list of all modifier class to change font weight for the Uni Neue web font.
 
@@ -300,7 +301,7 @@ Here is a list of all modifier class to change font weight for the Uni Neue web 
   </tbody>
 </table>
 
-## Text Alignment Modifiers
+### Alignment
 
 Easily realign text to components with text alignment classes.
 
@@ -330,8 +331,23 @@ Easily realign text to components with text alignment classes.
       </td>
       <td><h1 class="text-right">Text aligns to the right.</h1></td>
     </tr>
+    <tr>
+      <td>
+        {{ "`.text-justify`" | markdownify }}
+      </td>
+      <td><h1 class="text-right">Text aligns to the justify.</h1></td>
+    </tr>
   </tbody>
 </table>
+
+### Text decoration
+
+Remove a text decoration with a `.text-decoration-none` class.
+
+{% capture example %}
+<a href="#" class="text-decoration-none">Non-underlined link</a>
+{% endcapture %}
+{% include example.html content=example %}
 
 <br/>
 
@@ -343,26 +359,28 @@ Easily realign text to components with text alignment classes.
 ​
 Setting inherited from forking Bootstrap 4. These are not part of the design system, yet could be beneficial in the future.
 
+For left, right, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
 
-### Global settings
+{% capture example %}
 
-Sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{ site.baseurl }}/docs/utilities/text/).
+<p class="text-left">Left aligned text on all viewport sizes.</p>
+<p class="text-center">Center aligned text on all viewport sizes.</p>
+<p class="text-right">Right aligned text on all viewport sizes.</p>
 
-- Use a [native font stack]({{ site.baseurl }}/docs/content/reboot/#native-font-stack) that selects the best `font-family` for each OS and device.
-- For a more inclusive and accessible type scale, we assume the browser default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
-- Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
-- Set the global link color via `$link-color` and apply link underlines only on `:hover`.
-- Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
+<p class="text-sm-left">Left aligned text on viewports sized SM (small) or wider.</p>
+<p class="text-md-left">Left aligned text on viewports sized MD (medium) or wider.</p>
+<p class="text-lg-left">Left aligned text on viewports sized LG (large) or wider.</p>
+<p class="text-xl-left">Left aligned text on viewports sized XL (extra-large) or wider.</p>
+{% endcapture %}
+{% include example.html content=example %}
 
-These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
-
-#### Responsive font sizes
+### Responsive fonts
 
 Bootstrap v4.3 ships with the option to enable responsive font sizes, allowing text to scale more naturally across device and viewport sizes. <abbr title="Responsive font sizes">RFS</abbr> can be enabled by changing the `$enable-responsive-font-sizes` Sass variable to `true` and recompiling Bootstrap.
 
 To support <abbr title="Responsive font sizes">RFS</abbr>, we use a Sass mixin to replace our normal `font-size` properties. Responsive font sizes will be compiled into `calc()` functions with a mix of `rem` and viewport units to enable the responsive scaling behavior. More about <abbr title="Responsive font sizes">RFS</abbr> and its configuration can be found on its [GitHub repository](https://github.com/twbs/rfs/tree/v8.0.4).
 
-### Customizing Headings
+### Custom Headings
 {% capture example %}
 
 <h3>
@@ -372,7 +390,19 @@ To support <abbr title="Responsive font sizes">RFS</abbr>, we use a Sass mixin t
 {% endcapture %}
 {% include example.html content=example %}
 
-### Inline text elements
+### Reset color
+
+Reset a text or link's color with `.text-reset`, so that it inherits the color from its parent.
+
+{% capture example %}
+
+<p class="text-muted">
+  Muted text with a <a href="#" class="text-reset">reset link</a>.
+</p>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Inline text
 
 Styling for common inline HTML5 elements.
 
@@ -392,6 +422,56 @@ Styling for common inline HTML5 elements.
 `.mark` and `.small` classes are also available to apply the same styles as `<mark>` and `<small>` while avoiding any unwanted semantic implications that the tags would bring.
 
 While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant to highlight words or phrases without conveying additional importance while `<i>` is mostly for voice, technical terms, etc.
+
+### Wrapping and overflow
+
+Wrap text with a `.text-wrap` class.
+
+{% capture example %}
+
+<div class="badge badge-primary text-wrap" style="width: 6rem;">
+  This text should wrap.
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
+Prevent text from wrapping with a `.text-nowrap` class.
+
+{% capture example %}
+
+<div class="text-nowrap bd-highlight" style="width: 8rem;">
+  This text should overflow the parent.
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
+For longer content, you can add a `.text-truncate` class to truncate the text with an ellipsis. **Requires `display: inline-block` or `display: block`.**
+
+{% capture example %}
+
+<!-- Block level -->
+<div class="row">
+  <div class="col-2 text-truncate">
+    Praeterea iter est quasdam res quas ex communi.
+  </div>
+</div>
+
+<!-- Inline level -->
+<span class="d-inline-block text-truncate" style="max-width: 150px;">
+  Praeterea iter est quasdam res quas ex communi.
+</span>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Word break
+
+Prevent long strings of text from breaking your components' layout by using `.text-break` to set `overflow-wrap: break-word` (and `word-break: break-word` for IE & Edge compatibility).
+
+{% capture example %}
+
+<p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+{% endcapture %}
+{% include example.html content=example %}
 
 ### Dates and Times
 
@@ -427,6 +507,45 @@ Add `.initialism` to an abbreviation for a slightly smaller font-size.
 
 <p><abbr title="attribute">attr</abbr></p>
 <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Monospace
+
+Change a selection to our monospace font stack with `.text-monospace`.
+
+{% capture example %}
+
+<p class="text-monospace">This is in monospace</p>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Text transform
+
+Transform text in components with text capitalization classes.
+
+{% capture example %}
+
+<p class="text-lowercase">Lowercased text.</p>
+<p class="text-uppercase">Uppercased text.</p>
+<p class="text-capitalize">CapiTaliZed text.</p>
+{% endcapture %}
+{% include example.html content=example %}
+
+Note how `.text-capitalize` only changes the first letter of each word, leaving the case of any other letters unaffected.
+
+### Font weight and italics
+
+Quickly change the weight (boldness) of text or italicize text.
+
+{% capture example %}
+
+<p class="font-weight-bold">Bold text.</p>
+<p class="font-weight-bolder">Bolder weight text (relative to the parent element).</p>
+<p class="font-weight-normal">Normal weight text.</p>
+<p class="font-weight-light">Light weight text.</p>
+<p class="font-weight-lighter">Lighter weight text (relative to the parent element).</p>
+<p class="font-italic">Italic text.</p>
 {% endcapture %}
 {% include example.html content=example %}
 
