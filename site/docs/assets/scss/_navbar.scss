@@ -1,14 +1,18 @@
 .flo-doc-navbar {
-  padding: .625rem 0;
+  min-height: 4rem;
 
   @include media-breakpoint-down(md) {
+    padding-right: .5rem;
+    padding-left: .5rem;
+
     .navbar-nav-scroll {
-      width: 100%;
+      max-width: 100%;
+      height: 2.5rem;
       margin-top: .25rem;
+      overflow: hidden;
 
       .navbar-nav {
-        padding: .5rem 0;
-        margin: -.5rem 0;
+        padding-bottom: 2rem;
         overflow-x: auto;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
@@ -16,18 +20,21 @@
     }
   }
 
+  @include media-breakpoint-up(md) {
+    @supports (position: sticky) {
+      position: sticky;
+      top: 0;
+      z-index: 1071; // over everything in bootstrap
+    }
+  }
+
   .navbar-nav {
     .nav-link {
-      color: rgba($white, .85);
-
-      &:hover,
-      &:focus {
-        color: $white;
-      }
+      padding-right: .5rem;
+      padding-left: .5rem;
 
       &.active {
         font-weight: 600;
-        color: $white;
       }
     }
   }
@@ -38,4 +45,14 @@
     height: 1rem;
     vertical-align: text-top;
   }
+
+  .dropdown-menu {
+    @include font-size(.875rem);
+  }
+
+  //.dropdown-item.active {
+  //  font-weight: 600;
+  //  color: $gray-900;
+  //  background: escape-svg($dropdown-active-icon) no-repeat .4rem .6rem/.75rem .75rem;
+  //}
 }
