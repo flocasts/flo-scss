@@ -29,7 +29,8 @@
 
 ## Quick start
 
-Several quick start options are available to install flo-scss:
+### Install Flo-SCSS
+Several quick start options are available:
 
 - Clone the repo: `git clone git@github.com:flocasts/flo-scss`
 - OR [download the latest release](https://github.com/flocasts/flo-scss/archive/vflo-scss.zip)
@@ -40,7 +41,7 @@ Several quick start options are available to install flo-scss:
 1. `cd flo-scss`
 2. Run through the [tooling setup](https://flo-scss.flo.center/docs/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`. WARNING - read installing [ruby instructions](#install-ruby) for mac OS
 3. Run `npm install` to install Node.js dependencies.
-4. Run `npm start` to compile CSS and JavaScript files, generate our docs, and watch for changes.
+4. Run `npm run release && npm start` to compile CSS and JavaScript files, generate our docs, and watch for changes.
 5. Open `http://localhost:9001` in your browser, and voilà.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/).
