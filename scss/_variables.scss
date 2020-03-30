@@ -89,7 +89,7 @@ $colors: map-merge(
 );
 
 $primary: $red !default;
-$secondary: $gray-600 !default;
+$secondary: $white !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -653,26 +653,26 @@ $table-border-level: -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 $input-btn-font-family: null !default;
-$input-btn-letter-spacing: normal !default;
+$input-btn-letter-spacing: from-pixels(0.1) !default;
 $input-btn-text-transform: capitalize !default;
-$input-btn-focus-width: 0.2rem !default;
-$input-btn-focus-color: rgba($component-active-bg, 0.25) !default;
+$input-btn-focus-width: from-pixels(2.8) !default;
+$input-btn-focus-color: rgba($component-active-bg, 0.3) !default;
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
 $input-btn-font-size-pixels: 14 !default;
-$input-btn-padding-y: 1em * 10 / $input-btn-font-size-pixels !default;
-$input-btn-padding-x: 1em * 30 / $input-btn-font-size-pixels !default;
+$input-btn-padding-y: 1rem * 9 / $input-btn-font-size-pixels !default;
+$input-btn-padding-x: from-pixels(24) !default;
 $input-btn-font-size: from-pixels($input-btn-font-size-pixels) !default;
-$input-btn-line-height: 1.25 !default;
+$input-btn-line-height: 1.2 !default;
 
-$input-btn-padding-y-sm: 1em * 6 / $input-btn-font-size-pixels !default;
-$input-btn-padding-x-sm: 1em * 30 / $input-btn-font-size-pixels !default;
+$input-btn-padding-y-sm: 1rem * 5 / $input-btn-font-size-pixels !default;
+$input-btn-padding-x-sm: from-pixels(24) !default;
 $input-btn-font-size-sm: $input-btn-font-size !default;
 $input-btn-line-height-sm: $line-height-sm !default;
 
-$input-btn-padding-y-lg: 1em * 12 / $input-btn-font-size-pixels !default;
-$input-btn-padding-x-lg: 1em * 24 / $input-btn-font-size-pixels !default;
-$input-btn-font-size-lg: $input-btn-font-size !default;
+$input-btn-padding-y-lg: 1rem * 8 / $input-btn-font-size-pixels !default;
+$input-btn-padding-x-lg: from-pixels(24) !default;
+$input-btn-font-size-lg: from-pixels(15) !default;
 $input-btn-line-height-lg: $line-height-lg !default;
 
 $input-btn-border-width: $border-width !default;
@@ -714,9 +714,9 @@ $btn-link-disabled-color: $gray-600 !default;
 $btn-block-spacing-y: 0.5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius: from-pixels(6) !default;
-$btn-border-radius-lg: $border-radius-lg !default;
-$btn-border-radius-sm: $border-radius-sm !default;
+$btn-border-radius: from-pixels(5) !default;
+$btn-border-radius-lg: from-pixels(5) !default;
+$btn-border-radius-sm: from-pixels(5) !default;
 
 $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
@@ -924,7 +924,7 @@ $custom-select-padding-x: $input-padding-x !default;
 $custom-select-font-family: $input-font-family !default;
 $custom-select-font-size: $input-font-size !default;
 $custom-select-height: $input-height !default;
-$custom-select-indicator-padding: 1em !default; // Extra padding to account for the presence of the background-image based indicator
+$custom-select-indicator-padding: 1rem !default; // Extra padding to account for the presence of the background-image based indicator
 $custom-select-font-weight: $input-font-weight !default;
 $custom-select-line-height: $input-line-height !default;
 $custom-select-color: $input-color !default;
