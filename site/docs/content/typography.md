@@ -335,7 +335,7 @@ Easily realign text to components with text alignment classes.
       <td>
         {{ "`.text-justify`" | markdownify }}
       </td>
-      <td><h1 class="text-right">Text aligns to the justify.</h1></td>
+      <td><h1 class=“text-justify”>Text aligns to the justify.</h1></td>
     </tr>
   </tbody>
 </table>
