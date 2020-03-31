@@ -45,20 +45,7 @@ jobs:
           command: bundle version && bundle install
       - run: 
           name: create build
-          command: |
-            cd .. 
-            cp -rf flo-scss bs-docs
-            cd bs-docs
-            git checkout .
-            git checkout gh-pages
-            git pull
-            cd ..
-            mkdir gh-pages
-            cp -rf bs-docs/.git gh-pages
-            cp -rf flo-scss/.circleci gh-pages
-            cd flo-scss
-            npm run release
-            cp -rf docs/* ../gh-pages
+          command: npm run release
       - save_cache:
           paths:
             - '~'
@@ -96,6 +83,7 @@ workflows:
             branches:
               only: 
                 - master
+                - flo-scss-ci
       - build:
           requires:
             - dependencies
