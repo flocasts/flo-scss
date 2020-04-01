@@ -29,7 +29,6 @@ label.tab-label {
   text-align: center;
 
   &:first-of-type {
-    //margin-left: 0;
     padding-left: $tab-label-padding-x;
   }
   @include media-breakpoint-down(sm){
