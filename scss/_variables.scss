@@ -599,7 +599,7 @@ $blockquote-small-color: $gray-600 !default;
 $blockquote-small-font-size: $small-font-size !default;
 $blockquote-font-size: $font-size-base * 1.25 !default;
 
-$hr-border-color: rgba($black, 0.1) !default;
+$hr-border-color: $border-color !default;
 $hr-border-width: $border-width !default;
 
 $mark-padding: 0.2em !default;
@@ -1077,19 +1077,19 @@ $nav-link-padding-y: 0.5rem !default;
 $nav-link-padding-x: 1rem !default;
 $nav-link-disabled-color: $gray-600 !default;
 
-$nav-tabs-border-color: $gray-300 !default;
+$nav-tabs-border-color: $border-color !default;
 $nav-tabs-border-width: $border-width !default;
 $nav-tabs-border-radius: $border-radius !default;
-$nav-tabs-link-hover-border-color: $gray-200 $gray-200 $nav-tabs-border-color !default;
-$nav-tabs-link-active-color: $gray-700 !default;
+$nav-tabs-link-hover-border-color: $border-color $border-color $nav-tabs-border-color !default;
+$nav-tabs-link-active-color: $gray-500 !default;
 $nav-tabs-link-active-bg: $body-bg !default;
-$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
+$nav-tabs-link-active-border-color: $border-color $border-color $nav-tabs-link-active-bg !default;
 
 $nav-pills-border-radius: $border-radius !default;
 $nav-pills-link-active-color: $component-active-color !default;
 $nav-pills-link-active-bg: $component-active-bg !default;
 
-$nav-divider-color: $gray-200 !default;
+$nav-divider-color: $border-color !default;
 $nav-divider-margin-y: $spacer / 2 !default;
 
 // Navbar
@@ -1177,14 +1177,14 @@ $pagination-line-height: 1.25 !default;
 $pagination-color: $link-color !default;
 $pagination-bg: $white !default;
 $pagination-border-width: $border-width !default;
-$pagination-border-color: $gray-300 !default;
+$pagination-border-color: $border-color !default;
 
 $pagination-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $pagination-focus-outline: 0 !default;
 
 $pagination-hover-color: $link-hover-color !default;
 $pagination-hover-bg: $gray-200 !default;
-$pagination-hover-border-color: $gray-300 !default;
+$pagination-hover-border-color: $border-color !default;
 
 $pagination-active-color: $component-active-color !default;
 $pagination-active-bg: $component-active-bg !default;
@@ -1192,7 +1192,7 @@ $pagination-active-border-color: $pagination-active-bg !default;
 
 $pagination-disabled-color: $gray-600 !default;
 $pagination-disabled-bg: $white !default;
-$pagination-disabled-border-color: $gray-300 !default;
+$pagination-disabled-border-color: $border-color !default;
 
 // Jumbotron
 
@@ -1427,7 +1427,7 @@ $list-group-action-active-bg: $gray-200 !default;
 $thumbnail-padding: 0.25rem !default;
 $thumbnail-bg: $body-bg !default;
 $thumbnail-border-width: $border-width !default;
-$thumbnail-border-color: $gray-300 !default;
+$thumbnail-border-color: $border-color !default;
 $thumbnail-border-radius: $border-radius !default;
 $thumbnail-box-shadow: 0 1px 2px rgba($black, 0.075) !default;
 
@@ -1456,12 +1456,12 @@ $breadcrumb-border-radius: $border-radius !default;
 // Tabs
 
 $tab-content-padding-x: 0 !default;
-$tab-content-padding-y: 1rem !default;
-$tab-border-width: 0.1em !default;
+$tab-content-padding-y: from-pixels(28) !default;
+$tab-border-width: from-pixels(1) !default;
 $tab-border-color: $light !default;
-$tab-label-padding-x: 0 !default;
-$tab-label-padding-bottom: 1em !default;
-$tab-label-margin-x: 1em !default;
+$tab-label-padding-x: from-pixels(20) !default;
+$tab-label-padding-bottom: 0 !default;
+$tab-label-margin-x: 0 !default;
 
 // Carousel
 

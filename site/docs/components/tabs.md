@@ -101,7 +101,7 @@ Tab-items expand 100% of the width of the tabs-container.
     checked="checked"
     class="tab-input"
   />
-  <label for="tab-one-4" class="tab-label">Events</label>
+  <label for="tab-one-4" class="tab-label flex-tab">Events</label>
   <div class="tab-content h-100 overflow-y-auto">
     <ol class="list-group list-group-flush">
       <li class="list-group-item hover-target hover-bg-300">
@@ -157,7 +157,7 @@ Tab-items expand 100% of the width of the tabs-container.
     name="example-tabs-4"
     class="tab-input"
   />
-  <label for="tab-two-4" class="tab-label">Videos</label>
+  <label for="tab-two-4" class="tab-label flex-tab">Videos</label>
   <div class="tab-content">
     <form class="form-inline d-md-block">
       <select class="form-control">
@@ -209,7 +209,7 @@ Tab-items expand 100% of the width of the tabs-container.
     name="example-tabs-4"
     class="tab-input"
   />
-  <label for="tab-three-4" class="tab-label">Matchups</label>
+  <label for="tab-three-4" class="tab-label flex-tab">Matchups</label>
   <div class="tab-content">
   <h3>Matchups</h3>
     <div>
@@ -233,7 +233,7 @@ Tab-items expand 100% of the width of the tabs-container.
     name="example-tabs-4"
     class="tab-input"
   />
-  <label for="tab-four-4" class="tab-label">News</label>
+  <label for="tab-four-4" class="tab-label flex-tab">News</label>
   <div class="tab-content">
     <h3>News</h3>
     <div class="row">
@@ -281,7 +281,7 @@ Tab-items expand 100% of the width of the tabs-container.
     checked="checked"
     class="tab-input"
   />
-  <label for="tab-one-5" class="tab-label">Tab One</label>
+  <label for="tab-one-5" class="tab-label flex-tab">Tab One</label>
     <div class="tab-content h-100 overflow-y-auto">
       <p>Tab one content</p>
     </div>
@@ -291,7 +291,7 @@ Tab-items expand 100% of the width of the tabs-container.
     name="example-tabs-5"
     class="tab-input"
   />
-  <label for="tab-two-5" class="tab-label">Tab Two</label>
+  <label for="tab-two-5" class="tab-label flex-tab">Tab Two</label>
     <div class="tab-content">
      <p>Tab two content</p>
     </div>
@@ -301,7 +301,7 @@ Tab-items expand 100% of the width of the tabs-container.
     name="example-tabs-5"
     class="tab-input"
   />
-  <label for="tab-three-5" class="tab-label">Tab Three</label>
+  <label for="tab-three-5" class="tab-label flex-tab">Tab Three</label>
   <div class="tab-content">
     <p>Tab three content</p>
   </div>
@@ -311,7 +311,7 @@ Tab-items expand 100% of the width of the tabs-container.
     name="example-tabs-5"
     class="tab-input"
   />
-  <label for="tab-four-5" class="tab-label">Tab Four</label>
+  <label for="tab-four-5" class="tab-label flex-tab">Tab Four</label>
     <div class="tab-content">
       <p>Tab four content</p>
     </div>
@@ -321,7 +321,7 @@ Tab-items expand 100% of the width of the tabs-container.
     name="example-tabs-5"
     class="tab-input"
   />
-  <label for="tab-five-5" class="tab-label">Tab Five</label>
+  <label for="tab-five-5" class="tab-label flex-tab">Tab Five</label>
     <div class="tab-content">
       <p>Tab five content</p>
     </div>
@@ -342,7 +342,7 @@ Tab-items expand 100% of the width of the tabs-container. When additional tabs a
     checked="checked"
     class="tab-input"
   />
-  <label for="tab-one-dd" class="tab-label">Tab One</label>
+  <label for="tab-one-dd" class="tab-label flex-tab">Tab One</label>
   <div class="tab-content h-100 overflow-y-auto">
     <p>Tab one content</p>
   </div>
@@ -352,7 +352,7 @@ Tab-items expand 100% of the width of the tabs-container. When additional tabs a
     name="example-tabs-dd"
     class="tab-input"
   />
-  <label for="tab-two-dd" class="tab-label">Tab Two</label>
+  <label for="tab-two-dd" class="tab-label flex-tab">Tab Two</label>
   <div class="tab-content">
     <p>Tab two content</p>
   </div>
@@ -362,7 +362,7 @@ Tab-items expand 100% of the width of the tabs-container. When additional tabs a
     name="example-tabs-dd"
     class="tab-input"
   />
-  <label for="tab-three-dd" class="tab-label">Tab Three</label>
+  <label for="tab-three-dd" class="tab-label flex-tab">Tab Three</label>
   <div class="tab-content">
     <p>Tab three content</p>
   </div>
@@ -372,7 +372,7 @@ Tab-items expand 100% of the width of the tabs-container. When additional tabs a
     name="example-tabs-dd"
     class="tab-input"
   />
-  <label for="tab-four-dd" class="tab-label">Tab Four</label>
+  <label for="tab-four-dd" class="tab-label flex-tab">Tab Four</label>
   <div class="tab-content">
     <p>Tab four content</p>
   </div>
@@ -382,7 +382,7 @@ Tab-items expand 100% of the width of the tabs-container. When additional tabs a
     name="example-tabs-dd"
     class="tab-input"
   />
-  <label for="tab-five-dd" class="tab-label">More</label>
+  <label for="tab-five-dd" class="tab-label flex-tab">More</label>
   <div class="tab-content">
     <p>Tab five content</p>
   </div>
