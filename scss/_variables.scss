@@ -61,11 +61,14 @@ $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
 $red: #ff140f !default;
-$orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
-$green: #28a745 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
+
+// Flo Brand Utility Colors
+$utility-success: #00b338;
+$utility-warning: #ff621c;
+$utility-danger: #b31f1d;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -75,10 +78,10 @@ $colors: map-merge(
     "indigo": $indigo,
     "purple": $purple,
     "pink": $pink,
-    "red": $red,
-    "orange": $orange,
+    "red": $utility-danger,
+    "orange": $utility-warning,
     "yellow": $yellow,
-    "green": $green,
+    "green": $utility-success,
     "teal": $teal,
     "cyan": $cyan,
     "white": $white,
@@ -90,10 +93,10 @@ $colors: map-merge(
 
 $primary: $red !default;
 $secondary: $white !default;
-$success: $green !default;
+$success: $utility-success !default;
 $info: $cyan !default;
-$warning: $yellow !default;
-$danger: $red !default;
+$warning: $utility-warning !default;
+$danger: $utility-danger !default;
 $light: $gray-200 !default;
 $dark: $gray-800 !default;
 $tint: rgba(0, 0, 0, 0.5) !default;
