@@ -21,6 +21,7 @@
   border: $btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
+  min-width: from-pixels(154);
 
   // override $enable-rounded flag
   border-radius: $btn-border-radius;
@@ -77,6 +78,15 @@ fieldset:disabled a.btn {
 }
 
 // Custom Flo Primary
+.btn-primary{
+
+  &.disabled,
+  &:disabled {
+    background-color: $gray-400;
+    border-color: $gray-400;
+    opacity: 1;
+  }
+}
 
 // custom flo secondary button
 .btn-secondary {
@@ -90,7 +100,9 @@ fieldset:disabled a.btn {
   }
     &.disabled,
     &:disabled {
-      border-color: $gray-400;
+      border-color: $gray-300;
+      color: $gray-400;
+      opacity: 1;
     }
   &:active,
   &.active {
@@ -140,10 +152,12 @@ fieldset:disabled a.btn {
 
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+  min-width: from-pixels(154);
 }
 
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  min-width: from-pixels(154);
 }
 
 
