@@ -81,7 +81,9 @@ fieldset:disabled a.btn {
 .btn-primary{
 
   &.disabled,
-  &:disabled {
+  &:disabled,
+  fieldset:disabled & {
+    pointer-events: none;
     background-color: $gray-400;
     border-color: $gray-400;
     opacity: 1;
@@ -99,17 +101,21 @@ fieldset:disabled a.btn {
     color: $primary;
     border-color: $gray-300;
   }
-    &.disabled,
-    &:disabled {
-      border-color: $gray-300;
-      color: $gray-400;
-      opacity: 1;
-      pointer-events: none;
-    }
+
+  &.disabled,
+  &:disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+    border-color: $gray-300;
+    color: $gray-400;
+    opacity: 1;
+  }
+
   &:active,
   &.active {
     color: $primary !important;
   }
+
   &:focus,
   &.focus {
     box-shadow: 0 0 0 $btn-focus-width rgba(255, 20, 15, 0.2) !important;
