@@ -31,7 +31,7 @@ Primary buttons are are Ignite Red with White text.
 
 ### Sizes
 
-Heights are set by adding add `.btn`, `.btn-lg` or `.btn-sm`.  Small buttons `.btn-sm` have a height of 32px. Base btns `.btn` have a height of 40px. Large buttons `.btn-lg` have a height of 52px. Buttons have min-width of 154px, then have a dynamic width based on character counts and padding. Buttons widths can also be adjusted by adding a `.col-span-#` (# = 1-12) or by adding `.w-100`, to take up 100% of the parent element. 
+Heights are set by adding `.btn`, `.btn-lg` or `.btn-sm`.  Small buttons `.btn-sm` have a height of 32px. Base btns `.btn` have a height of 40px. Large buttons `.btn-lg` have a height of 52px. Buttons have min-width of 154px, then have a dynamic width based on character counts and padding. Buttons widths can also be adjusted by adding a `.col-span-#` (# = 1-12) or by adding `.w-100`, to take up 100% of the parent element. 
 
 #### Height and Min-width
 
@@ -72,7 +72,7 @@ Secondary buttons are are White with Ignite Red text.
 
 ### Sizes
 
-Heights are set by adding add `.btn`, `.btn-lg` or `.btn-sm`.  Small buttons `.btn-sm` have a height of 32px. Base btns `.btn` have a height of 40px. Large buttons `.btn-lg` have a height of 52px. Buttons have min-width of 154px, then have a dynamic width based on character counts and padding. Buttons widths can also be adjusted by adding a `.col-span-#` (# = 1-12) or by adding `.w-100`, to take up 100% of the parent element.
+Heights are set by adding `.btn`, `.btn-lg` or `.btn-sm`.  Small buttons `.btn-sm` have a height of 32px. Base btns `.btn` have a height of 40px. Large buttons `.btn-lg` have a height of 52px. Buttons have min-width of 154px, then have a dynamic width based on character counts and padding. Buttons widths can also be adjusted by adding a `.col-span-#` (# = 1-12) or by adding `.w-100`, to take up 100% of the parent element.
 
 #### Height and Min-width 
 
@@ -107,7 +107,7 @@ These buttons are used on top of an image. Transparent background with a white b
 
 ### Sizes
 
-Heights are set by adding add `.btn`, `.btn-lg` or `.btn-sm`.  Small buttons `.btn-sm` have a height of 32px. Base btns `.btn` have a height of 40px. Large buttons `.btn-lg` have a height of 52px. Buttons have min-width of 154px, then have a dynamic width based on character counts and padding. Buttons widths can also be adjusted by adding a `.col-span-#` (# = 1-12) or by adding `.w-100`, to take up 100% of the parent element.
+Heights are set by adding `.btn`, `.btn-lg` or `.btn-sm`.  Small buttons `.btn-sm` have a height of 32px. Base btns `.btn` have a height of 40px. Large buttons `.btn-lg` have a height of 52px. Buttons have min-width of 154px, then have a dynamic width based on character counts and padding. Buttons widths can also be adjusted by adding a `.col-span-#` (# = 1-12) or by adding `.w-100`, to take up 100% of the parent element.
 
 [TODO: Add Outline Button FLO-11207](https://flocasts.atlassian.net/browse/FLO-11207)
 
