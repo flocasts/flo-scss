@@ -45,6 +45,8 @@ In addition, groups and toolbars should be given an explicit label, as most assi
 ***
 
 ## System Extras
+​
+Settings inherited from forking Bootstrap 4. These are not part of the design system, yet could be beneficial in the future.
 
 ### Button toolbar
 
