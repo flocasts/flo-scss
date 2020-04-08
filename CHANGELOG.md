@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/flocasts/flo-scss/compare/v0.3.0...v0.5.2) (2020-02-25)
+
+
+### Features
+
+* button groups ([31eefc3](https://github.com/flocasts/flo-scss/commit/31eefc36f19ca8cec7cd274110b5b92695219c8a))
+
 ## [0.5.2](https://github.com/flocasts/flo-scss/compare/v0.3.0...v0.5.2) (2020-02-25)
 
 
