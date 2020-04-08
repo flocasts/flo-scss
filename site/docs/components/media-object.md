@@ -5,6 +5,7 @@ description: Documentation and examples for Bootstrap's media object to construc
 group: components
 toc: true
 ---
+# NOT Updated for FLO-SCSS yet
 
 ## Example
 

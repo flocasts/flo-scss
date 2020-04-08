@@ -6,6 +6,8 @@ group: components
 toc: true
 ---
 
+# NOT Updated for FLO-SCSS yet
+
 ## How it works
 
 Before getting started with Bootstrap's modal component, be sure to read the following as our menu options have recently changed.

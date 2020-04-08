@@ -6,6 +6,8 @@ group: components
 toc: true
 ---
 
+# NOT Updated for FLO-SCSS yet
+
 ## How it works
 
 Here's what you need to know before getting started with the navbar:

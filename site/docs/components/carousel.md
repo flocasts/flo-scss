@@ -5,6 +5,7 @@ description: A slideshow component for cycling through elements—images or slid
 group: components
 toc: true
 ---
+# NOT Updated for FLO-SCSS yet
 
 ## How it works
 
