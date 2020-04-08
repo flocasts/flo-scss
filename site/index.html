@@ -12,14 +12,12 @@ layout: home
       <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
         <h1 class="mb-3 text-primary">Flo-SCSS</h1>
         <p class="lead">
-          Build responsive, mobile-first projects on the web with the world’s
-          most popular front-end component library.
+          FloSport's style library built on top of Bootstrap's foundations. This contains only styles and no JS.
         </p>
         <p class="lead mb-4">
-          Bootstrap is an open source toolkit for developing with HTML, CSS, and
+          More on Bootstrap: it is an open source toolkit for developing with HTML, CSS, and
           JS. Quickly prototype your ideas or build your entire app with our
-          Sass variables and mixins, responsive grid system, extensive prebuilt
-          components, and powerful plugins built on jQuery.
+          Sass variables and mixins, and responsive grid system.
         </p>
         <div class="row mx-n2">
           <div class="col-md px-2">
@@ -32,7 +30,7 @@ layout: home
           <div class="col-md px-2">
             <a
               href="https://github.com/flocasts/flo-scss/archive/v{{site.current_version}}.zip"
-              class="btn btn-lg btn-secondary w-100 mb-3"
+              class="btn btn-lg btn-secondary w-100 mb-3 disabled"
               >Download</a
             >
           </div>
@@ -44,117 +42,3 @@ layout: home
     </div>
   </div>
 </main>
-
-<div class="masthead-followup row m-0 border border-white">
-  <div class="col-md-4 p-3 p-md-5 bg-light border border-white">
-    <!-- Icon by Bytesize https://github.com/danklammer/bytesize-icons -->
-    {% include icons/import.svg width="32" height="32" class="text-primary mb-2"
-    %}
-    <h3>Quick start</h3>
-
-    <p>Several quick start options are available:</p>
-
-    <ul>
-      <li>
-        Download the latest release.
-        https://github.com/flocasts/flo-scss/archive/vflo-scss.zip
-        <strong>
-          OR
-        </strong>
-      </li>
-      <li>
-        Clone the repo:
-        <code>
-          git clone git@github.com:flocasts/flo-scss && cd flo-scss && bundle
-          install && npm i && npm run release && npm start
-        </code>
-        <strong>
-          OR
-        </strong>
-      </li>
-      <li>
-        Install with [npm](https://www.npmjs.com/):
-        <code>
-          npm install flocasts/flo-scss
-        </code>
-      </li>
-    </ul>
-
-    <hr class="half-rule" />
-    <a
-      class="btn btn-outline-primary"
-      href="{{ site.baseurl }}/docs/getting-started/download/"
-      >Read installation docs</a
-    >
-  </div>
-
-  <div class="col-md-4 p-3 p-md-5 bg-light border border-white">
-    <!-- Icon by Bytesize https://github.com/danklammer/bytesize-icons -->
-    {% include icons/download.svg width="32" height="32" class="text-primary
-    mb-2" %}
-    <h3>BootstrapCDN</h3>
-    <p>
-      When you only need to include Bootstrap’s compiled CSS or JS, you can use
-      <a href="https://www.bootstrapcdn.com/">BootstrapCDN</a>.
-    </p>
-
-    <h5>CSS only</h5>
-    {% highlight html %}
-    <link
-      rel="stylesheet"
-      href="{{ site.cdn.css }}"
-      integrity="{{ site.cdn.css_hash }}"
-      crossorigin="anonymous"
-    />
-    {% endhighlight %}
-
-    <h5>JS, Popper.js, and jQuery</h5>
-    {% highlight html %}
-    <script
-      src="{{ site.cdn.jquery }}"
-      integrity="{{ site.cdn.jquery_hash }}"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="{{ site.cdn.popper }}"
-      integrity="{{ site.cdn.popper_hash }}"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="{{ site.cdn.js }}"
-      integrity="{{ site.cdn.js_hash }}"
-      crossorigin="anonymous"
-    ></script>
-    {% endhighlight %}
-    <hr class="half-rule" />
-    <a
-      class="btn btn-outline-primary"
-      href="{{ site.baseurl }}/docs/layout/overview/"
-      >Explore the docs</a
-    >
-  </div>
-
-  <div class="col-md-4 p-3 p-md-5 bg-light border border-white">
-    <!-- Icon by Bytesize https://github.com/danklammer/bytesize-icons -->
-    {% include icons/lightning.svg width="32" height="32" class="text-primary
-    mb-2" %}
-    <h3>Official Themes</h3>
-    <p>
-      Take Bootstrap 4 to the next level with official premium themes—toolkits
-      built on Bootstrap with new components and plugins, docs, and build tools.
-    </p>
-    <img
-      class="img-fluid mt-3 mx-auto"
-      srcset="{{ site.baseurl }}/docs/assets/img/bootstrap-themes.png,
-                                                {{ site.baseurl }}/docs/assets/img/bootstrap-themes@2x.png 2x"
-      src="{{ site.baseurl }}/docs/assets/img/bootstrap-themes.png"
-      alt="Bootstrap Themes"
-      width="500"
-      height="200"
-    />
-    <hr class="half-rule" />
-    <a href="{{ site.themes }}/" class="btn btn-outline-primary"
-      >Browse themes</a
-    >
-  </div>
-</div>
