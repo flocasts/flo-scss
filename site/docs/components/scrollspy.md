@@ -5,7 +5,8 @@ description: Automatically update Bootstrap navigation or list group components 
 group: components
 toc: true
 ---
-# NOT Updated for FLO-SCSS yet
+
+# Javascript is not included in FLO-SCSS
 
 ## How it works
 

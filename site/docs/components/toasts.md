@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-# NOT Updated for FLO-SCSS yet
+# Javascript is not included in FLO-SCSS
 
 Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They're built with flexbox, so they're easy to align and position.
 

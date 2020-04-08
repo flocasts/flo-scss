@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-# NOT Updated for FLO-SCSS yet
+# Javascript is not included in FLO-SCSS
 
 ## Overview
 
