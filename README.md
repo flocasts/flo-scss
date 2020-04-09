@@ -82,7 +82,15 @@ Documentation search is powered by [Algolia's DocSearch](https://community.algol
 
 ## Contributing
 
-Please read through our [contributing guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+Commit messages should follow semantic versioning.
+
+```
+docs: (changes to the documentation)
+feat: (new feature for the user, not a new feature for build script)
+fix: (bug fix for the user, not a fix to a build script)
+```
+
+Using `docs` will not update the npm version.
 
 
 ## Versioning
