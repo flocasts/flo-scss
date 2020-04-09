@@ -1,116 +1,33 @@
 ---
 layout: docs
-title: Logos (FloSports)
-description: Add complex Logos
+title: Logos
+description: SVG Logos
 group: components
 toc: true
 ---
 
-## Logos
+#### How to use these svgs and change their colors
 
-### Size
+### FloSports
 
-Apply `.icon`, `.icon-sm`, and `.icon-lg` to size icons
+#### Color
 
-{% capture example %}
-<div class="row row-cols-3">
-  <svg class="icon-sm">
-    <use xlink:href="#flo_hawk" />
-  </svg>
-  <svg class="icon">
-    <use xlink:href="#flo_hawk" />
-  </svg>
-  <svg class="icon-lg">
-    <use xlink:href="#flo_hawk" />
-  </svg>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
+TODO: either add `.text-$color` classes to apply colors to logos, or use custom class names to define these four variants.
 
+#### Main Logo and use cases
 
-### Color
+#### Dark logo
 
-add `.text-$color` classes to apply colors to icons and select logos
+#### Main logo/alternate
 
-{% capture example %}
-<svg>
-  <use xlink:href="#flosports_logo" />
-</svg>
-<svg class="text-primary">
-  <use xlink:href="#flosports_logo" />
-</svg>
-<svg class="text-primary bg-black">
-  <use xlink:href="#flosports_logo" />
-</svg>
-{% endcapture %}
-{% include example.html content=example %}
+#### Dark logo/alternate
 
-#### Brand Colors
+#### Hawks, used on live player
 
-The following brand-specific color classes are provided
+### Varsity
 
-{% capture example %}
-<svg class="icon color-amex">
-  <use xlink:href="#cc_amex" />
-</svg>
-<svg class="icon color-android">
-  <use xlink:href="#android_logo_stacked" />
-</svg>
-<svg class="icon color-apple">
-  <use xlink:href="#apple_logo" />
-</svg>
-<svg class="icon color-discover">
-  <use xlink:href="#cc_discover" />
-</svg>
-<svg class="icon color-visa">
-  <use xlink:href="#cc_visa" />
-</svg>
-<svg class="icon color-fire-tv">
-  <use xlink:href="#fire-tv" />
-</svg>
-<svg class="icon color-outlook">
-  <use xlink:href="#outlook_logo" />
-</svg>
-<svg class="icon color-roku">
-  <use xlink:href="#roku_logo" />
-</svg>
-{% endcapture %}
-{% include example.html content=example %}
+#### Variants and use cases
 
-### Transform
+#### Logo for live player
 
-Transform icons with [transform utilities](/docs/utilities/transform)
-
-{% capture example %}
-<svg class="rotate-180">
-  <use xlink:href="#right_arrow" />
-</svg>
-{% endcapture %}
-{% include example.html content=example %}
-
-## All Icons
-
-{% capture example %}
-<div class="row">
-{% for icon in site.data.icons %}
-<div class="col-6 col-md-2 d-flex flex-column align-items-center justify-content-center">
-  <svg class="icon">
-    <use xlink:href="#{{ icon.name }}" />
-  </svg>
-  <p class="caption">{{ icon.name }}</p>
-</div>
-{% endfor %}
-</div>
-<div class="row text-white bg-black">
-{% for icon in site.data.icons %}
-<div class="col-6 col-md-2 d-flex flex-column align-items-center justify-content-center">
-  <svg class="icon">
-    <use xlink:href="#{{ icon.name }}" />
-  </svg>
-  <p class="caption">{{ icon.name }}</p>
-</div>
-{% endfor %}
-</div>
-
-{% endcapture %}
-{% include example.html content=example %}
+### MileSplit - are we still using?
