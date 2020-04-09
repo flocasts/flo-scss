@@ -26,7 +26,6 @@
 - name: filters
 - name: fire_tv_logo
 - name: flo_hawk
-- name: flosports_logo
 - name: forward_10
 - name: google_logo
 - name: ios_logo
@@ -53,6 +52,7 @@
 - name: vid_play
 - name: vid_play_icon
 - name: vid_single_active
+- name: vid_single_inactive
 - name: volume_high
 - name: volume_low
 - name: volume_medium

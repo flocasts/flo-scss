@@ -10,6 +10,8 @@ toc: true
 TODO:
  - explain how svgs should not have set width or height so the parent container can set its dimensions
  - explain how it shold not have inline styles or colors, so colors can be changed through CSS and added classes
+ - mention logos but link them to the logo page
+ - mention badges but link them to the badge page
 
 #### Utility Classes for Icons
 
@@ -18,7 +20,7 @@ TODO:
 Apply `.icon`, `.icon-sm`, and `.icon-lg` to size icons
 
 {% capture example %}
-<div class="row row-cols-3 p-1">
+<div class="row row-cols-4 p-1">
   <svg class="icon-sm">
     <use xlink:href="#close_circle" />
   </svg>
