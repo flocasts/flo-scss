@@ -9,6 +9,10 @@
   // No need to set list-style: none; since .list-group-item is block level
   padding-left: 0; // reset padding because ul and ol
   margin-bottom: 0;
+  @if $enable-new-design-system {
+    border: $list-group-border-width solid $list-group-border-color;
+    @include border-radius($list-group-border-radius);
+  }
 }
 
 // Interactive list items
@@ -17,7 +21,7 @@
 // list items. Includes an extra `.active` modifier class for selected items.
 
 .list-group-item-action {
-  width: 100%; // For `<button>`s (anchors become 100% by default though)
+  // width: 100%; // For `<button>`s (anchors become 100% by default though)
   color: $list-group-action-color;
   text-align: inherit; // For `<button>`s (anchors inherit)
 
@@ -40,13 +44,35 @@
 // Use on `li`s or `div`s within the `.list-group` parent.
 
 .list-group-item {
+  @debug ($list-group-item-margin-x);
   position: relative;
   display: block;
   padding: $list-group-item-padding-y $list-group-item-padding-x;
+  margin: $list-group-item-margin-y $list-group-item-margin-x;
   color: $list-group-color;
   background-color: $list-group-bg;
   border: $list-group-border-width solid $list-group-border-color;
 
+  @if $enable-new-design-system {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    &:last-child {
+      border-bottom: none;
+    }
+  } @else {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    @include border-radius(0);
+
+    &:first-child {
+      border-top-width: 0;
+    }
+  }
   &:first-child {
     @include border-top-radius($list-group-border-radius);
   }
@@ -68,6 +94,15 @@
     color: $list-group-active-color;
     background-color: $list-group-active-bg;
     border-color: $list-group-active-border-color;
+    @if $enable-new-design-system {
+      padding-left: $list-group-item-margin-x;
+      padding-right: $list-group-item-margin-x;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .text-muted {
+      color: $white !important;
+    }
   }
 
   & + & {
@@ -84,10 +119,42 @@
   position: relative;
   display: block;
   padding: $list-group-heading-padding-y $list-group-heading-padding-x;
+  @if $enable-new-design-system {
+    padding-left: $list-group-item-margin-x;
+    padding-right: $list-group-item-margin-x;
+    border-top: none;
+    &:first-child {
+      border: none;
+    }
+
+    &:last-child {
+      border: none;
+    }
+    border: $list-group-heading-border-width
+      solid
+      $list-group-heading-border-color;
+  } @else {
+    padding-left: $list-group-item-padding-x;
+    padding-right: $list-group-item-padding-x;
+
+    color: $list-group-heading-color;
+    border: $list-group-heading-border-width
+      solid
+      $list-group-heading-border-color;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-top-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: $list-group-heading-border-width
+      solid
+      $list-group-heading-border-color;
+  }
+
   color: $list-group-heading-color;
-  background-color: $list-group-bg;
-  border: $list-group-heading-border-width solid
-    $list-group-heading-border-color;
+  background-color: $list-group-heading-bg;
 
   &:first-child {
     @include border-top-radius($list-group-heading-border-radius);
@@ -97,35 +164,49 @@
     @include border-bottom-radius($list-group-heading-border-radius);
   }
 
-  &.disabled,
-  &:disabled {
-    color: $list-group-disabled-color;
-    pointer-events: none;
-    background-color: $list-group-disabled-bg;
-  }
-
-  // Include both here for `<a>`s and `<button>`s
-  &.active {
-    z-index: 2; // Place active items above their siblings for proper border styling
-    color: $list-group-active-color;
-    background-color: $list-group-active-bg;
-    border-color: $list-group-active-border-color;
-  }
-
   & + & {
     border-top-width: 0;
-
-    &.active {
-      margin-top: -$list-group-border-width;
-      border-top-width: $list-group-border-width;
-    }
   }
 }
 
-.list-group-heading {
-  color: $list-group-heading-color;
-  border: $list-group-heading-border-width solid
-    $list-group-heading-border-color;
+// Flush list items
+//
+// Remove borders and border-radius to keep list group items edge-to-edge. Most
+// useful within other components (e.g., cards).
+
+.list-group-flush {
+  .list-group-heading {
+    color: $list-group-heading-color;
+    border: $list-group-heading-border-width solid
+      $list-group-heading-border-color;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-top-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .list-group-item {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    @include border-radius(0);
+
+    &:first-child {
+      border-top-width: 0;
+    }
+  }
+
+  &:last-child {
+    .list-group-item:last-child {
+      border-bottom-width: 0;
+    }
+  }
 }
 
 // Horizontal
@@ -138,8 +219,19 @@
 
     .list-group-horizontal#{$infix} {
       flex-direction: row;
+      @if $enable-new-design-system == false {
+        border-top: $list-group-border-width solid $list-group-border-color;
+        border-bottom: $list-group-border-width solid $list-group-border-color;
+      }
 
       .list-group-item {
+        @if $enable-new-design-system {
+          border-bottom: none;
+        } @else {
+          border: none;
+          margin: $list-group-item-margin-x $list-group-item-margin-y;
+          padding: $list-group-item-padding-x $list-group-item-padding-y;
+        }
         &:first-child {
           @include border-bottom-left-radius($list-group-border-radius);
           @include border-top-right-radius(0);
@@ -164,45 +256,6 @@
           }
         }
       }
-    }
-  }
-}
-
-// Flush list items
-//
-// Remove borders and border-radius to keep list group items edge-to-edge. Most
-// useful within other components (e.g., cards).
-
-.list-group-flush {
-
-  .list-group-heading {
-    color: $list-group-heading-color;
-    border: $list-group-heading-border-width solid
-      $list-group-heading-border-color;
-    border-right-width: 0;
-    border-left-width: 0;
-    border-top-width: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .list-group-item {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    border-right-width: 0;
-    border-left-width: 0;
-    @include border-radius(0);
-
-    &:first-child {
-      border-top-width: 0;
-    }
-  }
-
-  &:last-child {
-    .list-group-item:last-child {
-      border-bottom-width: 0;
     }
   }
 }

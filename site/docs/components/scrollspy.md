@@ -6,6 +6,8 @@ group: components
 toc: true
 ---
 
+# Javascript is not included in FLO-SCSS
+
 ## How it works
 
 Scrollspy has a few requirements to function properly:

@@ -21,17 +21,21 @@
   border: $btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
+  min-width: from-pixels(154);
+
+  // override $enable-rounded flag
+  border-radius: $btn-border-radius;
 
   @include hover() {
     color: $body-color;
     text-decoration: none;
   }
 
-  &:focus,
-  &.focus {
-    outline: 0;
-    box-shadow: $btn-focus-box-shadow;
-  }
+  // &:focus,
+  // &.focus {
+  //   outline: 0;
+  //   box-shadow: $btn-focus-box-shadow;
+  // }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
@@ -73,16 +77,47 @@ fieldset:disabled a.btn {
   }
 }
 
+// Custom Flo Primary
+.btn-primary{
+
+  &.disabled,
+  &:disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+    background-color: $gray-400;
+    border-color: $gray-400;
+    opacity: 1;
+  }
+}
+
 // custom flo secondary button
 .btn-secondary {
   @extend .btn-outline-primary;
-  border-color: $gray-400;
+  border-color: $gray-300;
   background: $white;
-
-  @include hover() {
-    @include gradient-bg($gray-200);
+  &:hover:not([disabled]) {
+    background-color: darken($gray-100, 5%);
     color: $primary;
-    border-color: $gray-400;
+    border-color: $gray-300;
+  }
+
+  &.disabled,
+  &:disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+    border-color: $gray-300;
+    color: $gray-400;
+    opacity: 1;
+  }
+
+  &:active,
+  &.active {
+    color: $primary !important;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba(255, 20, 15, 0.2) !important;
   }
 }
 
@@ -124,10 +159,12 @@ fieldset:disabled a.btn {
 
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+  min-width: from-pixels(154);
 }
 
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  min-width: from-pixels(154);
 }
 
 

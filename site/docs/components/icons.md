@@ -5,6 +5,7 @@ description: Use SVG Icons in HTML
 group: components
 toc: true
 ---
+# NOT Updated for FLO-SCSS yet
 
 TODO:
  - explain how svgs should not have set width or height so the parent container can set its dimensions
