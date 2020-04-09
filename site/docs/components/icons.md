@@ -20,7 +20,7 @@ TODO:
 Apply `.icon`, `.icon-sm`, and `.icon-lg` to size icons
 
 {% capture example %}
-<div class="row row-cols-4 p-1">
+<div class="row row-cols-4">
   <svg class="icon-sm">
     <use xlink:href="#close_circle" />
   </svg>
@@ -40,15 +40,17 @@ Apply `.icon`, `.icon-sm`, and `.icon-lg` to size icons
 Add `.text-$color` classes to apply colors to icons and select logos
 
 {% capture example %}
-<svg class="icon">
-  <use xlink:href="#close_circle" />
-</svg>
-<svg class="icon text-primary">
-  <use xlink:href="#close_circle" />
-</svg>
-<svg class="icon text-primary bg-black">
-  <use xlink:href="#close_circle" />
-</svg>
+<div class="row row-cols-4">
+  <svg class="icon">
+    <use xlink:href="#close_circle" />
+  </svg>
+  <svg class="icon text-primary">
+    <use xlink:href="#close_circle" />
+  </svg>
+  <svg class="icon text-primary bg-black">
+    <use xlink:href="#close_circle" />
+  </svg>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 
