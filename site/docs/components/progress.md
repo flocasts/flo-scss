@@ -6,6 +6,8 @@ group: components
 toc: true
 ---
 
+# NOT Updated for FLO-SCSS yet
+
 ## How it works
 
 Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don't use [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), ensuring you can stack progress bars, animate them, and place text labels over them.

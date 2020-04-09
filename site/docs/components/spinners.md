@@ -6,6 +6,8 @@ group: components
 toc: true
 ---
 
+# NOT Updated for FLO-SCSS yet
+
 ## About
 
 Bootstrap "spinners" can be used to show the loading state in your projects. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.

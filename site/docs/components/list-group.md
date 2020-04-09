@@ -6,6 +6,8 @@ group: components
 toc: true
 ---
 
+# NOT Updated for FLO-SCSS yet
+
 ## Basic example
 
 The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.

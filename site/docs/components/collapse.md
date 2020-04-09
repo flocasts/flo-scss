@@ -5,6 +5,7 @@ description: Toggle the visibility of content across your project with a few cla
 group: components
 toc: true
 ---
+# NOT Updated for FLO-SCSS yet
 
 ## How it works
 
