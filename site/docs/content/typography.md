@@ -1,101 +1,386 @@
 ---
 layout: docs
 title: Typography
-description: Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.
+description: Uni Neue is the main font-family. Interstate Mono is the mono font-family. The system has 26 type options, 3 text-alignment modifiers, 10 color modifiers, and 5 font-family modifiers for Une Neue font-weight variants.
 group: content
 toc: true
 ---
 
-## Global settings
+## Typeramp
 
-Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{ site.baseurl }}/docs/utilities/text/).
-
-- Use a [native font stack]({{ site.baseurl }}/docs/content/reboot/#native-font-stack) that selects the best `font-family` for each OS and device.
-- For a more inclusive and accessible type scale, we assume the browser default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
-- Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
-- Set the global link color via `$link-color` and apply link underlines only on `:hover`.
-- Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
-
-These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
-
-## Headings (Huge)
-
-All HTML headings, `<h1>` through `<h6>`, are available.
+### Display
+Starting with the largest fonts in the system, displays. When you need a heading to stand out. Keep in mind these headings are responsive by default.
 
 <table>
   <thead>
     <tr>
-      <th>Heading</th>
+      <th>Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ "`.display-1`" | markdownify }}</td>
+      <td><span class="display-1">Display 1</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`.display-2`" | markdownify }}</td>
+      <td><span class="display-2">Display 2</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`.display-3`" | markdownify }}</td>
+      <td><span class="display-3">Display 3</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`.display-4`" | markdownify }}</td>
+      <td><span class="display-4">Display 4</span></td>
+    </tr>
+  </tbody>
+</table>
+
+### Headings
+All HTML headings, `<h1>` through `<h6>` and `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Example</th>
+      <th>Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ "`<h1></h1>`" | markdownify }}</td>
+      <td><h1>h1 heading</h1></td>
+      <td>{{ "`.h1`" | markdownify }}</td>
+      <td><span class="h1">.h1 heading</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`<h2></h2>`" | markdownify }}</td>
+      <td><span class="h2">h2 Heading</span></td>
+      <td>{{ "`.h2`" | markdownify }}</td>
+      <td><span class="h2"> .h2 heading</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`<h3></h3>`" | markdownify }}</td>
+      <td><span class="h3">h3 heading</span></td>
+      <td>{{ "`.h3`" | markdownify }}</td>
+      <td><span class="h3">.h3 heading</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`<h4></h4>`" | markdownify }}</td>
+      <td><span class="h4">h4 heading</span></td>
+      <td>{{ "`.h4`" | markdownify }}</td>
+      <td><span class="h4">.h4 heading</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`<h5></h5>`" | markdownify }}</td>
+      <td><h5>h5. heading</h5></td>
+      <td>{{ "`.h5`" | markdownify }}</td>
+      <td><span class="h5">.h5 heading</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`<h6></h6>`" | markdownify }}</td>
+      <td><h6>h6. heading</h6></td>
+      <td>{{ "`.h6`" | markdownify }}</td>
+      <td><span class="h6">.h6 heading</span></td>
+    </tr>
+  </tbody>
+</table>
+
+### Additional Classes
+In addition the system has specific named classes.
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> {{ "`body`" | markdownify }}</td>
+      <td><p>Body font</p></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='text-data' `" | markdownify }}</td>
+      <td><span class="text-data">Sport Data Score</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='headline' `" | markdownify }}</td>
+      <td><span class="headline">Headline</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='headline font-family-bold' `" | markdownify }}</td>
+      <td><span class="headline font-family-bold">Headline Bold</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='subhead' `" | markdownify }}</td>
+      <td><span class="subhead">Subhead</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='subhead font-family-bold' `" | markdownify }}</td>
+      <td><span class="subhead font-family-bold">Subhead bold</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='footnote' `" | markdownify }}</td>
+      <td><span class="footnote">Footnote</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='footnote font-family-bold' `" | markdownify }}</td>
+      <td><span class="footnote font-family-bold">Footnote Bold</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='overtext' `" | markdownify }}</td>
+      <td><span class="overtext">Overtext</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='overtext font-family-bold' `" | markdownify }}</td>
+      <td><span class="overtext font-family-bold">Overtext Bold</span></td>
+    </tr>
+    <tr>
+      <td> {{ "`class='caption' `" | markdownify }}</td>
+      <td><span class="caption">caption</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='mono' `" | markdownify }}</td>
+      <td><span class="mono">mono</span></td>
+    </tr>
+  </tbody>
+</table>
+
+### Button Type
+
+Font sizes for buttons. Complete font styling documented in [buttons]({{ site.baseurl }}/docs/components/buttons/).
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ "` class='btn-lg' `" | markdownify }}</td>
+      <td><span class="btn-lg">Button Large</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='btn' `" | markdownify }}</td>
+      <td><span class="btn">Button Base</span></td>
+    </tr>
+    <tr>
+      <td>{{ "`class='btn-sm' `" | markdownify }}</td>
+      <td><span class="btn-sm">Button Small</span></td>
+    </tr>
+  </tbody>
+</table>
+
+## Modifiers
+
+### Color 
+
+Here is a list of all modifier class to change text color to any brand color.
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
       <th>Example</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{ "`<h1></h1>`" | markdownify }}
+        {{ "`.color-100`" | markdownify }}
       </td>
-      <td><span class="h1">h1. Bootstrap heading</span></td>
+      <td style="background:#0C0C0C"><h1 class="color-100">Change text Color</h1></td>
     </tr>
     <tr>
       <td>
-        {{ "`<h2></h2>`" | markdownify }}
+        {{ "`.color-200`" | markdownify }}
       </td>
-      <td><span class="h2">h2. Bootstrap heading</span></td>
+      <td><h1 class="color-200">Change text Color</h1></td>
     </tr>
     <tr>
       <td>
-        {{ "`<h3></h3>`" | markdownify }}
+        {{ "`.color-300`" | markdownify }}
       </td>
-      <td><span class="h3">h3. Bootstrap heading</span></td>
+      <td><h1 class="color-300">Change text Color</h1></td>
     </tr>
     <tr>
       <td>
-        {{ "`<h4></h4>`" | markdownify }}
+        {{ "`.color-400`" | markdownify }}
       </td>
-      <td><span class="h4">h4. Bootstrap heading</span></td>
+      <td><h1 class="color-400">Change text Color</h1></td>
+    </tr>
+        <tr>
+      <td>
+        {{ "`.color-500`" | markdownify }}
+      </td>
+      <td><h1 class="color-500">Change text Color</h1></td>
     </tr>
     <tr>
       <td>
-        {{ "`<h5></h5>`" | markdownify }}
+        {{ "`.color-600`" | markdownify }}
       </td>
-      <td><span class="h5">h5. Bootstrap heading</span></td>
+      <td><h1 class="color-600">Change text Color</h1></td>
     </tr>
     <tr>
       <td>
-        {{ "`<h6></h6>`" | markdownify }}
+        {{ "`.color-700`" | markdownify }}
       </td>
-      <td><span class="h6">h6. Bootstrap heading</span></td>
+      <td><h1 class="color-700">Change text Color</h1></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.color-800`" | markdownify }}
+      </td>
+      <td><h1 class="color-800">Change text Color</h1></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.color-900`" | markdownify }}
+      </td>
+      <td><h1 class="color-900">Change text Color</h1></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.color-ignite`" | markdownify }}
+      </td>
+      <td><h1 class="color-ignite">Change text Color</h1></td>
     </tr>
   </tbody>
 </table>
 
-{% highlight html %}
+### Font-weight
 
-<h1>h1. Bootstrap heading</h1>
-<h2>h2. Bootstrap heading</h2>
-<h3>h3. Bootstrap heading</h3>
-<h4>h4. Bootstrap heading</h4>
-<h5>h5. Bootstrap heading</h5>
-<h6>h6. Bootstrap heading</h6>
-{% endhighlight %}
+Here is a list of all modifier class to change font weight for the Uni Neue web font.
 
-`.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{ "`.font-family-thin`" | markdownify }}
+      </td>
+      <td><h1 class="font-family-thin">Change font family weight</h1></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.font-family-book`" | markdownify }}
+      </td>
+      <td><h1 class="font-family-book">Change font family weight</h1></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.font-family-regular`" | markdownify }}
+      </td>
+      <td><h1 class="font-family-regular">Change font family weight</h1></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.font-family-bold`" | markdownify }}
+      </td>
+      <td><h1 class="font-family-bold">Change font family weight</h1></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.font-family-heavy`" | markdownify }}
+      </td>
+      <td><h1 class="font-family-heavy">Change font family weight</h1></td>
+    </tr>
+  </tbody>
+</table>
+
+### Alignment
+
+Easily realign text to components with text alignment classes.
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{ "`.text-left`" | markdownify }}
+      </td>
+      <td><h1 class="text-left">Text aligns to the left.</h1></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.text-center`" | markdownify }}
+      </td>
+      <td><h1 class="text-center">Text aligns to the center.</h1></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.text-right`" | markdownify }}
+      </td>
+      <td><h1 class="text-right">Text aligns to the right.</h1></td>
+    </tr>
+    <tr>
+      <td>
+        {{ "`.text-justify`" | markdownify }}
+      </td>
+      <td><h1 class="text-justify">Text aligns to the justify.</h1></td>
+    </tr>
+  </tbody>
+</table>
+
+### Text decoration
+
+Remove a text decoration with a `.text-decoration-none` class.
 
 {% capture example %}
-
-<p class="h1">h1. Bootstrap heading</p>
-<p class="h2">h2. Bootstrap heading</p>
-<p class="h3">h3. Bootstrap heading</p>
-<p class="h4">h4. Bootstrap heading</p>
-<p class="h5">h5. Bootstrap heading</p>
-<p class="h6">h6. Bootstrap heading</p>
+<a href="#" class="text-decoration-none">Non-underlined link</a>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Customizing headings
+<br/>
 
-Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.
+<!-- Bootstrap 4 -->
 
+***
+​
+## System Extras
+​
+Setting inherited from forking Bootstrap 4. These are not part of the design system, yet could be beneficial in the future.
+
+For left, right, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
+
+{% capture example %}
+
+<p class="text-left">Left aligned text on all viewport sizes.</p>
+<p class="text-center">Center aligned text on all viewport sizes.</p>
+<p class="text-right">Right aligned text on all viewport sizes.</p>
+
+<p class="text-sm-left">Left aligned text on viewports sized SM (small) or wider.</p>
+<p class="text-md-left">Left aligned text on viewports sized MD (medium) or wider.</p>
+<p class="text-lg-left">Left aligned text on viewports sized LG (large) or wider.</p>
+<p class="text-xl-left">Left aligned text on viewports sized XL (extra-large) or wider.</p>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Responsive fonts
+
+Bootstrap v4.3 ships with the option to enable responsive font sizes, allowing text to scale more naturally across device and viewport sizes. <abbr title="Responsive font sizes">RFS</abbr> can be enabled by changing the `$enable-responsive-font-sizes` Sass variable to `true` and recompiling Bootstrap.
+
+To support <abbr title="Responsive font sizes">RFS</abbr>, we use a Sass mixin to replace our normal `font-size` properties. Responsive font sizes will be compiled into `calc()` functions with a mix of `rem` and viewport units to enable the responsive scaling behavior. More about <abbr title="Responsive font sizes">RFS</abbr> and its configuration can be found on its [GitHub repository](https://github.com/twbs/rfs/tree/v8.0.4).
+
+### Custom Headings
 {% capture example %}
 
 <h3>
@@ -105,86 +390,19 @@ Use the included utility classes to recreate the small secondary heading text fr
 {% endcapture %}
 {% include example.html content=example %}
 
-## Display headings
+### Reset color
 
-Traditional heading elements are designed to work best in the meat of your page
-content. When you need a heading to stand out, consider using a **display
-heading**—a smaller, slightly more opinionated heading style. Keep in mind
-these headings are responsive by default, but it's possible to disable
-[responsive font sizes](#responsive-font-sizes).
-
-<div class="bd-example bd-example-type">
-  <table class="table">
-    <tbody>
-      <tr>
-        <td><span class="display-1">Display 1</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-2">Display 2</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-3">Display 3</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-4">Display 4</span></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-{% highlight html %}
-
-<h1 class="display-1">Display 1</h1>
-<h1 class="display-2">Display 2</h1>
-<h1 class="display-3">Display 3</h1>
-<h1 class="display-4">Display 4</h1>
-{% endhighlight %}
-
-## Other Typefaces
+Reset a text or link's color with `.text-reset`, so that it inherits the color from its parent.
 
 {% capture example %}
 
-<div class="text-data">Sport Data Score</div>
+<p class="text-muted">
+  Muted text with a <a href="#" class="text-reset">reset link</a>.
+</p>
 {% endcapture %}
 {% include example.html content=example %}
 
-{% capture example %}
-
-<div class="headline">Headline</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-
-<div class="subhead">Subhead</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-
-<div class="footnote">Footnote</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-
-<div class="caption">Caption</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-
-<div class="overtext">Overtext</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-
-<div class="mono">Mono</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-## Inline text elements
+### Inline text
 
 Styling for common inline HTML5 elements.
 
@@ -205,11 +423,57 @@ Styling for common inline HTML5 elements.
 
 While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant to highlight words or phrases without conveying additional importance while `<i>` is mostly for voice, technical terms, etc.
 
-## Text utilities
+### Wrapping and overflow
 
-Change text alignment, transform, style, weight, and color with our [text utilities]({{ site.baseurl }}/docs/utilities/text/) and [color utilities]({{ site.baseurl }}/docs/utilities/colors/).
+Wrap text with a `.text-wrap` class.
 
-## Dates and Times
+{% capture example %}
+
+<div class="badge badge-primary text-wrap" style="width: 6rem;">
+  This text should wrap.
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
+Prevent text from wrapping with a `.text-nowrap` class.
+
+{% capture example %}
+
+<div class="text-nowrap bd-highlight" style="width: 8rem;">
+  This text should overflow the parent.
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
+For longer content, you can add a `.text-truncate` class to truncate the text with an ellipsis. **Requires `display: inline-block` or `display: block`.**
+
+{% capture example %}
+
+<!-- Block level -->
+<div class="row">
+  <div class="col-2 text-truncate">
+    Praeterea iter est quasdam res quas ex communi.
+  </div>
+</div>
+
+<!-- Inline level -->
+<span class="d-inline-block text-truncate" style="max-width: 150px;">
+  Praeterea iter est quasdam res quas ex communi.
+</span>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Word break
+
+Prevent long strings of text from breaking your components' layout by using `.text-break` to set `overflow-wrap: break-word` (and `word-break: break-word` for IE & Edge compatibility).
+
+{% capture example %}
+
+<p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Dates and Times
 
 The HTML `<time>` element represents a specific period in time. It may include
 the datetime attribute to translate dates into machine-readable format,
@@ -233,7 +497,7 @@ The `<time>` element in flo-scss recieves some default styling, but can be custo
 
 [see more on HTML time element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
 
-## Abbreviations
+### Abbreviations
 
 Stylized implementation of HTML's `<abbr>` element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
 
@@ -246,7 +510,46 @@ Add `.initialism` to an abbreviation for a slightly smaller font-size.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Blockquotes
+### Monospace
+
+Change a selection to our monospace font stack with `.text-monospace`.
+
+{% capture example %}
+
+<p class="text-monospace">This is in monospace</p>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Text transform
+
+Transform text in components with text capitalization classes.
+
+{% capture example %}
+
+<p class="text-lowercase">Lowercased text.</p>
+<p class="text-uppercase">Uppercased text.</p>
+<p class="text-capitalize">CapiTaliZed text.</p>
+{% endcapture %}
+{% include example.html content=example %}
+
+Note how `.text-capitalize` only changes the first letter of each word, leaving the case of any other letters unaffected.
+
+### Font weight and italics
+
+Quickly change the weight (boldness) of text or italicize text.
+
+{% capture example %}
+
+<p class="font-weight-bold">Bold text.</p>
+<p class="font-weight-bolder">Bolder weight text (relative to the parent element).</p>
+<p class="font-weight-normal">Normal weight text.</p>
+<p class="font-weight-light">Light weight text.</p>
+<p class="font-weight-lighter">Lighter weight text (relative to the parent element).</p>
+<p class="font-italic">Italic text.</p>
+{% endcapture %}
+{% include example.html content=example %}
+
+### Blockquotes
 
 For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.
 
@@ -258,7 +561,7 @@ For quoting blocks of content from another source within your document. Wrap `<b
 {% endcapture %}
 {% include example.html content=example %}
 
-### Naming a source
+#### Naming a source
 
 Add a `<footer class="blockquote-footer">` for identifying the source. Wrap the name of the source work in `<cite>`.
 
@@ -271,31 +574,9 @@ Add a `<footer class="blockquote-footer">` for identifying the source. Wrap the 
 {% endcapture %}
 {% include example.html content=example %}
 
-### Alignment
+### Lists
 
-Use text utilities as needed to change the alignment of your blockquote.
-
-{% capture example %}
-
-<blockquote class="blockquote text-center">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture example %}
-
-<blockquote class="blockquote text-right">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
-{% endcapture %}
-{% include example.html content=example %}
-
-## Lists
-
-### Unstyled
+#### Unstyled
 
 Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
 
@@ -321,7 +602,7 @@ Remove the default `list-style` and left margin on list items (immediate childre
 {% endcapture %}
 {% include example.html content=example %}
 
-### Inline
+#### Inline
 
 Remove a list's bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
 
@@ -335,7 +616,7 @@ Remove a list's bullets and apply some light `margin` with a combination of two 
 {% endcapture %}
 {% include example.html content=example %}
 
-### Description list alignment
+#### Description list alignment
 
 Align terms and descriptions horizontally by using our grid system's predefined classes (or semantic mixins). For longer terms, you can optionally add a `.text-truncate` class to truncate the text with an ellipsis.
 
@@ -368,8 +649,3 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 {% endcapture %}
 {% include example.html content=example %}
 
-## Responsive font sizes
-
-Bootstrap v4.3 ships with the option to enable responsive font sizes, allowing text to scale more naturally across device and viewport sizes. <abbr title="Responsive font sizes">RFS</abbr> can be enabled by changing the `$enable-responsive-font-sizes` Sass variable to `true` and recompiling Bootstrap.
-
-To support <abbr title="Responsive font sizes">RFS</abbr>, we use a Sass mixin to replace our normal `font-size` properties. Responsive font sizes will be compiled into `calc()` functions with a mix of `rem` and viewport units to enable the responsive scaling behavior. More about <abbr title="Responsive font sizes">RFS</abbr> and its configuration can be found on its [GitHub repository](https://github.com/twbs/rfs/tree/v8.0.4).

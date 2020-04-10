@@ -1,3 +1,29 @@
+//Variables adn Mixins
+
+$btn-group-focus: 0 0 0 $btn-focus-width rgba(255, 20, 15, 0.2) !important;
+
+@mixin btn-outline-secondary-active{
+  color: $gray-100;
+  background-color: $primary;
+  border: solid $btn-border-width $primary;
+}
+
+@mixin btn-group-inactive {
+  color: $gray-500;
+  border-color: $gray-300;
+  background-color: $gray-100;
+}
+
+@mixin button-group-border-right-radius($radius) {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin button-group-border-left-radius($radius) {
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
 // stylelint-disable selector-no-qualifying-type
 
 // Make the div behave like a button
@@ -10,6 +36,11 @@
   > .btn {
     position: relative;
     flex: 1 1 auto;
+    min-width: 0;
+
+    @include media-breakpoint-down(sm){
+      @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+    }
 
     // Bring the hover, focused, and "active" buttons to the front to overlay
     // the borders properly
@@ -21,6 +52,39 @@
     &.active {
       z-index: 1;
     }
+  }
+
+  .btn-outline-secondary{
+    @include btn-group-inactive();
+
+    &:hover,
+    &.hover,
+    &:hover:not([disabled]){
+      @include btn-outline-secondary-active;
+    }
+    &:active,
+    &.active {
+    @include btn-outline-secondary-active;
+    pointer-events: none;
+
+      &:focus,
+      &.focus,
+      &:focus:not([disabled]){
+        color: $gray-100;
+        background-color: $primary;
+        box-shadow: $btn-group-focus;
+        outline: none;
+      }
+    }
+
+    &:focus,
+    &.focus,
+    &:focus:not([disabled]) {
+      @include btn-group-inactive();
+      box-shadow: $btn-group-focus;
+      outline: none;
+    }
+
   }
 }
 
@@ -38,19 +102,19 @@
 .btn-group {
   // Prevent double borders when buttons are next to each other
   > .btn:not(:first-child),
-  > .btn-group:not(:first-child) {
+  > .btn-group:not(:first-child){
     margin-left: -$btn-border-width;
   }
 
   // Reset rounded corners
   > .btn:not(:last-child):not(.dropdown-toggle),
   > .btn-group:not(:last-child) > .btn {
-    @include border-right-radius(0);
+    @include button-group-border-right-radius(0);
   }
 
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) > .btn {
-    @include border-left-radius(0);
+    @include button-group-border-left-radius(0);
   }
 }
 
@@ -126,12 +190,12 @@
   // Reset rounded corners
   > .btn:not(:last-child):not(.dropdown-toggle),
   > .btn-group:not(:last-child) > .btn {
-    @include border-bottom-radius(0);
+    @include button-border-bottom-radius(0);
   }
 
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) > .btn {
-    @include border-top-radius(0);
+    @include button-border-top-radius(0);
   }
 }
 

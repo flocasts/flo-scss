@@ -5,6 +5,7 @@ description: Use SVG Icons in HTML
 group: components
 toc: true
 ---
+# NOT Updated for FLO-SCSS yet
 
 ## Icons
 
