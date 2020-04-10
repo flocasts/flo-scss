@@ -9,6 +9,8 @@ redirect_from:
 toc: true
 ---
 
+# NOT Updated for FLO-SCSS yet
+
 More inspiration [here](https://css-tricks.com/the-shapes-of-css/)
 
 ## Examples

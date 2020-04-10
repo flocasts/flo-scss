@@ -1,4 +1,4 @@
-current_version: 0.4.0
+current_version: 0.6.0
 markdown: kramdown
 highlighter: rouge
 kramdown:
@@ -9,7 +9,7 @@ destination: ./docs
 host: flo-scss.flo.center
 port: 80
 baseurl: ''
-url: 'https://flo-scss.flo.center'
+url: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
 encoding: UTF-8
 exclude:
   - docs/assets/scss/
@@ -24,28 +24,28 @@ authors: 'FloSports Engineering, Mark Otto, Jacob Thornton, and Bootstrap contri
 social_image_path: /docs/assets/brand/bootstrap-social.png
 social_logo_path: /docs/assets/brand/bootstrap-social-logo.png
 current_ruby_version: 0.0.1
-repo: 'https://github.com/twbs/bootstrap'
-slack: 'https://bootstrap-slack.herokuapp.com'
-opencollective: 'https://opencollective.com/bootstrap'
-blog: 'https://blog.getbootstrap.com'
-expo: 'https://expo.getbootstrap.com'
-themes: 'https://themes.getbootstrap.com'
-icons: 'https://icons.getbootstrap.com'
+repo: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
+slack: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
+opencollective: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
+blog: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
+expo: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
+themes: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
+icons: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
 download:
-  source: 'https://github.com/twbs/bootstrap/archive/v4.4.1.zip'
+  source: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
   dist: >-
     https://github.com/twbs/bootstrap/releases/download/v4.4.1/bootstrap-4.4.1-dist.zip
 cdn:
-  css: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'
+  css: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
   css_hash: sha384-hnvsmW4CEqIE9xpwdmvw+oyi2zalIdkqZJKT8ovyObj2fiPNSLt7xdsda4JGUfSf
-  js: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'
+  js: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
   js_hash: sha384-1RkA5wjfeG5u+6ycZ90q+PMlafLBaMCHvGk6PlVrQmIuTvpdA9qupxwbnPf9QbHH
   js_bundle: >-
     https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js
   js_bundle_hash: sha384-gEp0IQktG6BLXHMpPT1pxMSC8EKUA159uPI9c/AmIhedq/EvAEfBroQ5tsSOS1/A
-  jquery: 'https://code.jquery.com/jquery-3.4.1.slim.min.js'
+  jquery: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
   jquery_hash: sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n
-  popper: 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'
+  popper: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
   popper_hash: sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN
 toc:
   min_level: 2

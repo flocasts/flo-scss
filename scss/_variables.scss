@@ -4,6 +4,27 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-new-design-system: false !default;
+
+$enable-caret: false !default;
+$enable-rounded: $enable-new-design-system !default;
+$enable-rounded-buttons: $enable-new-design-system !default;
+$enable-shadows: false !default;
+$enable-gradients: true !default;
+$enable-transitions: true !default;
+$enable-prefers-reduced-motion-media-query: true !default;
+$enable-hover-media-query: false !default; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes: true !default;
+$enable-pointer-cursor-for-buttons: true !default;
+$enable-print-styles: true !default;
+$enable-responsive-font-sizes: true !default;
+$enable-validation-icons: true !default;
+$enable-deprecation-messages: true !default;
+
 // Color system
 
 $white: #fff !default;
@@ -40,11 +61,14 @@ $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
 $red: #ff140f !default;
-$orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
-$green: #28a745 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
+
+// Flo Brand Utility Colors
+$utility-success: #00b338;
+$utility-warning: #ff621c;
+$utility-danger: #b31f1d;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -54,10 +78,10 @@ $colors: map-merge(
     "indigo": $indigo,
     "purple": $purple,
     "pink": $pink,
-    "red": $red,
-    "orange": $orange,
+    "red": $utility-danger,
+    "orange": $utility-warning,
     "yellow": $yellow,
-    "green": $green,
+    "green": $utility-success,
     "teal": $teal,
     "cyan": $cyan,
     "white": $white,
@@ -68,11 +92,11 @@ $colors: map-merge(
 );
 
 $primary: $red !default;
-$secondary: $gray-600 !default;
-$success: $green !default;
+$secondary: $white !default;
+$success: $utility-success !default;
 $info: $cyan !default;
-$warning: $yellow !default;
-$danger: $red !default;
+$warning: $utility-warning !default;
+$danger: $utility-danger !default;
 $light: $gray-200 !default;
 $dark: $gray-800 !default;
 $tint: rgba(0, 0, 0, 0.5) !default;
@@ -94,10 +118,10 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
-$amex: #006FCF;
+$amex: #006fcf;
 $android: #3ddc84;
 $apple: #231f20;
-$discover: #FF6602;
+$discover: #ff6602;
 $mastercard: #000;
 $visa: #192061;
 $fire-tv: #fc4c02;
@@ -149,24 +173,6 @@ $escaped-characters: (
   ("(", "%28"),
   (")", "%29")
 ) !default;
-
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-
-$enable-caret: false !default;
-$enable-rounded: false !default;
-$enable-shadows: false !default;
-$enable-gradients: true !default;
-$enable-transitions: true !default;
-$enable-prefers-reduced-motion-media-query: true !default;
-$enable-hover-media-query: false !default; // Deprecated, no longer affects any compiled CSS
-$enable-grid-classes: true !default;
-$enable-pointer-cursor-for-buttons: true !default;
-$enable-print-styles: true !default;
-$enable-responsive-font-sizes: true !default;
-$enable-validation-icons: true !default;
-$enable-deprecation-messages: true !default;
 
 // Spacing
 //
@@ -322,13 +328,17 @@ $font-family-sans-serif: "Uni-Neue-Regular", "Open Sans", "Helvetica Neue",
 $font-family-monospace: "InterstateMono", SFMono-Regular, Menlo, Monaco,
   Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
+$font-family-thin: "Uni-Neue-Thin", "Open Sans", "Helvetica Neue", Helvetica,
+Arial, sans-serif !default;
+$font-family-book: "Uni-Neue-Book", "Open Sans", "Helvetica Neue", Helvetica,
+Arial, sans-serif !default;
 $font-family-bold: "Uni-Neue-Bold", "Open Sans", "Helvetica Neue", Helvetica,
   Arial, sans-serif !default;
 $font-family-heavy: "Uni-Neue-Heavy", "Open Sans", "Helvetica Neue", Helvetica,
   Arial, sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$typefaces: "h1", "h2", "h3", "display-1", "display-2", "display-3", "display-4",
+$typefaces: "display-1", "display-2", "display-3", "display-4", "h1", "h2", "h3", "h4", "h5", "h6",
   "body", "text-data", "headline", "subhead", "footnote", "caption", "overtext",
   "mono", "small", "bold", "heavy" !default;
 
@@ -343,7 +353,7 @@ $font-weight-bold: 700 !default;
 $font-weight-bolder: 900 !default;
 $font-weight-base: $font-weight-normal !default;
 
-$line-height-base: 1.5 !default;
+$line-height-base: 1.7 !default;
 $line-height-lg: 2 !default;
 $line-height-sm: 1.25 !default;
 
@@ -354,16 +364,16 @@ $font-families: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $font-families: map-merge(
   (
+    "display-1": $font-family-heavy,
+    "display-2": $font-family-heavy,
+    "display-3": $font-family-heavy,
+    "display-4": $font-family-heavy,
     "h1": $font-family-heavy,
     "h2": $font-family-heavy,
-    "h3": $font-family-heavy,
+    "h3": $font-family-bold,
     "h4": $font-family-heavy,
     "h5": $font-family-heavy,
     "h6": $font-family-heavy,
-    "display-1": $font-family-heavy,
-    "display-2": $font-family-heavy,
-    "display-3": $font-family-bold,
-    "display-4": $font-family-heavy,
     "text-data": $font-family-heavy,
     "headline": $font-family-base,
     "subhead": $font-family-base,
@@ -383,17 +393,17 @@ $font-weights: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $font-weights: map-merge(
   (
-    "h1": $font-weight-bolder,
-    "h2": $font-weight-bolder,
-    "h3": $font-weight-bolder,
-    "h4": $font-weight-bold,
-    "h5": $font-weight-bold,
-    "h6": $font-weight-bold,
-    "display-1": $font-weight-bolder,
-    "display-2": $font-weight-bolder,
-    "display-3": $font-weight-bold,
-    "display-4": $font-weight-bolder,
-    "text-data": $font-weight-bolder,
+    "display-1": $font-weight-normal,
+    "display-2": $font-weight-normal,
+    "display-3": $font-weight-normal,
+    "display-4": $font-weight-normal,
+    "h1": $font-weight-normal,
+    "h2": $font-weight-normal,
+    "h3": $font-weight-normal,
+    "h4": $font-weight-normal,
+    "h5": $font-weight-normal,
+    "h6": $font-weight-normal,
+    "text-data": $font-weight-normal,
     "headline": $font-weight-normal,
     "subhead": $font-weight-normal,
     "footnote": $font-weight-normal,
@@ -408,17 +418,17 @@ $font-weights: map-merge(
   $font-weights
 );
 
-$h1-font-size: from-pixels(56) !default;
-$h2-font-size: from-pixels(44) !default;
-$h3-font-size: from-pixels(36) !default;
-$h4-font-size: from-pixels(16) !default;
-$h5-font-size: from-pixels(14) !default;
-$h6-font-size: from-pixels(13) !default;
+$display-1-font-size: from-pixels(68) !default;
+$display-2-font-size: from-pixels(56) !default;
+$display-3-font-size: from-pixels(44) !default;
+$display-4-font-size: from-pixels(36) !default;
 
-$display-1-font-size: from-pixels(32) !default;
-$display-2-font-size: from-pixels(24) !default;
-$display-3-font-size: from-pixels(20) !default;
-$display-4-font-size: from-pixels(18) !default;
+$h1-font-size: from-pixels(32) !default;
+$h2-font-size: from-pixels(24) !default;
+$h3-font-size: from-pixels(20) !default;
+$h4-font-size: from-pixels(18) !default;
+$h5-font-size: from-pixels(16) !default;
+$h6-font-size: from-pixels(14) !default;
 
 $text-data-font-size: from-pixels(16) !default;
 $headline-font-size: from-pixels(16) !default;
@@ -434,16 +444,16 @@ $font-sizes: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $font-sizes: map-merge(
   (
+    "display-1": $display-1-font-size,
+    "display-2": $display-2-font-size,
+    "display-3": $display-3-font-size,
+    "display-4": $display-4-font-size,
     "h1": $h1-font-size,
     "h2": $h2-font-size,
     "h3": $h3-font-size,
     "h4": $h4-font-size,
     "h5": $h5-font-size,
     "h6": $h6-font-size,
-    "display-1": $display-1-font-size,
-    "display-2": $display-2-font-size,
-    "display-3": $display-3-font-size,
-    "display-4": $display-4-font-size,
     "text-data": $text-data-font-size,
     "headline": $headline-font-size,
     "subhead": $subhead-font-size,
@@ -458,17 +468,17 @@ $font-sizes: map-merge(
   $font-sizes
 );
 
-$h1-line-height: 72 / 56 !default;
-$h2-line-height: 56 / 44 !default;
-$h3-line-height: 48 / 36 !default;
-$h4-line-height: 40 / 32 !default;
-$h5-line-height: 32 / 24 !default;
-$h6-line-height: 28 / 20 !default;
+$display-1-line-height: 84 / 68 !default;
+$display-2-line-height: 72 / 56 !default;
+$display-3-line-height: 56 / 44 !default;
+$display-4-line-height: 48 / 36 !default;
 
-$display-1-line-height: 40 / 32 !default;
-$display-2-line-height: 32 / 24 !default;
-$display-3-line-height: 28 / 20 !default;
-$display-4-line-height: 28 / 18 !default;
+$h1-line-height: 40 / 32 !default;
+$h2-line-height: 32 / 24 !default;
+$h3-line-height: 28 / 20 !default;
+$h4-line-height: 24 / 18 !default;
+$h5-line-height: 24 / 16 !default;
+$h6-line-height: 20 / 14 !default;
 
 $text-data-line-height: 24 / 16 !default;
 $headline-line-height: 24 / 16 !default;
@@ -484,16 +494,16 @@ $line-heights: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $line-heights: map-merge(
   (
+    "display-1": $display-1-line-height,
+    "display-2": $display-2-line-height,
+    "display-3": $display-3-line-height,
+    "display-4": $display-4-line-height,
     "h1": $h1-line-height,
     "h2": $h2-line-height,
     "h3": $h3-line-height,
     "h4": $h4-line-height,
     "h5": $h5-line-height,
     "h6": $h6-line-height,
-    "display-1": $display-1-line-height,
-    "display-2": $display-2-line-height,
-    "display-3": $display-3-line-height,
-    "display-4": $display-4-line-height,
     "text-data": $text-data-line-height,
     "headline": $headline-line-height,
     "subhead": $subhead-line-height,
@@ -511,16 +521,16 @@ $text-transforms: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $text-transforms: map-merge(
   (
+    "display-1": none,
+    "display-2": none,
+    "display-3": none,
+    "display-4": none,
     "h1": none,
     "h2": none,
     "h3": none,
     "h4": none,
     "h5": none,
     "h6": none,
-    "display-1": none,
-    "display-2": none,
-    "display-3": none,
-    "display-4": none,
     "text-data": none,
     "headline": none,
     "subhead": none,
@@ -536,41 +546,41 @@ $text-transforms: map-merge(
 );
 
 $letter-spacing-base: 0.00588rem !default;
-$h1-letter-spacing: 0.35 / 56 !default;
-$h2-letter-spacing: 0.28 / 44 !default;
-$h3-letter-spacing: 0.23 / 36 !default;
-$display-1-letter-spacing: 0.2 / 32 !default;
-$display-2-letter-spacing: 0.2 / 24 !default;
-$display-3-letter-spacing: 0.1 / 20 !default;
-$display-4-letter-spacing: 0.1 / 18 !default;
+$display-1-letter-spacing: 0.025rem !default;
+$display-2-letter-spacing: 0.021rem !default;
+$display-3-letter-spacing: 0.016rem !default;
+$display-4-letter-spacing: 0.014rem !default;
+$h1-letter-spacing: 0.012rem !default;
+$h2-letter-spacing: 0.012rem !default;
+$h3-letter-spacing: 0.006rem !default;
+$h4-letter-spacing: 0.021rem !default;
+$h5-letter-spacing: 0rem !default;
+$h6-letter-spacing: 0.006rem !default;
 
-$text-data-letter-spacing: 0 / 16 !default;
-$headline-letter-spacing: 0 / 16 !default;
-$subhead-letter-spacing: 0.1 / 14 !default;
-$footnote-letter-spacing: 0.2 / 13 !default;
-$caption-letter-spacing: 0.1 / 12 !default;
-$overtext-letter-spacing: 1 / 12 !default;
-$mono-letter-spacing: 0.1 / 13 !default;
-$link-letter-spacing: 0.1 / 13 !default;
-$time-letter-spacing: 0.8 / 11 !default;
-$h4-letter-spacing: 40 / 32 !default;
-$h5-letter-spacing: 32 / 24 !default;
-$h6-letter-spacing: 28 / 20 !default;
+$text-data-letter-spacing: 0rem !default;
+$headline-letter-spacing: 0rem !default;
+$subhead-letter-spacing: 0.006rem !default;
+$footnote-letter-spacing: 0.012rem !default;
+$caption-letter-spacing: 0.006rem !default;
+$overtext-letter-spacing: 0.059rem !default;
+$mono-letter-spacing: 0.006rem !default;
+$link-letter-spacing: 0.006rem !default;
+$time-letter-spacing: 0.047rem !default;
 
 $letter-spacings: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $letter-spacings: map-merge(
   (
+    "display-1": $display-1-letter-spacing,
+    "display-2": $display-2-letter-spacing,
+    "display-3": $display-3-letter-spacing,
+    "display-4": $display-4-letter-spacing,
     "h1": $h1-letter-spacing,
     "h2": $h2-letter-spacing,
     "h3": $h3-letter-spacing,
     "h4": $h4-letter-spacing,
     "h5": $h5-letter-spacing,
     "h6": $h6-letter-spacing,
-    "display-1": $display-1-letter-spacing,
-    "display-2": $display-2-letter-spacing,
-    "display-3": $display-3-letter-spacing,
-    "display-4": $display-4-letter-spacing,
     "text-data": $text-data-letter-spacing,
     "headline": $headline-letter-spacing,
     "subhead": $subhead-letter-spacing,
@@ -592,7 +602,7 @@ $blockquote-small-color: $gray-600 !default;
 $blockquote-small-font-size: $small-font-size !default;
 $blockquote-font-size: $font-size-base * 1.25 !default;
 
-$hr-border-color: rgba($black, 0.1) !default;
+$hr-border-color: $border-color !default;
 $hr-border-width: $border-width !default;
 
 $mark-padding: 0.2em !default;
@@ -646,26 +656,26 @@ $table-border-level: -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 $input-btn-font-family: null !default;
-$input-btn-letter-spacing: normal !default;
+$input-btn-letter-spacing: from-pixels(0.1) !default;
 $input-btn-text-transform: capitalize !default;
-$input-btn-focus-width: 0.2rem !default;
-$input-btn-focus-color: rgba($component-active-bg, 0.25) !default;
+$input-btn-focus-width: from-pixels(2.8) !default;
+$input-btn-focus-color: rgba($component-active-bg, 0.3) !default;
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-font-size-pixels: 16 !default;
-$input-btn-padding-y: 1em * 10 / $input-btn-font-size-pixels !default;
-$input-btn-padding-x: 1em * 30 / $input-btn-font-size-pixels !default;
+$input-btn-font-size-pixels: 14 !default;
+$input-btn-padding-y: 1rem * 9 / $input-btn-font-size-pixels !default;
+$input-btn-padding-x: from-pixels(24) !default;
 $input-btn-font-size: from-pixels($input-btn-font-size-pixels) !default;
-$input-btn-line-height: 1.25 !default;
+$input-btn-line-height: 1.2 !default;
 
-$input-btn-padding-y-sm: 1em * 6 / $input-btn-font-size-pixels !default;
-$input-btn-padding-x-sm: 1em * 30 / $input-btn-font-size-pixels !default;
+$input-btn-padding-y-sm: 1rem * 5 / $input-btn-font-size-pixels !default;
+$input-btn-padding-x-sm: from-pixels(24) !default;
 $input-btn-font-size-sm: $input-btn-font-size !default;
 $input-btn-line-height-sm: $line-height-sm !default;
 
-$input-btn-padding-y-lg: 1em * 12 / $input-btn-font-size-pixels !default;
-$input-btn-padding-x-lg: 1em * 30 / $input-btn-font-size-pixels !default;
-$input-btn-font-size-lg: $input-btn-font-size !default;
+$input-btn-padding-y-lg: 1rem * 8 / $input-btn-font-size-pixels !default;
+$input-btn-padding-x-lg: from-pixels(24) !default;
+$input-btn-font-size-lg: from-pixels(15) !default;
 $input-btn-line-height-lg: $line-height-lg !default;
 
 $input-btn-border-width: $border-width !default;
@@ -674,28 +684,28 @@ $input-btn-border-width: $border-width !default;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-font-size: $input-btn-font-size !default;
-$btn-padding-y: $input-btn-padding-y !default;
-$btn-padding-x: $input-btn-padding-x !default;
+$btn-font-size: from-pixels(14) !default; 
+$btn-padding-y: from-pixels(10) !default; 
+$btn-padding-x: from-pixels(24) !default;
 $btn-font-family: $input-btn-font-family !default;
-$btn-line-height: $input-btn-line-height !default;
+$btn-line-height: 20 / 14 !default;
 $btn-letter-spacing: $input-btn-letter-spacing !default;
 $btn-text-transform: $input-btn-text-transform !default;
 $btn-white-space: null !default; // Set to `nowrap` to prevent text wrapping
 
-$btn-padding-y-sm: $input-btn-padding-y-sm !default;
-$btn-padding-x-sm: $input-btn-padding-x-sm !default;
-$btn-font-size-sm: $input-btn-font-size-sm !default;
-$btn-line-height-sm: $input-btn-line-height-sm !default;
+$btn-padding-y-sm: from-pixels(6) !default;
+$btn-padding-x-sm: $btn-padding-x !default;
+$btn-font-size-sm: $btn-font-size !default;
+$btn-line-height-sm: $btn-line-height !default;
 
-$btn-padding-y-lg: $input-btn-padding-y-lg !default;
-$btn-padding-x-lg: $input-btn-padding-x-lg !default;
-$btn-font-size-lg: $input-btn-font-size-lg !default;
-$btn-line-height-lg: $input-btn-line-height-lg !default;
+$btn-padding-y-lg: from-pixels(16)!default;
+$btn-padding-x-lg: $btn-padding-x !default;
+$btn-font-size-lg: from-pixels(15) !default;
+$btn-line-height-lg: 20 / 15 !default;
 
 $btn-border-width: $input-btn-border-width !default;
 
-$btn-font-weight: $font-weight-bolder !default;
+$btn-font-weight: $font-weight-normal !default;
 $btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075) !default;
 $btn-focus-width: $input-btn-focus-width !default;
 $btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
@@ -707,9 +717,9 @@ $btn-link-disabled-color: $gray-600 !default;
 $btn-block-spacing-y: 0.5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius: $border-radius !default;
-$btn-border-radius-lg: $border-radius-lg !default;
-$btn-border-radius-sm: $border-radius-sm !default;
+$btn-border-radius: from-pixels(5) !default;
+$btn-border-radius-lg: from-pixels(5) !default;
+$btn-border-radius-sm: from-pixels(5) !default;
 
 $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
@@ -719,10 +729,10 @@ $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 $chip-padding-x: 0.75rem !default;
-$chip-padding-y: .4em !default;
+$chip-padding-y: .4rem !default;
 // $chip-height: 2.75em !default;
 $chip-white-space: null !default; // Set to `nowrap` to prevent text wrapping
-$chip-font-size: $input-btn-font-size !default;
+$chip-font-size: 	$input-btn-font-size !default;
 
 $chip-padding-y-sm: $input-btn-padding-y-sm !default;
 $chip-padding-x-sm: $input-btn-padding-x-sm !default;
@@ -734,7 +744,7 @@ $chip-padding-x-lg: $input-btn-padding-x-lg !default;
 $chip-font-size-lg: $input-btn-font-size-lg !default;
 $chip-line-height-lg: $input-btn-line-height-lg !default;
 
-$chip-border-width: $input-btn-border-width !default;
+$chip-border-width: 0 !default;
 
 $chip-box-shadow: inset 0 1px 0 rgba($white, 0.15),
   0 1px 1px rgba($black, 0.075) !default;
@@ -742,25 +752,26 @@ $chip-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $chip-disabled-opacity: 0.65 !default;
 $chip-active-box-shadow: inset 0 3px 5px rgba($black, 0.125) !default;
 
-$chip-link-disabled-color: $gray-600 !default;
-
 $chip-block-spacing-y: 0.5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$chip-border-radius: 1rem !default;
+$chip-border-radius: 0.9375rem !default;
 $chip-border-radius-lg: $chip-border-radius * 2 !default;
 $chip-border-radius-sm: $chip-border-radius !default;
 
 $chip-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
 
-$chip-close-icon-color: $gray-400;
+$chip-close-icon-color: $gray-500;
+$chip-close-icon-color-hover: $gray-600;
 $chip-close-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$chip-close-icon-color}' viewBox='0 0 500 500'><path d='M250,0C111.929,0,0,111.929,0,250S111.929,500,250,500,500,388.071,500,250,388.071,0,250,0ZM355.342,339.208l-16.134,16.134a7.092,7.092,0,0,1-10.029,0L250,276.163l-79.179,79.179a7.092,7.092,0,0,1-10.029,0l-16.134-16.134a7.092,7.092,0,0,1,0-10.029L223.837,250l-79.179-79.179a7.092,7.092,0,0,1,0-10.029l16.134-16.134a7.092,7.092,0,0,1,10.029,0L250,223.837l79.179-79.179a7.092,7.092,0,0,1,10.029,0l16.134,16.134a7.092,7.092,0,0,1,0,10.029L276.163,250l79.179,79.179A7.092,7.092,0,0,1,355.342,339.208Z'/></svg>") !default;
-$chip-close-icon-buffer-padding: 2em !default;
+$chip-close-icon-hover: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$chip-close-icon-color-hover}' viewBox='0 0 500 500'><path d='M250,0C111.929,0,0,111.929,0,250S111.929,500,250,500,500,388.071,500,250,388.071,0,250,0ZM355.342,339.208l-16.134,16.134a7.092,7.092,0,0,1-10.029,0L250,276.163l-79.179,79.179a7.092,7.092,0,0,1-10.029,0l-16.134-16.134a7.092,7.092,0,0,1,0-10.029L223.837,250l-79.179-79.179a7.092,7.092,0,0,1,0-10.029l16.134-16.134a7.092,7.092,0,0,1,10.029,0L250,223.837l79.179-79.179a7.092,7.092,0,0,1,10.029,0l16.134,16.134a7.092,7.092,0,0,1,0,10.029L276.163,250l79.179,79.179A7.092,7.092,0,0,1,355.342,339.208Z'/></svg>") !default;
+$chip-close-icon-buffer-padding-right: 2.225em !default;;
 $chip-close-icon-height: 1.3em !default;
 $chip-close-icon-width: 1.6em !default;
 $chip-close-icon-position-y: 50% !default;
 $chip-close-icon-translate-y: -50% !default;
+$chip-close-icon-right: .2em !default;
 
 // Forms
 
@@ -916,7 +927,7 @@ $custom-select-padding-x: $input-padding-x !default;
 $custom-select-font-family: $input-font-family !default;
 $custom-select-font-size: $input-font-size !default;
 $custom-select-height: $input-height !default;
-$custom-select-indicator-padding: 1em !default; // Extra padding to account for the presence of the background-image based indicator
+$custom-select-indicator-padding: 1rem !default; // Extra padding to account for the presence of the background-image based indicator
 $custom-select-font-weight: $input-font-weight !default;
 $custom-select-line-height: $input-line-height !default;
 $custom-select-color: $input-color !default;
@@ -1069,19 +1080,19 @@ $nav-link-padding-y: 0.5rem !default;
 $nav-link-padding-x: 1rem !default;
 $nav-link-disabled-color: $gray-600 !default;
 
-$nav-tabs-border-color: $gray-300 !default;
+$nav-tabs-border-color: $border-color !default;
 $nav-tabs-border-width: $border-width !default;
 $nav-tabs-border-radius: $border-radius !default;
-$nav-tabs-link-hover-border-color: $gray-200 $gray-200 $nav-tabs-border-color !default;
-$nav-tabs-link-active-color: $gray-700 !default;
+$nav-tabs-link-hover-border-color: $border-color $border-color $nav-tabs-border-color !default;
+$nav-tabs-link-active-color: $gray-500 !default;
 $nav-tabs-link-active-bg: $body-bg !default;
-$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
+$nav-tabs-link-active-border-color: $border-color $border-color $nav-tabs-link-active-bg !default;
 
 $nav-pills-border-radius: $border-radius !default;
 $nav-pills-link-active-color: $component-active-color !default;
 $nav-pills-link-active-bg: $component-active-bg !default;
 
-$nav-divider-color: $gray-200 !default;
+$nav-divider-color: $border-color !default;
 $nav-divider-margin-y: $spacer / 2 !default;
 
 // Navbar
@@ -1169,14 +1180,14 @@ $pagination-line-height: 1.25 !default;
 $pagination-color: $link-color !default;
 $pagination-bg: $white !default;
 $pagination-border-width: $border-width !default;
-$pagination-border-color: $gray-300 !default;
+$pagination-border-color: $border-color !default;
 
 $pagination-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $pagination-focus-outline: 0 !default;
 
 $pagination-hover-color: $link-hover-color !default;
 $pagination-hover-bg: $gray-200 !default;
-$pagination-hover-border-color: $gray-300 !default;
+$pagination-hover-border-color: $border-color !default;
 
 $pagination-active-color: $component-active-color !default;
 $pagination-active-bg: $component-active-bg !default;
@@ -1184,7 +1195,7 @@ $pagination-active-border-color: $pagination-active-bg !default;
 
 $pagination-disabled-color: $gray-600 !default;
 $pagination-disabled-bg: $white !default;
-$pagination-disabled-border-color: $gray-300 !default;
+$pagination-disabled-border-color: $border-color !default;
 
 // Jumbotron
 
@@ -1295,7 +1306,7 @@ $badge-font-weight: $font-weight-bold !default;
 $badge-padding-y: 0.25em !default;
 $badge-padding-x: 0.4em !default;
 $badge-margin-x: 0.4em !default;
-$badge-border-radius: $border-radius !default;
+$badge-border-radius: 0 !default;
 
 $badge-transition: $btn-transition !default;
 $badge-focus-width: $input-btn-focus-width !default;
@@ -1381,16 +1392,21 @@ $progress-bar-transition: width 0.6s ease !default;
 
 $list-group-color: null !default;
 $list-group-bg: $white !default;
-$list-group-border-color: rgba($black, 0.125) !default;
+$list-group-border-color: if($enable-new-design-system, $gray-300, rgba($black, 0.125)) !default;
 $list-group-border-width: $border-width !default;
 $list-group-border-radius: $border-radius !default;
 
-$list-group-item-padding-y: 0.75rem !default;
-$list-group-item-padding-x: 1.25rem !default;
+$list-group-item-padding-y: if($enable-new-design-system, 0.75rem, 0.75rem) !default;
+$list-group-item-padding-x: if($enable-new-design-system, 0, 1.25rem) !default;
+
+$list-group-item-margin-y: if($enable-new-design-system, 0, 0) !default;
+$list-group-item-margin-x: if($enable-new-design-system, 1.25rem, 0) !default;
 
 $list-group-heading-padding-y: $list-group-item-padding-y !default;
 $list-group-heading-padding-x: $list-group-item-padding-x !default;
 $list-group-heading-color: $black !default;
+$list-group-heading-bg: if($enable-new-design-system, $list-group-border-color, $list-group-bg) !default;
+$list-group-heading-border-color: if($enable-new-design-system, $list-group-border-color, $black) !default;
 $list-group-heading-border-color: $black !default;
 $list-group-heading-border-width: $list-group-border-width !default;
 $list-group-heading-border-radius: $list-group-border-radius !default;
@@ -1414,7 +1430,7 @@ $list-group-action-active-bg: $gray-200 !default;
 $thumbnail-padding: 0.25rem !default;
 $thumbnail-bg: $body-bg !default;
 $thumbnail-border-width: $border-width !default;
-$thumbnail-border-color: $gray-300 !default;
+$thumbnail-border-color: $border-color !default;
 $thumbnail-border-radius: $border-radius !default;
 $thumbnail-box-shadow: 0 1px 2px rgba($black, 0.075) !default;
 
@@ -1443,12 +1459,12 @@ $breadcrumb-border-radius: $border-radius !default;
 // Tabs
 
 $tab-content-padding-x: 0 !default;
-$tab-content-padding-y: 1rem !default;
-$tab-border-width: 0.1em !default;
+$tab-content-padding-y: from-pixels(28) !default;
+$tab-border-width: from-pixels(1) !default;
 $tab-border-color: $light !default;
-$tab-label-padding-x: 0 !default;
-$tab-label-padding-bottom: 1em !default;
-$tab-label-margin-x: 1em !default;
+$tab-label-padding-x: from-pixels(20) !default;
+$tab-label-padding-bottom: 0 !default;
+$tab-label-margin-x: 0 !default;
 
 // Carousel
 
@@ -1486,7 +1502,6 @@ $spinner-width-sm: 1rem !default;
 $spinner-height-sm: $spinner-width-sm !default;
 $spinner-border-width-sm: 0.2em !default;
 
-
 // Code
 
 $code-font-size: 87.5% !default;
@@ -1523,4 +1538,3 @@ $select-icon-buffer-padding: 3em;
 $select-icon-height: 1em;
 $select-icon-width: 2em;
 $select-icon-position-y: 1em;
-

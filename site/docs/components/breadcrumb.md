@@ -5,6 +5,8 @@ description: Indicate the current page's location within a navigational hierarch
 group: components
 ---
 
+# NOT Updated for FLO-SCSS yet
+
 ## Example
 
 {% capture example %}
