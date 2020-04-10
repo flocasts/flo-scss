@@ -4,6 +4,12 @@
   .list-group-item-#{$state} {
     color: $color;
     background-color: $background;
+    @if $enable-new-design-system {
+      padding-left: $list-group-item-margin-x;
+      padding-right: $list-group-item-margin-x;
+      margin-left: 0;
+      margin-right: 0;
+    }
 
     &.list-group-item-action {
       @include hover-focus() {

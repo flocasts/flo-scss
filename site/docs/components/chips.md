@@ -1,19 +1,25 @@
 ---
 layout: docs
-title: Chips (FloSports) (WIP)
-description: Chips are compact elements that represent an input, attribute, or action.
+title: Chips
+description: FloSports Brand has one chip style used to filter content or trigger actions. 
 group: components
 toc: true
 ---
 
-Chips allow users to enter information, make selections, filter content, or
-trigger actions. While buttons are expected to appear consistently and with
-familiar calls to action, chips should appear dynamically as a group of
-multiple interactive elements.
+Chips are used in the system to filter content, or trigger actions. While buttons are expected to appear consistently and with
+familiar calls to action, chips should appear dynamically as a group of multiple interactive elements. 
 
-## Examples
+{% capture example %}
+<button type="button" class="chip chip-close chip-light">Sub 1</button>
+{% endcapture %}
+{% include example.html content=example %}
 
-Flo-SCSS includes several predefined chip styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+
+***
+
+<!-- Bootstrap 4 -->
+## System Extras
+Here are extra variations on chips, imported from forking Bootstrap 4. These are not part of the design system, yet could be beneficial in the future.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -23,24 +29,15 @@ Flo-SCSS includes several predefined chip styles, each serving its own semantic 
 
 {% include callout-warning-color-assistive-technologies.md %}
 
-## Chips with Badges
+### Chips with Close Icon Variant
 
 {% capture example %}
-<button type="button" class="chip chip-light chip-close">
-  Close 
-</button>
-
-<button type="button" class="chip chip-light">
-  Watch <span class="badge badge-400 bg-primary text-white">Live</span>
-</button>
-
-<button type="button" class="chip chip-light">
-  Event <span class="badge badge-400 badge-pill">FloSports</span>
-</button>
+<button type="button" class="chip chip-close chip-light">Light</button>
+<button type="button" class="chip chip-close chip-dark">Dark</button>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Disable text wrapping
+### Disable text wrapping
 
 If you don't want the chip text to wrap, you can add the `.text-nowrap` class to the chip. In Sass, you can set `$chip-white-space: nowrap` to disable text wrapping for each chip.
 
@@ -53,7 +50,7 @@ If you don't want the chip text to wrap, you can add the `.text-nowrap` class to
 {% endcapture %}
 {% include example.html content=example %}
 
-## chip tags
+### chip tags
 
 The `.chip` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
 
@@ -68,9 +65,7 @@ When using chip classes on `<a>` elements that are used to trigger in-page funct
 {% endcapture %}
 {% include example.html content=example %}
 
-## Gray chips
-
-In need of a chip, but not the hefty background colors they bring? Replace the default modifier classes with the `.chip-outline-*` ones to remove all background images and colors on any chip.
+### Gray chips
 
 {% capture example %}
 {% for color in site.data.grays %}
@@ -78,7 +73,7 @@ In need of a chip, but not the hefty background colors they bring? Replace the d
 {% endcapture %}
 {% include example.html content=example %}
 
-## Outline chips
+### Outline chips
 
 In need of a chip, but not the hefty background colors they bring? Replace the default modifier classes with the `.chip-outline-*` ones to remove all background images and colors on any chip.
 
@@ -88,7 +83,7 @@ In need of a chip, but not the hefty background colors they bring? Replace the d
 {% endcapture %}
 {% include example.html content=example %}
 
-## Sizes
+### Sizes
 
 Fancy larger or smaller chips? Add `.chip-lg` or `.chip-sm` for additional sizes.
 
@@ -104,7 +99,7 @@ Fancy larger or smaller chips? Add `.chip-lg` or `.chip-sm` for additional sizes
 {% endcapture %}
 {% include example.html content=example %}
 
-## Active state
+### Active state
 
 chips will appear pressed (with a darker background, darker border, and inset shadow) when active. **There's no need to add a class to `<button>`s as they use a pseudo-class**. However, you can still force the same active appearance with `.active` (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.
 
@@ -114,7 +109,7 @@ chips will appear pressed (with a darker background, darker border, and inset sh
 {% endcapture %}
 {% include example.html content=example %}
 
-## Disabled state
+### Disabled state
 
 Make chips look inactive by adding the `disabled` boolean attribute to any `<button>` element.
 

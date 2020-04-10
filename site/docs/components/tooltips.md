@@ -6,6 +6,8 @@ group: components
 toc: true
 ---
 
+# Javascript is not included in FLO-SCSS
+
 ## Overview
 
 Things to know when using the tooltip plugin:

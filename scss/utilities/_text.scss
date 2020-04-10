@@ -40,6 +40,14 @@
 .font-weight-bolder  { font-weight: $font-weight-bolder !important; }
 .font-italic         { font-style: italic !important; }
 
+// Font
+
+.font-family-thin     { font-family: $font-family-thin !important; }
+.font-family-book     { font-family: $font-family-book !important; }
+.font-family-regular  { font-family: $font-family-sans-serif !important; }
+.font-family-bold     { font-family: $font-family-bold !important; }
+.font-family-heavy    { font-family: $font-family-heavy !important; }
+
 // Contextual colors
 
 .text-white { color: $white !important; }
@@ -55,10 +63,15 @@
 .text-white-50 { color: rgba($white, .5) !important; }
 
 @each $level, $value in $grays {
-  .text-#{$level} {
+  .color-#{$level} {
     color: $value;
   }
 }
+
+.color-ignite {
+  color: $primary;
+}
+
 
 // Misc
 

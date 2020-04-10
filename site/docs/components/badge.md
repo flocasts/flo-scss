@@ -5,6 +5,7 @@ description: Documentation and examples for badges, our small count and labeling
 group: components
 toc: true
 ---
+# NOT Updated for FLO-SCSS yet
 
 ## Example
 

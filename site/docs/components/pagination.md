@@ -6,6 +6,8 @@ group: components
 toc: true
 ---
 
+# NOT Updated for FLO-SCSS yet
+
 ## Overview
 
 We use a large block of connected links for our pagination, making links hard to miss and easily scalable—all while providing large hit areas. Pagination is built with list HTML elements so screen readers can announce the number of available links. Use a wrapping `<nav>` element to identify it as a navigation section to screen readers and other assistive technologies.
