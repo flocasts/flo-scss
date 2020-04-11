@@ -41,8 +41,8 @@ Apply `.icon`, `.icon-sm`, and `.icon-lg` to size icons
 
 
 ### Color
-Setting `fill=currentColor` gives control of coloring the SVG colors through CSS and added classes.
-Here you can see by adding `.text-$color` classes to it controls the changing the colors.
+
+Setting `fill=currentColor` in the SVG allows the SVG's colors to be controlled by CSS and added classes. Below you can see the SVG's color changing by adding `.color- classes` to the svg tag.
 
 {% capture example %}
 <div class="row row-cols-4">
@@ -83,30 +83,11 @@ Transform icons with [transform utilities](/docs/utilities/transform)
 ## Icons
 A complete list of all the SVG icons in the system.
 
-{% capture callout %}
-##### SVG-Sprite
-FLO-SCSS is using `svg-sprite`, which is a module that takes a bunch o SVG files, optimizes them and puts them all into one svg sprite which is located here,` _includes/icon-sprite.svg`, in this app. with their names referenced in `site/_data/icons.yml.` The "All icons" section of icons.md loops through these names to presents the full svg list.
-
-To add or remove an svg, update the name in the `icons.yml` and run `npm run process-svg`
-{% endcapture %}
-{% include callout.html content=callout type="secondary" %}
-
-
 {% capture example %}
 <div class="row">
 {% for icon in site.data.icons %}
-<div class="col-6 col-md-2 d-flex flex-column align-items-center justify-content-center">
-  <svg class="icon">
-    <use xlink:href="#{{ icon.name }}" />
-  </svg>
-  <p class="caption">{{ icon.name }}</p>
-</div>
-{% endfor %}
-</div>
-<div class="row text-white bg-black">
-{% for icon in site.data.icons %}
-<div class="col-6 col-md-2 d-flex flex-column align-items-center justify-content-center">
-  <svg class="icon">
+<div class="col-md-2 d-flex flex-column align-items-center justify-content-center color-500">
+  <svg class="icon-lg">
     <use xlink:href="#{{ icon.name }}" />
   </svg>
   <p class="caption">{{ icon.name }}</p>
@@ -116,6 +97,16 @@ To add or remove an svg, update the name in the `icons.yml` and run `npm run pro
 
 {% endcapture %}
 {% include example.html content=example %}
+
+{% capture callout %}
+##### FLO-SCSS-Sprite Sheet
+The above grid list of FLO-SCSS icons is generated using `svg-sprite`, is a module that takes a bunch of SVG files, optimizes them and puts them all into one svg sprite which is located here,` _includes/icon-sprite.svg`, in this app. with their names referenced in `site/_data/icons.yml.` The "All icons" section of icons.md loops through these names to presents the full svg list.
+
+To add or remove an svg, update the name in the `icons.yml` and run `npm run process-svg`
+
+Currently we are not using a sprite sheet in the web app.
+{% endcapture %}
+{% include callout.html content=callout type="secondary" %}
 
 ### Brands in colors
 
@@ -182,7 +173,14 @@ The following brand-specific color classes are provided:
 
 Each icon in the system is a formatted svg with a `viewBox="0 0 500 500"`, a path fill="currentColor" and a descriptive class name.
 
-The SVG is created on a 500px x 500px art board. SVG's created in a design program such as Adobe Illustrator or Sketch contain extra information. Clean up an svg with this online tool https://jakearchibald.github.io/svgomg/. Finally format the svg to match the example below.
+The SVG is created on a 500px x 500px art board. SVG's created in a design program such as Adobe Illustrator or Sketch. Clean up an svg with this online tool https://jakearchibald.github.io/svgomg/. Make sure no extra `g` `tags`, `masks`, or `nested paths` are present 
+
+Format Guidelines
+* `fill=currentColor` is set
+* `viewBox= 0 0 500 500` is present
+* no inline width, height, or colors
+* use of classes to reference the SVG
+* the svg is flat with only a path tag. No `g` `tags`, `masks`, or `nested paths`
  
 
 {% capture example %}
