@@ -1,7 +1,7 @@
 {
   "name": "@flosportsinc/flo-scss",
   "description": "Based on The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "version_short": "0.1",
   "keywords": [
     "css",
@@ -130,7 +130,7 @@
     "cross-env": "^5.2.1",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^5.16.0",
-    "find-unused-sass-variables": "^0.6.0",
+    "find-unused-sass-variables": "^0.6.1",
     "glob": "^7.1.6",
     "hammer-simulator": "0.0.1",
     "http-server": "^0.12.0",
