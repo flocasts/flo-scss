@@ -6,7 +6,7 @@ version: 2.1
 jobs:
   dependencies:
     docker:
-      - image: circleci/ruby:2.6.5-buster-node  # language image
+      - image: circleci/ruby:2.6.5-node  # language image
     working_directory: ~/flo-scss
     steps:
       - checkout
@@ -15,6 +15,8 @@ jobs:
           command: |
             git config --global user.email "engineering@flosports.tv"
             git config --global user.name "FloSports Engineering"
+            node --version
+            npm --version
       - run:
           name: npm ci
           command: npm ci
@@ -30,7 +32,7 @@ jobs:
 
   build:
     docker:
-      - image: circleci/ruby:2.6.5-buster-node  # language image
+      - image: circleci/ruby:2.6.5-node  # language image
     working_directory: ~/flo-scss
     steps:
       - add_ssh_keys:
@@ -58,7 +60,7 @@ jobs:
 
   release-npm:
     docker:
-      - image: circleci/ruby:2.6.5-buster-node  # language image
+      - image: circleci/ruby:2.6.5-node  # language image
     working_directory: ~/flo-scss
     steps:
       - restore_cache:
