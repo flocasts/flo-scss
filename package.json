@@ -1,7 +1,7 @@
 {
   "name": "@flosportsinc/flo-scss",
   "description": "Based on The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "0.6.0",
+  "version": "0.6.2",
   "version_short": "0.6",
   "keywords": [
     "css",
@@ -14,7 +14,7 @@
     "flosports"
   ],
   "homepage": "https://flo-scss.flo.center/",
-  "author": "FloSports Engineering (https://flosports.tv) & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
+  "author": "FloSports Engineering (https://flosports.tv) and the Bootstrap authors (https://github.com/twbs/bootstrap/graphs/contributors)",
   "contributors": [
     "FloSports",
     "Twitter, Inc."
