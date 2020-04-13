@@ -18,10 +18,6 @@ jobs:
       - run:
           name: npm install
           command: npm install
-      - save_cache:
-          paths:
-            - '~'
-          key: flo-scss-dependencies-{{ .Branch }}-{{ .Revision }}
       - slack/status:
           fail_only: true
           channel: 'DEZFWC2B0'
