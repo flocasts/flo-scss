@@ -43,7 +43,7 @@ jobs:
       - run:
           name: bundle install
           command: bundle version && bundle install
-      - run: 
+      - run:
           name: create build
           command: npm run release
       - save_cache:
@@ -79,14 +79,13 @@ workflows:
   build-release:
     jobs:
       - dependencies:
-          filters:
-            branches:
-              only: 
-                - master
-                - flo-scss-ci
       - build:
           requires:
             - dependencies
       - release-npm:
+          filters:
+            branches:
+              only:
+                - master
           requires:
             - build
