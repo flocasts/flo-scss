@@ -112,6 +112,12 @@ The following brand-specific color classes are provided:
     <p class="caption mt-1">class="color-android"</p>
   </div>
   <div class="col-3 col-md-2 d-flex flex-column align-items-center justify-content-center">
+    <svg class="icon color-android h-50">
+      <use xlink:href="#android_logo" />
+    </svg>
+    <p class="caption mt-1">class="color-android"</p>
+  </div>
+  <div class="col-3 col-md-2 d-flex flex-column align-items-center justify-content-center">
     <svg class="icon color-apple h-50">
       <use xlink:href="#apple_logo" />
     </svg>

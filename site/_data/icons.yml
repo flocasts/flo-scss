@@ -60,8 +60,6 @@
 - name: streaming
 - name: tv
 - name: user
-- name: varsity_stacked
-- name: varsity_white_logo
 - name: vid_2up_active
 - name: vid_2up_inactive
 - name: vid_4up_active
