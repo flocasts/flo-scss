@@ -16,8 +16,8 @@ jobs:
             git config --global user.email "engineering@flosports.tv"
             git config --global user.name "FloSports Engineering"
       - run:
-          name: npm install
-          command: npm install
+          name: npm ci
+          command: npm ci
       - save_cache:
           paths:
             - '~'
@@ -78,13 +78,14 @@ orbs:
 workflows:
   build-release:
     jobs:
-      - dependencies:
+      - dependencies
       - build:
           requires:
             - dependencies
-      # - release-npm:
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only: master
+      - release-npm:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
