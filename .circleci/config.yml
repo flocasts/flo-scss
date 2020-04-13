@@ -83,7 +83,7 @@ workflows:
             branches:
               only: 
                 - master
-                - flo-scss-ci
+                - package-version-error
       - build:
           requires:
             - dependencies
