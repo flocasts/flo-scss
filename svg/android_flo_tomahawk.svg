@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
   <path class="squircle-shape" fill="currentColor" d="M421.8 31.2c25.9 0 46.9 21 46.9 46.9v343.8c0 25.9-21 46.9-46.9 46.9H78.2c-25.9 0-46.9-21-46.9-46.9V78.2c0-25.9 21-46.9 46.9-46.9 0-.1 343.6-.1 343.6-.1z"/>
-  <path class="tomahawk-top" fill="currentColor" d="M394.4 108.3H100l104.9 82.4h174.8z"/>
-  <path class="tomahawk-bottom" fill="currentColor" d="M358.1 232.1c-94 0-174.4 67.4-190.6 160H253c14.5-45.7 56.9-76.8 104.9-76.9l14.5-82.6c-4.7-.2-9.4-.5-14.3-.5z"/>
+  <path class="tomahawk-top" fill="#ffffff" d="M394.4 108.3H100l104.9 82.4h174.8z"/>
+  <path class="tomahawk-bottom" fill="#ffffff" d="M358.1 232.1c-94 0-174.4 67.4-190.6 160H253c14.5-45.7 56.9-76.8 104.9-76.9l14.5-82.6c-4.7-.2-9.4-.5-14.3-.5z"/>
 </svg>

@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-  <path class="google_color_4" fill="currentColor" d="M459 255.4c0-14.9-1.2-29.8-3.6-44.5H251.2v84.5h117c-4.8 27.2-20.4 51.4-43.3 66.8v54.9h69.8C435.6 379 459 322.6 459 255.4z" clip-rule="evenodd"/>
-  <path class="google_color_3" fill="currentColor" d="M251.2 470.3c58.4 0 107.7-19.5 143.5-53.1l-69.8-54.9c-19.6 13.4-44.5 21.1-73.7 21.1-56.6 0-104.4-38.8-121.5-90.6h-72v56.8c36.7 74 111.6 120.7 193.5 120.7z" clip-rule="evenodd"/>
-  <path class="google_color_2" fill="currentColor" d="M129.6 292.7c-9-27.3-9-56.9 0-84.2V152H57.7c-31 62.1-31 135.1 0 197.1l71.9-56.4z" clip-rule="evenodd"/>
-  <path class="google_color_1" fill="currentColor"  d="M251.2 117.8c31-.6 60.9 11.3 83 33l62-62.9c-39.1-37.1-91.1-57.6-145-57.1-81.8 0-156.7 47-193.4 121.1l71.9 56.8c17.1-52.1 64.9-90.9 121.5-90.9z" clip-rule="evenodd"/>
+  <path class="google_color_4" fill="#4285f4" d="M459 255.4c0-14.9-1.2-29.8-3.6-44.5H251.2v84.5h117c-4.8 27.2-20.4 51.4-43.3 66.8v54.9h69.8C435.6 379 459 322.6 459 255.4z" clip-rule="evenodd"/>
+  <path class="google_color_3" fill="#34a853" d="M251.2 470.3c58.4 0 107.7-19.5 143.5-53.1l-69.8-54.9c-19.6 13.4-44.5 21.1-73.7 21.1-56.6 0-104.4-38.8-121.5-90.6h-72v56.8c36.7 74 111.6 120.7 193.5 120.7z" clip-rule="evenodd"/>
+  <path class="google_color_2" fill="#fbbc04" d="M129.6 292.7c-9-27.3-9-56.9 0-84.2V152H57.7c-31 62.1-31 135.1 0 197.1l71.9-56.4z" clip-rule="evenodd"/>
+  <path class="google_color_1" fill="#ea4335"  d="M251.2 117.8c31-.6 60.9 11.3 83 33l62-62.9c-39.1-37.1-91.1-57.6-145-57.1-81.8 0-156.7 47-193.4 121.1l71.9 56.8c17.1-52.1 64.9-90.9 121.5-90.9z" clip-rule="evenodd"/>
 </svg>
-
