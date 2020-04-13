@@ -83,9 +83,8 @@ workflows:
           requires:
             - dependencies
       - release-npm:
-          filters:
-            branches:
-              only:
-                - master
           requires:
             - build
+          filters:
+            branches:
+              only: master
