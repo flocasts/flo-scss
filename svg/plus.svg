@@ -1,4 +1,3 @@
-<svg width="28" height="28" viewBox="0 0 28 28">
-  <rect fill="currentColor" width="14" height="2" x="7" y="13" rx=".5"/>
-  <rect fill="currentColor" width="2" height="14" x="13" y="7" rx=".5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <path fill="currentColor" d="M406.2 245.1v9.8c0 5.4-4.4 9.8-9.8 9.8H264.6v131.8c0 5.4-4.4 9.8-9.8 9.8H245c-5.4 0-9.8-4.4-9.8-9.8V264.6H103.5c-5.4 0-9.8-4.4-9.8-9.8V245c0-5.4 4.4-9.8 9.8-9.8h131.8V103.5c0-5.4 4.4-9.8 9.8-9.8h9.8c5.4 0 9.8 4.4 9.8 9.8v131.8h131.8c5.4.1 9.7 4.4 9.7 9.8z"/>
 </svg>

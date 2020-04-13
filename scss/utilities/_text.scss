@@ -96,3 +96,12 @@
   color: $value;
 }
 }
+
+// Control Color stacked SVGS
+
+@each $label, $value in $icon-stacked {
+ .#{$label} {
+    color: $value;
+}
+}
+

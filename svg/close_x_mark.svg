@@ -1,12 +1,3 @@
-<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<path id="a" d="M0 0h12v12H0z"/>
-</defs>
-<g fill="none" fill-rule="evenodd">
-<mask id="b">
-<use xlink:href="#a"/>
-</mask>
-<g mask="url(#b)" fill="currentColor">
-<path d="M.176 1.263L1.18.258l10.543 10.543-1.005 1.005z"/>
-<path d="M1.292 11.806L.176 10.689 10.719.146l1.116 1.117z"/>
-</g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <path fill="currentColor" d="M350.6 371.4L250 270.8 149.4 371.4c-3.8 3.8-10 3.8-13.8 0l-6.9-6.9c-3.8-3.8-3.8-10 0-13.8L229.2 250 128.7 149.4c-3.8-3.8-3.8-10 0-13.8l6.9-6.9c3.8-3.8 10-3.8 13.8 0L250 229.3l100.6-100.6c3.8-3.8 10-3.8 13.8 0l6.9 6.9c3.8 3.8 3.8 10 0 13.8L270.7 250l100.6 100.6c3.8 3.8 3.8 10 0 13.8l-6.9 6.9c-3.8 3.8-10 3.8-13.8.1z"/>
+</svg>

@@ -138,10 +138,39 @@ $brand-colors: map-merge(
     "visa": $visa,
     "fire-tv": $fire-tv,
     "outlook": $outlook,
-    "roku": $roku
+    "roku": $roku,
   ),
   $brand-colors
 );
+
+
+//Add  `aa,ay` before class names, these are added from compiling sprite page
+$aatomahawk-bottom: $gray-100;
+$aatomahawk-top: $gray-100;
+$bbhd_bg: $primary;
+$bbhd_text: $gray-100;
+$blgoogle_color_4: #4285f4;
+$blgoogle_color_3: #34a853;
+$blgoogle_color_2: #fbbc04;
+$blgoogle_color_1: #ea4335;
+$bjhawk: $primary;
+
+$icon-stacked: () !default;
+$icon-stacked: map-merge(
+  (
+    "aatomahawk-bottom": $aatomahawk-bottom,
+    "aatomahawk-top": $aatomahawk-top,
+    "bbhd_bg": $bbhd_bg,
+    "bbhd_text": $bbhd_text,
+    "blgoogle_color_4": $blgoogle_color_4,
+    "blgoogle_color_3": $blgoogle_color_3,
+    "blgoogle_color_2": $blgoogle_color_2,
+    "blgoogle_color_1": $blgoogle_color_1,
+    "bjhawk": $bjhawk
+  ),
+  $icon-stacked
+);
+
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8% !default;

@@ -25,7 +25,7 @@ Icons inherit width and height from the parent container, so the parent containe
 Apply `.icon`, `.icon-sm`, and `.icon-lg` to size icons
 
 {% capture example %}
-<div class="row row-cols-4">
+<div class="row row-cols-4 align-items-center">
   <svg class="icon-sm">
     <use xlink:href="#close_circle" />
   </svg>
@@ -79,14 +79,13 @@ Transform icons with [transform utilities](/docs/utilities/transform)
 {% endcapture %}
 {% include example.html content=example %}
 
-
 ## Icons
 A complete list of all the SVG icons in the system.
 
 {% capture example %}
 <div class="row">
 {% for icon in site.data.icons %}
-<div class="col-md-2 d-flex flex-column align-items-center justify-content-center color-500">
+<div class="col-4 col-md-4 d-flex flex-column align-items-center justify-content-center color-500">
   <svg class="icon-lg">
     <use xlink:href="#{{ icon.name }}" />
   </svg>
@@ -97,6 +96,7 @@ A complete list of all the SVG icons in the system.
 
 {% endcapture %}
 {% include example.html content=example %}
+
 
 {% capture callout %}
 ##### FLO-SCSS-Sprite Sheet
@@ -114,26 +114,26 @@ The following brand-specific color classes are provided:
 
 {% capture example %}
 <div class="row">
-  <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center">
-    <svg class="icon color-amex">
+  <div class="col-3 col-md-2 d-flex flex-column align-items-center justify-content-center">
+    <svg class="icon color-amex h-50">
       <use xlink:href="#cc_amex" />
     </svg>
     <p class="caption mt-1">class="color-amex"</p>
   </div>
-  <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center">
-    <svg class="icon color-android">
+  <div class="col-3 col-md-2 d-flex flex-column align-items-center justify-content-center">
+    <svg class="icon color-android h-50">
       <use xlink:href="#android_logo_stacked" />
     </svg>
     <p class="caption mt-1">class="color-android"</p>
   </div>
-  <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center">
-    <svg class="icon color-apple">
+  <div class="col-3 col-md-2 d-flex flex-column align-items-center justify-content-center">
+    <svg class="icon color-apple h-50">
       <use xlink:href="#apple_logo" />
     </svg>
     <p class="caption mt-1">class="color-apple"</p>
   </div>
-  <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center">
-    <svg class="icon color-discover">
+  <div class="col-3 col-md-2 d-flex flex-column align-items-center justify-content-center">
+    <svg class="icon color-discover h-50">
       <use xlink:href="#cc_discover" />
     </svg>
     <p class="caption mt-1">class="color-discover"</p>
@@ -141,25 +141,25 @@ The following brand-specific color classes are provided:
 </div>
 <div class="row">
   <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center">
-    <svg class="icon color-visa">
+    <svg class="icon color-visa h-50">
       <use xlink:href="#cc_visa" />
     </svg>
     <p class="caption mt-1">class="color-visa"</p>
   </div>
   <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center">
-    <svg class="icon color-fire-tv">
+    <svg class="icon color-fire-tv h-50">
       <use xlink:href="#fire_tv_logo" />
     </svg>
     <p class="caption mt-1">class="color-fire-tv"</p>
   </div>
   <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center">
-    <svg class="icon color-outlook">
+    <svg class="icon color-outlook h-50">
       <use xlink:href="#outlook_logo" />
     </svg>
     <p class="caption mt-1">class="color-outlook"</p>
   </div>
   <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center">
-    <svg class="icon color-roku">
+    <svg class="icon color-roku h-50">
       <use xlink:href="#roku_logo" />
     </svg>
     <p class="caption mt-1">class="color-roku"</p>
@@ -173,7 +173,7 @@ The following brand-specific color classes are provided:
 
 Each icon in the system is a formatted svg with a `viewBox="0 0 500 500"`, a path fill="currentColor" and a descriptive class name.
 
-The SVG is created on a 500px x 500px art board. SVG's created in a design program such as Adobe Illustrator or Sketch. Clean up an svg with this online tool https://jakearchibald.github.io/svgomg/. Make sure no extra `g` `tags`, `masks`, or `nested paths` are present 
+The SVG is created on a 500px x 500px art board. SVG's created in a design program such as Adobe Illustrator or Sketch. Clean up an svg with this online tool https://jakearchibald.github.io/svgomg/. Make sure no extra `g` `tags`, `masks`, or `nested paths` are present.
 
 Format Guidelines
 * `fill=currentColor` is set
