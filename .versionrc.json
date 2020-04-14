@@ -14,5 +14,6 @@
       "filename": "_config.yml",
       "updater": "build/config-updater.js"
     }
-  ]
+  ],
+  "releaseCommitMessageFormat": "chore(release): {{currentTag}} [skip ci]"
 }

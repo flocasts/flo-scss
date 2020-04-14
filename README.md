@@ -33,7 +33,7 @@
 Several quick start options are available:
 
 - Clone the repo: `git clone git@github.com:flocasts/flo-scss`
-- OR [download the latest release](https://github.com/flocasts/flo-scss/archive/vflo-scss.zip)
+- OR [download the latest release](https://github.com/flocasts/flo-scss/archive/v0.6.2.zip)
 - OR install with [npm](https://www.npmjs.com/): `npm install flocasts/flo-scss`
 
 ### Running documentation locally
@@ -52,11 +52,11 @@ Learn more about using Jekyll by reading its [documentation](https://jekyllrb.co
 
     Make sure you follow these instructions for installing Ruby on macOS. Mistakes made in the process of installing
     Ruby on macOS can result in the operating system failing to boot.
-   
+
 
  1. Install `gpg` and `curl`
       * `brew install gpg curl`
-      
+
  2. Install RVM by following the instructions [here](https://rvm.io/rvm/install)
       * If you have an issue installing the GPG keys, contact your sysadmin
           * @Sysadmins, this could be a DNS issue. Try switching to 8.8.8.8 temporarily.
@@ -65,16 +65,16 @@ Learn more about using Jekyll by reading its [documentation](https://jekyllrb.co
 
  3. Run the RVM startup script and restart your terminals
       * Run `source ~/.rvm/scripts/rvm`
-      
+
  4. Install the correct version of ruby for the project
       * The version can be found in the [Gemfile](./Gemfile)
       * Run `rvm install x.x.x` replacing Xs with the correct version
- 
+
  5. Run `rvm use x.x.x` to set your ruby version, and you're ready to go!
 
 ## Documentation
 
-Flo-SCSS's documentation is built off of bootstrap's and can be found: <https://flo-scss.flo.center/>. 
+Flo-SCSS's documentation is built off of bootstrap's and can be found: <https://flo-scss.flo.center/>.
 
 Read the [Getting started page](https://flo-scss.flo.center/docs/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 

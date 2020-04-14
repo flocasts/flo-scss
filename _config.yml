@@ -1,44 +1,56 @@
-current_version: 0.6.2
-markdown: kramdown
-highlighter: rouge
+# Dependencies
+markdown:       kramdown
+highlighter:    rouge
 kramdown:
-  auto_ids: true
+  auto_ids:     true
+
 permalink: pretty
-source: site
-destination: ./docs
-host: flo-scss.flo.center
-port: 80
-baseurl: ''
-url: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
-encoding: UTF-8
+
+# Server
+source:         "site"
+destination:    ./docs
+host:           flo-scss.flo.center
+port:           80
+baseurl:        ""
+url:            "https://flo-scss.flo.center"
+encoding:       UTF-8
 exclude:
   - docs/assets/scss/
+
 plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-toc
+
+# Social
 title: Flo-SCSS
 description: 'Based on The most popular HTML, CSS, and JS library in the world.'
 twitter: flosports
 authors: 'FloSports Engineering, Mark Otto, Jacob Thornton, and Bootstrap contributors'
 social_image_path: /docs/assets/brand/bootstrap-social.png
 social_logo_path: /docs/assets/brand/bootstrap-social-logo.png
-current_ruby_version: 0.0.1
-repo: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
-slack: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
-opencollective: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
-blog: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
-expo: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
-themes: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
-icons: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
+
+# Custom Variables
+current_version:      0.6.2
+current_ruby_version: 0.6.2
+docs_version:         0.6.2
+github_org:           "https://github.com/flocasts"
+repo:                 "https://github.com/flocasts/flo-scss"
+slack:                "https://www.flosports.tv"
+opencollective:       "https://www.flosports.tv"
+blog:                 "https://www.flosports.tv"
+expo:                 "https://www.flosports.tv"
+themes:               "https://www.flosports.tv"
+icons:                "https://flo-scss.flo.center"
+
 download:
-  source: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
-  dist: >-
-    https://github.com/twbs/bootstrap/releases/download/v4.4.1/bootstrap-4.4.1-dist.zip
+  source: "https://github.com/flocasts/flo-scss/archive/v0.6.2.zip"
+
 cdn:
-  css: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
+  # See https://www.srihash.org for info on how to generate the hashes
+  css: 'https://unpkg.com/@flosportsinc/flo-scss@0.6.2/dist/css/bootstrap.min.css'
   css_hash: sha384-hnvsmW4CEqIE9xpwdmvw+oyi2zalIdkqZJKT8ovyObj2fiPNSLt7xdsda4JGUfSf
-  js: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
+  js: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'
   js_hash: sha384-1RkA5wjfeG5u+6ycZ90q+PMlafLBaMCHvGk6PlVrQmIuTvpdA9qupxwbnPf9QbHH
   js_bundle: >-
     https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js
@@ -47,6 +59,7 @@ cdn:
   jquery_hash: sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n
   popper: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
   popper_hash: sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN
+
 toc:
   min_level: 2
   max_level: 4

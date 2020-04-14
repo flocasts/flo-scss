@@ -207,6 +207,11 @@
     ]
   },
   "standard-version": {
+    "scripts": {
+      "prerelease": "./build/snapshot-before-version.sh",
+      "postbump": "./build/update-version.sh && npm run release",
+      "precommit": "git add ."
+    },
     "skip": {
       "tag": true
     }
