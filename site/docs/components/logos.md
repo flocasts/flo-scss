@@ -378,6 +378,7 @@ Corporate Logo
 
 #### Live player
 A one color white logo is used on the Live player.
+
 <div class="row color-100">
    <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center justify-content-center bg-black px-5">
     <svg>
@@ -385,6 +386,7 @@ A one color white logo is used on the Live player.
     </svg>
     <p class="caption mt-1">flo_hawk</p>
   </div>
+ </div>
 
 
 ## Co-brands
