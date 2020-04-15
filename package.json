@@ -1,8 +1,8 @@
 {
   "name": "@flosportsinc/flo-scss",
   "description": "Based on The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "0.6.0",
-  "version_short": "0.1",
+  "version": "0.6.2",
+  "version_short": "0.6",
   "keywords": [
     "css",
     "sass",
@@ -14,7 +14,7 @@
     "flosports"
   ],
   "homepage": "https://flo-scss.flo.center/",
-  "author": "FloSports Engineering (https://flosports.tv) & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
+  "author": "FloSports Engineering (https://flosports.tv) and the Bootstrap authors (https://github.com/twbs/bootstrap/graphs/contributors)",
   "contributors": [
     "FloSports",
     "Twitter, Inc."
@@ -130,7 +130,7 @@
     "cross-env": "^5.2.1",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^5.16.0",
-    "find-unused-sass-variables": "^0.6.0",
+    "find-unused-sass-variables": "0.6.0",
     "glob": "^7.1.6",
     "hammer-simulator": "0.0.1",
     "http-server": "^0.12.0",
