@@ -85,11 +85,11 @@ Documentation search is powered by [Algolia's DocSearch](https://community.algol
 Commit messages should follow semantic versioning.
 
 ```
-breaking: (major breaking change - e.g. finally removing float in favor of hovering)
 build: (no change - e.g. build script changes that do not affect the final output for the user)
 docs: (no change - e.g. changes to the documentation)
-feat: (minor change - e.g. new feature for the user, not a new feature for build script)
 fix: (patch change - bug fix for the user, not a fix to a build script)
+feat: (minor change - e.g. new feature for the user, not a new feature for build script)
+breaking: (major breaking change - e.g. changing or removing class names or functionality. Changes that break parity with mainline bootstrap documentation.
 ```
 
 Using `docs` will not update the npm version.
