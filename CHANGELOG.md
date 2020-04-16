@@ -1,3 +1,10 @@
+## [0.6.6](https://github.com/flocasts/flo-scss/compare/v0.6.5...v0.6.6) (2020-04-16)
+
+
+### Bug Fixes
+
+* changelog by omitting it from change-version script ([0bb5a83](https://github.com/flocasts/flo-scss/commit/0bb5a8372a043479328adca052543eff80159cc8))
+
 ## [0.6.5](https://github.com/flocasts/flo-scss/compare/v0.6.4...v0.6.5) (2020-04-16)
 
 ### Bug Fixes
