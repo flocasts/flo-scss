@@ -13,7 +13,7 @@ jobs:
       - run:
           name: setup git && npm
           command: |
-            git config --global user.email "engineering@flosports.tv"
+            git config --global user.email "dev@flosports.tv"
             git config --global user.name "FloSports Engineering"
             node --version
             npm --version
