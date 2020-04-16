@@ -3,7 +3,7 @@
 Package.describe({
   name: 'flosports:flo-scss', // https://atmospherejs.com/twbs/bootstrap
   summary: 'The most popular front-end framework for developing responsive, mobile first projects on the web.',
-  version: '0.6.3',
+  version: '0.6.4',
   git: 'https://github.com/flocasts/flo-scss'
 });
 
