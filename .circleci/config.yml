@@ -6,6 +6,10 @@ jobs:
   dependencies:
     docker:
       - image: circleci/ruby:2.6.5-buster-node  # language image
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
     working_directory: ~/flo-scss
     steps:
       - checkout
@@ -28,9 +32,14 @@ jobs:
           channel: 'C0108LULD1D'
           webhook: '${SLACK_WEBHOOK}'
 
+  # $BUNDLE_PATH $GEM_HOME
   build:
     docker:
       - image: circleci/ruby:2.6.5-buster-node  # language image
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
     working_directory: ~/flo-scss
     steps:
       - add_ssh_keys:
@@ -58,6 +67,10 @@ jobs:
   release-npm:
     docker:
       - image: circleci/ruby:2.6.5-buster-node  # language image
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
     working_directory: ~/flo-scss
     steps:
       - restore_cache:
@@ -87,3 +100,4 @@ workflows:
             branches:
               only:
                 - master
+                - ci-dev
