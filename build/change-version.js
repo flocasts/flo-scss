@@ -56,13 +56,15 @@ function replaceRecursively(directory, excludedDirectories, allowedExtensions, o
   original = new RegExp(regExpQuote(original), 'g')
   replacement = regExpQuoteReplacement(replacement)
   const updateFile = DRY_RUN ? (filepath) => {
-    if (allowedExtensions.has(path.parse(filepath).ext)) {
+    const parsedPath = path.parse(filepath)
+    if (allowedExtensions.has(parsedPath.ext) && parsedPath.base !== 'package-lock.json') {
       console.log(`FILE: ${filepath}`)
     } else {
       console.log(`EXCLUDED:${filepath}`)
     }
   } : (filepath) => {
-    if (allowedExtensions.has(path.parse(filepath).ext)) {
+    const parsedPath = path.parse(filepath)
+    if (allowedExtensions.has(parsedPath.ext) && parsedPath.base !== 'package-lock.json') {
       sh.sed('-i', original, replacement, filepath)
     }
   }

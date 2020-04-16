@@ -1,10 +1,10 @@
 // package metadata file for Meteor.js
 
 Package.describe({
-  name: 'twbs:bootstrap', // https://atmospherejs.com/twbs/bootstrap
+  name: 'flosports:flo-scss', // https://atmospherejs.com/twbs/bootstrap
   summary: 'The most popular front-end framework for developing responsive, mobile first projects on the web.',
-  version: 'flo-scss',
-  git: 'https://github.com/twbs/bootstrap.git'
+  version: '0.6.2',
+  git: 'https://github.com/flocasts/flo-scss'
 });
 
 Package.onUse(function (api) {
