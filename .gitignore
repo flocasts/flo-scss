@@ -47,3 +47,4 @@ Thumbs.db
 /js/dist/
 /node_modules/
 /dist/
+/tmp

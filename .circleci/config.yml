@@ -1,5 +1,4 @@
 # JavaScript Node CircleCI 2.0 configuration file
-#
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2.1
@@ -7,30 +6,40 @@ jobs:
   dependencies:
     docker:
       - image: circleci/ruby:2.6.5-buster-node  # language image
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
     working_directory: ~/flo-scss
     steps:
       - checkout
       - run:
           name: setup git && npm
           command: |
-            git config --global user.email "engineering@flosports.tv"
+            git config --global user.email "dev@flosports.tv"
             git config --global user.name "FloSports Engineering"
+            node --version
+            npm --version
       - run:
-          name: npm install
-          command: npm install
+          name: npm ci
+          command: npm ci
       - save_cache:
           paths:
             - '~'
           key: flo-scss-dependencies-{{ .Branch }}-{{ .Revision }}
       - slack/status:
           fail_only: true
-          channel: 'DEZFWC2B0'
-          mentions: 'KurtAngular'
+          channel: 'C0108LULD1D'
           webhook: '${SLACK_WEBHOOK}'
 
+  # $BUNDLE_PATH $GEM_HOME
   build:
     docker:
       - image: circleci/ruby:2.6.5-buster-node  # language image
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
     working_directory: ~/flo-scss
     steps:
       - add_ssh_keys:
@@ -43,7 +52,7 @@ jobs:
       - run:
           name: bundle install
           command: bundle version && bundle install
-      - run: 
+      - run:
           name: create build
           command: npm run release
       - save_cache:
@@ -52,13 +61,16 @@ jobs:
           key: flo-scss-build-{{ .Branch }}-{{ .Revision }}
       - slack/status:
           fail_only: true
-          channel: 'DEZFWC2B0'
-          mentions: 'KurtAngular'
+          channel: 'C0108LULD1D'
           webhook: '${SLACK_WEBHOOK}'
 
   release-npm:
     docker:
       - image: circleci/ruby:2.6.5-buster-node  # language image
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
     working_directory: ~/flo-scss
     steps:
       - restore_cache:
@@ -69,8 +81,7 @@ jobs:
           command: npm run semantic-release
       - slack/status:
           fail_only: false
-          channel: 'DEZFWC2B0'
-          mentions: 'KurtAngular'
+          channel: 'C0108LULD1D'
           webhook: '${SLACK_WEBHOOK}'
 
 orbs:
@@ -78,15 +89,15 @@ orbs:
 workflows:
   build-release:
     jobs:
-      - dependencies:
-          filters:
-            branches:
-              only: 
-                - master
-                - flo-scss-ci
+      - dependencies
       - build:
           requires:
             - dependencies
       - release-npm:
           requires:
             - build
+          filters:
+            branches:
+              only:
+                - master
+                - ci-dev

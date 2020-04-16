@@ -1,8 +1,8 @@
 {
   "name": "@flosportsinc/flo-scss",
   "description": "Based on The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "0.6.1",
-  "version_short": "0.1",
+  "version": "0.6.6",
+  "version_short": "0.6",
   "keywords": [
     "css",
     "sass",
@@ -14,7 +14,7 @@
     "flosports"
   ],
   "homepage": "https://flo-scss.flo.center/",
-  "author": "FloSports Engineering (https://flosports.tv) & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
+  "author": "FloSports Engineering (https://flosports.tv) and the Bootstrap authors (https://github.com/twbs/bootstrap/graphs/contributors)",
   "contributors": [
     "FloSports",
     "Twitter, Inc."
@@ -121,6 +121,10 @@
     "@babel/preset-env": "^7.7.7",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/release-notes-generator": "^9.0.1",
     "autoprefixer": "^9.7.3",
     "babel-eslint": "^10.0.3",
     "babel-plugin-istanbul": "^5.2.0",
@@ -130,7 +134,7 @@
     "cross-env": "^5.2.1",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^5.16.0",
-    "find-unused-sass-variables": "^0.6.0",
+    "find-unused-sass-variables": "0.6.0",
     "glob": "^7.1.6",
     "hammer-simulator": "0.0.1",
     "http-server": "^0.12.0",
@@ -160,7 +164,6 @@
     "shelljs": "^0.8.3",
     "shx": "^0.3.2",
     "sinon": "^7.5.0",
-    "standard-version": "^7.1.0",
     "stylelint": "^9.10.1",
     "stylelint-config-twbs-bootstrap": "^0.5.0",
     "uglify-js": "^3.7.3",
@@ -204,11 +207,35 @@
       {
         "name": "master"
       }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "npm run release-version ${lastRelease.version} ${nextRelease.version} && npm run release"
+        }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "README.md",
+            "_config.yml",
+            "package.json",
+            "package-lock.json",
+            "package.js",
+            "scss",
+            "site/_data/docs-versions.yml"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github"
     ]
-  },
-  "standard-version": {
-    "skip": {
-      "tag": true
-    }
   }
 }
