@@ -121,7 +121,10 @@
     "@babel/preset-env": "^7.7.7",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/release-notes-generator": "^9.0.1",
     "autoprefixer": "^9.7.3",
     "babel-eslint": "^10.0.3",
     "babel-plugin-istanbul": "^5.2.0",
@@ -210,13 +213,13 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
-      "@semantic-release/npm",
       [
         "@semantic-release/exec",
         {
-          "prepareCmd": "./build/change-version.js ${lastRelease.version} ${nextRelease.version}"
+          "prepareCmd": "./build/change-version.js ${lastRelease.version} ${nextRelease.version} && npm run release"
         }
       ],
+      "@semantic-release/npm",
       [
         "@semantic-release/git",
         {
