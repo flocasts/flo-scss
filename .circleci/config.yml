@@ -1,5 +1,4 @@
 # JavaScript Node CircleCI 2.0 configuration file
-#
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2.1
@@ -26,8 +25,7 @@ jobs:
           key: flo-scss-dependencies-{{ .Branch }}-{{ .Revision }}
       - slack/status:
           fail_only: true
-          channel: 'DEZFWC2B0'
-          mentions: 'KurtAngular'
+          channel: 'C0108LULD1D'
           webhook: '${SLACK_WEBHOOK}'
 
   build:
@@ -54,8 +52,7 @@ jobs:
           key: flo-scss-build-{{ .Branch }}-{{ .Revision }}
       - slack/status:
           fail_only: true
-          channel: 'DEZFWC2B0'
-          mentions: 'KurtAngular'
+          channel: 'C0108LULD1D'
           webhook: '${SLACK_WEBHOOK}'
 
   release-npm:
@@ -71,8 +68,7 @@ jobs:
           command: npm run semantic-release
       - slack/status:
           fail_only: false
-          channel: 'DEZFWC2B0'
-          mentions: 'KurtAngular'
+          channel: 'C0108LULD1D'
           webhook: '${SLACK_WEBHOOK}'
 
 orbs:

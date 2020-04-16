@@ -215,7 +215,7 @@
       [
         "@semantic-release/exec",
         {
-          "prepareCmd": "./build/change-version.js ${lastRelease.version} ${nextRelease.version} && npm run release"
+          "prepareCmd": "npm run release-version ${lastRelease.version} ${nextRelease.version} && npm run release"
         }
       ],
       "@semantic-release/npm",
