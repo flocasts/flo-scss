@@ -195,57 +195,57 @@ Here is a list of all modifier class to change text color to any brand color.
   <tbody>
     <tr>
       <td>
-        {{ "`.color-100`" | markdownify }}
+        {{ "`.gray-100`" | markdownify }}
       </td>
-      <td style="background:#0C0C0C"><h1 class="color-100">Change text Color</h1></td>
+      <td style="background:#0C0C0C"><h1 class="gray-100">Change text Color</h1></td>
     </tr>
     <tr>
       <td>
-        {{ "`.color-200`" | markdownify }}
+        {{ "`.gray-200`" | markdownify }}
       </td>
-      <td><h1 class="color-200">Change text Color</h1></td>
+      <td><h1 class="gray-200">Change text Color</h1></td>
     </tr>
     <tr>
       <td>
-        {{ "`.color-300`" | markdownify }}
+        {{ "`.gray-300`" | markdownify }}
       </td>
-      <td><h1 class="color-300">Change text Color</h1></td>
+      <td><h1 class="gray-300">Change text Color</h1></td>
     </tr>
     <tr>
       <td>
-        {{ "`.color-400`" | markdownify }}
+        {{ "`.gray-400`" | markdownify }}
       </td>
-      <td><h1 class="color-400">Change text Color</h1></td>
+      <td><h1 class="gray-400">Change text Color</h1></td>
     </tr>
         <tr>
       <td>
-        {{ "`.color-500`" | markdownify }}
+        {{ "`.gray-500`" | markdownify }}
       </td>
-      <td><h1 class="color-500">Change text Color</h1></td>
+      <td><h1 class="gray-500">Change text Color</h1></td>
     </tr>
     <tr>
       <td>
-        {{ "`.color-600`" | markdownify }}
+        {{ "`.gray-600`" | markdownify }}
       </td>
-      <td><h1 class="color-600">Change text Color</h1></td>
+      <td><h1 class="gray-600">Change text Color</h1></td>
     </tr>
     <tr>
       <td>
-        {{ "`.color-700`" | markdownify }}
+        {{ "`.gray-700`" | markdownify }}
       </td>
-      <td><h1 class="color-700">Change text Color</h1></td>
+      <td><h1 class="gray-700">Change text Color</h1></td>
     </tr>
     <tr>
       <td>
-        {{ "`.color-800`" | markdownify }}
+        {{ "`.gray-800`" | markdownify }}
       </td>
-      <td><h1 class="color-800">Change text Color</h1></td>
+      <td><h1 class="gray-800">Change text Color</h1></td>
     </tr>
     <tr>
       <td>
-        {{ "`.color-900`" | markdownify }}
+        {{ "`.gray-900`" | markdownify }}
       </td>
-      <td><h1 class="color-900">Change text Color</h1></td>
+      <td><h1 class="gray-900">Change text Color</h1></td>
     </tr>
     <tr>
       <td>

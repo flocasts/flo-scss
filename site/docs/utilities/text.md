@@ -126,27 +126,27 @@ Change a selection to our monospace font stack with `.text-monospace`.
 
 <div class="row">
   <div class="col-6">
-    <p class="color-100">This is in Gray 100</p>
-    <p class="color-200">This is in Gray 200</p>
-    <p class="color-300">This is in Gray 300</p>
-    <p class="color-400">This is in Gray 400</p>
-    <p class="color-500">This is in Gray 500</p>
-    <p class="color-600">This is in Gray 600</p>
-    <p class="color-700">This is in Gray 700</p>
-    <p class="color-800">This is in Gray 800</p>
-    <p class="color-900">This is in Gray 900</p>
+    <p class="gray-100">This is in Gray 100</p>
+    <p class="gray-200">This is in Gray 200</p>
+    <p class="gray-300">This is in Gray 300</p>
+    <p class="gray-400">This is in Gray 400</p>
+    <p class="gray-500">This is in Gray 500</p>
+    <p class="gray-600">This is in Gray 600</p>
+    <p class="gray-700">This is in Gray 700</p>
+    <p class="gray-800">This is in Gray 800</p>
+    <p class="gray-900">This is in Gray 900</p>
   </div>
 
   <div class="col-6">
-    <p class="bg-black color-100">This is in Gray 100</p>
-    <p class="bg-black color-200">This is in Gray 200</p>
-    <p class="bg-black color-300">This is in Gray 300</p>
-    <p class="bg-black color-400">This is in Gray 400</p>
-    <p class="bg-black color-500">This is in Gray 500</p>
-    <p class="bg-black color-600">This is in Gray 600</p>
-    <p class="bg-black color-700">This is in Gray 700</p>
-    <p class="bg-black color-800">This is in Gray 800</p>
-    <p class="bg-black color-900">This is in Gray 900</p>
+    <p class="bg-black gray-100">This is in Gray 100</p>
+    <p class="bg-black gray-200">This is in Gray 200</p>
+    <p class="bg-black gray-300">This is in Gray 300</p>
+    <p class="bg-black gray-400">This is in Gray 400</p>
+    <p class="bg-black gray-500">This is in Gray 500</p>
+    <p class="bg-black gray-600">This is in Gray 600</p>
+    <p class="bg-black gray-700">This is in Gray 700</p>
+    <p class="bg-black gray-800">This is in Gray 800</p>
+    <p class="bg-black gray-900">This is in Gray 900</p>
   </div>
 </div>
 {% endcapture %}
