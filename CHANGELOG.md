@@ -1,26 +1,23 @@
-## [0.6.5](https://github.com/flocasts/flo-scss/compare/v0.6.5...v0.6.5) (2020-04-16)
-
+## [0.6.5](https://github.com/flocasts/flo-scss/compare/v0.6.4...v0.6.5) (2020-04-16)
 
 ### Bug Fixes
 
 * update circleci config ([19ce49c](https://github.com/flocasts/flo-scss/commit/19ce49cac8f403b36d503f36239631db45384d02))
 
-## [0.6.5](https://github.com/flocasts/flo-scss/compare/v0.6.5...v0.6.5) (2020-04-16)
-
+## [0.6.4](https://github.com/flocasts/flo-scss/compare/v0.6.3...v0.6.4) (2020-04-16)
 
 ### Bug Fixes
 
 * ensure add the assets ([f108c4b](https://github.com/flocasts/flo-scss/commit/f108c4b325a318814d79bd7bb528f6f9f962a6e5))
 
-## [0.6.5](https://github.com/flocasts/flo-scss/compare/v0.6.5...v0.6.5) (2020-04-16)
-
+## [0.6.3](https://github.com/flocasts/flo-scss/compare/v0.6.2...v0.6.3) (2020-04-16)
 
 ### Bug Fixes
 
 * more scripts ([1a14509](https://github.com/flocasts/flo-scss/commit/1a145092d2a2cdece8e1306b8b6181fc80345d20))
 * rewrite more files ([0c5547d](https://github.com/flocasts/flo-scss/commit/0c5547d5d97de29690ee7b05b6cc9f3473770d21))
 
-## [0.6.5](https://github.com/flocasts/flo-scss/compare/v0.6.1...v0.6.5) (2020-04-13)
+## [0.6.2](https://github.com/flocasts/flo-scss/compare/v0.6.1...v0.6.2) (2020-04-13)
 
 ### Features
 

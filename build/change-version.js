@@ -52,19 +52,19 @@ function walkAsync(directory, excludedDirectories, fileCallback, errback) {
   })
 }
 
-function replaceRecursively(directory, excludedDirectories, allowedExtensions, original, replacement) {
+function replaceRecursively(directory, excludedDirectories, excludedFiles, allowedExtensions, original, replacement) {
   original = new RegExp(regExpQuote(original), 'g')
   replacement = regExpQuoteReplacement(replacement)
   const updateFile = DRY_RUN ? (filepath) => {
     const parsedPath = path.parse(filepath)
-    if (allowedExtensions.has(parsedPath.ext) && parsedPath.base !== 'package-lock.json') {
+    if (allowedExtensions.has(parsedPath.ext) && !excludedFiles.has(parsedPath.base)) {
       console.log(`FILE: ${filepath}`)
     } else {
       console.log(`EXCLUDED:${filepath}`)
     }
   } : (filepath) => {
     const parsedPath = path.parse(filepath)
-    if (allowedExtensions.has(parsedPath.ext) && parsedPath.base !== 'package-lock.json') {
+    if (allowedExtensions.has(parsedPath.ext) && !excludedFiles.has(parsedPath.base)) {
       sh.sed('-i', original, replacement, filepath)
     }
   }
@@ -89,6 +89,10 @@ function main(args) {
     'node_modules',
     'vendor'
   ])
+  const EXCLUDED_FILES = new Set([
+    'CHANGELOG.md',
+    'package-lock.json'
+  ])
   const INCLUDED_EXTENSIONS = new Set([
     // This extension whitelist is how we avoid modifying binary files
     '',
@@ -102,7 +106,7 @@ function main(args) {
     '.txt',
     '.yml'
   ])
-  replaceRecursively('.', EXCLUDED_DIRS, INCLUDED_EXTENSIONS, oldVersion, newVersion)
+  replaceRecursively('.', EXCLUDED_DIRS, EXCLUDED_FILES, INCLUDED_EXTENSIONS, oldVersion, newVersion)
 }
 
 main(process.argv.slice(2))
