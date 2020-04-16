@@ -33,7 +33,7 @@
 Several quick start options are available:
 
 - Clone the repo: `git clone git@github.com:flocasts/flo-scss`
-- OR [download the latest release](https://github.com/flocasts/flo-scss/archive/v0.6.4.zip)
+- OR [download the latest release](https://github.com/flocasts/flo-scss/archive/v0.6.5.zip)
 - OR install with [npm](https://www.npmjs.com/): `npm install flocasts/flo-scss`
 
 ### Running documentation locally
