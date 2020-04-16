@@ -1,8 +1,16 @@
+## [0.6.3](https://github.com/flocasts/flo-scss/compare/v0.6.3...v0.6.3) (2020-04-16)
+
+
+### Bug Fixes
+
+* more scripts ([1a14509](https://github.com/flocasts/flo-scss/commit/1a145092d2a2cdece8e1306b8b6181fc80345d20))
+* rewrite more files ([0c5547d](https://github.com/flocasts/flo-scss/commit/0c5547d5d97de29690ee7b05b6cc9f3473770d21))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [0.6.2](https://github.com/flocasts/flo-scss/compare/v0.6.1...v0.6.2) (2020-04-13)
+## [0.6.3](https://github.com/flocasts/flo-scss/compare/v0.6.1...v0.6.3) (2020-04-13)
 
 ### Features
 
