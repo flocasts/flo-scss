@@ -82,7 +82,17 @@ Documentation search is powered by [Algolia's DocSearch](https://community.algol
 
 ## Contributing
 
-Please read through our [contributing guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+Commit messages should follow semantic versioning.
+
+```
+build: (no change - e.g. build script changes that do not affect the final output for the user)
+docs: (no change - e.g. changes to the documentation)
+fix: (patch change - bug fix for the user, not a fix to a build script)
+feat: (minor change - e.g. new feature for the user, not a new feature for build script)
+breaking: (major breaking change - e.g. changing or removing class names or functionality. Changes that break parity with mainline bootstrap documentation.
+```
+
+Using `docs` will not update the npm version.
 
 
 ## Versioning
