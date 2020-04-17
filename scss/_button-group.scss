@@ -65,7 +65,6 @@ $btn-group-focus: 0 0 0 $btn-focus-width rgba(255, 20, 15, 0.2) !important;
     &:active,
     &.active {
     @include btn-outline-secondary-active;
-    pointer-events: none;
 
       &:focus,
       &.focus,
