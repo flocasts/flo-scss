@@ -72,6 +72,24 @@
   }
 }
 
+// Message Alerts
+@each $color, $value in $alert-message  {
+  .alert-#{$color} {
+    @include alert-message-variant(
+      alert-message-color-level($color),
+      alert-message-color-level($color, $alert-color-level)
+    );
+  }
+}
+
+
+.alert-msg-light{
+  color: $gray-900;
+  .alert-link{
+    color:$gray-900;
+  }
+}
+
 // Status Alerts
 @each $color, $value in $alert-status  {
   .alert-#{$color} {

@@ -137,15 +137,15 @@ $alert-status: map-merge(
   $alert-status
 );
 
-// $alert-message: () !default;
-// $alert-message: map-merge(
-//   (
-//     "msg-primary": $red,
-//     "msg-light": $gray-100,
-//     "msg-dark": $gray-900,
-//     ),
-//   $alert-message
-// );
+$alert-message: () !default;
+$alert-message: map-merge(
+  (
+    "msg-primary": $red,
+    "msg-light": $gray-100,
+    "msg-dark": $gray-900,
+    ),
+  $alert-message
+);
 
 
 $amex: #006fcf;
@@ -1406,6 +1406,7 @@ $alert-border-radius: $border-radius !default;
 $alert-link-font-weight: $font-family-bold !default;
 $alert-border-width: $border-width !default;
 $alert-close-opacity: 0.5 !default;
+$alerts-message-box-shadow: $box-shadow;
 
 $alert-bg-level: -10 !default;
 $alert-border-level: -9 !default;

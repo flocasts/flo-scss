@@ -1,0 +1,6 @@
+- name: msg-primary
+  hex: "#FF140F"
+- name: msg-light
+  hex: "#FFFFFF"
+- name: msg-dark
+  hex: "#0C0C0C"

@@ -13,7 +13,16 @@ toc: true
 ## Message
 Message Alerts communicate information to users on the site.
 
-
+{% capture example %}
+{% for color in site.data.alert-message %}
+<div class="alert alert-{{ color.name }}" role="alert">
+  A simple {{ color.name }} alert with <a href="#" class="alert-link">an example link</a>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <svg class="alert-close"><use xlink:href="#close"/></svg>
+  </button>
+</div>{% endfor %}
+{% endcapture %}
+{% include example.html content=example %}
 
 
 ## Status
@@ -56,8 +65,6 @@ Alerts used to provide a message to users on the site.
 
 {% endcapture %}
 {% include example.html content=example %}
-
-
 
 
 <!-- Bootstrap 4 -->
