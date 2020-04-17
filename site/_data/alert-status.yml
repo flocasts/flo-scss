@@ -1,0 +1,10 @@
+- name: msg-default
+  hex: "#919196"
+- name: msg-info
+  hex: "#0B598A"
+- name: msg-success
+  hex: "#155734"
+- name: msg-warning
+  hex: "#CC7014"
+- name: msg-danger
+  hex: "#B31F1D"

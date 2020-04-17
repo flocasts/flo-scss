@@ -56,7 +56,7 @@ $grays: map-merge(
   $grays
 );
 
-$blue: #007bff !default;
+$blue: #0B598A !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
@@ -66,9 +66,9 @@ $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
 
 // Flo Brand Utility Colors
-$utility-success: #00b338;
-$utility-warning: #ff621c;
-$utility-danger: #b31f1d;
+$utility-success: #155734;
+$utility-warning: #CC7014;
+$utility-danger: #B31F1D;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -94,7 +94,7 @@ $colors: map-merge(
 $primary: $red !default;
 $secondary: $white !default;
 $success: $utility-success !default;
-$info: $cyan !default;
+$info: $blue !default;
 $warning: $utility-warning !default;
 $danger: $utility-danger !default;
 $light: $gray-200 !default;
@@ -117,6 +117,36 @@ $theme-colors: map-merge(
   ),
   $theme-colors
 );
+
+//Alert Status
+$alert-msg-default: $gray-600;
+$alert-msg-info: $blue;
+$alert-msg-success: $utility-success;
+$alert-msg-warning: $utility-warning;
+$alert-msg-danger: $utility-danger;
+
+$alert-status: () !default;
+$alert-status: map-merge(
+  (
+    "msg-default": $alert-msg-default,
+    "msg-info": $alert-msg-info,
+    "msg-success": $alert-msg-success,
+    "msg-warning": $alert-msg-warning,
+    "msg-danger": $alert-msg-danger,
+  ),
+  $alert-status
+);
+
+// $alert-message: () !default;
+// $alert-message: map-merge(
+//   (
+//     "msg-primary": $red,
+//     "msg-light": $gray-100,
+//     "msg-dark": $gray-900,
+//     ),
+//   $alert-message
+// );
+
 
 $amex: #006fcf;
 $android: #3ddc84;
@@ -143,8 +173,12 @@ $brand-colors: map-merge(
   $brand-colors
 );
 
+
+
+
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8% !default;
+// $alert-status-color-interval: 10% !default;
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold: 150 !default;
@@ -684,8 +718,8 @@ $input-btn-border-width: $border-width !default;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-font-size: from-pixels(14) !default; 
-$btn-padding-y: from-pixels(10) !default; 
+$btn-font-size: from-pixels(14) !default;
+$btn-padding-y: from-pixels(10) !default;
 $btn-padding-x: from-pixels(24) !default;
 $btn-font-family: $input-btn-font-family !default;
 $btn-line-height: 20 / 14 !default;
@@ -1365,12 +1399,13 @@ $modal-scale-transform: scale(1.02) !default;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-y: 0.75rem !default;
-$alert-padding-x: 1.25rem !default;
+$alert-padding-bottom: from-pixels(28) !default;
+$alert-padding: from-pixels(20) !default;
 $alert-margin-bottom: 1rem !default;
 $alert-border-radius: $border-radius !default;
-$alert-link-font-weight: $font-weight-bold !default;
+$alert-link-font-weight: $font-family-bold !default;
 $alert-border-width: $border-width !default;
+$alert-close-opacity: 0.5 !default;
 
 $alert-bg-level: -10 !default;
 $alert-border-level: -9 !default;

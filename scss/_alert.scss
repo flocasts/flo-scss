@@ -4,21 +4,117 @@
 
 .alert {
   position: relative;
-  padding: $alert-padding-y $alert-padding-x;
+  padding: from-pixels(12);
   margin-bottom: $alert-margin-bottom;
   border: $alert-border-width solid transparent;
+  @extend .subhead;
   @include border-radius($alert-border-radius);
+
+  .alert-link {
+    font-family: $alert-link-font-weight;
+  }
+
+  button{
+    background-color: inherit;
+    border: 1px solid transparent;
+    color: inherit;
+    opacity: $alert-close-opacity;
+    height: from-pixels(24);
+    float: right;
+    margin-top: from-pixels(-8);
+    margin-right: from-pixels(-12);
+
+  :hover{
+    opacity: 1;
+  }
+
+      svg{
+        color: inherit;
+        @extend .icon;
+        width: from-pixels(24);
+    }
+  }
 }
 
 // Headings for larger alerts
+
 .alert-heading {
-  // Specified to prevent conflicts of changing $headings-color
-  color: inherit;
+  @extend .alert;
+  padding: $alert-padding $alert-padding $alert-padding-bottom $alert-padding;
+
+  h4, .h4 {
+    // Specified to prevent conflicts of changing $headings-color
+    color: inherit;
+    @extend .headline;
+    font-family: $font-family-bold;
+  }
+  svg{
+    @extend .icon;
+    width:from-pixels(16);
+    vertical-align: text-top;
+  }
 }
 
+
 // Provide class for links that match alerts
-.alert-link {
-  font-weight: $alert-link-font-weight;
+
+
+// Alternate styles
+
+// Generate contextual modifier classes for colorizing the alert.
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant(
+      theme-color-level($color, $alert-bg-level),
+      theme-color-level($color, $alert-border-level),
+      theme-color-level($color, $alert-color-level)
+    );
+  }
+}
+
+// Status Alerts
+@each $color, $value in $alert-status  {
+  .alert-#{$color} {
+    @include alert-status-variant(
+      alert-msg-color-level($color)
+    );
+  }
+}
+
+// Status Alert background colors
+
+.alert-msg-danger{
+  background: lighten(saturate(adjust-hue($utility-danger, -1), 2.88), 56.08);
+}
+
+.alert-msg-warning{
+  background: lighten(desaturate(adjust-hue($utility-warning, 2), 1.19), 51.96);
+}
+
+.alert-msg-success{
+  background: lighten(desaturate($utility-success, 1.11), 73.92);
+}
+
+.alert-msg-info{
+  background: lighten(desaturate(adjust-hue($blue, 10), 25.23), 64.90);
+}
+
+.alert-msg-default{
+background-color: $gray-200;
+}
+
+
+
+// Stripped Alert background
+.alert-stripped {
+  border: none;
+  background: repeating-linear-gradient(
+    $alert-stripe-angle,
+    $alert-stripe-color-1,
+    $alert-stripe-color-1 $alert-stripe-width-base,
+    $alert-stripe-color-2 0,
+    $alert-stripe-color-2 #{$alert-stripe-width-base * $alert-stripe-width-ratio}
+  );
 }
 
 // Dismissible alerts
@@ -37,28 +133,3 @@
 //     color: inherit;
 //   }
 // }
-
-// Alternate styles
-//
-// Generate contextual modifier classes for colorizing the alert.
-
-@each $color, $value in $theme-colors {
-  .alert-#{$color} {
-    @include alert-variant(
-      theme-color-level($color, $alert-bg-level),
-      theme-color-level($color, $alert-border-level),
-      theme-color-level($color, $alert-color-level)
-    );
-  }
-}
-// custom flo secondary alert
-.alert-secondary {
-  border: none;
-  background: repeating-linear-gradient(
-    $alert-stripe-angle,
-    $alert-stripe-color-1,
-    $alert-stripe-color-1 $alert-stripe-width-base,
-    $alert-stripe-color-2 0,
-    $alert-stripe-color-2 #{$alert-stripe-width-base * $alert-stripe-width-ratio}
-  );
-}

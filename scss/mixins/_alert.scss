@@ -11,3 +11,23 @@
     color: darken($color, 10%);
   }
 }
+
+
+@mixin alert-status-variant($color) {
+  color: $color;
+  // background: lighten($color, 74%);
+  border-radius: $border-radius;
+  .alert-link {
+    color:lighten($color, 10%);
+  }
+}
+
+
+// @mixin alert-status-variant($color) {
+//   color: $color;
+//   background: lighten($color, 74%);
+//   border-radius: $border-radius;
+//   .alert-link {
+//     color:lighten($color, 20%);
+//   }
+// }
