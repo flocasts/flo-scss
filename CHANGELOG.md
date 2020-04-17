@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/flocasts/flo-scss/compare/v0.6.6...v0.7.0) (2020-04-17)
+
+
+### Features
+
+* svg logos and icons ([#29](https://github.com/flocasts/flo-scss/issues/29)) ([b669bfd](https://github.com/flocasts/flo-scss/commit/b669bfd591efcdb29cba841545df85d0798e687f))
+
 ## [0.6.6](https://github.com/flocasts/flo-scss/compare/v0.6.5...v0.6.6) (2020-04-16)
 
 
