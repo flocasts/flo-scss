@@ -70,6 +70,12 @@ $utility-success: #00b338;
 $utility-warning: #ff621c;
 $utility-danger: #b31f1d;
 
+// Flo Co-brand colors TODO: Keep if colors are documented
+// $varsity-blue: #247BB8;
+// $milesplit-blue: #000062;
+// $milesplit-red: #C80000;
+
+
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
@@ -138,7 +144,7 @@ $brand-colors: map-merge(
     "visa": $visa,
     "fire-tv": $fire-tv,
     "outlook": $outlook,
-    "roku": $roku
+    "roku": $roku,
   ),
   $brand-colors
 );
@@ -684,8 +690,8 @@ $input-btn-border-width: $border-width !default;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-font-size: from-pixels(14) !default; 
-$btn-padding-y: from-pixels(10) !default; 
+$btn-font-size: from-pixels(14) !default;
+$btn-padding-y: from-pixels(10) !default;
 $btn-padding-x: from-pixels(24) !default;
 $btn-font-family: $input-btn-font-family !default;
 $btn-line-height: 20 / 14 !default;

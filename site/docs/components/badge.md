@@ -7,6 +7,14 @@ toc: true
 ---
 # NOT Updated for FLO-SCSS yet
 
+TODO: - These badges are currently used in web-app and are svgs.
+
+- badge_live.svg
+- badge_not_live.svg
+- badge_pro_dark.svg
+- badge_pro_light.svg
+- badge_replay.svg
+
 ## Example
 
 Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units.

@@ -12,3 +12,8 @@ $bd-danger:        #d9534f;
 // The weird if test is made as a workaround to prevent a false fusv error.
 //
 $enable-responsive-font-sizes: if($enable-responsive-font-sizes, true, true);
+
+// For icon display
+$icon-size: 1.42em !default;
+$icon-size-lg: 2em !default;
+$icon-size-sm: 1.06em !default;

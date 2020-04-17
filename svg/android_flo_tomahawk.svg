@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><path class="squircle-shape" fill="currentColor" d="M250,0C50,0,0,50,0,250S50,500,250,500s250-50,250-250S450,0,250,0Z"/><path class="tomahawk-top" fill="none" d="M363.272,233.951l-13.426,76.466a102.236,102.236,0,0,0-97.068,71.219h-79.09A179.166,179.166,0,0,1,350.154,233.488C354.63,233.488,358.951,233.642,363.272,233.951Z"/><polygon class="tomahawk-bottom" fill="none" points="383.642 118.827 370.139 195.062 208.256 195.062 111.111 118.827 383.642 118.827"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <path class="squircle-shape" fill="currentColor" d="M421.8 31.2c25.9 0 46.9 21 46.9 46.9v343.8c0 25.9-21 46.9-46.9 46.9H78.2c-25.9 0-46.9-21-46.9-46.9V78.2c0-25.9 21-46.9 46.9-46.9 0-.1 343.6-.1 343.6-.1z"/>
+  <path class="tomahawk-top" fill="#ffffff" d="M394.4 108.3H100l104.9 82.4h174.8z"/>
+  <path class="tomahawk-bottom" fill="#ffffff" d="M358.1 232.1c-94 0-174.4 67.4-190.6 160H253c14.5-45.7 56.9-76.8 104.9-76.9l14.5-82.6c-4.7-.2-9.4-.5-14.3-.5z"/>
+</svg>

@@ -80,6 +80,7 @@ Read the [Getting started page](https://flo-scss.flo.center/docs/getting-started
 
 Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/docs/assets/js/src/search.js` file.
 
+
 ## Contributing
 
 Commit messages should follow semantic versioning.
