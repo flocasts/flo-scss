@@ -48,16 +48,16 @@ download:
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css: 'sha384-KVECXYZTt1whwERGDiUFMzP40sDUFjfzxqX02VjqEeyqVyg4YXNoWg0z7F0q6qJX'
+  css: 'sha384-MMLzfhqcj7iAztos0doM4v4OXRfBzu1mFfFV+hNw/dvth+emrA3riw9Y+XCaMyFd'
   css_hash: sha384-hnvsmW4CEqIE9xpwdmvw+oyi2zalIdkqZJKT8ovyObj2fiPNSLt7xdsda4JGUfSf
-  js: 'sha384-KVECXYZTt1whwERGDiUFMzP40sDUFjfzxqX02VjqEeyqVyg4YXNoWg0z7F0q6qJX'
+  js: 'sha384-MMLzfhqcj7iAztos0doM4v4OXRfBzu1mFfFV+hNw/dvth+emrA3riw9Y+XCaMyFd'
   js_hash: sha384-1RkA5wjfeG5u+6ycZ90q+PMlafLBaMCHvGk6PlVrQmIuTvpdA9qupxwbnPf9QbHH
   js_bundle: >-
     https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js
   js_bundle_hash: sha384-gEp0IQktG6BLXHMpPT1pxMSC8EKUA159uPI9c/AmIhedq/EvAEfBroQ5tsSOS1/A
-  jquery: 'sha384-KVECXYZTt1whwERGDiUFMzP40sDUFjfzxqX02VjqEeyqVyg4YXNoWg0z7F0q6qJX'
+  jquery: 'sha384-MMLzfhqcj7iAztos0doM4v4OXRfBzu1mFfFV+hNw/dvth+emrA3riw9Y+XCaMyFd'
   jquery_hash: sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n
-  popper: 'sha384-KVECXYZTt1whwERGDiUFMzP40sDUFjfzxqX02VjqEeyqVyg4YXNoWg0z7F0q6qJX'
+  popper: 'sha384-MMLzfhqcj7iAztos0doM4v4OXRfBzu1mFfFV+hNw/dvth+emrA3riw9Y+XCaMyFd'
   popper_hash: sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN
 
 toc:
