@@ -31,9 +31,9 @@ social_image_path: /docs/assets/brand/bootstrap-social.png
 social_logo_path: /docs/assets/brand/bootstrap-social-logo.png
 
 # Custom Variables
-current_version:      0.7.0
-current_ruby_version: 0.7.0
-docs_version:         0.7.0
+current_version:      0.7.1
+current_ruby_version: 0.7.1
+docs_version:         0.7.1
 github_org:           "https://github.com/flocasts"
 repo:                 "https://github.com/flocasts/flo-scss"
 slack:                "https://www.flosports.tv"
@@ -44,20 +44,20 @@ themes:               "https://www.flosports.tv"
 icons:                "https://flo-scss.flo.center"
 
 download:
-  source: "https://github.com/flocasts/flo-scss/archive/v0.7.0.zip"
+  source: "https://github.com/flocasts/flo-scss/archive/v0.7.1.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css: 'sha384-MMLzfhqcj7iAztos0doM4v4OXRfBzu1mFfFV+hNw/dvth+emrA3riw9Y+XCaMyFd'
+  css: 'sha384-bTuOyWFzvtzatBsqmXxShF1CAHyTzY4LiDCiZ5xdOi/Uq4W2ss8wllsHVHbNOd5P'
   css_hash: sha384-hnvsmW4CEqIE9xpwdmvw+oyi2zalIdkqZJKT8ovyObj2fiPNSLt7xdsda4JGUfSf
-  js: 'sha384-MMLzfhqcj7iAztos0doM4v4OXRfBzu1mFfFV+hNw/dvth+emrA3riw9Y+XCaMyFd'
+  js: 'sha384-bTuOyWFzvtzatBsqmXxShF1CAHyTzY4LiDCiZ5xdOi/Uq4W2ss8wllsHVHbNOd5P'
   js_hash: sha384-1RkA5wjfeG5u+6ycZ90q+PMlafLBaMCHvGk6PlVrQmIuTvpdA9qupxwbnPf9QbHH
   js_bundle: >-
     https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js
   js_bundle_hash: sha384-gEp0IQktG6BLXHMpPT1pxMSC8EKUA159uPI9c/AmIhedq/EvAEfBroQ5tsSOS1/A
-  jquery: 'sha384-MMLzfhqcj7iAztos0doM4v4OXRfBzu1mFfFV+hNw/dvth+emrA3riw9Y+XCaMyFd'
+  jquery: 'sha384-bTuOyWFzvtzatBsqmXxShF1CAHyTzY4LiDCiZ5xdOi/Uq4W2ss8wllsHVHbNOd5P'
   jquery_hash: sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n
-  popper: 'sha384-MMLzfhqcj7iAztos0doM4v4OXRfBzu1mFfFV+hNw/dvth+emrA3riw9Y+XCaMyFd'
+  popper: 'sha384-bTuOyWFzvtzatBsqmXxShF1CAHyTzY4LiDCiZ5xdOi/Uq4W2ss8wllsHVHbNOd5P'
   popper_hash: sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN
 
 toc:
