@@ -34,57 +34,41 @@ Logos inherit width and height from the parent container, so the parent containe
 {% include example.html content=example %}
 
 
-### Color
-There are four color variations of the FloSports logos.
-
-{% capture example %}
-<div class="row align-items-center">
-  <svg class="text-900 col-4"> <!-- colors svg -->
-    <use xlink:href="#flofc-hawk" />
-  </svg>
-  <p class="caption mt-1">flosports-hawk</p>
-  <svg class="text-900 col-4"> <!-- colors svg -->
-    <use xlink:href="#flofc-hawk" />
-  </svg>
-  <p class="caption mt-1">flosports-hawk</p>
-</div>
-<div class="row align-items-center bg-black">
-  <svg class="text-100 col-4"> <!-- colors svg -->
-    <use xlink:href="#flofc-hawk" />
-  </svg>
-  <p class="caption mt-1">flosports-hawk</p>
-  <svg class="text-100 col-4"> <!-- colors svg -->
-    <use xlink:href="#flofc-hawk" />
-  </svg>
-  <p class="caption mt-1">flosports-hawk</p>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
-
-#### Multiple Colors
-Targeted class are available to color the hawk or text independent of each other. In the FloSports logo below `class="flo-svg-logo-graphic"` is targeted to color the hawk red independently of the logo title.
-
-- `class="flo-svg-logo-title"` will change the color of the text
-- `class="flo-svg-logo-graphic"` will change the color of the icon(hawk)
-
 ## FloSports 
-Corporate Logo
+There are four color variations of the corporate logos.
 
-<div class="row mb-3">  
-  <div class="col-md-6 d-flex flex-column bg-black text-100 align-items-center justify-content-center pt-3 mb-3">
-    <svg>
+<div class="row mb-3">
+  <div class="col-md-6 d-flex flex-column align-items-center justify-content-center pt-3 mb-3">
+    <svg class="text-900 icon">
       <use xlink:href="#flosports-hawk" />
     </svg>
     <p class="caption mt-1">flosports-hawk</p>
   </div>
-  <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
+  <div class="col-md-6 d-flex flex-column bg-black text-100 align-items-center justify-content-center pt-3 mb-3">
+    <svg class="text-100 icon">
+      <use xlink:href="#flosports-hawk" />
+    </svg>
+    <p class="caption mt-1">flosports-hawk</p>
+  </div>
+  <div class="alternate-logo col-md-6 d-flex flex-column bg-black text-100 align-items-center justify-content-center pt-3 mb-3">
+    <svg class="text-100 icon">
+      <use xlink:href="#flosports-hawk" />
+    </svg>
+    <p class="caption mt-1">flosports-hawk</p>
+  </div>
+  <div class="col-md-6 d-flex flex-column align-items-center justify-content-center pt-3 mb-3">
     <svg class="icon text-900">
       <use xlink:href="#flosports-hawk" />
     </svg>
     <p class="caption mt-1">flosports-hawk</p>
   </div>
 </div>
+
+#### Multiple Colors
+Targeted class are available to color the hawk or text independent of each other. In the FloSports logo below `class="flo-svg-logo-graphic"` is targeted to color the hawk red independently of the logo title.
+
+- `class="flo-svg-logo-title"` will change the color of the text
+- `class="flo-svg-logo-graphic"` will change the color of the icon(hawk)
 
 ## Brands
 FloSports network of brands (verticals).

@@ -12,9 +12,9 @@ This page contains a list of all SVG icons available and utility classes to supp
 
 Each icon in the Flo-SCSS system is a formatted SVG with a `viewBox="0 0 500 500"`, a path fill="currentColor" and a descriptive class name.
 
-The SVG is created on a 500px x 500px art board. SVG were created in a design program such as Adobe Illustrator or Sketch and cleaned up with an [online tool](https://jakearchibald.github.io/svgomg/). When using SVG, make sure there are no extra `g` `tags`, `masks`, or `nested paths` present as these uncessarily increase file size.
+The SVG is created on a 500px x 500px art board in a design program such as Adobe Illustrator or Sketch and cleaned up with a [svgomg](https://jakearchibald.github.io/svgomg/). When using SVG, make sure there are no extra `g` `tags`, `masks`, or `nested paths` present as these unnecessarily increase file size.
 
-Format Guidelines
+SVG Format Guidelines
 * `fill=currentColor` is set
 * `viewBox="0 0 500 500"` is present
 * no inline width, height, or colors
@@ -27,8 +27,8 @@ Format Guidelines
 </svg>
 ```
 
-## Manipulating SVG's
-<p class="text-ignite"><strong>Note:</strong> These examples below reference Flo-SCSS's SVG sprite sheet and may not reflect how your application references SVG. The names of the SVG icons should remain the same.</p>
+## Manipulating SVG
+<p class="text-ignite"><strong>Note:</strong> These examples below uses Flo-SCSS's SVG sprite sheet and may not reflect how your application references SVG. The names of the SVG icons should remain the same.</p>
 
 
 
@@ -50,21 +50,6 @@ Apply `.icon`, `.icon-sm`, and `.icon-lg` to size icons directly.
 {% endcapture %}
 {% include example.html content=example %}
 
-If SVG are added to the site dynamically, icons can inherit width and height from their parent container.
-
-{% capture example %}
-<div class="row row-cols-4 align-items-center">
-  <svg>
-    <use xlink:href="#close_circle" />
-  </svg>
-  <svg>
-    <use xlink:href="#close_circle" />
-  </svg>
-  <svg>
-    <use xlink:href="#close_circle" />
-  </svg>
-</div>
-{% endcapture %}
 
 ### Color
 
