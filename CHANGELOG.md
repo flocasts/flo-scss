@@ -1,3 +1,10 @@
+## [0.7.1](https://github.com/flocasts/flo-scss/compare/v0.7.0...v0.7.1) (2020-04-20)
+
+
+### Bug Fixes
+
+* **color:** add type- color classes back ([#56](https://github.com/flocasts/flo-scss/issues/56)) ([4530796](https://github.com/flocasts/flo-scss/commit/45307962672bea0618de3338c614702d4e81e1ec))
+
 # [0.7.0](https://github.com/flocasts/flo-scss/compare/v0.6.6...v0.7.0) (2020-04-17)
 
 
