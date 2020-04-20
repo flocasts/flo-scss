@@ -6,13 +6,13 @@ group: components
 toc: true
 ---
 
-We use svgs in the design system and not a font library to display icons. Look here for details on [Brand Logos]({{ site.baseurl }}/docs/components/logos) or [Badges]({{ site.baseurl }}/docs/components/badge).
+This page contains a list of all SVG icons available and utility classes to support them. Not included are  [Brand Logos]({{ site.baseurl }}/docs/components/logos) or [Badges]({{ site.baseurl }}/docs/components/badge).
 
-## SVGs
+## SVG
 
-Each icon in the Flo-SCSS system is a formatted svg with a `viewBox="0 0 500 500"`, a path fill="currentColor" and a descriptive class name.
+Each icon in the Flo-SCSS system is a formatted SVG with a `viewBox="0 0 500 500"`, a path fill="currentColor" and a descriptive class name.
 
-The SVG is created on a 500px x 500px art board. SVG's created in a design program such as Adobe Illustrator or Sketch. Clean up an svg with this online tool https://jakearchibald.github.io/svgomg/. Make sure no extra `g` `tags`, `masks`, or `nested paths` are present.
+The SVG is created on a 500px x 500px art board. SVG were created in a design program such as Adobe Illustrator or Sketch and cleaned up with an [online tool](https://jakearchibald.github.io/svgomg/). When using SVG, make sure there are no extra `g` `tags`, `masks`, or `nested paths` present as these uncessarily increase file size.
 
 Format Guidelines
 * `fill=currentColor` is set
@@ -26,22 +26,14 @@ Format Guidelines
 <path fill="currentColor" d="M346.382,250.246A96.882,96.882,0,1,0,249.5,347.128,96.992,96.992,0,0,0,346.382,250.246Zm93.428,35.383,42.96,24.8a12.121,12.121,0,0,1,5.5,14.1,249.617,249.617,0,0,1-55.13,95.348,12.113,12.113,0,0,1-14.952,2.273l-42.927-24.794a193.113,193.113,0,0,1-61.249,35.413v49.579a12.1,12.1,0,0,1-9.453,11.812,251.979,251.979,0,0,1-110.1.008,12.123,12.123,0,0,1-9.479-11.818V432.764a193.083,193.083,0,0,1-61.249-35.413L80.808,422.145a12.113,12.113,0,0,1-14.952-2.273,249.63,249.63,0,0,1-55.13-95.348,12.122,12.122,0,0,1,5.5-14.1l42.961-24.8a195.04,195.04,0,0,1,0-70.765l-42.96-24.8a12.121,12.121,0,0,1-5.5-14.1A249.621,249.621,0,0,1,65.857,80.62a12.113,12.113,0,0,1,14.952-2.272l42.927,24.793a193.131,193.131,0,0,1,61.249-35.413V18.149a12.108,12.108,0,0,1,9.453-11.813,252,252,0,0,1,110.1-.007,12.121,12.121,0,0,1,9.479,11.817V67.727a193.1,193.1,0,0,1,61.249,35.413l42.927-24.793a12.113,12.113,0,0,1,14.952,2.272,249.634,249.634,0,0,1,55.13,95.349,12.122,12.122,0,0,1-5.5,14.1l-42.961,24.8A195.045,195.045,0,0,1,439.81,285.629Z"/>
 </svg>
 ```
- 
-#### Flo-SCSS Sprite Sheet
-
-FLO-SCSS svg icons are displayed in a grid list generated using `svg-sprite`, is a module that takes a bunch of SVG files, optimizes them and puts them all into one svg sprite which is located here,` _includes/icon-sprite.svg`, in this app. with their names referenced in `site/_data/icons.yml.` The "All icons" section of icons.md loops through these names to presents the full svg list.
-
-To add or remove an svg, update the name in the `icons.yml` and run `npm run process-svg`
-
-TODO: explain the difference between fill="currentColor" and the use of classes in the svg.
 
 ## Manipulating SVG's
+<p class="text-ignite"><strong>Note:</strong> These examples below reference Flo-SCSS's SVG sprite sheet and may not reflect how your application references SVG. The names of the SVG icons should remain the same.</p>
 
-### Sizing
-Icons inherit width and height from the parent container, so the parent container can set its dimensions.  
+
 
 #### Modify Class
-Apply `.icon`, `.icon-sm`, and `.icon-lg` to size icons
+Apply `.icon`, `.icon-sm`, and `.icon-lg` to size icons directly.
 
 {% capture example %}
 <div class="row row-cols-4 align-items-center">
@@ -58,9 +50,25 @@ Apply `.icon`, `.icon-sm`, and `.icon-lg` to size icons
 {% endcapture %}
 {% include example.html content=example %}
 
+If SVG are added to the site dynamically, icons can inherit width and height from their parent container.
+
+{% capture example %}
+<div class="row row-cols-4 align-items-center">
+  <svg>
+    <use xlink:href="#close_circle" />
+  </svg>
+  <svg>
+    <use xlink:href="#close_circle" />
+  </svg>
+  <svg>
+    <use xlink:href="#close_circle" />
+  </svg>
+</div>
+{% endcapture %}
+
 ### Color
 
-Setting `fill=currentColor` in the SVG allows the SVG's colors to be controlled by CSS and added classes. Below you can see the SVG's color changing by adding `.color-class` to the svg or parent tag.
+Setting `fill=currentColor` in the SVG allows the SVG colors to be controlled by CSS. Below you can see the SVG color changing by adding `.color-class` to the SVG or parent tag.
 
 {% capture example %}
 <div class="row row-cols-4 color-ignite">
@@ -77,7 +85,7 @@ Setting `fill=currentColor` in the SVG allows the SVG's colors to be controlled 
 {% endcapture %}
 {% include example.html content=example %}
 
-### Brand colors 
+### Non-FLO Brand Colors 
 The following brand-specific color classes are provided:
 
 <div class="row">
@@ -139,20 +147,20 @@ Transform icons with [transform utilities](/docs/utilities/transform)
 
 {% capture example %}
 <div class="row row-cols-4">
-  <svg class="icon-sm rotate-180">
+  <svg class="icon-md rotate-180">
     <use xlink:href="#bell_regular" />
   </svg>
-    <svg class="icon-sm rotate-45">
+    <svg class="icon-md rotate-45">
     <use xlink:href="#bell_regular" />
   </svg>
-    <svg class="icon-sm rotate-135">
+    <svg class="icon-md rotate-135">
     <use xlink:href="#bell_regular" />
   </svg>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Icons
+## Icon List
 A complete list of all the SVG icons in the system.
 
 <div class="row">
@@ -166,3 +174,10 @@ A complete list of all the SVG icons in the system.
 {% endfor %}
 </div>
 
+
+
+#### Adding an SVG to the Flo-SCSS Sprite Sheet
+
+FLO-SCSS svg icons are displayed in a grid list generated using `svg-sprite`, is a module that takes a bunch of SVG files, optimizes them and puts them all into one svg sprite which is located here,` _includes/icon-sprite.svg`, in this app. with their names referenced in `site/_data/icons.yml.` The "All icons" section of icons.md loops through these names to presents the full svg list.
+
+To add or remove an svg, update the name in the `icons.yml` and run `npm run process-svg`
