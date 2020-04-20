@@ -6,20 +6,11 @@ group: components
 toc: true
 ---
 
-## Add Logo
-Logos are stored on AWS library, and accessed with the API.
-
 ## Modifiers
 ### Sizing
-Logos inherit width and height from the parent container, so the parent container can set the SVG's dimensions.
+Logos inherit width and height from the parent container, so the parent container can set the SVG dimensions.
 
 {% capture example %}
-<div class="row row-cols-2 align-items-center color-800"> <!-- reference size in parent -->
-  <svg>
-    <use xlink:href="#flofc-hawk" />
-  </svg>
- </div> 
-
 <div class="row row-cols-6 align-items-center">  <!-- reference size in parent -->
   <svg>
     <use xlink:href="#flofc-hawk" />
@@ -32,27 +23,40 @@ Logos inherit width and height from the parent container, so the parent containe
   </svg>
 </div>
 
+<div class="row row-cols-2 align-items-center text-800"> <!-- reference size in parent -->
+  <svg>
+    <use xlink:href="#flofc-hawk" />
+  </svg>
+</div> 
+
+
 {% endcapture %}
 {% include example.html content=example %}
 
 
 ### Color
-Logos can have one color or variant colors. Descriptive classes can change the icon(hawk) or the brand name colors. Setting `fill=currentColor` in the SVG allows the SVG's colors to be controlled by CSS and added classes. 
-
-#### One Color 
-Below you can see the SVG's color changing by adding `.color-class` to the svg or parent tag.
+There are four color variations of the FloSports logos.
 
 {% capture example %}
-<div class="row row-cols-4 align-items-center">
-  <svg class="color-800"> <!-- colors svg -->
+<div class="row align-items-center">
+  <svg class="text-900 col-4"> <!-- colors svg -->
     <use xlink:href="#flofc-hawk" />
   </svg>
-  <svg class="color-500"> <!-- colors svg -->
+  <p class="caption mt-1">flosports-hawk</p>
+  <svg class="text-900 col-4"> <!-- colors svg -->
     <use xlink:href="#flofc-hawk" />
   </svg>
-  <svg class="color-ignite"> <!-- colors svg -->
+  <p class="caption mt-1">flosports-hawk</p>
+</div>
+<div class="row align-items-center bg-black">
+  <svg class="text-100 col-4"> <!-- colors svg -->
     <use xlink:href="#flofc-hawk" />
   </svg>
+  <p class="caption mt-1">flosports-hawk</p>
+  <svg class="text-100 col-4"> <!-- colors svg -->
+    <use xlink:href="#flofc-hawk" />
+  </svg>
+  <p class="caption mt-1">flosports-hawk</p>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -68,14 +72,14 @@ Targeted class are available to color the hawk or text independent of each other
 Corporate Logo
 
 <div class="row mb-3">  
-  <div class="col-md-6 d-flex flex-column bg-black color-100 align-items-center justify-content-center pt-3 mb-3">
-    <svg class="icon">
+  <div class="col-md-6 d-flex flex-column bg-black text-100 align-items-center justify-content-center pt-3 mb-3">
+    <svg>
       <use xlink:href="#flosports-hawk" />
     </svg>
     <p class="caption mt-1">flosports-hawk</p>
   </div>
   <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
-    <svg class="icon color-900">
+    <svg class="icon text-900">
       <use xlink:href="#flosports-hawk" />
     </svg>
     <p class="caption mt-1">flosports-hawk</p>
@@ -85,7 +89,7 @@ Corporate Logo
 ## Brands
 FloSports network of brands (verticals).
 
-<div class="row mb-3 color-500">
+<div class="row mb-3 text-500">
 <!-- baseball bj -->
   <div class="col-md-6  d-flex flex-column align-items-center justify-content-center">
     <svg class="icon-sm">
@@ -253,7 +257,7 @@ FloSports network of brands (verticals).
 #### Live player
 A one color white logo is used on the Live player.
 
-<div class="row color-100">
+<div class="row text-100">
    <div class="col-md-6 d-flex flex-column align-items-center justify-content-center bg-black px-5">
     <svg>
       <use xlink:href="#flo_hawk" />
@@ -268,13 +272,13 @@ Other brands part of FloSports network
 
 
 ### Varsity
-Varsity has one color and multiple color svg options. 
+Varsity has one color and multiple color SVG options. 
 
-**One color SVGs**
+**One color SVG**
 * `varsity_stacked.svg`
 * `varsity_white_logo.svg`
 
-**Multiple Color SVGs**
+**Multiple Color SVG**
 These have additional class to control color independently.
 - `varsity_stacked_color.svg`
    - change the V color with `class="varsity_stacked_v"`
@@ -289,7 +293,7 @@ These have additional class to control color independently.
    - change the pill with `class="varsity_logo_pill"`
 
 
-<div class="row bg-black color-100 mb-3">
+<div class="row bg-black text-100 mb-3">
   <div class="col-md-6 col-lg-3 d-flex flex-column align-items-center justify-content-center">
     <svg>
       <use xlink:href="#varsity_stacked" />
@@ -325,7 +329,7 @@ These have additional class to control color independently.
 #### Live player
 A one color white logo is used on the Live player.
 
-<div class="row color-100">
+<div class="row text-100">
    <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center justify-content-center bg-black px-5">
     <svg>
       <use xlink:href="#varsity_white_logo" />
@@ -336,7 +340,6 @@ A one color white logo is used on the Live player.
 
 
 ### MileSplit
-Co-brand logo used on Stripe and funnel.
 <div class="row">
    <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center justify-content-center">
     <svg>
