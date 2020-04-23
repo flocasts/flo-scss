@@ -11,3 +11,23 @@
     color: darken($color, 10%);
   }
 }
+
+@mixin alert-message-variant($background, $color) { //Need tpo pass in Bg color and calculate text
+  color: $gray-100;
+  background: $background;
+  border-radius: $border-radius;
+  box-shadow: $alerts-message-box-shadow;
+  text-align: center;
+  .alert-link {
+    color: $gray-100;
+    font-family: $alert-link-font-weight;
+  }
+}
+
+@mixin alert-status-variant($color) {
+  color: $color;
+  border-radius: $border-radius;
+  .alert-link {
+    color:lighten($color, 10%);
+  }
+}

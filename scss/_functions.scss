@@ -88,6 +88,14 @@
   @return map-get($theme-colors, $key);
 }
 
+@function alert-status($key: "msg-default") {
+  @return map-get($alert-status, $key);
+}
+
+@function alert-message($key: "primary") {
+  @return map-get($alert-message, $key);
+}
+
 @function gray($key: "100") {
   @return map-get($grays, $key);
 }
@@ -95,6 +103,24 @@
 // Request a theme color level
 @function theme-color-level($color-name: "primary", $level: 0) {
   $color: theme-color($color-name);
+  $color-base: if($level > 0, $black, $white);
+  $level: abs($level);
+
+  @return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+// Request Alert Message color
+@function alert-message-color-level($color-name: "msg-primary", $level: 0) {
+  $color: alert-message($color-name);
+  $color-base: if($level > 0, $black, $white);
+  $level: abs($level);
+
+  @return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+// Request Alert Status color
+@function alert-msg-color-level($color-name: "msg-default", $level: 0) {
+  $color: alert-status($color-name);
   $color-base: if($level > 0, $black, $white);
   $level: abs($level);
 
