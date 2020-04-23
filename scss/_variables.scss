@@ -1399,18 +1399,32 @@ $modal-scale-transform: scale(1.02) !default;
 //
 // Define alert colors, border radius, and padding.
 
+$alert-message-padding: from-pixels(12) !default;
 $alert-padding-bottom: from-pixels(28) !default;
 $alert-padding: from-pixels(20) !default;
 $alert-margin-bottom: 1rem !default;
 $alert-border-radius: $border-radius !default;
 $alert-link-font-weight: $font-family-bold !default;
-$alert-border-width: $border-width !default;
+$alert-border: solid $border-width transparent !default;
 $alert-close-opacity: 0.5 !default;
 $alerts-message-box-shadow: $box-shadow;
+
 
 $alert-bg-level: -10 !default;
 $alert-border-level: -9 !default;
 $alert-color-level: 6 !default;
+
+$alert-button-height: from-pixels(24);
+$alert-button-margin-top: from-pixels(-8);
+$alert-button-margin-right: from-pixels(-12);
+
+$alert-svg-button-width: from-pixels(24);
+$alert-svg-heading-width: from-pixels(16);
+
+$alert-msg-danger-bg: lighten(saturate(adjust-hue($utility-danger, -1), 2.88), 56.08);
+$alert-msg-warning-bg:  lighten(desaturate(adjust-hue($utility-warning, 2), 1.19), 51.96);
+$alert-msg-success-bg: lighten(desaturate($utility-success, 1.11), 73.92);
+$alert-msg-info-bg: lighten(desaturate(adjust-hue($blue, 10), 25.23), 64.90);
 
 // for flo .alert-secondary
 $alert-stripe-width-base: .3rem !default;

@@ -4,9 +4,9 @@
 
 .alert {
   position: relative;
-  padding: from-pixels(12);
+  padding: $alert-message-padding;
   margin-bottom: $alert-margin-bottom;
-  border: $alert-border-width solid transparent;
+  border: $alert-border;
   @extend .subhead;
   @include border-radius($alert-border-radius);
 
@@ -16,13 +16,13 @@
 
   button{
     background-color: inherit;
-    border: 1px solid transparent;
+    border: $alert-border;
     color: inherit;
     opacity: $alert-close-opacity;
-    height: from-pixels(24);
+    height: $alert-button-height;
     float: right;
-    margin-top: from-pixels(-8);
-    margin-right: from-pixels(-12);
+    margin-top: $alert-button-margin-top;
+    margin-right: $alert-button-margin-right;
 
   :hover{
     opacity: 1;
@@ -31,7 +31,7 @@
       svg{
         color: inherit;
         @extend .icon;
-        width: from-pixels(24);
+        width: $alert-svg-button-width;
     }
   }
 }
@@ -50,7 +50,7 @@
   }
   svg{
     @extend .icon;
-    width:from-pixels(16);
+    width: $alert-svg-heading-width;
     vertical-align: text-top;
   }
 }
@@ -102,19 +102,19 @@
 // Status Alert background colors
 
 .alert-msg-danger{
-  background: lighten(saturate(adjust-hue($utility-danger, -1), 2.88), 56.08);
+  background: $alert-msg-danger-bg;
 }
 
 .alert-msg-warning{
-  background: lighten(desaturate(adjust-hue($utility-warning, 2), 1.19), 51.96);
+  background: $alert-msg-warning-bg;
 }
 
 .alert-msg-success{
-  background: lighten(desaturate($utility-success, 1.11), 73.92);
+  background: $alert-msg-success-bg
 }
 
 .alert-msg-info{
-  background: lighten(desaturate(adjust-hue($blue, 10), 25.23), 64.90);
+  background: $alert-msg-info-bg;
 }
 
 .alert-msg-default{
