@@ -5,7 +5,7 @@ description: Group a series of buttons together on a single line with the button
 group: components
 toc: true
 ---
-Styling options for button groups, checkout button groups in web-app storybook to add to the site.
+Styling options for button groups, checkout button groups in web-app [storybook](https://flosports-webapp-storybook.stag.flokubernetes.com) to add to the site.
 
 ## Two Buttons
 
