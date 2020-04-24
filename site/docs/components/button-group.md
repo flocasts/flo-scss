@@ -5,40 +5,22 @@ description: Group a series of buttons together on a single line with the button
 group: components
 toc: true
 ---
+Styling options for button groups, checkout button groups in web-app [storybook](https://flosports-webapp-storybook.stag.flokubernetes.com) to add to the site.
 
-## Two Buttons 
-Wrap a series of buttons with `.btn` in `.btn-group` with a `w-100` to take up 100% of the parent element. Button groups inherit a height from `.btn` on tablet and desktop devices. Button groups inherit a height from `.btn-lg` on mobile devices.  
+## Two Buttons
 
-{% capture example %}
 <div class="btn-group w-100" role="group" aria-label="Basic example two buttons">
   <button type="button" class="btn btn-outline-secondary active">Left</button>
   <button type="button" class="btn btn-outline-secondary">Right</button>
 </div>
-{% endcapture %}
-{% include example.html content=example %}
-
 
 ## Three Buttons
 
-Wrap a series of buttons with `.btn` in `.btn-group`. 
-
-{% capture example %}
 <div class="btn-group w-100" role="group" aria-label="Basic example three buttons">
   <button type="button" class="btn btn-outline-secondary active">Left</button>
   <button type="button" class="btn btn-outline-secondary">Middle</button>
   <button type="button" class="btn btn-outline-secondary">Right</button>
 </div>
-{% endcapture %}
-{% include example.html content=example %}
-
-{% capture callout %}
-##### Ensure correct `role` and provide a label
-
-In order for assistive technologies (such as screen readers) to convey that a series of buttons is grouped, an appropriate `role` attribute needs to be provided. For button groups, this would be `role="group"`, while toolbars should have a `role="toolbar"`.
-
-In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct role attribute. In the examples provided here, we use `aria-label`, but alternatives such as `aria-labelledby` can also be used.
-{% endcapture %}
-{% include callout.html content=callout type="warning" %}
 
 <!-- Bootstrap 4 -->
 
