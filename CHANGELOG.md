@@ -1,3 +1,10 @@
+## [0.7.2](https://github.com/flocasts/flo-scss/compare/v0.7.1...v0.7.2) (2020-11-19)
+
+
+### Bug Fixes
+
+* use gray on hover in button groups instead of primary ([#60](https://github.com/flocasts/flo-scss/issues/60)) ([c9869cd](https://github.com/flocasts/flo-scss/commit/c9869cd9b9a499ff493d510d368c5cfe0965a4d5))
+
 ## [0.7.1](https://github.com/flocasts/flo-scss/compare/v0.7.0...v0.7.1) (2020-04-20)
 
 
