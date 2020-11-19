@@ -8,6 +8,11 @@ $btn-group-focus: 0 0 0 $btn-focus-width rgba(255, 20, 15, 0.2) !important;
   border: solid $btn-border-width $primary;
 }
 
+@mixin btn-outline-secondary-hover{
+  background-color: darken($gray-100, 5%);
+  border: solid $btn-border-width $gray-300;
+}
+
 @mixin btn-group-inactive {
   color: $gray-500;
   border-color: $gray-300;
@@ -60,7 +65,7 @@ $btn-group-focus: 0 0 0 $btn-focus-width rgba(255, 20, 15, 0.2) !important;
     &:hover,
     &.hover,
     &:hover:not([disabled]){
-      @include btn-outline-secondary-active;
+      @include btn-outline-secondary-hover;
     }
     &:active,
     &.active {
