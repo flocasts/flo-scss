@@ -71,6 +71,11 @@ $btn-group-focus: 0 0 0 $btn-focus-width rgba(255, 20, 15, 0.2) !important;
     &.active {
     @include btn-outline-secondary-active;
 
+      &:hover,
+      &.hover {
+        @include btn-outline-secondary-active;
+      }
+
       &:focus,
       &.focus,
       &:focus:not([disabled]){
