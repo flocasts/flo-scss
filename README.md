@@ -95,6 +95,7 @@ breaking: (major breaking change - e.g. changing or removing class names or func
 
 Using `docs` will not update the npm version.
 
+## Releasing
 
 ## Versioning
 
