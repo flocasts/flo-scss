@@ -1,3 +1,10 @@
+## [0.7.4](https://github.com/flocasts/flo-scss/compare/v0.7.3...v0.7.4) (2020-11-20)
+
+
+### Bug Fixes
+
+* remove hover effect on active buttons in button group ([#61](https://github.com/flocasts/flo-scss/issues/61)) ([b9cef8e](https://github.com/flocasts/flo-scss/commit/b9cef8e1c82e95995f46bf5f523d1b8e29a1a74d))
+
 ## [0.7.3](https://github.com/flocasts/flo-scss/compare/v0.7.2...v0.7.3) (2020-11-20)
 
 
