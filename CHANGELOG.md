@@ -1,3 +1,10 @@
+## [0.7.3](https://github.com/flocasts/flo-scss/compare/v0.7.2...v0.7.3) (2020-11-20)
+
+
+### Bug Fixes
+
+* ci build ([51f9574](https://github.com/flocasts/flo-scss/commit/51f9574a6992e039d692295127709fbd20e6420b))
+
 ## [0.7.2](https://github.com/flocasts/flo-scss/compare/v0.7.1...v0.7.2) (2020-11-19)
 
 
