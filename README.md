@@ -32,7 +32,7 @@
 ### Install Flo-SCSS
 Several quick start options are available:
 
-- Clone the repo: `git clone git@github.com:flocasts/flo-scss`
+- Clone the repo: `git clone git@github.com:flocasts/flo-scss` or `git clone https://github.com/flocasts/flo-scss.git`
 - OR [download the latest release](https://github.com/flocasts/flo-scss/archive/v0.7.4.zip)
 - OR install with [npm](https://www.npmjs.com/): `npm install flocasts/flo-scss`
 
