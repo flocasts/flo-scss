@@ -1,0 +1,7 @@
+a.link-secondary {
+  color: $link-color-secondary;
+
+  @include hover() {
+    color: $link-hover-color-secondary;
+  }
+}

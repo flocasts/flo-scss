@@ -244,6 +244,12 @@ $link-hover-decoration: underline !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
 
+
+
+// Secondary links
+$dark-blue: #0028A8 !default;
+$link-color-secondary: $dark-blue;
+$link-hover-color-secondary: darken($link-color-secondary, 15%);
 // Paragraphs
 //
 // Style p element.
