@@ -1,3 +1,10 @@
+# [0.8.0](https://github.com/flocasts/flo-scss/compare/v0.7.4...v0.8.0) (2020-12-18)
+
+
+### Features
+
+* **links:** secondary link class ([#63](https://github.com/flocasts/flo-scss/issues/63)) ([fad79f0](https://github.com/flocasts/flo-scss/commit/fad79f0c35f809c5ec079d2c1f9fcb27d95481e7))
+
 ## [0.7.4](https://github.com/flocasts/flo-scss/compare/v0.7.3...v0.7.4) (2020-11-20)
 
 
