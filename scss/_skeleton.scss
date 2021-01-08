@@ -1,11 +1,10 @@
-
-
-.h1-skeleton:empty, .h2-skeleton:empty, .h5-skeleton:empty, h1:empty, h2:empty, a:empty, img:empty, .img-skeleton:empty {
+.h1-skeleton:empty, .h2-skeleton:empty, .h5-skeleton:empty, .img-skeleton:empty, .a-skeleton:empty, .skeleton:empty {
     animation: loading 1.7s infinite linear;
     background: #dedfe1;
     background-image: -webkit-linear-gradient(to right, #dedfe1 0%, #f2f3f5 20%, #dedfe1 40%, #dedfe1 100%);
     background-image: linear-gradient(to right, #dedfe1 0%, #f2f3f5 20%, #dedfe1 40%, #dedfe1 100%);
     background-repeat: no-repeat;
+    border-radius: 3px;
   }
   
   .h1-skeleton:empty {
