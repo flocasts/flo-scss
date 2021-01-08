@@ -37,6 +37,18 @@ Empty h1 and empty divs
 {% endcapture %}
 {% include example.html content=example %}
 
+Skeleton for leaderboard ads
+{% capture example %}
+<div class="leaderboard-skeleton skeleton"></div>
+{% endcapture %}
+{% include example.html content=example %}
+
+Skeleton for ad-rectangle
+{% capture example %}
+<div class="ad-rectangle-skeleton skeleton"></div>
+{% endcapture %}
+{% include example.html content=example %}
+
 ---
 
 **Note:** 
