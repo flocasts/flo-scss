@@ -22,6 +22,12 @@ Empty H1 skeleton
 {% endcapture %}
 {% include example.html content=example %}
 
+Empty Paragraph "description" skeleton
+{% capture example %}
+<p class="p-skeleton"></p>
+{% endcapture %}
+{% include example.html content=example %}
+
 Empty img
 {% capture example %}
 <img style="width:150px; height:150px;" class="skeleton"/>
