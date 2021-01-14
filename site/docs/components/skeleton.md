@@ -4,25 +4,25 @@ title: Skeleton
 description: Empty Elements
 group: components
 ---
-When a element has the class .skeleton applied to it it will by default have an animation attached to it during its :empty state. This component does not exist in bootstrap by default. 
+When an element has the `.skeleton` class applied, it will by default have a skeleton animation attached during its `:empty` state. This component does not exist in Bootstrap by default. 
 
-empty psedo-class docs =>  https://developer.mozilla.org/en-US/docs/Web/CSS/:empty
+Please refer to [these docs](https://developer.mozilla.org/en-US/docs/Web/CSS/:empty) for more info on the `:empty` pseudo-class.
 
-There are existing height and widths for Header elements. h1,h2,h3,h4,h5 have predetermined heights and widths for empty states.
-Can add more base elements to this such as img but for now having it opt in by adding the skeleton class.
+Skeletons are applied to all `<img>` elements by default, because these register as "empty" while they are loading.
 
-Currently can add skeleton class onto any element to get the animation. You will need to specify what the height and width are
-for the element when it is in its empty state. In your scss file add div-skeleton:empty { height and width here }.
+In addition, there are also skeleton elements with predetermined heights and widths for h1's (using `.h1-skeleton`), descriptions (using `.p-skeleton`), and hero images (using `.hero-skeleton`). We can add more as needed.
+
+You could make a skeleton for any element using the `.skeleton` class (to get the animation) and then manually declaring the height and width.
 
 ## Examples
 
-H1 skeleton
+### H1 Skeleton
 {% capture example %}
 <h1 class="h1-skeleton"></h1>
 {% endcapture %}
 {% include example.html content=example %}
 
-Paragraph "description" skeleton
+### Description Skeleton
 {% capture example %}
 <div class="col-12 col-lg-8">
   <p class="p-skeleton"></p>
@@ -30,7 +30,7 @@ Paragraph "description" skeleton
 {% endcapture %}
 {% include example.html content=example %}
 
-Hero Image skeleton
+### Hero Image Skeleton
 {% capture example %}
 <div class="col-12 col-lg-8">
   <img class="hero-skeleton"/>
@@ -38,30 +38,16 @@ Hero Image skeleton
 {% endcapture %}
 {% include example.html content=example %}
 
-Empty img
+### Default skeleton for images
 {% capture example %}
 <img style="width:150px; height:150px;" class="skeleton"/>
 {% endcapture %}
 {% include example.html content=example %}
 
-Animation will be applyied to any empty element with the .skeleton class
-Empty h1 and empty divs
+Animation will be applied to any empty element with the .skeleton class
 {% capture example %}
-<h1 class="h1-skeleton"></h1>
 <div class="skeleton my-1" style="width:100%; height:30px;"></div>
 <div class="skeleton my-1" style="width:100%; height:30px;"></div>
-{% endcapture %}
-{% include example.html content=example %}
-
-Skeleton for leaderboard ads
-{% capture example %}
-<div class="leaderboard-skeleton skeleton"></div>
-{% endcapture %}
-{% include example.html content=example %}
-
-Skeleton for ad-rectangle
-{% capture example %}
-<div class="ad-rectangle-skeleton skeleton"></div>
 {% endcapture %}
 {% include example.html content=example %}
 

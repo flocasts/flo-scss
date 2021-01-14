@@ -1,24 +1,11 @@
 @import "variables";
 
-//.h1-skeleton:empty, .p-skeleton:empty, .h2-skeleton:empty, .h5-skeleton:empty, .img:empty, .a-skeleton:empty, .skeleton:empty {
-//  animation: loading 1.7s infinite linear;
-//  background: $gray-200;
-//  background-image: -webkit-linear-gradient(to right, $gray-200 0%, $gray-100 20%, $gray-200 40%, $gray-200 100%);
-//  background-image: linear-gradient(to right, $gray-200 0%, $gray-100 20%, $gray-200 40%, $gray-200 100%);
-//  background-repeat: no-repeat;
-//  border-radius: 5px;
-//}
-
+img:empty,
 .h1-skeleton:empty,
 .p-skeleton:empty,
 .p-skeleton:empty::after,
-.hero-skeleton:empty,
-.h2-skeleton:empty,
-.h5-skeleton:empty,
-.img:empty,
-.a-skeleton:empty,
 .skeleton:empty {
-  //animation: loading 1.7s infinite linear;
+  animation: loading 1.7s infinite linear;
   background: $gray-200;
   background-image: -webkit-linear-gradient(to right, $gray-200 0%, $gray-100 20%, $gray-200 40%, $gray-200 100%);
   background-image: linear-gradient(to right, $gray-200 0%, $gray-100 20%, $gray-200 40%, $gray-200 100%);
@@ -62,41 +49,6 @@
     height: 383px;
   }
 }
-
-.h2-skeleton:empty {
-  height: 22px;
-  width: 200px;
-}
-
-.h5-skeleton:empty {
-  height: 16px;
-  width: 200px;
-}
-
-.leaderboard-skeleton:empty {
-  display: block;
-  position: relative;
-  z-index: 2;
-  min-height: 90px;
-  height: auto;
-  max-width: 970px;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.ad-rectangle-skeleton:empty {
-  background: $gray-200;
-    max-width: 300px;
-    width: 100%;
-    min-height: 250px;
-    height: auto;
-    margin: 0 auto;
-    margin-top: 30px;
-}
-
 
 @keyframes loading {
   0% {
