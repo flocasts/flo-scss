@@ -16,15 +16,25 @@ for the element when it is in its empty state. In your scss file add div-skeleto
 
 ## Examples
 
-Empty H1 skeleton
+H1 skeleton
 {% capture example %}
 <h1 class="h1-skeleton"></h1>
 {% endcapture %}
 {% include example.html content=example %}
 
-Empty Paragraph "description" skeleton
+Paragraph "description" skeleton
 {% capture example %}
-<p class="p-skeleton"></p>
+<div class="col-12 col-lg-8">
+  <p class="p-skeleton"></p>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
+Hero Image skeleton
+{% capture example %}
+<div class="col-12 col-lg-8">
+  <img class="hero-skeleton"/>
+</div>
 {% endcapture %}
 {% include example.html content=example %}
 

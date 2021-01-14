@@ -12,6 +12,7 @@
 .h1-skeleton:empty,
 .p-skeleton:empty,
 .p-skeleton:empty::after,
+.hero-skeleton:empty,
 .h2-skeleton:empty,
 .h5-skeleton:empty,
 .img:empty,
@@ -36,7 +37,7 @@
 }
 
 .p-skeleton:empty {
-  animation: loading-p 1.7s infinite linear;
+  animation: loading-full-width 1.7s infinite linear;
   height: 20px;
   width: 100%;
   position: relative;
@@ -48,7 +49,17 @@
     content: "";
     height: 20px;
     width: 60%;
-    animation: loading-p 1.7s infinite linear;
+    animation: loading-full-width 1.7s infinite linear;
+  }
+}
+
+.hero-skeleton:empty {
+  animation: loading-full-width 1.7s infinite linear;
+  width: 100%;
+  height: 194px;
+
+  @include media-breakpoint-up(md) {
+    height: 383px;
   }
 }
 
@@ -107,7 +118,7 @@
   }
 }
 
-@keyframes loading-p {
+@keyframes loading-full-width {
   0% {
     background-position: -100px;
   }
