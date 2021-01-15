@@ -37,13 +37,18 @@ All images get skeletons by default, because images trigger as "empty" while the
 {% endcapture %}
 {% include example.html content=example %}
 
-Animation will be applied to any empty element with the .skeleton class
+### Using the .skeleton class
+Animation will be applied to any empty element with the `.skeleton` class.
 {% capture example %}
 <div class="skeleton my-1" style="width:100%; height:30px;"></div>
 <div class="skeleton my-1" style="width:100%; height:30px;"></div>
 {% endcapture %}
 {% include example.html content=example %}
 
----
-
-**Note:** 
+For example, `.skeleton` could be used to imitate a desktop leaderboard ad.
+{% capture example %}
+<div class="w-100 bg-800 justify-content-center align-items-center d-none d-lg-flex">
+  <div class="leaderboard-center skeleton my-3" style="height: 90px; width: 728px;"></div>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
