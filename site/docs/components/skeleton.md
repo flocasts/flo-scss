@@ -30,17 +30,10 @@ You could make a skeleton for any element using the `.skeleton` class (to get th
 {% endcapture %}
 {% include example.html content=example %}
 
-### Hero Image Skeleton
-{% capture example %}
-<div class="col-12 col-lg-8">
-  <img class="hero-skeleton"/>
-</div>
-{% endcapture %}
-{% include example.html content=example %}
-
 ### Default skeleton for images
+All images get skeletons by default, because images trigger as "empty" while they are loading (i.e., they have no `src`). When building out certain skeleton images, you can give them a set height/width, or just allow them to fill the parent.
 {% capture example %}
-<img style="width:150px; height:150px;" class="skeleton"/>
+<img style="width:150px; height:150px;"/>
 {% endcapture %}
 {% include example.html content=example %}
 
