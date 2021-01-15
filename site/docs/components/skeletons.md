@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Skeleton
+title: Skeletons
 description: Empty Elements
 group: components
 ---
