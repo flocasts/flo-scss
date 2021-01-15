@@ -10,7 +10,7 @@ Please refer to [these docs](https://developer.mozilla.org/en-US/docs/Web/CSS/:e
 
 Skeletons are applied to all `<img>` elements by default, because these register as "empty" while they are loading.
 
-In addition, there are also skeleton elements with predetermined heights and widths for h1's (using `.h1-skeleton`), descriptions (using `.p-skeleton`), and hero images (using `.hero-skeleton`). We can add more as needed.
+In addition, there are also skeleton elements with predetermined heights and widths for h1's (using `.h1-skeleton`) and descriptions (using `.p-skeleton`). We can add more as needed.
 
 You could make a skeleton for any element using the `.skeleton` class (to get the animation) and then manually declaring the height and width.
 
