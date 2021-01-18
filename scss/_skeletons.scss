@@ -1,6 +1,6 @@
 @import "variables";
 
-img:empty,
+img:empty:not(.no-skeleton),
 .h1-skeleton:empty,
 .p-skeleton:empty,
 .p-skeleton:empty::after,
