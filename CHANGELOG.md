@@ -1,3 +1,10 @@
+# [0.9.0](https://github.com/flocasts/flo-scss/compare/v0.8.0...v0.9.0) (2021-01-15)
+
+
+### Features
+
+* introduce styles for skeletons ([#64](https://github.com/flocasts/flo-scss/issues/64)) ([bcc5078](https://github.com/flocasts/flo-scss/commit/bcc507856bb3e2138c2da9c600489dc8c060b8e3))
+
 # [0.8.0](https://github.com/flocasts/flo-scss/compare/v0.7.4...v0.8.0) (2020-12-18)
 
 
