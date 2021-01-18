@@ -1,3 +1,10 @@
+## [0.9.1](https://github.com/flocasts/flo-scss/compare/v0.9.0...v0.9.1) (2021-01-18)
+
+
+### Bug Fixes
+
+* add .no-skeleton ability to images ([#65](https://github.com/flocasts/flo-scss/issues/65)) ([98ec7b3](https://github.com/flocasts/flo-scss/commit/98ec7b376aa657e374965b51a2f1802792ec8440))
+
 # [0.9.0](https://github.com/flocasts/flo-scss/compare/v0.8.0...v0.9.0) (2021-01-15)
 
 
