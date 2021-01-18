@@ -8,7 +8,7 @@ When an element has the `.skeleton` class applied, it will by default have a ske
 
 Please refer to [these docs](https://developer.mozilla.org/en-US/docs/Web/CSS/:empty) for more info on the `:empty` pseudo-class.
 
-Skeletons are applied to all `<img>` elements by default, because these register as "empty" while they are loading.
+Skeletons are applied to all `<img>` elements by default, because these register as "empty" since images have no children.
 
 In addition, there are also skeleton elements with predetermined heights and widths for h1's (using `.h1-skeleton`) and descriptions (using `.p-skeleton`). We can add more as needed.
 
@@ -31,9 +31,16 @@ You could make a skeleton for any element using the `.skeleton` class (to get th
 {% include example.html content=example %}
 
 ### Default skeleton for images
-All images get skeletons by default, because images trigger as "empty" while they are loading (i.e., they have no `src`). When building out certain skeleton images, you can give them a set height/width, or just allow them to fill the parent.
+All images get skeletons by default, because these register as "empty" since images have no children. When building out certain skeleton images, you can give them a set height/width, or just allow them to fill the parent.
 {% capture example %}
 <img style="width:150px; height:150px;"/>
+{% endcapture %}
+{% include example.html content=example %}
+
+You can also "opt out" of an `img` having a skeleton using the `.no-skeleton` class.
+
+{% capture example %}
+<img class="no-skeleton" style="width:150px; height:150px;"/>
 {% endcapture %}
 {% include example.html content=example %}
 
