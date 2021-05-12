@@ -1,3 +1,10 @@
+## [0.9.2](https://github.com/flocasts/flo-scss/compare/v0.9.1...v0.9.2) (2021-05-12)
+
+
+### Bug Fixes
+
+* update node to 14 ([bd45d07](https://github.com/flocasts/flo-scss/commit/bd45d07eb8aa00627d1da57ae379cd1b8daf3e12))
+
 ## [0.9.1](https://github.com/flocasts/flo-scss/compare/v0.9.0...v0.9.1) (2021-01-18)
 
 
