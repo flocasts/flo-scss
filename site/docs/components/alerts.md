@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Alerts (WIP)
+title: Alerts
 description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
 group: components
 redirect_from:
@@ -16,7 +16,7 @@ Alerts are available for any length of text, as well as an optional dismiss butt
 {% capture example %}
 {% for color in site.data.theme-colors %}
 <div class="alert alert-{{ color.name }}" role="alert">
-  A simple {{ color.name }} alert—check it out!
+  A simple {{ color.name }} alert— <a href="#">check it out!</a>
 </div>{% endfor %}
 {% endcapture %}
 {% include example.html content=example %}
