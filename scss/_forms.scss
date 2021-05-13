@@ -335,30 +335,3 @@ textarea.form-control {
   }
 }
 
-.select-wrapper {
-  position: relative;
-
-  select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding-right: $select-icon-buffer-padding; // to ensure select text does not run into chevron
-
-    &::-ms-expand {
-      // remove the caret on `<select>`s in IE10+.
-      display: none;
-    }
-  }
-
-  &:after {
-    content: "";
-    background-image: url($select-icon);
-    background-repeat: no-repeat;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    top: $select-icon-position-y;
-    height: $select-icon-height;
-    width: $select-icon-width;
-  }
-}
