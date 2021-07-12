@@ -29,6 +29,8 @@
 
 ## Quick start
 
+Node 12 required
+
 ### Install Flo-SCSS
 Several quick start options are available:
 
