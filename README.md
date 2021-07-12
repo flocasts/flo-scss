@@ -7,7 +7,7 @@
 <h3 align="center">Flo-SCSS</h3>
 
 <p align="center">
-  Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+  Sleek, intuitive, and powerful front-end framework for faster + easier web development.
   <br>
   <a href="https://flo-scss.flo.center/docs/"><strong>Explore Flo-SCSS docs »</strong></a>
   <br>
