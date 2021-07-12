@@ -161,7 +161,7 @@ $yiq-text-light: $white !default;
 
 // Base font-sizes
 
-$font-size-pixels: 17 !default; // used in calculations
+$font-size-pixels: 16 !default; // used in calculations
 $default-font-size-pixels: 16 !default; // used in calculations
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg: $font-size-base * 1.25 !default;
@@ -365,7 +365,7 @@ $font-weight-bold: 700 !default;
 $font-weight-bolder: 900 !default;
 $font-weight-base: $font-weight-normal !default;
 
-$line-height-base: 1.7 !default;
+$line-height-base: 1.5 !default;
 $line-height-lg: 2 !default;
 $line-height-sm: 1.25 !default;
 
@@ -480,27 +480,27 @@ $font-sizes: map-merge(
   $font-sizes
 );
 
-$display-1-line-height: 84 / 68 !default;
-$display-2-line-height: 72 / 56 !default;
-$display-3-line-height: 56 / 44 !default;
-$display-4-line-height: 48 / 36 !default;
+$display-1-line-height: 5.25rem !default;
+$display-2-line-height: 4.5rem !default;
+$display-3-line-height: 3.5rem !default;
+$display-4-line-height: 3rem !default;
 
-$h1-line-height: 40 / 32 !default;
-$h2-line-height: 32 / 24 !default;
-$h3-line-height: 28 / 20 !default;
-$h4-line-height: 24 / 18 !default;
-$h5-line-height: 24 / 16 !default;
-$h6-line-height: 20 / 14 !default;
+$h1-line-height: 2.5rem !default;
+$h2-line-height: 2rem !default;
+$h3-line-height: 1.75rem !default;
+$h4-line-height: 1.5rem !default;
+$h5-line-height: 1.5rem !default;
+$h6-line-height: 1.25rem !default;
 
-$text-data-line-height: 24 / 16 !default;
-$headline-line-height: 24 / 16 !default;
-$subhead-line-height: 20 / 14 !default;
-$footnote-line-height: 20 / 13 !default;
-$caption-line-height: 20 / 12 !default;
-$overtext-line-height: 20 / 12 !default;
-$mono-line-height: 18 / 13 !default;
-$link-line-height: 20 / 13 !default;
-$time-line-height: 15 / 11 !default;
+$text-data-line-height: 1.5rem !default;
+$headline-line-height: 1.5rem !default;
+$subhead-line-height: 1.25rem !default;
+$footnote-line-height: 1.25rem !default;
+$caption-line-height: 1.25rem !default;
+$overtext-line-height: 1.25rem !default;
+$mono-line-height: 1.125rem !default;
+$link-line-height: 1.25rem !default;
+$time-line-height: 0.9375rem !default;
 
 $line-heights: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
