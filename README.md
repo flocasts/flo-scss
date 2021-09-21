@@ -29,7 +29,7 @@
 
 ## Quick start
 
-Node 12 required
+Node 14 required
 
 ### Install Flo-SCSS
 Several quick start options are available:
@@ -73,6 +73,26 @@ Learn more about using Jekyll by reading its [documentation](https://jekyllrb.co
       * Run `rvm install x.x.x` replacing Xs with the correct version
 
  5. Run `rvm use x.x.x` to set your ruby version, and you're ready to go!
+
+ ## Troubleshooting
+
+If you get the following error: `Error: Node Sass does not yet support your current environment`, your `node-sass` is not compatible with node version. Run the following command:
+
+```
+npm rebuild node-sass
+
+//or
+
+sudo npm rebuild node-sass
+```
+
+If you get the following error: `gyp: No Xcode or CLT version detected!` when attempting to update `node-sass`, run the following command: 
+
+```
+sudo xcode-select --reset
+```
+
+- [Source](https://medium.com/flawless-app-stories/gyp-no-xcode-or-clt-version-detected-macos-catalina-anansewaa-38b536389e8d)
 
 ## Documentation
 
