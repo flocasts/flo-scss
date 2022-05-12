@@ -1,3 +1,10 @@
+## [0.10.1](https://github.com/flocasts/flo-scss/compare/v0.10.0...v0.10.1) (2022-05-12)
+
+
+### Bug Fixes
+
+* bump the node version 16 ([5d90c5c](https://github.com/flocasts/flo-scss/commit/5d90c5c902dc51775ba7a12e571da2f8fc6de23f))
+
 # [0.10.0](https://github.com/flocasts/flo-scss/compare/v0.9.2...v0.10.0) (2021-07-12)
 
 
