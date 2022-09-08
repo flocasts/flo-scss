@@ -35,7 +35,7 @@ Node 14 required
 Several quick start options are available:
 
 - Clone the repo: `git clone git@github.com:flocasts/flo-scss`
-- OR [download the latest release](https://github.com/flocasts/flo-scss/archive/v0.10.1.zip)
+- OR [download the latest release](https://github.com/flocasts/flo-scss/archive/v0.11.0.zip)
 - OR install with [npm](https://www.npmjs.com/): `npm install flocasts/flo-scss`
 
 ### Running documentation locally

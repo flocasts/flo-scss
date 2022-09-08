@@ -1,3 +1,10 @@
+# [0.11.0](https://github.com/flocasts/flo-scss/compare/v0.10.1...v0.11.0) (2022-09-08)
+
+
+### Features
+
+* just for new release ([#69](https://github.com/flocasts/flo-scss/issues/69)) ([8189a0a](https://github.com/flocasts/flo-scss/commit/8189a0a974e880b7e2aa11a3f1f69da196d1b366))
+
 ## [0.10.1](https://github.com/flocasts/flo-scss/compare/v0.10.0...v0.10.1) (2022-05-12)
 
 
