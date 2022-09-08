@@ -47,8 +47,7 @@ $btn-group-focus: 0 0 0 $btn-focus-width rgba(255, 20, 15, 0.2) !important;
       @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
     }
 
-    // Bring the hover, focused, and "active" buttons to the front to overlay
-    // the borders properly
+    // Bring the hover, focused, and "active" buttons to the front to overlay the borders properly
     @include hover() {
       z-index: 1;
     }
