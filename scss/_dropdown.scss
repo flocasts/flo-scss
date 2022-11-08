@@ -169,10 +169,6 @@
   }
 }
 
-.dropdown-menu.show {
-  display: block;
-}
-
 // Dropdown section headers
 .dropdown-header {
   display: block;
@@ -188,4 +184,11 @@
   display: block;
   padding: $dropdown-item-padding-y $dropdown-item-padding-x;
   color: $dropdown-link-color;
+}
+
+
+.dropdown-menu.show,
+input[type="checkbox"].dropdown-toggle:checked ~ .dropdown-menu,
+input[type="checkbox"].dropdown-toggle:checked .dropdown-menu {
+  display: block;
 }
